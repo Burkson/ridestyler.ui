@@ -3,3 +3,5 @@ node_modules/
 !.csscomb.json
 !.gitignore
 !.gitattributes
+dist/
+docs/dist/
