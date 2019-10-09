@@ -1,45 +1,50 @@
 {
-  "name": "spectre.css",
-  "version": "0.5.8",
-  "homepage": "http://picturepan2.github.io/spectre",
-  "author": "Yan Zhu <picturepan2@hotmail.com>",
-  "description": "Spectre.css: A lightweight, responsive and modern CSS framework",
-  "main": "dist/spectre.css",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/picturepan2/spectre.git"
-  },
-  "license": "MIT",
-  "keywords": [
-    "css",
-    "framework",
-    "flexbox",
-    "responsive",
-    "mobile-friendly",
-    "front-end",
-    "sass",
-    "modern"
-  ],
-  "bugs": {
-    "url": "https://github.com/picturepan2/spectre/issues"
-  },
-  "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "latest",
-    "gulp-clean-css": "latest",
-    "gulp-csscomb": "latest",
-    "gulp-pug": "latest",
-    "gulp-rename": "latest",
-    "gulp-sass": "latest",
-    "jstransformer-highlight": "latest",
-    "jstransformer-markdown-it": "latest"
-  },
-  "browserslist": [
-    "last 4 Chrome versions",
-    "Edge >= 12",
-    "Firefox ESR",
-    "last 4 Safari versions",
-    "last 4 Opera versions",
-    "Explorer >= 10"
-  ]
+    "name": "ridestyler.ui",
+    "version": "0.0.0",
+    "contributors": [
+        {
+            "name": "Byron Carasco",
+            "email": "byron@burkson.com",
+            "url": "http://github.com/bcarasco"
+        }
+    ],
+    "description": "ridestyler.ui - RideStyler's branded CSS framework",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Burkson/ridestyler.ui"
+    },
+    "license": "MIT",
+    "keywords": [
+        "css",
+        "framework",
+        "flexbox",
+        "responsive",
+        "mobile-friendly",
+        "front-end",
+        "sass",
+        "modern",
+        "RideStyler"
+    ],
+    "bugs": {
+        "url": "https://github.com/Burkson/ridestyler.ui/issues"
+    },
+    "devDependencies": {
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "latest",
+        "gulp-clean-css": "latest",
+        "gulp-csscomb": "latest",
+        "gulp-pug": "latest",
+        "gulp-rename": "latest",
+        "gulp-sass": "latest",
+        "jstransformer-highlight": "latest",
+        "jstransformer-markdown-it": "latest"
+    },
+    "browserslist": [
+        "last 4 Chrome versions",
+        "Edge >= 12",
+        "Firefox ESR",
+        "last 4 Safari versions",
+        "last 4 Opera versions",
+        "Explorer >= 10"
+    ]
 }
