@@ -15,6 +15,11 @@
     },
     "main": "src/index.scss",
     "sass": "src/index.scss",
+    "scripts": {
+        "build": "gulp build",
+        "watch": "gulp watch",
+        "docs": "gulp docs"
+    },
     "keywords": [
         "css",
         "framework",
