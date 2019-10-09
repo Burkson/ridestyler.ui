@@ -13,7 +13,8 @@
         "type": "git",
         "url": "https://github.com/Burkson/ridestyler.ui"
     },
-    "license": "MIT",
+    "main": "src/index.scss",
+    "sass": "src/index.scss",
     "keywords": [
         "css",
         "framework",
@@ -23,7 +24,8 @@
         "front-end",
         "sass",
         "modern",
-        "RideStyler"
+        "RideStyler",
+        "Burkson"
     ],
     "bugs": {
         "url": "https://github.com/Burkson/ridestyler.ui/issues"
