@@ -4,18 +4,26 @@ $version: "0.5.8";
 // Core features
 $rtl: false !default;
 
+// RideStyler Colors
+$ridestyler-color-black: #0D192B;
+$ridestyler-color-dark-gray: #556172;
+$ridestyler-color-gray: #7A8798;
+$ridestyler-color-orange: #F3693C;
+$ridestyler-color-red: #E72320;
+$ridestyler-color-blue: #21B8F7;
+
 // Core colors
-$primary-color: #5755d9 !default;
+$primary-color: $ridestyler-color-blue !default;
 $primary-color-dark: darken($primary-color, 3%) !default;
 $primary-color-light: lighten($primary-color, 3%) !default;
-$secondary-color: lighten($primary-color, 37.5%) !default;
+$secondary-color: #E6EBF2 !default;
 $secondary-color-dark: darken($secondary-color, 3%) !default;
 $secondary-color-light: lighten($secondary-color, 3%) !default;
 
 // Gray colors
 $dark-color: #303742 !default;
 $light-color: #fff !default;
-$gray-color: lighten($dark-color, 55%) !default;
+$gray-color: #E6EBF2 !default;
 $gray-color-dark: darken($gray-color, 30%) !default;
 $gray-color-light: lighten($gray-color, 20%) !default;
 
@@ -23,8 +31,9 @@ $border-color: lighten($dark-color, 65%) !default;
 $border-color-dark: darken($border-color, 10%) !default;
 $border-color-light: lighten($border-color, 8%) !default;
 $bg-color: lighten($dark-color, 75%) !default;
-$bg-color-dark: darken($bg-color, 3%) !default;
+$bg-color-dark: #3c4553 !default;
 $bg-color-light: $light-color !default;
+$bg-color-gray: $gray-color !default;
 
 // Control colors
 $success-color: #32b643 !default;
