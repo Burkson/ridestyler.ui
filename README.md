@@ -10,11 +10,21 @@ To use the framework you can either:
  - Use the precompiled SCSS on our static CDN
 
 
-### Install from CDN
+### From CDN
 TODO
 
-### Install with NPM
-`npm install --save Burkson/ridestyler.ui`
+### From NPM
+First install the package:
+
+```sh
+npm install --save Burkson/ridestyler.ui
+```
+
+Then import the library using SCSS:
+```scss
+@import "~ridestyler.ui"
+```
+
 
 ## Compiling custom version
 
