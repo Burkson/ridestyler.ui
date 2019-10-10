@@ -92,10 +92,12 @@
 		@include button-variant($error-color);
 	}
 
-	// Button Link
-	&.btn-link {
+	&.btn-link, &.btn-unstyled {
 		background: transparent;
 		border-color: transparent;
+	}
+
+	&.btn-link {
 		color: $link-color;
 
 		&:focus,
@@ -104,6 +106,12 @@
 		&.active {
 			color: $link-color-dark;
 		}
+	}
+
+	&.btn-unstyled {
+		font-family: $body-font-family;
+		font-weight: normal;
+		color: currentColor;
 	}
 
 	// Button Sizes
