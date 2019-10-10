@@ -1,15 +1,26 @@
 // Navbar
 .navbar {
+	$navbar-background-color: $bg-color-dark;
+
 	align-items: stretch;
 	display: flex;
 	flex-wrap: wrap;
     justify-content: space-between;
-    background-color: $bg-color-dark;
-    padding: $layout-spacing-sm $layout-spacing-lg;
-    color: $light-color;
+    background-color: $navbar-background-color;
+	padding: $layout-spacing-sm $layout-spacing-lg*0.6;
+	color: $light-color;
+	
+	%navbar-item {
+		margin-right: $layout-spacing-sm;
+	}
+
+	.btn, a {
+		@extend %navbar-item;
+	}
 
     .navbar-primary {
-        display: flex;
+		display: flex;
+		align-items: center;
     }
 
 	.navbar-section {

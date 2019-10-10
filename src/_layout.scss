@@ -2,8 +2,7 @@
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: $layout-spacing;
-  padding-right: $layout-spacing;
+  padding: $layout-spacing $layout-spacing-lg;
   width: 100%;
 
   $grid-spacing: ($layout-spacing / ($layout-spacing * 0 + 1)) * $html-font-size;
