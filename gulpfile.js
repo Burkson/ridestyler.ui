@@ -5,31 +5,57 @@ var csscomb = require('gulp-csscomb');
 var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
 var pug = require('gulp-pug');
+var merge = require('merge-stream');
+var replace = require('gulp-replace');
 
 var paths = {
     source: './src/*.scss',
     doc: './docs/src/scss/*.scss'
 };
 
+var distPaths = {
+    source: './dist',
+    docs: './docs'
+};
+
+var libraryFileName = 'rsui';
+
 gulp.task('watch', function () {
-    gulp.watch('./**/*.scss', gulp.series('build'));
+    gulp.watch('./**/*.scss', gulp.series('scss'));
+});
+
+gulp.task('watch-docs', function () {
     gulp.watch('./**/*.scss', gulp.series('docs'));
     gulp.watch('./**/*.pug', gulp.series('docs'));
 });
 
-gulp.task('build', function () {
+function buildSCSS() {
     return gulp.src(paths.source)
         .pipe(sass({ outputStyle: 'compact', precision: 10 })
             .on('error', sass.logError)
         )
+        .pipe(replace('{PACKAGE_VERSION}', require('./package.json').version))
         .pipe(autoprefixer())
         .pipe(csscomb())
-        .pipe(gulp.dest('./dist'))
+        .pipe(rename(function (path) {
+            if (path.basename === 'index') path.basename = libraryFileName;
+            else path.basename = libraryFileName + '-' + path.basename;
+        }))
+        .pipe(gulp.dest(distPaths.source))
         .pipe(cleancss())
         .pipe(rename({
             suffix: '.min'
-        }))
-        .pipe(gulp.dest('./dist'));
+        }));
+}
+
+function sourceStream() {
+    return merge(buildSCSS(), gulp.src('./src/fonts/**', {
+        base: './src'
+    }));
+}
+
+gulp.task('scss', function () {
+    return sourceStream().pipe(gulp.dest(distPaths.source));
 });
 
 var docTasks = {
@@ -40,26 +66,16 @@ var docTasks = {
             )
             .pipe(autoprefixer())
             .pipe(csscomb())
-            .pipe(gulp.dest('./docs/dist'))
+            .pipe(gulp.dest(distPaths.docs + '/dist'))
             .pipe(cleancss())
             .pipe(rename({
                 suffix: '.min'
             }))
-            .pipe(gulp.dest('./docs/dist'))
+            .pipe(gulp.dest(distPaths.docs + '/dist'))
     },
     scssSource() {
-        return gulp.src(paths.source)
-            .pipe(sass({ outputStyle: 'compact', precision: 10 })
-                .on('error', sass.logError)
-            )
-            .pipe(autoprefixer())
-            .pipe(csscomb())
-            .pipe(gulp.dest('./docs/dist'))
-            .pipe(cleancss())
-            .pipe(rename({
-                suffix: '.min'
-            }))
-            .pipe(gulp.dest('./docs/dist'))
+        return sourceStream()
+            .pipe(gulp.dest(distPaths.docs + '/dist'))
     },
     html() {
         return gulp.src('docs/src/**/!(_)*.pug')
@@ -70,10 +86,13 @@ var docTasks = {
     }
 };
 
-gulp.task('docs', gulp.parallel(
+gulp.task('docs', gulp.series(
     docTasks.html,
-    docTasks.scssDocs,
-    docTasks.scssSource
+    gulp.parallel(
+        docTasks.scssDocs,
+        docTasks.scssSource
+    )
 ));
 
+gulp.task('build', gulp.parallel('scss', 'docs'));
 gulp.task('default', gulp.series('build'))
