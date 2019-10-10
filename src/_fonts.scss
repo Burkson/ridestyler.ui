@@ -2,23 +2,21 @@
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: normal;
-    src: url('./fonts/open-sans-v17-latin-regular.eot'); /* IE9 Compat Modes */
     src: local('Open Sans Regular'), local('OpenSans-Regular'),
-         url('./fonts/open-sans-v17-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('./fonts/open-sans-v17-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-         url('./fonts/open-sans-v17-latin-regular.woff') format('woff'), /* Modern Browsers */
-         url('./fonts/open-sans-v17-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('./fonts/open-sans-v17-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+         url($font-base + 'open-sans-v17-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url($font-base + 'open-sans-v17-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url($font-base + 'open-sans-v17-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url($font-base + 'open-sans-v17-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url($font-base + 'open-sans-v17-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
 }
 
 @font-face {
     font-family: 'Geomanist';
-    src: url('./fonts/geomanist-bold-webfont.eot');
-    src: url('./fonts/geomanist-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('./fonts/geomanist-bold-webfont.woff2') format('woff2'),
-         url('./fonts/geomanist-bold-webfont.woff') format('woff'),
-         url('./fonts/geomanist-bold-webfont.ttf') format('truetype'),
-         url('./fonts/geomanist-bold-webfont.svg#geomanistregular') format('svg');
+    src: url($font-base + 'geomanist-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url($font-base + 'geomanist-bold-webfont.woff2') format('woff2'),
+         url($font-base + 'geomanist-bold-webfont.woff') format('woff'),
+         url($font-base + 'geomanist-bold-webfont.ttf') format('truetype'),
+         url($font-base + 'geomanist-bold-webfont.svg#geomanistregular') format('svg');
 
     font-weight: bold;
     font-style: normal;

@@ -1,12 +1,11 @@
-// Variables and mixins
 @import "variables";
 @import "mixins";
+/*! ridestyler.ui v#{$version} */
+@import "fonts";
 
-/*! Spectre.css v#{$version} | MIT License | github.com/picturepan2/spectre */
 // Reset and dependencies
 @import "normalize";
 @import "base";
-@import "fonts";
 
 // Elements
 @import "typography";
