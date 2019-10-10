@@ -7,6 +7,8 @@
 	color: $primary-color;
 	cursor: pointer;
 	display: inline-block;
+	font-family: $button-font-family;
+	font-weight: bold;
 	font-size: $font-size;
 	height: $control-size;
 	line-height: $line-height;
