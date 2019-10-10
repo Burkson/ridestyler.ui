@@ -11,6 +11,11 @@
             body {
                 padding: 0 10%;
             }
+            .card-image.empty {
+                height: 100px;
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+            }
         </style>
     </head>
     <body>
@@ -49,105 +54,47 @@
             </div>
         </header>
         <h1 class="header">
-            Available Plans
+            Come fill out one of our forms
         </h1>
         <div class="container">
-            <h2>Free Tools</h2>
-            <p class="text-large">Be the expert for your customers, and get the information you need, when you need it.</p>
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="#">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#">Cool Stuff</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#">Tables</a>
+                </li>
+            </ul>
+            <form>
+                <div class="form-group">
+                    <label class="form-label" for="input-example-1">Name</label>
+                    <input class="form-input" type="text" id="input-example-1">
+                    <p class="form-input-hint">Enter your best name here.</p>
+                </div>
 
-            <div class="columns">
-                <div class="column col-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">
-                                <div class="float-right">
-                                    <div class="h5">$299.99</div>
-                                    <div class="text-small">per month</div>
-                                </div>
-                                <h2>Standard</h2>
-                            </div>
-                            <p>Turn your website into your showroom &amp; capture leads.</p>
-                            <button class="btn btn-lg btn-primary btn-block">Upgrade</button>
-                            <button class="btn btn-lg btn-link btn-block">Contact Sales</button>
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <label class="form-label" for="input-example-1">Your Key</label>
+                    <input class="form-input" type="text" id="input-example-1">
+                    <p class="form-input-hint">The name is invalid.</p>
                 </div>
-                <div class="column col-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">
-                                <div class="float-right">
-                                    <div class="h5">$449.99</div>
-                                    <div class="text-small">per month</div>
-                                </div>
-                                <h2>Pro</h2>
-                            </div>
-                            <p>Turn your website into your showroom &amp; capture leads.</p>
-                            <button class="btn btn-lg btn-primary btn-block">Upgrade</button>
-                            <button class="btn btn-lg btn-link btn-block">Contact Sales</button>
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <label class="form-checkbox">
+                        <input type="checkbox">
+                        <i class="form-icon"></i> Remember me
+                    </label>
+                    <label class="form-switch">
+                        <input type="checkbox">
+                        <i class="form-icon"></i> Remember someone else
+                    </label>
                 </div>
-                <div class="column col-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">
-                                <h2>Enterprise</h2>
-                            </div>
-                            <p>Unlock the full pwoer of RideStyler with our API.</p>
-                            <button class="btn btn-lg btn-primary btn-block">Contact Sales</button>
-                            <button class="btn btn-lg btn-link btn-block">Learn More</button>
-                        </div>
-                    </div>
+
+                <div class="form-group text-right">
+                    <button class="btn btn-primary">Looks Good <i class="icon icon-arrow-right"></i></button>
                 </div>
-            </div>
+            </form>
         </div>
-        <div class="container">
-            <div class="toast toast-secondary">
-                <a class="float-right" href="#">Subscribe</a>
-                Stay in the loop on product updates, subscribe to our blog
-            </div>
-        </div>
-        <footer>
-            <div class="columns">
-                <div class="column col-3">
-                    <ul>
-                        <h5>About</h5>
-                        <li><a href="#">Server status</a></li>
-                        <li><a href="#">News</a></li>
-                        <li><a href="#">History</a></li>
-                        <li><a href="#">Privacy poliscy</a></li>
-                        <li><a href="#">Terms of use</a></li>
-                        <li><a href="#">Team</a></li>
-                    </ul>
-                </div>
-                <div class="column col-3">
-                    <ul>
-                        <h5>Mobile</h5>
-                        <li><a href="#">iPhone</a></li>
-                        <li><a href="#">Google</a></li>
-                        <li><a href="#">Amazon</a></li>
-                    </ul>
-                </div>
-                <div class="column col-3">
-                    <ul>
-                        <h5>Help</h5>
-                        <li><a href="#">How it works</a></li>
-                        <li><a href="#">Tutorial</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Command reference</a></li>
-                        <li><a href="#">API reference</a></li>
-                    </ul>
-                </div>
-                <div class="column col-3">
-                    <ul>
-                        <h5>Making money</h5>
-                        <li><a href="#">Affiliate program</a></li>
-                        <li><a href="#">Getting started</a></li>
-                        <li><a href="#">Approval process</a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
     </body>
 </html>
