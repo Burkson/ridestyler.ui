@@ -25,7 +25,7 @@ $secondary-color-light: lighten($secondary-color, 3%) !default;
 $dark-color: $ridestyler-color-black !default;
 $light-color: #fff !default;
 $gray-color: #E6EBF2 !default;
-$gray-color-dark: darken($gray-color, 30%) !default;
+$gray-color-dark: $ridestyler-color-dark-gray !default;
 $gray-color-light: lighten($gray-color, 20%) !default;
 
 $border-color: $ridestyler-color-dark-gray !default;

@@ -1,57 +1,116 @@
 // Tables
 .table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
-  @if $rtl == true {
-    text-align: right;
-  } @else {
-    text-align: left;
-  }
+	border-spacing: 0;
+	width: 100%;
 
-  &.table-striped {
-    tbody {
-      tr:nth-of-type(odd) {
-        background: $bg-color;
-      }
+	@if $rtl==true {
+		text-align: right;
+	} @else {
+		text-align: left;
     }
-  }
+    
+    td,
+	th {
+		padding: $unit-1 $unit-2;
+	}
 
-  &,
-  &.table-striped {
-    tbody {
-      tr {
-        &.active {
-          background: $bg-color-dark;
+    tr {
+        &:first-child {
+            td, th {
+                &:first-child {
+                    border-top-left-radius: $border-radius;
+                }
+                &:last-child {
+                    border-top-right-radius: $border-radius;
+                }
+            }
         }
-      }
     }
-  }
 
-  &.table-hover {
     tbody {
-      tr {
-        &:hover {
-          background: $bg-color-dark;
+        tr {
+            td, th {
+                border-bottom: $border-width solid $gray-color;
+
+                &:first-child {
+                    border-left: $border-width solid $border-color;
+                }
+                &:last-child {
+                    border-right: $border-width solid $border-color;
+                }
+            }
+
+            &:last-child {
+                td, th {
+                    border-bottom: $border-width solid $border-color;
+
+                    &:first-child {
+                        border-bottom-left-radius: $border-radius;
+                    }
+                    &:last-child {
+                        border-bottom-right-radius: $border-radius;
+                    }
+                }
+            }
         }
-      }
     }
-  }
+    
+    thead {
+        th {
+            background-color: $gray-color-dark;
+            color: $light-color;
+        }
 
-  // Scollable tables
-  &.table-scroll {
-    display: block;
-    overflow-x: auto;
-    padding-bottom: .75rem;
-    white-space: nowrap;
-  }
+        + tbody {
+            tr {
+                &:first-child {
+                    td, th {
+                        &:first-child {
+                            border-top-left-radius: 0;
+                        }
+                        &:last-child {
+                            border-top-right-radius: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
-  td,
-  th {
-    border-bottom: $border-width solid $border-color;
-    padding: $unit-3 $unit-2;
-  }
-  th {
-    border-bottom-width: $border-width-lg;
-  }
+	&.table-striped {
+		tbody {
+			tr:nth-of-type(odd) {
+				background: $bg-color;
+			}
+		}
+	}
+
+	&,
+	&.table-striped {
+		tbody {
+			tr {
+				&.active {
+					background: $primary-color;
+				}
+			}
+		}
+	}
+
+	&.table-hover {
+		tbody {
+			tr {
+				&:hover {
+					background: $primary-color;
+				}
+			}
+		}
+	}
+
+	// Scollable tables
+	&.table-scroll {
+		display: block;
+		overflow-x: auto;
+		padding-bottom: .75rem;
+		white-space: nowrap;
+	}
 }
