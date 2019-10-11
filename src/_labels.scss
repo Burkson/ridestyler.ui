@@ -1,7 +1,6 @@
 // Labels
 .label {
   @include label-base();
-  @include label-variant(lighten($body-font-color, 5%), $bg-color-dark);
   display: inline-block;
 
   // Label rounded
@@ -16,8 +15,9 @@
     @include label-variant($light-color, $primary-color);
   }
 
-  &.label-secondary {
-    @include label-variant($primary-color, $secondary-color);
+  &, &.label-secondary {
+    @include label-variant($body-font-color, $secondary-color);
+    color: red;
   }
 
   &.label-success {
