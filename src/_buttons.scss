@@ -57,30 +57,7 @@
 
 	// Button Primary
 	&.btn-primary {
-		background: $primary-color;
-		border-color: $primary-color-dark;
-		color: $light-color;
-
-		&:focus,
-		&:hover {
-			background: darken($primary-color-dark, 2%);
-			border-color: darken($primary-color-dark, 5%);
-			color: $light-color;
-		}
-
-		&:active,
-		&.active {
-			background: darken($primary-color-dark, 4%);
-			border-color: darken($primary-color-dark, 7%);
-			color: $light-color;
-		}
-
-		&.loading {
-			&::after {
-				border-bottom-color: $light-color;
-				border-left-color: $light-color;
-			}
-		}
+		@include button-variant($primary-color);
 	}
 
 	// Button Colors
