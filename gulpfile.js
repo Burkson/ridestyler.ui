@@ -54,9 +54,16 @@ function sourceStream() {
     }));
 }
 
-gulp.task('scss', function () {
-    return sourceStream().pipe(gulp.dest(distPaths.source));
-});
+gulp.task('scss', gulp.series(
+    function buildSCSSWithFonts () {
+        return sourceStream().pipe(gulp.dest(distPaths.source));
+    }, 
+    function copyToDocs() {
+        return gulp.src(distPaths.source + '/**', {
+            base: distPaths.source
+        }).pipe(gulp.dest(distPaths.docs + '/dist'));
+    }
+));
 
 var docTasks = {
     scssDocs() {
@@ -93,6 +100,8 @@ gulp.task('docs', gulp.series(
         docTasks.scssSource
     )
 ));
+
+
 
 gulp.task('build', gulp.parallel('scss', 'docs'));
 gulp.task('default', gulp.series('build'))
