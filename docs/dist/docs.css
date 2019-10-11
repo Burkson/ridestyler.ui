@@ -57,14 +57,14 @@
 }
 
 .docs-sidebar .accordion input ~ .accordion-header {
-  color: #455060;
+  color: #192052;
   font-size: .65rem;
   font-weight: 600;
   text-transform: uppercase;
 }
 
 .docs-sidebar .accordion input:checked ~ .accordion-header {
-  color: #505c6e;
+  color: #1f2866;
 }
 
 .docs-sidebar .accordion .menu .menu-item {
@@ -74,7 +74,7 @@
 
 .docs-sidebar .accordion .menu .menu-item > a {
   background: transparent;
-  color: #819abe;
+  color: #556172;
   display: inline-block;
 }
 
@@ -152,21 +152,21 @@
 
 .docs-content .docs-demo .card {
   border: 0;
-  box-shadow: 0 .25rem 1rem rgba(48, 55, 66, .15);
+  box-shadow: 0 .25rem 1rem rgba(13, 17, 43, .15);
   height: 100%;
 }
 
 .docs-content .column {
-  padding: .4rem;
+  padding: 1.2rem;
 }
 
 .docs-content .docs-block {
-  border-radius: .1rem;
-  padding: .4rem;
+  border-radius: .4rem;
+  padding: .8rem;
 }
 
 .docs-content .docs-block.bg-gray {
-  background: #3c4553;
+  background: #0d112b;
 }
 
 .docs-content .docs-shape {
@@ -190,18 +190,18 @@
 }
 
 .docs-content .docs-color {
-  border-radius: .1rem;
+  border-radius: .4rem;
   margin: .25rem 0;
   padding: 5rem .5rem .5rem;
 }
 
 .docs-content .docs-color .color-subtitle {
-  font-size: .7rem;
+  font-size: .75rem;
   opacity: .75;
 }
 
 .docs-content .code .hljs-tag {
-  color: #505c6e;
+  color: #192052;
 }
 
 .docs-content .code .hljs-comment {
@@ -225,7 +225,7 @@
 
 .docs-content .code .hljs-value,
 .docs-content .code .hljs-hexcolor {
-  color: #505c6e;
+  color: #192052;
 }
 
 .docs-content .c-select-all {
@@ -255,7 +255,7 @@
   align-content: space-around;
   align-items: center;
   background: #21b8f7;
-  border-radius: .1rem;
+  border-radius: .4rem;
   color: #fff;
   display: flex;
   display: -ms-flexbox;
@@ -284,9 +284,9 @@
 }
 
 .docs-content .off-canvas .off-canvas-toggle {
-  left: .4rem;
+  left: 1.2rem;
   position: absolute;
-  top: .4rem;
+  top: 1.2rem;
   z-index: 1;
 }
 
@@ -300,7 +300,7 @@
 
 .docs-brand .docs-logo {
   align-items: center;
-  border-radius: .1rem;
+  border-radius: .4rem;
   display: inline-flex;
   display: -ms-inline-flexbox;
   -ms-flex-align: center;
@@ -337,15 +337,15 @@
 }
 
 .docs-footer a {
-  color: #819abe;
+  color: #556172;
 }
 
 .docs-ad {
-  background: #f7f8f9;
-  border-radius: .1rem;
+  background: #e6ebf2;
+  border-radius: .4rem;
   display: block;
   margin: 2rem 0;
-  padding: .4rem;
+  padding: 1.2rem;
   position: relative;
 }
 
@@ -359,14 +359,14 @@
 }
 
 .docs-ad .carbon-wrap .carbon-text {
-  color: #819abe;
+  color: #556172;
   display: block;
-  font-size: .7rem;
+  font-size: .75rem;
 }
 
 .docs-ad .carbon-poweredby {
   color: #e6ebf2;
-  font-size: .7rem;
+  font-size: .75rem;
 }
 
 /* Spectre Homepage style */
@@ -384,7 +384,7 @@
 }
 
 .section-hero .column {
-  padding: .4rem;
+  padding: 1.2rem;
 }
 
 .section-ads {
@@ -405,7 +405,7 @@
 }
 
 .section-features .column {
-  padding: .4rem;
+  padding: 1.2rem;
 }
 
 .section-footer {
@@ -416,7 +416,7 @@
 }
 
 .section-footer a {
-  color: #819abe;
+  color: #556172;
 }
 
 .grid-hero {
@@ -425,14 +425,14 @@
 }
 
 .grid-hero h1 {
-  color: #3b4351;
+  color: #0d112b;
   font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
 }
 
 .grid-hero h2 {
-  color: #455060;
+  color: #13193f;
   font-size: .9rem;
   font-weight: 400;
   line-height: 1.5rem;
@@ -448,7 +448,7 @@
 .grid-hero .card {
   background: none;
   border: 0;
-  color: #5b687d;
+  color: #1f2866;
   padding: .5rem;
 }
 
@@ -481,7 +481,7 @@
   .docs-navbar {
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
-    background: rgba(247, 248, 249, .65);
+    background: rgba(230, 235, 242, .65);
     left: 0;
   }
   .docs-content {
@@ -542,7 +542,7 @@
     padding: 0 .5rem;
   }
   .docs-content .docs-block {
-    padding: .4rem .1rem;
+    padding: .8rem .1rem;
   }
 }
 
@@ -745,7 +745,7 @@
   background: transparent;
   border: none;
   border-radius: 4px;
-  box-shadow: 0 .05rem .2rem rgba(48, 55, 66, .3); 
+  box-shadow: 0 .05rem .2rem rgba(13, 17, 43, .3); 
   height: auto;
   margin: 6px 0 0;
   max-width: 600px;
@@ -790,7 +790,7 @@
 
 .algolia-autocomplete .algolia-docsearch-suggestion {
   background: #fff;
-  color: #303742;
+  color: #0d112b;
   display: block;
   overflow: hidden; 
   padding: 0 8px;
@@ -840,7 +840,7 @@
 
 .algolia-autocomplete .algolia-docsearch-suggestion--category-header {
   border-bottom: 1px solid white;
-  color: #303742; 
+  color: #0d112b; 
   display: none;
   font-size: 1em;
   margin-top: 8px;
@@ -881,13 +881,13 @@
 }
 
 .algolia-autocomplete .algolia-docsearch-suggestion--title {
-  color: #303742;
+  color: #0d112b;
   font-size: .9em;
   font-weight: 700;
 }
 
 .algolia-autocomplete .algolia-docsearch-suggestion--text {
-  color: #819abe; 
+  color: #556172; 
   display: block;
   font-size: .85em;
   line-height: 1.2em;
