@@ -1,5 +1,4 @@
-/*! ridestyler.ui RTL */
-/*! ridestyler.ui v{PACKAGE_VERSION} */
+/*! ridestyler.ui v0.0.0 */
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
@@ -547,7 +546,7 @@ html:lang(ko),
 
 .table {
   border-spacing: 0;
-  text-align: right; 
+  text-align: left; 
   width: 100%;
 }
 
