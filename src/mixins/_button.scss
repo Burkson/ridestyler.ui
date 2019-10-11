@@ -1,27 +1,27 @@
 // Button variant mixin
-@mixin button-variant($color: $primary-color) {
+@mixin button-variant($color: $primary-color, $color2: $primary-color-dark, $color3: $light-color) {
   background: $color;
-  border-color: darken($color, 3%);
-  color: $light-color;
+  border-color: $color2;
+  color: $color3;
   &:focus {
     @include control-shadow($color);
   }
   &:focus,
   &:hover {
-    background: darken($color, 2%);
-    border-color: darken($color, 5%);
-    color: $light-color;
+    background: darken($color2, 2%);
+    border-color: darken($color2, 5%);
+    color: $color3;
   }
   &:active,
   &.active {
-    background: darken($color, 7%);
-    border-color: darken($color, 10%);
-    color: $light-color;
+    background: darken($color2, 7%);
+    border-color: darken($color2, 10%);
+    color: $color3;
   }
   &.loading {
     &::after {
-      border-bottom-color: $light-color;
-      border-left-color: $light-color;
+      border-bottom-color: $color3;
+      border-left-color: $color3;
     }
   }
 }
