@@ -66,8 +66,7 @@ $cjk-zh-hant-font-family: $base-font-family, "PingFang TC", "Hiragino Sans CNS",
 $cjk-jp-font-family: $base-font-family, "Hiragino Sans", "Hiragino Kaku Gothic Pro", "Yu Gothic", YuGothic, Meiryo, $fallback-font-family !default;
 $cjk-ko-font-family: $base-font-family, "Malgun Gothic", $fallback-font-family !default;
 $body-font-family: $base-font-family, $fallback-font-family !default;
-$heading-font-family: "Geomanist", $base-font-family !default;
-$button-font-family: $heading-font-family !default;
+$heading-font-family: "Geomanist", $body-font-family !default;
 
 // Unit sizes
 $unit-o: .05rem !default;
