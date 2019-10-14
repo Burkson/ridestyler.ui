@@ -1,0 +1,21 @@
+.ridestyler-logo-text {
+    background-image: url($ridestyler-logo-text);
+}
+.ridestyler-logo-icon {
+    width: 45px;
+    height: 45px;
+    background-image: url($ridestyler-logo-icon);
+    background-size: 100% 100%;
+}
+.ridestyler-logo-full {
+    background-image: url($ridestyler-logo-full);
+    width: 187px;
+    height: 45px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &.light {
+        background-image: url($ridestyler-logo-full-light);
+    }
+}

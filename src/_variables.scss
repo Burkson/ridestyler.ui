@@ -13,6 +13,12 @@ $ridestyler-color-orange: #F3693C;
 $ridestyler-color-red: #E72320;
 $ridestyler-color-blue: #21B8F7;
 
+// RideStyler Logos
+$ridestyler-logo-text: 'https://static.ridestyler.net/temp/logos/ridestyler-logo-TEXT.svg' !default;
+$ridestyler-logo-icon: 'https://static.ridestyler.net/temp/logos/ridestyler-logo-ICON.svg' !default;
+$ridestyler-logo-full: 'https://static.ridestyler.net/temp/logos/ridestyler-logo-FULL.svg' !default;
+$ridestyler-logo-full-light: 'https://static.ridestyler.net/temp/logos/ridestyler-logo-FULL-light.svg' !default;
+
 // Core colors
 $primary-color: $ridestyler-color-blue !default;
 $primary-color-dark: darken($primary-color, 3%) !default;
