@@ -10,6 +10,7 @@ var replace = require('gulp-replace');
 
 var paths = {
     source: './src/*.scss',
+    variables: './src/_variables.scss',
     doc: './docs/src/scss/*.scss'
 };
 
@@ -19,14 +20,13 @@ var distPaths = {
 };
 
 var libraryFileName = 'rsui';
+var version = require('./package.json').version;
 
 gulp.task('watch', function () {
-    gulp.watch('./**/*.scss', gulp.series('scss'));
-});
-
-gulp.task('watch-docs', function () {
-    gulp.watch('./**/*.scss', gulp.series('docs'));
-    gulp.watch('./**/*.pug', gulp.series('docs'));
+    gulp.watch(paths.source, gulp.parallel('scss'));
+    gulp.watch(paths.variables, gulp.series(docTasks.scssDocs));
+    gulp.watch(paths.doc, gulp.series(docTasks.scssDocs));
+    gulp.watch('./**/*.pug', gulp.series(docTasks.html));
 });
 
 function buildSCSS() {
@@ -34,7 +34,7 @@ function buildSCSS() {
         .pipe(sass({ outputStyle: 'compact', precision: 10 })
             .on('error', sass.logError)
         )
-        .pipe(replace('{PACKAGE_VERSION}', require('./package.json').version))
+        .pipe(replaceTokens())
         .pipe(autoprefixer())
         .pipe(csscomb())
         .pipe(rename(function (path) {
@@ -46,6 +46,9 @@ function buildSCSS() {
         .pipe(rename({
             suffix: '.min'
         }));
+}
+function replaceTokens() {
+    return replace('{PACKAGE_VERSION}', version);
 }
 
 function sourceStream() {
@@ -71,6 +74,7 @@ var docTasks = {
             .pipe(sass({ outputStyle: 'compact', precision: 10 })
                 .on('error', sass.logError)
             )
+            .pipe(replaceTokens())
             .pipe(autoprefixer())
             .pipe(csscomb())
             .pipe(gulp.dest(distPaths.docs + '/dist'))
@@ -78,10 +82,6 @@ var docTasks = {
             .pipe(rename({
                 suffix: '.min'
             }))
-            .pipe(gulp.dest(distPaths.docs + '/dist'))
-    },
-    scssSource() {
-        return sourceStream()
             .pipe(gulp.dest(distPaths.docs + '/dist'))
     },
     html() {
@@ -93,12 +93,9 @@ var docTasks = {
     }
 };
 
-gulp.task('docs', gulp.series(
+gulp.task('docs', gulp.parallel(
     docTasks.html,
-    gulp.parallel(
-        docTasks.scssDocs,
-        docTasks.scssSource
-    )
+    docTasks.scssDocs
 ));
 
 
