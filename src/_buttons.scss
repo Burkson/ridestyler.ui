@@ -55,9 +55,14 @@
 		pointer-events: none;
 	}
 
-	// Button Primary
+	// Primary Button
 	&.btn-primary {
 		@include button-variant($primary-color);
+	}
+
+	// Secondary Button (default)
+	&, &.btn-secondary {
+		@include button-variant($secondary-color, darken($secondary-color, 2%), $gray-color-dark);
 	}
 
 	// Button Colors

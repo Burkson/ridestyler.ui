@@ -2,7 +2,11 @@
 @mixin button-variant($color: $primary-color, $color2: $primary-color-dark, $color3: $light-color) {
   background: $color;
   border-color: $color2;
-  color: $color3;
+
+  &, &:visited {
+    color: $color3;
+  }
+  
   &:focus {
     @include control-shadow($color);
   }
