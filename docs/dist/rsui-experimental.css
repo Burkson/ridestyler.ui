@@ -90,13 +90,13 @@
 .calendar .calendar-header {
   background: #e6ebf2;
   border-bottom: .05rem solid #556172;
-  color: #e6ebf2;
+  color: #7a8798;
   font-size: .75rem;
   text-align: center;
 }
 
 .calendar .calendar-body {
-  color: #556172;
+  color: #4b5561;
 }
 
 .calendar .calendar-date {
@@ -111,7 +111,7 @@
   background: transparent;
   border: .05rem solid transparent;
   border-radius: 50%;
-  color: #556172;
+  color: #4b5561;
   cursor: pointer;
   font-size: .75rem;
   height: 2.8rem;
@@ -292,7 +292,7 @@
 .carousel .carousel-locator:nth-of-type(6):checked ~ .carousel-nav .nav-item:nth-of-type(6),
 .carousel .carousel-locator:nth-of-type(7):checked ~ .carousel-nav .nav-item:nth-of-type(7),
 .carousel .carousel-locator:nth-of-type(8):checked ~ .carousel-nav .nav-item:nth-of-type(8) {
-  color: white;
+  color: #b3bbc5;
 }
 
 .carousel {
@@ -335,9 +335,9 @@
 
 .carousel .carousel-container .item-prev,
 .carousel .carousel-container .item-next {
-  background: rgba(255, 255, 255, .25);
-  border-color: rgba(255, 255, 255, .5);
-  color: white;
+  background: rgba(179, 187, 197, .25);
+  border-color: rgba(179, 187, 197, .5);
+  color: #b3bbc5;
   opacity: 0;
   position: absolute;
   top: 50%;
@@ -368,7 +368,7 @@
 }
 
 .carousel .carousel-nav .nav-item {
-  color: rgba(255, 255, 255, .5);
+  color: rgba(179, 187, 197, .5);
   display: block;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
@@ -659,7 +659,7 @@
 }
 
 .off-canvas .off-canvas-overlay {
-  background: rgba(13, 17, 43, .1);
+  background: rgba(13, 17, 43, .5);
   border-color: transparent;
   border-radius: 0;
   bottom: 0;
@@ -952,19 +952,19 @@
 
 .slider:disabled::-webkit-slider-thumb,
 .slider.disabled::-webkit-slider-thumb {
-  background: white;
+  background: #b3bbc5;
   transform: scale(1);
 }
 
 .slider:disabled::-moz-range-thumb,
 .slider.disabled::-moz-range-thumb {
-  background: white;
+  background: #b3bbc5;
   transform: scale(1);
 }
 
 .slider:disabled::-ms-thumb,
 .slider.disabled::-ms-thumb {
-  background: white;
+  background: #b3bbc5;
   transform: scale(1);
 }
 

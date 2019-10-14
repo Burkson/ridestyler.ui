@@ -1,6 +1,6 @@
 /*! ridestyler.ui Docs */
 .version::after {
-  content: "{PACKAGE_VERSION}";
+  content: "0.0.0";
 }
 
 .off-canvas .off-canvas-toggle {
@@ -56,25 +56,8 @@
   margin-bottom: .75rem;
 }
 
-.docs-sidebar .accordion input ~ .accordion-header {
-  color: #192052;
-  font-size: .65rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.docs-sidebar .accordion input:checked ~ .accordion-header {
-  color: #1f2866;
-}
-
-.docs-sidebar .accordion .menu .menu-item {
-  font-size: .7rem;
-  padding-left: 1rem;
-}
-
 .docs-sidebar .accordion .menu .menu-item > a {
   background: transparent;
-  color: #556172;
   display: inline-block;
 }
 
@@ -205,7 +188,7 @@
 }
 
 .docs-content .code .hljs-comment {
-  color: #e6ebf2;
+  color: #7a8798;
 }
 
 .docs-content .code .hljs-title,
@@ -332,12 +315,12 @@
 }
 
 .docs-footer {
-  color: #e6ebf2;
+  color: #7a8798;
   padding: .5rem;
 }
 
 .docs-footer a {
-  color: #556172;
+  color: #0d112b;
 }
 
 .docs-ad {
@@ -359,13 +342,13 @@
 }
 
 .docs-ad .carbon-wrap .carbon-text {
-  color: #556172;
+  color: #4b5561;
   display: block;
   font-size: .75rem;
 }
 
 .docs-ad .carbon-poweredby {
-  color: #e6ebf2;
+  color: #7a8798;
   font-size: .75rem;
 }
 
@@ -409,14 +392,14 @@
 }
 
 .section-footer {
-  color: #e6ebf2;
+  color: #dce3ed;
   padding: 1.8rem .75rem 1rem;
   position: relative;
   z-index: 200;
 }
 
 .section-footer a {
-  color: #556172;
+  color: #0d112b;
 }
 
 .grid-hero {
@@ -425,14 +408,12 @@
 }
 
 .grid-hero h1 {
-  color: #0d112b;
   font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
 }
 
 .grid-hero h2 {
-  color: #13193f;
   font-size: .9rem;
   font-weight: 400;
   line-height: 1.5rem;
@@ -448,12 +429,10 @@
 .grid-hero .card {
   background: none;
   border: 0;
-  color: #1f2866;
   padding: .5rem;
 }
 
 .grid-hero .card .card-title {
-  color: #21b8f7;
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 0;
@@ -828,7 +807,7 @@
 }
 
 .algolia-autocomplete .algolia-docsearch-suggestion--content:before {
-  background: white;
+  background: #b3bbc5;
   content: "";
   display: block;
   height: 100%;
@@ -839,7 +818,7 @@
 }
 
 .algolia-autocomplete .algolia-docsearch-suggestion--category-header {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #b3bbc5;
   color: #0d112b; 
   display: none;
   font-size: 1em;
@@ -855,7 +834,7 @@
 }
 
 .algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column {
-  color: #e6ebf2;
+  color: #7a8798;
   float: left;
   font-size: .9em;
   padding: 5.33333px 10.66667px;
@@ -866,7 +845,7 @@
 }
 
 .algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column:before {
-  background: white;
+  background: #b3bbc5;
   content: "";
   display: block;
   height: 100%;
@@ -887,7 +866,7 @@
 }
 
 .algolia-autocomplete .algolia-docsearch-suggestion--text {
-  color: #556172; 
+  color: #4b5561; 
   display: block;
   font-size: .85em;
   line-height: 1.2em;

@@ -3,8 +3,8 @@ extends ../_layout/_docs-layout.pug
 block variables
   - var slug = 'typography'
   - var parent = 'elements'
-  - var title = 'Typography - Elements - Spectre.css CSS Framework'
-  - var description = 'Typography sets default styles for headings, paragraphs, semantic text, blockquote and lists elements. Spectre.css CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development.'
+  - var title = 'Typography - Elements - ridestyler.ui CSS Framework'
+  - var description = 'Typography sets default styles for headings, paragraphs, semantic text, blockquote and lists elements. ridestyler.ui CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development.'
 
 block docs-content
   +docs-heading('typography', 'Typography')
@@ -181,16 +181,18 @@ block docs-content
     +docs-subheading('typography-fonts', 'Fonts')
 
     p
-      | Spectre sets the most common and best #[code font-family] for each OS with fallback support in old systems.
+      | ridestyler.ui sets the most common and best #[code font-family] for each OS with fallback support in old systems.
       | There are also fonts targeted East Asian typography.
 
     pre.code
       code
         :highlight(lang="scss")
           /* Western typography targeted */
-          font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+          font-family: "Open Sans","Segoe UI", Tahoma, sans-serif;
           /* Monospace typography targeted */
-          font-family: "SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace;
+          font-family: "SF Mono","Segoe UI Mono","Roboto Mono",Menlo,Courier,monospace;
+          /* Heading typography targeted */
+          font-family: Geomanist,"Open Sans","Segoe UI", Tahoma, sans-serif;
 
           /* Chinese (lang="zh" and lang="zh-Hans") targeted */
           font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", sans-serif;

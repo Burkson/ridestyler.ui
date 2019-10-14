@@ -3,23 +3,22 @@ extends _layout/_layout.pug
 block variables
   - var slug = 'index'
   - var parent = 'index'
-  - var title = 'Spectre.css CSS Framework'
-  - var description = 'Spectre.css CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development. Spectre provides basic styles for typography and elements, flexbox based responsive layout system, pure CSS components and utilities with best practice coding and consistent design language.'
+  - var title = 'ridestyler.ui CSS Framework'
+  - var description = 'ridestyler.ui CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development. ridestyler.ui provides basic styles for typography and elements, flexbox based responsive layout system, pure CSS components and utilities with best practice coding and consistent design language.'
 
 block content
-  .section.section-hero.bg-gray
+  .section.section-hero
     #overview.grid-hero.container.grid-lg.text-center
       .docs-brand
-        a.docs-logo(href='index.html')
-          img(src='img/spectre-logo.svg' alt='Spectre.css CSS Framework')
-          h2 SPECTRE
-      h1 SPECTRE.CSS
+        a.docs-logo(href='https://www.ridestyler.com')
+          .ridestyler-logo-full
+      h1 ridestyler.ui
       h2
-        | A #[u Lightweight], #[u Responsive] and #[u Modern] CSS Framework
+        | RideStyler&apos;s CSS Framework for branded tools and applications
       p
         a.btn.btn-primary.btn-lg.mr-2(href='getting-started.html') Docs
-        a.btn.btn-primary.btn-lg(href='https://github.com/picturepan2/spectre' target='_blank') GitHub
-      p.text-gray
+        a.btn.btn-primary.btn-lg(href='https://github.com/Burkson/ridestyler.ui' target='_blank') GitHub
+      p
         | Latest version: 
         span.version
       .columns
@@ -45,50 +44,18 @@ block content
   .section.section-ads.bg-gray
     include _layout/_ad-g.pug
 
-  .section.section-features.bg-primary.text-light.text-center
+  .section.section-features.bg-ridestyler-orange.text-light.text-center
     .container.grid-lg
       h2 Introduction
       .columns
         .column.col-10.col-sm-12.col-mx-auto.text-left
-          p.text-secondary
-            strong Spectre.css 
+          p
+            strong ridestyler.ui 
             | is a lightweight, responsive and modern CSS framework for faster and extensible development.
-          p.text-secondary
-            | Spectre provides basic styles for typography and elements, flexbox based responsive layout system, pure CSS components and utilities with best practice coding and consistent design language.
+          p
+            | ridestyler.ui provides basic styles for typography and elements, flexbox based responsive layout system, pure CSS components and utilities with best practice coding and consistent design language.
         .column.col-10.col-sm-12.col-mx-auto
-          a.btn.btn-lg(href='getting-started/installation.html') Install Spectre.css
-
-  .section.section-updates.bg-gray
-    .container.grid-lg
-      .columns
-        .column.col-4.col-xs-12
-          .card
-            .card-header
-              .card-title.h6 Spectre Twitter
-            .card-body
-              | For the latest announcements and updates, follow on Twitter: 
-              a(href='https://twitter.com/spectrecss' target='_blank') @spectrecss
-              | .
-            .card-footer
-              a.btn.btn-primary(href='https://twitter.com/spectrecss' target='_blank') Follow
-        .column.col-4.col-xs-12
-          .card
-            .card-header
-              .card-title.h6 PayPal Donate
-            .card-body
-              | Spectre.css is completely free to use. If you enjoy it, please consider donating for the further development.
-            .card-footer
-              a.btn.btn-primary(href='https://www.paypal.me/picturepan2' target='_blank') Donate
-        .column.col-4.col-xs-12
-          .card
-            .card-header
-              .card-title.h6 Sponsor via Patreon
-            .card-body
-              | Your name or company logo will be put on Spectre Docs homepage.
-            .card-footer
-              a.btn.btn-primary(href='https://www.patreon.com/spectrecss' target='_blank') Sponsor
-  .section.section-ads.bg-gray
-    include _layout/_ad-c.pug
+          a.btn.btn-lg(href='getting-started/installation.html') Install ridestyler.ui
 
   footer.section.section-footer
     include _layout/_footer.pug

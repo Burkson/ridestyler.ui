@@ -9,19 +9,19 @@ block content
       .btns.d-flex
         input.docs-search.form-input(type="text" placeholder="Search Docs")
         a.btn.ml-1(href='https://www.paypal.me/picturepan2' target='_blank') PayPal
-        a.btn.btn-primary.ml-1(href='https://github.com/picturepan2/spectre' target='_blank') GitHub
+        a.btn.btn-primary.ml-1(href='https://github.com/picturepan2/ridestyler.ui' target='_blank') GitHub
 
     #sidebar.docs-sidebar.off-canvas-sidebar
       .docs-brand
         if slug != parent
           a.docs-logo(href='../index.html')
-            img(src='../img/spectre-logo.svg' alt='Spectre.css CSS Framework')
-            h2 SPECTRE
+            .ridestyler-logo-icon
+            h2 ridestyler.ui
             small.label.label-secondary.text-bold DOCS
         else
           a.docs-logo(href='index.html')
-            img(src='img/spectre-logo.svg' alt='Spectre.css CSS Framework')
-            h2 SPECTRE
+            .ridestyler-logo-icon
+            h2 ridestyler.ui
             small.label.label-secondary.text-bold DOCS
       .docs-nav
         .accordion-container
@@ -114,7 +114,7 @@ block content
   script.
     docsearch({ 
     apiKey: 'bede06373c5a1fa3c1bbe8401e24c653', 
-    indexName: 'picturepan2_spectre', 
+    indexName: 'picturepan2_ridestyler.ui', 
     inputSelector: '.docs-search', 
     debug: true
     }); 

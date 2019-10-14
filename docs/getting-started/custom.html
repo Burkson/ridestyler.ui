@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Custom - Getting started - Spectre.css CSS Framework</title>
+    <title>Custom - Getting started - ridestyler.ui CSS Framework</title>
     <meta charset="utf-8">
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="Spectre.css CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development. Spectre provides basic styles for typography and elements, flexbox based responsive layout system, pure CSS components and utilities with best practice coding and consistent design language.">
+    <meta name="description" content="ridestyler.ui CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development. ridestyler.ui provides basic styles for typography and elements, flexbox based responsive layout system, pure CSS components and utilities with best practice coding and consistent design language.">
     <meta name="author" content="Yan Zhu">
     <meta property="og:url" content="https://burkson.github.io/ridestyler.ui/getting-started/custom.html">
-    <meta property="og:title" content="Custom - Getting started - Spectre.css CSS Framework">
-    <meta property="og:description" content="Spectre.css CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development. Spectre provides basic styles for typography and elements, flexbox based responsive layout system, pure CSS components and utilities with best practice coding and consistent design language.">
+    <meta property="og:title" content="Custom - Getting started - ridestyler.ui CSS Framework">
+    <meta property="og:description" content="ridestyler.ui CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development. ridestyler.ui provides basic styles for typography and elements, flexbox based responsive layout system, pure CSS components and utilities with best practice coding and consistent design language.">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@spectrecss">
+    <meta name="twitter:site" content="@ridestyler.uicss">
     <meta name="twitter:creator" content="@picturepan2">
     <link rel="shortcut icon" href="../img/favicons/favicon.ico">
     <link rel="icon" href="../img/favicons/favicon.png">
@@ -26,12 +26,13 @@
     <div class="docs-container off-canvas off-canvas-sidebar-show">
       <div class="docs-navbar"><a class="off-canvas-toggle btn btn-link btn-action" href="#sidebar"><i class="icon icon-menu"></i></a>
         <div class="btns d-flex">
-          <input class="docs-search form-input" type="text" placeholder="Search Docs"><a class="btn ml-1" href="https://www.paypal.me/picturepan2" target="_blank">PayPal</a><a class="btn btn-primary ml-1" href="https://github.com/picturepan2/spectre" target="_blank">GitHub</a>
+          <input class="docs-search form-input" type="text" placeholder="Search Docs"><a class="btn ml-1" href="https://www.paypal.me/picturepan2" target="_blank">PayPal</a><a class="btn btn-primary ml-1" href="https://github.com/picturepan2/ridestyler.ui" target="_blank">GitHub</a>
         </div>
       </div>
       <div class="docs-sidebar off-canvas-sidebar" id="sidebar">
-        <div class="docs-brand"><a class="docs-logo" href="../index.html"><img src="../img/spectre-logo.svg" alt="Spectre.css CSS Framework">
-            <h2>SPECTRE</h2><small class="label label-secondary text-bold">DOCS</small></a>
+        <div class="docs-brand"><a class="docs-logo" href="../index.html">
+            <div class="ridestyler-logo-icon"></div>
+            <h2>ridestyler.ui</h2><small class="label label-secondary text-bold">DOCS</small></a>
         </div>
         <div class="docs-nav">
           <div class="accordion-container">
@@ -211,15 +212,15 @@
                 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
               </div>
             </div>
-            <p>You can customize your version of Spectre.css by editing Sass files in <code>/src</code> directory or removing unneeded components from <code>.scss</code> source files.</p>
-            <p><a class="btn btn-primary" href="https://github.com/picturepan2/spectre/" target="_blank">Sass Source Code</a></p>
-            <p>If you are looking for Less version of Spectre.css, please switch to <code>Less</code> branch.</p>
-            <p><a class="btn" href="https://github.com/picturepan2/spectre/tree/less" target="_blank">Less Branch</a></p>
+            <p>You can customize your version of ridestyler.ui by editing Sass files in <code>/src</code> directory or removing unneeded components from <code>.scss</code> source files.</p>
+            <p><a class="btn btn-primary" href="https://github.com/picturepan2/ridestyler.ui/" target="_blank">Sass Source Code</a></p>
+            <p>If you are looking for Less version of ridestyler.ui, please switch to <code>Less</code> branch.</p>
+            <p><a class="btn" href="https://github.com/picturepan2/ridestyler.ui/tree/less" target="_blank">Less Branch</a></p>
             <h4 class="s-subtitle" id="compiling">Compiling CSS<a class="anchor" href="#compiling" aria-hidden="true">#</a></h4>
-            <p>Spectre uses <a href="http://gulpjs.com/" target="_blank">Gulp</a> for compiling CSS. Firstly you need to <a href="https://www.npmjs.com/get-npm" target="_blank">install NPM</a>, which is used to manage Gulp and other dependencies.</p>
+            <p>ridestyler.ui uses <a href="http://gulpjs.com/" target="_blank">Gulp</a> for compiling CSS. Firstly you need to <a href="https://www.npmjs.com/get-npm" target="_blank">install NPM</a>, which is used to manage Gulp and other dependencies.</p>
             <p>Then, you can build the CSS file from the command line:</p>
             <ol>
-              <li>Navigate to the root directory of Spectre.</li>
+              <li>Navigate to the root directory of ridestyler.ui.</li>
               <li>Run <code>npm install</code>. NPM will install all dev dependencies as listed in package.json.</li>
               <li>When completed, run <code>gulp build</code> task to compile Sass to CSS and minify files.</li>
               <li>You can find compiled CSS files in <code>/dist</code> directory.</li>
@@ -231,46 +232,46 @@
               <li><code>gulp watch</code> - watch file changes and re-compile CSS files</li>
             </ul>
             <h4 class="s-subtitle" id="importing">Importing Sass<a class="anchor" href="#importing" aria-hidden="true">#</a></h4>
-            <p>It is recommended to customize Spectre by importing Sass source files to your projects. In this way, you can keep Spectre up to date without conflicts, since Spectre code and your custom code are separate.</p>
+            <p>It is recommended to customize ridestyler.ui by importing Sass source files to your projects. In this way, you can keep ridestyler.ui up to date without conflicts, since ridestyler.ui code and your custom code are separate.</p>
             <ul>
-              <li>First, create your own project and install Spectre via <a href="#installation">NPM or other package managers</a>.</li>
+              <li>First, create your own project and install ridestyler.ui via <a href="#installation">NPM or other package managers</a>.</li>
               <li>Then create your <code>project-name.scss</code> file in the root folder. You can use <code>project-name.scss</code> to define your variables.</li>
-              <li>Compile the Sass file to CSS to get the custom version of Spectre.</li>
+              <li>Compile the Sass file to CSS to get the custom version of ridestyler.ui.</li>
             </ul>
             <pre class="code" data-lang="Sass"><code><span class="hljs-comment">// Example of project-name.scss</span>
 <span class="hljs-comment">// Define variables to override default ones</span>
 <span class="hljs-variable">$primary-color</span>: <span class="hljs-number">#2e5bec</span>;
 <span class="hljs-variable">$dark-color</span>: <span class="hljs-number">#3e396b</span>;
 
-<span class="hljs-comment">// Import full Spectre source code</span>
-@<span class="hljs-keyword">import</span> <span class="hljs-string">"node_modules/spectre.css/src/spectre"</span>;
+<span class="hljs-comment">// Import full ridestyler.ui source code</span>
+@<span class="hljs-keyword">import</span> <span class="hljs-string">"node_modules/ridestyler.ui/src/ridestyler.ui"</span>;
 </code></pre>
             <p>Alternatively, you can create custom <code>_variables.scss</code> and import it to <code>project-name.scss</code>.</p>
             <pre class="code" data-lang="Sass"><code><span class="hljs-comment">// Example of project-name.scss</span>
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"variables"</span>;
 
 <span class="hljs-comment">// Import only the needed components</span>
-@<span class="hljs-keyword">import</span> <span class="hljs-string">"node_modules/spectre.css/src/buttons"</span>;
-@<span class="hljs-keyword">import</span> <span class="hljs-string">"node_modules/spectre.css/src/forms"</span>;
+@<span class="hljs-keyword">import</span> <span class="hljs-string">"node_modules/ridestyler.ui/src/buttons"</span>;
+@<span class="hljs-keyword">import</span> <span class="hljs-string">"node_modules/ridestyler.ui/src/forms"</span>;
 </code></pre>
             <h4 class="s-subtitle" id="folders">Folder structure<a class="anchor" href="#folders" aria-hidden="true">#</a></h4>
-            <pre class="code"><code>spectre/
+            <pre class="code"><code>ridestyler.ui/
 ├── <span class="hljs-built_in">dist</span>/                           <span class="hljs-comment">// Build folder</span>
-│   ├── spectre-<span class="hljs-built_in">exp</span>.css
-│   ├── spectre-<span class="hljs-built_in">exp</span>.<span class="hljs-built_in">min</span>.css
-│   ├── spectre-icons.css
-│   ├── spectre-icons.<span class="hljs-built_in">min</span>.css
-│   ├── spectre.css
-│   └── spectre.<span class="hljs-built_in">min</span>.css
+│   ├── ridestyler.ui-<span class="hljs-built_in">exp</span>.css
+│   ├── ridestyler.ui-<span class="hljs-built_in">exp</span>.<span class="hljs-built_in">min</span>.css
+│   ├── ridestyler.ui-icons.css
+│   ├── ridestyler.ui-icons.<span class="hljs-built_in">min</span>.css
+│   ├── ridestyler.ui
+│   └── ridestyler.ui.<span class="hljs-built_in">min</span>.css
 │
 ├── docs/
 │   ├── <span class="hljs-built_in">dist</span>/                       <span class="hljs-comment">// Pre-built CSS folder</span>
-│   │   ├── spectre-<span class="hljs-built_in">exp</span>.css
-│   │   ├── spectre-<span class="hljs-built_in">exp</span>.<span class="hljs-built_in">min</span>.css
-│   │   ├── spectre-icons.css
-│   │   ├── spectre-icons.<span class="hljs-built_in">min</span>.css
-│   │   ├── spectre.css
-│   │   └── spectre.<span class="hljs-built_in">min</span>.css
+│   │   ├── ridestyler.ui-<span class="hljs-built_in">exp</span>.css
+│   │   ├── ridestyler.ui-<span class="hljs-built_in">exp</span>.<span class="hljs-built_in">min</span>.css
+│   │   ├── ridestyler.ui-icons.css
+│   │   ├── ridestyler.ui-icons.<span class="hljs-built_in">min</span>.css
+│   │   ├── ridestyler.ui
+│   │   └── ridestyler.ui.<span class="hljs-built_in">min</span>.css
 |   ├── css/                        <span class="hljs-comment">// Docs CSS files</span>
 │   │   └── docs.css
 |   ├── src/
@@ -285,9 +286,9 @@
 │   └── ...
 │
 ├── src/                            <span class="hljs-comment">// Source Sass files</span>
-│   ├── spectre.scss
-│   ├── spectre-icons.scss
-│   ├── spectre-<span class="hljs-built_in">exp</span>.scss
+│   ├── ridestyler.ui.scss
+│   ├── ridestyler.ui-icons.scss
+│   ├── ridestyler.ui-<span class="hljs-built_in">exp</span>.scss
 │   ├── _mixins.scss
 │   ├── _variables.scss
 │   └── ...
@@ -297,7 +298,7 @@
 └── ...
 </code></pre>
             <h4 class="s-subtitle" id="variables">Variables<a class="anchor" href="#variables" aria-hidden="true">#</a></h4>
-            <p>Spectre.css is designed with consistent design language. You can use your own variables to create your new or match existing design. All variables in <code>_variables.scss</code> include <code>!default</code> flag. You can redefine the variables to override the values.</p>
+            <p>ridestyler.ui is designed with consistent design language. You can use your own variables to create your new or match existing design. All variables in <code>_variables.scss</code> include <code>!default</code> flag. You can redefine the variables to override the values.</p>
             <h4 class="s-subtitle" id="variables-colors">Variables - Colors<a class="anchor" href="#variables-colors" aria-hidden="true">#</a></h4>
             <div class="columns">
               <div class="column col-2 col-md-6">
@@ -382,30 +383,30 @@
 }
 </code></pre>
             <h4 class="s-subtitle" id="variables-sizes">Variables - Sizes<a class="anchor" href="#variables-sizes" aria-hidden="true">#</a></h4>
-            <p>The default REM (root em) size in Spectre.css is <code>20px</code>.</p>
-            <p>Please note in the Chinese/Japanese/Korean version, Chrome uses 12px as default minimum font size. That is why Spectre sets rem default html font size to <code>20px</code>, which is relatively easy to calculate.</p>
-            <p>Spectre uses <code>4px</code> as the unit size. Sizes of components are based on the unit size.</p>
+            <p>The default REM (root em) size in ridestyler.ui is <code>20px</code>.</p>
+            <p>Please note in the Chinese/Japanese/Korean version, Chrome uses 12px as default minimum font size. That is why ridestyler.ui sets rem default html font size to <code>20px</code>, which is relatively easy to calculate.</p>
+            <p>ridestyler.ui uses <code>4px</code> as the unit size. Sizes of components are based on the unit size.</p>
             <h4 class="s-subtitle" id="variables-custom-prefix">Variables - Custom prefix<a class="anchor" href="#variables-custom-prefix" aria-hidden="true">#</a></h4>
             <p>There is also a way to add custom prefix to all CSS classes. You can use <a href="https://www.npmjs.com/package/gulp-css-prefix" target="_blank">gulp-css-prefix</a> plugin and add a new Gulp task to enable it.</p>
             <pre class="code" data-lang="Bash"><code>npm install gulp-css-prefix
 </code></pre>
-            <p>To add <code>spectre-</code> to all classes, you can add the Gulp task to <code>gulpfile.js</code> file.</p>
+            <p>To add <code>ridestyler.ui-</code> to all classes, you can add the Gulp task to <code>gulpfile.js</code> file.</p>
             <pre class="code"><code><span class="hljs-keyword">var</span> cssPrefix = <span class="hljs-built_in">require</span>(<span class="hljs-string">'gulp-css-prefix'</span>);
 
 gulp.task(<span class="hljs-string">'prefix'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   gulp.src(<span class="hljs-string">'./dist/*.css'</span>)
-      .pipe(cssPrefix(<span class="hljs-string">'spectre-'</span>))
+      .pipe(cssPrefix(<span class="hljs-string">'ridestyler.ui-'</span>))
       .pipe(gulp.dest(<span class="hljs-string">'./dist'</span>))
 });
 </code></pre>
-            <p>After you compile your version of Spectre in the /dist, run <code>gulp prefix</code> in the directory of Spectre.</p>
+            <p>After you compile your version of ridestyler.ui in the /dist, run <code>gulp prefix</code> in the directory of ridestyler.ui.</p>
             <div class="docs-ad docs-ad-sidebar text-center">
               <script id="_carbonads_js" async="" type="text/javascript" src="https://cdn.carbonads.com/carbon.js?serve=CK7DTKQW&amp;placement=picturepan2githubio"></script>
             </div>
           </div>
           <div class="docs-footer container grid-lg" id="copyright">
-            <p><a href="https://github.com/picturepan2/spectre" target="_blank">GitHub</a> · <a href="https://twitter.com/spectrecss" target="_blank">Twitter</a> · <a href="https://www.paypal.me/picturepan2" target="_blank">PayPal Donate</a> · <a href="https://www.patreon.com/spectrecss" target="_blank">Patreon Sponsor</a> · Version <span class="version"></span></p>
-            <p>Designed and built with <span class="text-error">&hearts;</span> by <a href="https://twitter.com/picturepan2" target="_blank">Yan Zhu</a>. Licensed under the <a href="https://github.com/picturepan2/spectre/blob/master/LICENSE" target="_blank">MIT License</a>.</p>
+            <p><a href="https://github.com/picturepan2/ridestyler.ui" target="_blank">GitHub</a> · <a href="https://twitter.com/ridestyler.uicss" target="_blank">Twitter</a> · <a href="https://www.paypal.me/picturepan2" target="_blank">PayPal Donate</a> · <a href="https://www.patreon.com/ridestyler.uicss" target="_blank">Patreon Sponsor</a> · Version <span class="version"></span></p>
+            <p>Designed and built with <span class="text-error">&hearts;</span> by <a href="https://twitter.com/picturepan2" target="_blank">Yan Zhu</a>. Licensed under the <a href="https://github.com/picturepan2/ridestyler.ui/blob/master/LICENSE" target="_blank">MIT License</a>.</p>
           </div>
         </div>
       </div>
@@ -414,7 +415,7 @@ gulp.task(<span class="hljs-string">'prefix'</span>, <span class="hljs-function"
     <script>
       docsearch({ 
       apiKey: 'bede06373c5a1fa3c1bbe8401e24c653', 
-      indexName: 'picturepan2_spectre', 
+      indexName: 'picturepan2_ridestyler.ui', 
       inputSelector: '.docs-search', 
       debug: true
       }); 

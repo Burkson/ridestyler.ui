@@ -63,27 +63,24 @@
 
     input {
       & ~ .accordion-header {
-        color: lighten($dark-color, 10%);
-        font-size: .65rem;
-        font-weight: 600;
-        text-transform: uppercase;
+        // color: lighten($dark-color, 10%);
       }
       
       &:checked {
         & ~ .accordion-header {
-          color: lighten($dark-color, 15%);
+          // color: lighten($dark-color, 15%);
         }
       }
     }
 
     .menu {
       .menu-item {
-        font-size: .7rem;
-        padding-left: 1rem;
+        // font-size: .7rem;
+        // padding-left: 1rem;
         
         & > a {
           background: transparent;
-          color: $gray-color-dark;
+          // color: $gray-color-dark;
           display: inline-block;
         }
       }
@@ -339,7 +336,7 @@
   padding: .5rem;
 
   a {
-    color: $gray-color-dark;
+    color: $dark-color;
   }
 }
 
@@ -414,13 +411,13 @@
 }
 
 .section-footer {
-  color: $gray-color;
+  color: $secondary-color-dark;
   padding: 1.8rem .75rem 1rem;
   position: relative;
   z-index: 200;
 
   a {
-    color: $gray-color-dark;
+    color: $dark-color;
   }
 }
 
@@ -429,14 +426,12 @@
   padding-top: 6rem;
 
   h1 {
-    color: $body-font-color;
     font-size: 1.6rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
   }
 
   h2 {
-    color: lighten($body-font-color, 5%);
     font-size: .9rem;
     font-weight: 400;
     line-height: 1.5rem;
@@ -452,11 +447,9 @@
   .card {
     background: none;
     border: 0;
-    color: lighten($body-font-color, 15%);
     padding: .5rem;
 
     .card-title {
-      color: $primary-color;
       font-size: 1rem;
       font-weight: 700;
       margin-bottom: 0;

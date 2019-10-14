@@ -3,39 +3,39 @@ extends ../_layout/_docs-layout.pug
 block variables
   - var slug = 'custom'
   - var parent = 'getting-started'
-  - var title = 'Custom - Getting started - Spectre.css CSS Framework'
-  - var description = 'Spectre.css CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development. Spectre provides basic styles for typography and elements, flexbox based responsive layout system, pure CSS components and utilities with best practice coding and consistent design language.'
+  - var title = 'Custom - Getting started - ridestyler.ui CSS Framework'
+  - var description = 'ridestyler.ui CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development. ridestyler.ui provides basic styles for typography and elements, flexbox based responsive layout system, pure CSS components and utilities with best practice coding and consistent design language.'
 
 block docs-content
   +docs-heading('custom', 'Custom version')
     include ../_layout/_ad-g.pug
     
     p
-      | You can customize your version of Spectre.css by editing Sass files in 
+      | You can customize your version of ridestyler.ui by editing Sass files in 
       code /src
       |  directory or removing unneeded components from 
       code .scss
       |  source files.
     p
-      a.btn.btn-primary(href='https://github.com/picturepan2/spectre/', target='_blank') Sass Source Code
+      a.btn.btn-primary(href='https://github.com/picturepan2/ridestyler.ui/', target='_blank') Sass Source Code
     p
-      | If you are looking for Less version of Spectre.css, please switch to 
+      | If you are looking for Less version of ridestyler.ui, please switch to 
       code Less
       |  branch.
     p
-      a.btn(href='https://github.com/picturepan2/spectre/tree/less', target='_blank') Less Branch
+      a.btn(href='https://github.com/picturepan2/ridestyler.ui/tree/less', target='_blank') Less Branch
 
     +docs-subheading('compiling', 'Compiling CSS')
 
     p
-      | Spectre uses 
+      | ridestyler.ui uses 
       a(href='http://gulpjs.com/', target='_blank') Gulp
       |  for compiling CSS. Firstly you need to 
       a(href='https://www.npmjs.com/get-npm', target='_blank') install NPM
       | , which is used to manage Gulp and other dependencies.
     p Then, you can build the CSS file from the command line:
     ol
-      li Navigate to the root directory of Spectre.
+      li Navigate to the root directory of ridestyler.ui.
       li
         | Run 
         code npm install
@@ -62,10 +62,10 @@ block docs-content
 
     +docs-subheading('importing', 'Importing Sass')
     p
-      | It is recommended to customize Spectre by importing Sass source files to your projects. In this way, you can keep Spectre up to date without conflicts, since Spectre code and your custom code are separate.
+      | It is recommended to customize ridestyler.ui by importing Sass source files to your projects. In this way, you can keep ridestyler.ui up to date without conflicts, since ridestyler.ui code and your custom code are separate.
     ul
       li
-        | First, create your own project and install Spectre via 
+        | First, create your own project and install ridestyler.ui via 
         a(href='#installation') NPM or other package managers
         | .
       li
@@ -74,7 +74,7 @@ block docs-content
         |  file in the root folder. You can use 
         code project-name.scss
         |  to define your variables.
-      li Compile the Sass file to CSS to get the custom version of Spectre.
+      li Compile the Sass file to CSS to get the custom version of ridestyler.ui.
 
     //- importing
     pre.code(data-lang='Sass')
@@ -85,8 +85,8 @@ block docs-content
           $primary-color: #2e5bec;
           $dark-color: #3e396b;
 
-          // Import full Spectre source code
-          @import "node_modules/spectre.css/src/spectre";
+          // Import full ridestyler.ui source code
+          @import "node_modules/ridestyler.ui/src/ridestyler.ui";
 
     p
       | Alternatively, you can create custom 
@@ -103,8 +103,8 @@ block docs-content
           @import "variables";
 
           // Import only the needed components
-          @import "node_modules/spectre.css/src/buttons";
-          @import "node_modules/spectre.css/src/forms";
+          @import "node_modules/ridestyler.ui/src/buttons";
+          @import "node_modules/ridestyler.ui/src/forms";
 
     +docs-subheading('folders', 'Folder structure')
 
@@ -112,23 +112,23 @@ block docs-content
     pre.code
       code
         :highlight
-          spectre/
+          ridestyler.ui/
           ├── dist/                           // Build folder
-          │   ├── spectre-exp.css
-          │   ├── spectre-exp.min.css
-          │   ├── spectre-icons.css
-          │   ├── spectre-icons.min.css
-          │   ├── spectre.css
-          │   └── spectre.min.css
+          │   ├── ridestyler.ui-exp.css
+          │   ├── ridestyler.ui-exp.min.css
+          │   ├── ridestyler.ui-icons.css
+          │   ├── ridestyler.ui-icons.min.css
+          │   ├── ridestyler.ui
+          │   └── ridestyler.ui.min.css
           │
           ├── docs/
           │   ├── dist/                       // Pre-built CSS folder
-          │   │   ├── spectre-exp.css
-          │   │   ├── spectre-exp.min.css
-          │   │   ├── spectre-icons.css
-          │   │   ├── spectre-icons.min.css
-          │   │   ├── spectre.css
-          │   │   └── spectre.min.css
+          │   │   ├── ridestyler.ui-exp.css
+          │   │   ├── ridestyler.ui-exp.min.css
+          │   │   ├── ridestyler.ui-icons.css
+          │   │   ├── ridestyler.ui-icons.min.css
+          │   │   ├── ridestyler.ui
+          │   │   └── ridestyler.ui.min.css
           |   ├── css/                        // Docs CSS files
           │   │   └── docs.css
           |   ├── src/
@@ -143,9 +143,9 @@ block docs-content
           │   └── ...
           │
           ├── src/                            // Source Sass files
-          │   ├── spectre.scss
-          │   ├── spectre-icons.scss
-          │   ├── spectre-exp.scss
+          │   ├── ridestyler.ui.scss
+          │   ├── ridestyler.ui-icons.scss
+          │   ├── ridestyler.ui-exp.scss
           │   ├── _mixins.scss
           │   ├── _variables.scss
           │   └── ...
@@ -157,7 +157,7 @@ block docs-content
     +docs-subheading('variables', 'Variables')
 
     p
-      | Spectre.css is designed with consistent design language. You can use your own variables to create your new or match existing design. All variables in 
+      | ridestyler.ui is designed with consistent design language. You can use your own variables to create your new or match existing design. All variables in 
       code _variables.scss
       |  include 
       code !default
@@ -242,15 +242,15 @@ block docs-content
     +docs-subheading('variables-sizes', 'Variables - Sizes')
 
     p
-      | The default REM (root em) size in Spectre.css is 
+      | The default REM (root em) size in ridestyler.ui is 
       code 20px
       | .
     p
-      | Please note in the Chinese/Japanese/Korean version, Chrome uses 12px as default minimum font size. That is why Spectre sets rem default html font size to 
+      | Please note in the Chinese/Japanese/Korean version, Chrome uses 12px as default minimum font size. That is why ridestyler.ui sets rem default html font size to 
       code 20px
       | , which is relatively easy to calculate.
     p
-      | Spectre uses 
+      | ridestyler.ui uses 
       code 4px
       |  as the unit size. Sizes of components are based on the unit size.
 
@@ -268,7 +268,7 @@ block docs-content
 
     p
       | To add 
-      code spectre-
+      code ridestyler.ui-
       |  to all classes, you can add the Gulp task to 
       code gulpfile.js
       |  file.
@@ -281,14 +281,14 @@ block docs-content
       
           gulp.task('prefix', function() {
             gulp.src('./dist/*.css')
-                .pipe(cssPrefix('spectre-'))
+                .pipe(cssPrefix('ridestyler.ui-'))
                 .pipe(gulp.dest('./dist'))
           });
 
     p
-      | After you compile your version of Spectre in the /dist, run 
+      | After you compile your version of ridestyler.ui in the /dist, run 
       code gulp prefix
-      |  in the directory of Spectre.
+      |  in the directory of ridestyler.ui.
 
     include ../_layout/_ad-c.pug
 
