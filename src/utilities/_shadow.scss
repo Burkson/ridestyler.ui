@@ -1,9 +1,9 @@
 .shadow-close {
-    @include shadow-variant(0.1rem);
+    @include shadow-variant($shadow-close);
 }
 
 .shadow-far {
-    @include shadow-variant(0.25rem);
+    @include shadow-variant($shadow-far);
 }
 
 .shadow-disabled {

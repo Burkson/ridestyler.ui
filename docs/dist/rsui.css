@@ -6385,7 +6385,7 @@ summary.accordion-header::-webkit-details-marker {
 .card {
   background: #fff;
   border-radius: .4rem;
-  box-shadow: 0 1rem 2.1rem rgba(13, 17, 43, .3); 
+  box-shadow: 0 .25rem .6rem rgba(13, 17, 43, .3); 
   display: flex;
   display: -ms-flexbox;
   -ms-flex-direction: column;
@@ -6479,7 +6479,7 @@ summary.accordion-header::-webkit-details-marker {
 
 .dropdown .menu {
   animation: slide-down .15s ease 1;
-  box-shadow: 0 1rem 2.1rem rgba(13, 17, 43, .3);
+  box-shadow: 0 .25rem .6rem rgba(13, 17, 43, .3);
   display: none;
   left: 0;
   max-height: 50vh;
@@ -6630,7 +6630,7 @@ summary.accordion-header::-webkit-details-marker {
 
 .modal:target .modal-overlay,
 .modal.active .modal-overlay {
-  background: rgba(230, 235, 242, .75);
+  background: rgba(13, 17, 43, .75);
   bottom: 0;
   cursor: default;
   display: block;
@@ -6663,7 +6663,7 @@ summary.accordion-header::-webkit-details-marker {
 .modal-container {
   background: #fff;
   border-radius: .4rem;
-  box-shadow: 0 1rem 2.1rem rgba(13, 17, 43, .3);
+  box-shadow: 0 .25rem .6rem rgba(13, 17, 43, .3);
   display: flex;
   display: -ms-flexbox;
   -ms-flex-direction: column;
@@ -6872,7 +6872,7 @@ summary.accordion-header::-webkit-details-marker {
 
 .popover .card {
   border: 0; 
-  box-shadow: 0 .2rem .5rem rgba(13, 17, 43, .3);
+  box-shadow: 0 .1rem .3rem rgba(13, 17, 43, .3);
 }
 
 .step {

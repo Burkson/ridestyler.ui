@@ -22,7 +22,7 @@ $parallax-fade-color: rgba(255, 255, 255, .35) !default;
   width: auto;
 
   .parallax-content {
-    @include shadow-variant(1rem);
+    @include shadow-variant($shadow-far);
     height: auto;
     transform: perspective($parallax-perspective);
     transform-style: preserve-3d;

@@ -59,7 +59,7 @@
   }
 
   .card {
-    @include shadow-variant(.2rem);
+    @include shadow-variant($shadow-close);
     border: 0;
   }
 }

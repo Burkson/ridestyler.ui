@@ -6,7 +6,7 @@
 	border-radius: $border-radius;
 	display: flex;
 	flex-direction: column;
-    @include shadow-variant(1rem);
+    @include shadow-variant($shadow-far);
     
     .card-header {
         border-top-left-radius: $border-radius;

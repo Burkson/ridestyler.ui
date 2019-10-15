@@ -4253,10 +4253,6 @@ a {
   text-decoration: underline;
 }
 
-a:focus {
-  box-shadow: 0 0 0 .1rem rgba(33, 184, 247, .2);
-}
-
 a:focus,
 a:hover,
 a:active,
@@ -4864,8 +4860,7 @@ legend {
 }
 
 .form-input:focus {
-  border-color: #21b8f7; 
-  box-shadow: 0 0 0 .1rem rgba(33, 184, 247, .2);
+  border-color: #21b8f7;
 }
 
 .form-input:-ms-input-placeholder {
@@ -4942,8 +4937,7 @@ textarea.form-input.input-sm {
 }
 
 .form-select:focus {
-  border-color: #21b8f7; 
-  box-shadow: 0 0 0 .1rem rgba(33, 184, 247, .2);
+  border-color: #21b8f7;
 }
 
 .form-select::-ms-expand {
@@ -5035,8 +5029,7 @@ textarea.form-input.input-sm {
 .form-checkbox input:focus + .form-icon,
 .form-radio input:focus + .form-icon,
 .form-switch input:focus + .form-icon {
-  border-color: #21b8f7; 
-  box-shadow: 0 0 0 .1rem rgba(33, 184, 247, .2);
+  border-color: #21b8f7;
 }
 
 .form-checkbox input:checked + .form-icon,
@@ -5256,26 +5249,12 @@ textarea.form-input.input-sm {
   border-color: #32b643;
 }
 
-.has-success .form-input:focus,
-.form-input.is-success:focus,
-.has-success .form-select:focus,
-.form-select.is-success:focus {
-  box-shadow: 0 0 0 .1rem rgba(50, 182, 67, .2);
-}
-
 .has-error .form-input,
 .form-input.is-error,
 .has-error .form-select,
 .form-select.is-error {
   background: white;
   border-color: #f00;
-}
-
-.has-error .form-input:focus,
-.form-input.is-error:focus,
-.has-error .form-select:focus,
-.form-select.is-error:focus {
-  box-shadow: 0 0 0 .1rem rgba(255, 0, 0, .2);
 }
 
 .has-error .form-checkbox .form-icon,
@@ -5303,8 +5282,7 @@ textarea.form-input.input-sm {
 .form-radio.is-error input:focus + .form-icon,
 .has-error .form-switch input:focus + .form-icon,
 .form-switch.is-error input:focus + .form-icon {
-  border-color: #f00; 
-  box-shadow: 0 0 0 .1rem rgba(255, 0, 0, .2);
+  border-color: #f00;
 }
 
 .has-error .form-checkbox input:indeterminate + .form-icon,
@@ -5318,8 +5296,7 @@ textarea.form-input.input-sm {
 }
 
 .form-input:not(:placeholder-shown):invalid:focus {
-  background: white; 
-  box-shadow: 0 0 0 .1rem rgba(255, 0, 0, .2);
+  background: white;
 }
 
 .form-input:not(:placeholder-shown):invalid + .form-input-hint {
@@ -7998,11 +7975,11 @@ a.text-active:visited {
 }
 
 .shadow-close {
-  box-shadow: 0 .5rem 1.1rem rgba(13, 17, 43, .3);
+  box-shadow: 0 .1rem .3rem rgba(13, 17, 43, .3);
 }
 
 .shadow-far {
-  box-shadow: 0 .5rem 1.1rem rgba(13, 17, 43, .3);
+  box-shadow: 0 .25rem .6rem rgba(13, 17, 43, .3);
 }
 
 .shadow-disabled {

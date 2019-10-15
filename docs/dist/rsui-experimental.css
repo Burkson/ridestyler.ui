@@ -701,7 +701,7 @@
 }
 
 .parallax .parallax-content {
-  box-shadow: 0 1rem 2.1rem rgba(13, 17, 43, .3);
+  box-shadow: 0 .25rem .6rem rgba(13, 17, 43, .3);
   height: auto;
   transform: perspective(1000px);
   transform-style: preserve-3d;

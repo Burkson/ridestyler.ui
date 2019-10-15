@@ -4,7 +4,7 @@
 	position: relative;
 
 	.menu {
-        @include shadow-variant(1rem);
+        @include shadow-variant($shadow-far);
 		animation: slide-down .15s ease 1;
 		display: none;
 		left: 0;
