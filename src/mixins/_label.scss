@@ -3,6 +3,7 @@
   border-radius: $border-radius;
   line-height: 1.25;
   padding: .1rem .2rem;
+  @include label-variant($body-font-color, $secondary-color);
 }
 
 @mixin label-variant($color: $light-color, $bg-color: $primary-color) {
