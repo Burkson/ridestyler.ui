@@ -82,7 +82,11 @@
 			tr:nth-of-type(odd) {
 				background: $bg-color;
 			}
-		}
+        }
+        
+        &.table-hover tbody tr:nth-of-type(odd):hover {
+            background: $bg-color-dark;
+        }
 	}
 
 	&,
@@ -90,17 +94,21 @@
 		tbody {
 			tr {
 				&.active {
-					background: $primary-color;
+					background: $active-color;
 				}
 			}
 		}
+        
+        &.table-hover tbody tr.active:hover {
+            background: darken($active-color, 10%);
+        }
 	}
 
 	&.table-hover {
 		tbody {
 			tr {
 				&:hover {
-					background: $primary-color;
+					background: $secondary-color-dark;
 				}
 			}
 		}

@@ -848,7 +848,7 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: #0d112b;
+  background: #d3d8df;
   border: 0;
   border-radius: .4rem;
   color: #21b8f7;
@@ -874,7 +874,7 @@
 
 .progress:indeterminate {
   animation: progress-indeterminate 1.5s linear infinite;
-  background: #0d112b linear-gradient(to right, #21b8f7 30%, #0d112b 30%) top left/150% 150% no-repeat;
+  background: #d3d8df linear-gradient(to right, #21b8f7 30%, #d3d8df 30%) top left/150% 150% no-repeat;
 }
 
 .progress:indeterminate::-moz-progress-bar {
@@ -969,21 +969,21 @@
 }
 
 .slider::-webkit-slider-runnable-track {
-  background: #0d112b;
+  background: #d3d8df;
   border-radius: .4rem;
   height: .1rem;
   width: 100%;
 }
 
 .slider::-moz-range-track {
-  background: #0d112b;
+  background: #d3d8df;
   border-radius: .4rem;
   height: .1rem;
   width: 100%;
 }
 
 .slider::-ms-track {
-  background: #0d112b;
+  background: #d3d8df;
   border-radius: .4rem;
   height: .1rem;
   width: 100%;

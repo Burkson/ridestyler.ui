@@ -4555,13 +4555,17 @@ html:lang(ko),
   background: #e6ebf2;
 }
 
+.table.table-striped.table-hover tbody tr:nth-of-type(odd):hover {
+  background: #d3d8df;
+}
+
 .table tbody tr.active,
 .table.table-striped tbody tr.active {
-  background: #21b8f7;
+  background: #f3693c;
 }
 
 .table.table-hover tbody tr:hover {
-  background: #21b8f7;
+  background: #dce3ed;
 }
 
 .table.table-scroll {
@@ -5162,7 +5166,7 @@ textarea.form-input.input-sm {
 
 .form-checkbox input:active + .form-icon,
 .form-radio input:active + .form-icon {
-  background: #0d112b;
+  background: #d3d8df;
 }
 
 .form-checkbox .form-icon {
@@ -5411,7 +5415,7 @@ textarea.form-input.input-sm {
 .form-input.disabled,
 .form-select:disabled,
 .form-select.disabled {
-  background-color: #0d112b;
+  background-color: #d3d8df;
   cursor: not-allowed;
   opacity: .5;
 }
@@ -5422,7 +5426,7 @@ textarea.form-input.input-sm {
 
 input:disabled + .form-icon,
 input.disabled + .form-icon {
-  background: #0d112b;
+  background: #d3d8df;
   cursor: not-allowed;
   opacity: .5;
 }
@@ -6085,7 +6089,7 @@ video.video-responsive::before {
 
 .navbar {
   align-items: stretch;
-  background-color: #0d112b;
+  background-color: #d3d8df;
   color: #fff; 
   display: flex;
   display: -ms-flexbox;
@@ -6341,7 +6345,7 @@ summary.accordion-header::-webkit-details-marker {
 }
 
 .bar {
-  background: #0d112b;
+  background: #d3d8df;
   border-radius: .4rem;
   display: flex;
   display: -ms-flexbox;
@@ -6394,7 +6398,7 @@ summary.accordion-header::-webkit-details-marker {
 }
 
 .bar-slider .bar-item:not(:last-child):first-child {
-  background: #0d112b;
+  background: #d3d8df;
   z-index: 1;
 }
 
@@ -6468,7 +6472,7 @@ summary.accordion-header::-webkit-details-marker {
 
 .chip {
   align-items: center;
-  background: #0d112b;
+  background: #e6ebf2;
   border-radius: 5rem;
   display: inline-flex;
   display: -ms-inline-flexbox;
