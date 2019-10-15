@@ -134,8 +134,6 @@
 }
 
 .docs-content .docs-demo .card {
-  border: 0;
-  box-shadow: 0 .25rem 1rem rgba(13, 17, 43, .15);
   height: 100%;
 }
 

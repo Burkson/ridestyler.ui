@@ -7995,3 +7995,15 @@ a.text-active:visited {
   word-break: break-word;
   word-wrap: break-word;
 }
+
+.shadow-close {
+  box-shadow: 0 .1rem .3rem rgba(13, 17, 43, .3);
+}
+
+.shadow-far {
+  box-shadow: 0 .25rem .6rem rgba(13, 17, 43, .3);
+}
+
+.shadow-disabled {
+  box-shadow: none !important;
+}

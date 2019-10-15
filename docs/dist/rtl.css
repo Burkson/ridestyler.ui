@@ -5996,9 +5996,28 @@ video.video-responsive::before {
   padding: .8rem 1.92rem;
 }
 
-.navbar .btn,
-.navbar a {
-  margin-right: .8rem;
+.navbar h1,
+.navbar h2,
+.navbar h3,
+.navbar h4,
+.navbar h5,
+.navbar h6,
+.navbar .h1,
+.navbar .h2,
+.navbar .h3,
+.navbar .h4,
+.navbar .h5,
+.navbar .h6 {
+  margin: 0;
+}
+
+.navbar .h1,
+.navbar h1 {
+  font-size: 2rem;
+}
+
+.navbar .btn-link {
+  color: currentColor;
 }
 
 .navbar .navbar-primary {
@@ -6032,6 +6051,10 @@ video.video-responsive::before {
 }
 
 .navbar .navbar-brand {
+  align-items: center; 
+  display: flex;
+  display: -ms-flexbox;
+  -ms-flex-align: center;
   font-size: 1.25rem;
   text-decoration: none;
 }
@@ -6040,6 +6063,73 @@ video.video-responsive::before {
 .navbar .navbar-brand img {
   display: block;
   max-height: 40px;
+}
+
+.navbar.navbar-branded {
+  height: 6rem; 
+  padding: 0;
+}
+
+.navbar.navbar-branded .navbar-brand {
+  position: relative;
+  width: 8rem;
+}
+
+.navbar.navbar-branded .navbar-brand .navbar-brand-logo {
+  bottom: 0; 
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.navbar.navbar-branded .navbar-brand .navbar-brand-logo:before {background: linear-gradient(180deg, #e72320 0%, #f3693c 100%); /* w3c */ 
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: -2rem;
+  top: 0;
+  transform: skewX(-20deg) translateX(-3.2rem); /* ff3.6+ */ /* safari4+,chrome */ /* safari5.1+,chrome10+ */ /* opera 11.10+ */ /* ie10+ */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFE72320', endColorstr='#FFF3693C',GradientType=0 ); /* ie6-9 */
+}
+
+.navbar.navbar-branded .navbar-brand .navbar-brand-logo:after {
+  background-image: url("http://static.ridestyler.net/images/ridestyler_logo_tagonly_nobg_white.svg");
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-size: 80%;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 3rem;
+  top: 0;
+}
+
+.navbar.navbar-branded .navbar-brand .icon {
+  align-items: center;
+  background-color: #e6ebf2;
+  border-radius: 50%;
+  color: #f3693c;
+  display: flex;
+  display: -ms-flexbox;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  height: 3rem;
+  justify-content: center; 
+  position: absolute;
+  right: 0;
+  top: 1.5rem;
+  width: 3rem;
+}
+
+.navbar.navbar-branded .navbar-brand + .navbar-section {
+  padding-left: 1.92rem;
+}
+
+.navbar.navbar-branded .navbar-section {
+  padding: .8rem 1.92rem;
 }
 
 .accordion input:checked ~ .accordion-header .icon,
@@ -6073,12 +6163,13 @@ summary.accordion-header::-webkit-details-marker {
 }
 
 .avatar {
-  background: #f3693c;
+  background: #e6ebf2;
   border-radius: 50%;
-  color: #f3693c;
+  color: #0d112b;
   display: inline-block;
+  font-family: "Geomanist", "Open Sans", "Segoe UI", Tahoma, sans-serif;
   font-size: 1.6rem;
-  font-weight: 300;
+  font-weight: bold;
   height: 3.2rem;
   line-height: 1.25;
   margin: 0;
@@ -6169,32 +6260,33 @@ summary.accordion-header::-webkit-details-marker {
 
 .badge[data-badge]::after,
 .badge:not([data-badge])::after {
-  background: #21b8f7;
+  background: #f3693c;
   background-clip: padding-box;
-  border-radius: .5rem;
+  border-radius: 1rem;
   box-shadow: 0 0 0 .1rem #fff;
   color: #fff;
   content: attr(data-badge);
   display: inline-block;
-  transform: translate(-.05rem, -.5rem);
+  transform: translate(-.05rem, -1.3rem);
+  z-index: 1;
 }
 
 .badge[data-badge]::after {
   font-size: .875rem;
-  height: .9rem;
   line-height: 1;
+  min-height: .9rem;
   min-width: .9rem;
-  padding: .1rem .2rem;
+  padding: .3rem .5rem;
   text-align: center;
   white-space: nowrap;
 }
 
 .badge:not([data-badge])::after,
 .badge[data-badge=""]::after {
-  height: 6px;
-  min-width: 6px;
+  height: 1rem;
+  min-width: 1rem;
   padding: 0;
-  width: 6px;
+  width: 1rem;
 }
 
 .badge.btn::after {
@@ -7132,6 +7224,14 @@ summary.accordion-header::-webkit-details-marker {
   background-image: url("https://static.ridestyler.net/temp/logos/ridestyler-logo-FULL-light.svg");
 }
 
+.ridestyler-logo-tagonly {
+  background-image: url("http://static.ridestyler.net/images/ridestyler_logo_tagonly_nobg_black.svg");
+}
+
+.ridestyler-logo-tagonly.light {
+  background-image: url("http://static.ridestyler.net/images/ridestyler_logo_tagonly_nobg_white.svg");
+}
+
 @keyframes loading {
   0% {
     transform: rotate(0deg);
@@ -7895,4 +7995,16 @@ a.text-active:visited {
   hyphens: auto;
   word-break: break-word;
   word-wrap: break-word;
+}
+
+.shadow-close {
+  box-shadow: 0 .5rem 1.1rem rgba(13, 17, 43, .3);
+}
+
+.shadow-far {
+  box-shadow: 0 .5rem 1.1rem rgba(13, 17, 43, .3);
+}
+
+.shadow-disabled {
+  box-shadow: none !important;
 }

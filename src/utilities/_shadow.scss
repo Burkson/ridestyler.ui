@@ -1,0 +1,11 @@
+.shadow-close {
+    @include shadow-variant(0.1rem);
+}
+
+.shadow-far {
+    @include shadow-variant(0.25rem);
+}
+
+.shadow-disabled {
+    box-shadow: none !important;
+}
