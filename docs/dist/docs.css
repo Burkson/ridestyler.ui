@@ -139,6 +139,10 @@
   height: 100%;
 }
 
+.docs-content .docs-demo .column {
+  margin-bottom: .8rem;
+}
+
 .docs-content .docs-block {
   border-radius: .4rem;
   padding: .8rem;

@@ -6554,7 +6554,7 @@ summary.accordion-header::-webkit-details-marker {
 }
 
 .empty .empty-icon {
-  margin-bottom: 3.2rem;
+  margin-bottom: 1.2rem;
 }
 
 .empty .empty-title,
@@ -6563,7 +6563,7 @@ summary.accordion-header::-webkit-details-marker {
 }
 
 .empty .empty-action {
-  margin-top: 3.2rem;
+  margin-top: 1.2rem;
 }
 
 .menu {

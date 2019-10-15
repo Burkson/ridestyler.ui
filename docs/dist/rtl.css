@@ -4564,6 +4564,11 @@ html:lang(ko),
   background: #f3693c;
 }
 
+.table.table-hover tbody tr.active:hover,
+.table.table-striped.table-hover tbody tr.active:hover {
+  background: #ed450f;
+}
+
 .table.table-hover tbody tr:hover {
   background: #dce3ed;
 }
