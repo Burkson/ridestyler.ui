@@ -5192,6 +5192,7 @@ textarea.form-input.input-sm {
 .input-group .form-select {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  height: auto; 
   width: 1%;
 }
 
