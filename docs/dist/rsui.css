@@ -6162,12 +6162,13 @@ summary.accordion-header::-webkit-details-marker {
 }
 
 .avatar {
-  background: #f3693c;
+  background: #e6ebf2;
   border-radius: 50%;
-  color: #f3693c;
+  color: #0d112b;
   display: inline-block;
+  font-family: "Geomanist", "Open Sans", "Segoe UI", Tahoma, sans-serif;
   font-size: 1.6rem;
-  font-weight: 300;
+  font-weight: bold;
   height: 3.2rem;
   line-height: 1.25;
   margin: 0;
