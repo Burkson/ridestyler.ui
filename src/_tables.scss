@@ -57,7 +57,7 @@
     
     thead {
         th {
-            background-color: $gray-color-dark;
+            background-color: $border-color;
             color: $light-color;
         }
 
@@ -108,7 +108,7 @@
 		tbody {
 			tr {
 				&:hover {
-					background: $secondary-color-dark;
+					background: $gray-color;
 				}
 			}
 		}
