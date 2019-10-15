@@ -19,7 +19,7 @@
         "build": "gulp build",
         "watch": "gulp watch",
         "docs": "gulp docs",
-        "serve": "concurrently \"http-server .\" \"npm run watch\""
+        "serve": "concurrently \"http-server docs\" \"npm run watch\""
     },
     "keywords": [
         "css",
@@ -37,19 +37,22 @@
         "url": "https://github.com/Burkson/ridestyler.ui/issues"
     },
     "devDependencies": {
+        "async": "^3.1.0",
         "concurrently": "^5.0.0",
         "gulp": "^4.0.2",
         "gulp-autoprefixer": "latest",
         "gulp-clean-css": "latest",
         "gulp-csscomb": "latest",
+        "gulp-iconfont": "^10.0.3",
         "gulp-pug": "latest",
         "gulp-rename": "^1.4.0",
         "gulp-replace": "^1.0.0",
         "gulp-sass": "latest",
+        "gulp-sourcemaps": "^2.6.5",
+        "handlebars": "^4.4.3",
         "http-server": "^0.11.1",
         "jstransformer-highlight": "latest",
-        "jstransformer-markdown-it": "latest",
-        "merge-stream": "^2.0.0"
+        "jstransformer-markdown-it": "latest"
     },
     "browserslist": [
         "last 4 Chrome versions",

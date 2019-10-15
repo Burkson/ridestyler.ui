@@ -139,10 +139,6 @@
   height: 100%;
 }
 
-.docs-content .column {
-  padding: 1.2rem;
-}
-
 .docs-content .docs-block {
   border-radius: .4rem;
   padding: .8rem;
@@ -364,10 +360,6 @@
 
 .section-hero .docs-brand h2 {
   color: #21b8f7;
-}
-
-.section-hero .column {
-  padding: 1.2rem;
 }
 
 .section-ads {

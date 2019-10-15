@@ -7,24 +7,25 @@ block variables
   - var description = 'Icons are single-element, responsive and pure CSS icons. ridestyler.ui CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development.'
 
 block docs-content
-  +docs-heading('icons', 'Icons.css')
+  +docs-heading('icons', 'Icons')
     p
-      small.label.label-secondary CSS ONLY
+      | ridestyler.ui includes its own custom set of icons that you can use in your interface.
 
-    include ../_layout/_ad-g.pug
+    pre.code(data-lang='HTML')
+      code
+        :highlight(lang="html")
+          <i class="icon icon-arrow-right"></i>
 
-    .docs-demo.columns
-      .column
-        .toast.toast-primary
-          | ridestyler.ui Icons will be moved to a new 
-          a(href="https://github.com/picturepan2/icons.css" target="_blank") GitHub Repo
-          |  while ridestyler.ui will only include basic icons.
     p
-      | Icons.css are single-element, responsive and pure CSS icons.
-      | You can include #[code ridestyler.ui-icons.css] located in the #[code dist] folder to your web #{'<head>'} to have these CSS icons.
+      | Add a #[code icon] class and the correct 
+      code icon-[name]
+      |  class to an element to display an icon using a pseudo #[code :before] element.
 
-    +docs-subheading('icons-navigation', 'Navigation icons')
+    +docs-subheading('icons-fontawesome', 'Font Awesome')
 
+    p
+      | All of the icons from #[a(href='https://fontawesome.com/icons?d=gallery&s=solid&m=free' target='blank') FontAwesome v5 (free, solid)] have been included. 
+      | Use their website or browse the #[code /src/icons/font-awesome-solid] folder to discover icon names.
     .docs-demo.columns
       .column.col-3.col-md-6
         button.btn.btn-primary.btn-action.btn-lg
@@ -44,157 +45,45 @@ block docs-content
         p icon-arrow-left
       .column.col-3.col-md-6
         button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-upward
-        p icon-upward
+          i.icon.icon-angle-double-up
+        p icon-angle-double-up
       .column.col-3.col-md-6
         button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-forward
-        p icon-forward
+          i.icon.icon-angle-double-right
+        p icon-angle-double-right
       .column.col-3.col-md-6
         button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-downward
-        p icon-downward
+          i.icon.icon-angle-double-down
+        p icon-angle-double-down
       .column.col-3.col-md-6
         button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-back
-        p icon-back
+          i.icon.icon-angle-double-left
+        p icon-angle-double-left
       .column.col-3.col-md-6
         button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-caret
-        p icon-caret
+          i.icon.icon-shopping-cart
+        p icon-shopping-cart
       .column.col-3.col-md-6
         button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-menu
-        p icon-menu
+          i.icon.icon-user-secret
+        p icon-user-secret
       .column.col-3.col-md-6
         button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-apps
-        p icon-apps
+          i.icon.icon-biohazard
+        p icon-biohazard
       .column.col-3.col-md-6
         button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-more-horiz
-        p icon-more-horiz
+          i.icon.icon-sd-card
+        p icon-sd-card
       .column.col-3.col-md-6
         button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-more-vert
-        p icon-more-vert
+          i.icon.icon-pizza-slice
+        p icon-pizza-slice
 
-    +docs-subheading('icons-action', 'Action icons')
+    +docs-subheading('icons-custom', 'Custom icons')
 
-    .docs-demo.columns
-      .column.col-3.col-md-6
-        button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-resize-horiz
-        p icon-resize-horiz
-      .column.col-3.col-md-6
-        button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-resize-vert
-        p icon-resize-vert
-      .column.col-3.col-md-6
-        button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-plus
-        p icon-plus
-      .column.col-3.col-md-6
-        button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-minus
-        p icon-minus
-      .column.col-3.col-md-6
-        button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-cross
-        p icon-cross
-      .column.col-3.col-md-6
-        button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-check
-        p icon-check
-      .column.col-3.col-md-6
-        button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-stop
-        p icon-stop
-      .column.col-3.col-md-6
-        button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-shutdown
-        p icon-shutdown
-      .column.col-3.col-md-6
-        button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-refresh
-        p icon-refresh
-      .column.col-3.col-md-6
-        button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-search
-        p icon-search
-      .column.col-3.col-md-6
-        button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-flag
-        p icon-flag
-      .column.col-3.col-md-6
-        button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-bookmark
-        p icon-bookmark
-      .column.col-3.col-md-6
-        button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-edit
-        p icon-edit
-      .column.col-3.col-md-6
-        button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-delete
-        p icon-delete
-      .column.col-3.col-md-6
-        button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-share
-        p icon-share
-      .column.col-3.col-md-6
-        button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-download
-        p icon-download
-      .column.col-3.col-md-6
-        button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-upload
-        p icon-upload
-      .column.col-3.col-md-6
-        button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-copy
-        p icon-copy
-
-    +docs-subheading('icons-object', 'Object icons')
-
-    .docs-demo.columns
-      .column.col-3.col-md-6
-        button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-mail
-        p icon-mail
-      .column.col-3.col-md-6
-        button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-people
-        p icon-people
-      .column.col-3.col-md-6
-        button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-message
-        p icon-message
-      .column.col-3.col-md-6
-        button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-photo
-        p icon-photo
-      .column.col-3.col-md-6
-        button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-time
-        p icon-time
-      .column.col-3.col-md-6
-        button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-location
-        p icon-location
-      .column.col-3.col-md-6
-        button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-link
-        p icon-link
-      .column.col-3.col-md-6
-        button.btn.btn-primary.btn-action.btn-lg
-          i.icon.icon-emoji
-        p icon-emoji
-
-    pre.code(data-lang='HTML')
-      code
-        :highlight(lang="html")
-          <i class="icon icon-menu"></i>
+    p
+      | Custom icons can easily be added in the future by adding them to the #[code src/icons] folder and rebuilding the fonts.
 
     +docs-subheading('icons-sizes', 'Icon sizes')
 
@@ -205,22 +94,38 @@ block docs-content
     .docs-demo.columns
       .column.col-3.col-md-6
         p
-          i.icon.icon-2x.icon-mail
-        p icon-2x (32px)
+          i.icon.icon-2x.icon-camera-retro
+        p icon-2x (2rem)
       .column.col-3.col-md-6
         p
-          i.icon.icon-3x.icon-mail
-        p icon-3x (48px)
+          i.icon.icon-3x.icon-camera-retro
+        p icon-3x (3rem)
       .column.col-3.col-md-6
         p
-          i.icon.icon-4x.icon-mail
-        p icon-4x (64px)
+          i.icon.icon-4x.icon-camera-retro
+        p icon-4x (4rem)
 
     pre.code(data-lang='HTML')
       code
         :highlight(lang="html")
-          <i class="icon icon-2x icon-mail"></i>
+          <i class="icon icon-2x icon-camera-retro"></i>
+    
+    +docs-subheading('icons-scss', 'SCSS Enhancements')
 
-    include ../_layout/_ad-c.pug
+    p
+      | A variable containing the unicode value for each icon is included and can be used in place of the #[code .icon] classes. 
+      | To use the custom variables extend the #[code %icon] placeholder selector (or add the #[code font-family: 'rsui-icons';] to your class), and 
+      | use the variable in the #[code :before] or #[code :after] pseudo-class.
+
+    pre.code(data-lang='SCSS')
+      code
+        :highlight(lang="scss")
+          .my-custom-icon {
+            @extend %icon;
+
+            &:before {
+              content: $icon-code-camera-retro;
+            }
+          }
 
   include ../_layout/_footer.pug
