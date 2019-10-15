@@ -1,13 +1,18 @@
-@font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Open Sans Regular'), local('OpenSans-Regular'),
-         url($font-base + 'open-sans-v17-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url($font-base + 'open-sans-v17-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-         url($font-base + 'open-sans-v17-latin-regular.woff') format('woff'), /* Modern Browsers */
-         url($font-base + 'open-sans-v17-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-         url($font-base + 'open-sans-v17-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+$openSansFaces:   300    300italic regular italic 600    600italic 700    700italic 800    800italic;
+$openSansStyles:  normal italic    normal  italic normal italic    normal italic    normal italic;
+$openSansWeights: 300    300       400     400    600    600       700    700       800    800;
+
+@for $i from 1 through length($openSansFaces) {
+    @font-face {
+        font-family: 'Open Sans';
+        font-style: nth($openSansStyles, $i);
+        font-weight: nth($openSansWeights, $i);
+        src: url($font-base + 'open-sans-v17-latin-#{nth($openSansFaces, $i)}.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+             url($font-base + 'open-sans-v17-latin-#{nth($openSansFaces, $i)}.woff2') format('woff2'), /* Super Modern Browsers */
+             url($font-base + 'open-sans-v17-latin-#{nth($openSansFaces, $i)}.woff') format('woff'), /* Modern Browsers */
+             url($font-base + 'open-sans-v17-latin-#{nth($openSansFaces, $i)}.ttf') format('truetype'), /* Safari, Android, iOS */
+             url($font-base + 'open-sans-v17-latin-#{nth($openSansFaces, $i)}.svg#OpenSans') format('svg'); /* Legacy iOS */
+    }
 }
 
 @font-face {
