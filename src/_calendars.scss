@@ -69,10 +69,6 @@
         color: $primary-color;
       }
 
-      &:focus {
-        @include control-shadow();
-      }
-
       &:focus,
       &:hover {
         background: $secondary-color-light;

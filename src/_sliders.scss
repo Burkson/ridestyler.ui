@@ -6,11 +6,7 @@
   display: block;
   width: 100%;
   height: $unit-6;
-
-  &:focus {
-    @include control-shadow();
-    outline: none;
-  }
+  outline: none;
 
   &.tooltip:not([data-tooltip]) {
     &::after {

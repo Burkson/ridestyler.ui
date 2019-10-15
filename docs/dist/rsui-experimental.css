@@ -16,8 +16,7 @@
 }
 
 .form-autocomplete .form-autocomplete-input.is-focused {
-  border-color: #21b8f7; 
-  box-shadow: 0 0 0 .1rem rgba(33, 184, 247, .2);
+  border-color: #21b8f7;
 }
 
 .form-autocomplete .form-autocomplete-input .form-input {
@@ -130,10 +129,6 @@
 .calendar .calendar-date .date-item.date-today {
   border-color: #ed450f;
   color: #21b8f7;
-}
-
-.calendar .calendar-date .date-item:focus {
-  box-shadow: 0 0 0 .1rem rgba(33, 184, 247, .2);
 }
 
 .calendar .calendar-date .date-item:focus,
@@ -896,13 +891,9 @@
   appearance: none;
   background: transparent;
   display: block;
-  height: 2.4rem; 
+  height: 2.4rem;
+  outline: none; 
   width: 100%;
-}
-
-.slider:focus {
-  box-shadow: 0 0 0 .1rem rgba(33, 184, 247, .2);
-  outline: none;
 }
 
 .slider.tooltip:not([data-tooltip])::after {

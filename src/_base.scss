@@ -26,10 +26,6 @@ a {
 	outline: none;
 	text-decoration: underline;
 
-	&:focus {
-		@include control-shadow();
-	}
-
 	&:focus,
 	&:hover,
 	&:active,

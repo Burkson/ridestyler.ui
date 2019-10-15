@@ -11,7 +11,6 @@
     padding: $unit-h;
 
     &.is-focused {
-      @include control-shadow();
       border-color: $primary-color;
     }
 
