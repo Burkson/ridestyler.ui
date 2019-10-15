@@ -11,7 +11,7 @@
 }
 
 .off-canvas .off-canvas-sidebar {
-  width: 12rem;
+  width: 14rem;
 }
 
 .off-canvas .off-canvas-content {
@@ -49,7 +49,7 @@
   padding: .5rem 1.5rem;
   position: fixed;
   top: 3.5rem;
-  width: 12rem;
+  width: 14rem;
 }
 
 .docs-sidebar .accordion {
@@ -284,12 +284,14 @@
 .docs-brand .docs-logo {
   align-items: center;
   border-radius: .4rem;
+  color: #0d112b;
   display: inline-flex;
   display: -ms-inline-flexbox;
   -ms-flex-align: center;
   font-size: .7rem;
   height: 2rem;
   padding: .2rem;
+  text-decoration: none; 
   width: auto;
 }
 

@@ -7,6 +7,8 @@
   content: "#{$version}";
 }
 
+$sidebar-width: 14rem;
+
 .off-canvas {
   .off-canvas-toggle {
     font-size: 1rem;
@@ -16,7 +18,7 @@
   }
 
   .off-canvas-sidebar {
-    width: 12rem;
+    width: $sidebar-width;
   }
 
   .off-canvas-content {
@@ -54,7 +56,7 @@
     padding: .5rem 1.5rem;
     position: fixed;
     top: 3.5rem;
-    width: 12rem;
+    width: $sidebar-width;
     -webkit-overflow-scrolling: touch;
   }
 
@@ -307,6 +309,8 @@
     height: 2rem;
     padding: .2rem;
     width: auto;
+    color: $body-font-color;
+    text-decoration: none;
     
     &:focus,
     &:hover {
