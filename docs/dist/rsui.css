@@ -6789,8 +6789,9 @@ summary.accordion-header::-webkit-details-marker {
 }
 
 .panel {
-  border: .05rem solid #556172;
+  background: #fff;
   border-radius: .4rem;
+  box-shadow: 0 .25rem .6rem rgba(13, 17, 43, .3); 
   display: flex;
   display: -ms-flexbox;
   -ms-flex-direction: column;
