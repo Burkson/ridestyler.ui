@@ -202,13 +202,10 @@
             <div class="docs-demo columns">
               <div class="column">
                 <div class="navbar">
-                  <div class="navbar-section"><a class="navbar-brand text-bold mr-2" href="#navbar">ridestyler.ui</a><a class="btn btn-link" href="#navbar">Docs</a><a class="btn btn-link" href="https://github.com/picturepan2/ridestyler.ui">GitHub</a></div>
-                  <div class="navbar-section">
-                    <div class="input-group input-inline">
-                      <input class="form-input" type="text" placeholder="search">
-                      <button class="btn btn-primary input-group-btn">Search</button>
-                    </div>
-                  </div>
+                  <div class="navbar-brand">RideStyler</div>
+                  <section class="navbar-section">
+                    <button class="btn btn-link">Wheel Co. <i class="icon icon-caret-down"></i></button>
+                  </section>
                 </div>
               </div>
             </div>
@@ -218,9 +215,7 @@
             </p>
             <pre class="code" data-lang="HTML"><code><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar-section"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"..."</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar-brand mr-2"</span>&gt;</span>ridestyler.ui<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"..."</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-link"</span>&gt;</span>Docs<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"..."</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-link"</span>&gt;</span>GitHub<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"..."</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar-brand"</span>&gt;</span>RideStyler<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar-section"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-group input-inline"</span>&gt;</span>
@@ -230,6 +225,41 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 </code></pre>
+            <h4 class="s-subtitle" id="navbar-branded">Branded<a class="anchor" href="#navbar-branded" aria-hidden="true">#</a></h4>
+            <p>You can use <code>navbar-branded</code> class to use the branded navbar styling. Add a 
+              <code>.navbar-brand</code> with a <code>.navbar-brand-logo</code> element inside of it to get 
+              the branded logo. Add an <code>.icon</code> element and put your logo inside of it to 
+              get your app's logo overlaid ontop.
+            </p>
+            <div class="docs-demo columns">
+              <div class="column">
+                <div class="navbar navbar-branded">
+                  <div class="navbar-brand">
+                    <div class="navbar-brand-logo"></div><i class="icon icon-car"></i>
+                  </div>
+                  <section class="navbar-section">
+                    <h1>Calculators</h1>
+                  </section>
+                  <section class="navbar-section">
+                    <button class="btn btn-link">Wheel Co. <i class="icon icon-caret-down"></i></button>
+                  </section>
+                </div>
+              </div>
+            </div>
+            <pre class="code" data-lang="HTML"><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar navbar-branded"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar-brand"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar-brand-logo"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon-car"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar-section"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Calculators<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar-section"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-link"</span>&gt;</span>Wheel Co. <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon-caret-down"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+            <h4 class="s-subtitle" id="navbar-centered">Centered<a class="anchor" href="#navbar-centered" aria-hidden="true">#</a></h4>
             <p>You can use <code>navbar-center</code> class to have a centered section.</p>
             <div class="docs-demo columns">
               <div class="column col-12">
@@ -254,9 +284,6 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 </code></pre>
-            <div class="docs-ad docs-ad-sidebar text-center">
-              <script id="_carbonads_js" async="" type="text/javascript" src="https://cdn.carbonads.com/carbon.js?serve=CK7DTKQW&amp;placement=picturepan2githubio"></script>
-            </div>
           </div>
           <div class="docs-footer container grid-lg" id="copyright">
             <p><a href="https://github.com/Burkson/ridestyler.ui" target="_blank">GitHub</a> · <a href="https://ridestyler.com" target="_blank">RideStyler</a> · Version <span class="version"></span></p>

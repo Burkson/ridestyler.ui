@@ -19,3 +19,10 @@
         background-image: url($ridestyler-logo-full-light);
     }
 }
+.ridestyler-logo-tagonly {
+    background-image: url($ridestyler-logo-tagonly-black);
+
+    &.light {
+        background-image: url($ridestyler-logo-tagonly-white);
+    }
+}

@@ -1,21 +1,28 @@
 // Navbar
 .navbar {
-	$navbar-background-color: $bg-color-dark;
+	$navbar-background-color: $ridestyler-color-black;
+	$padding-y: $layout-spacing-sm;
+	$padding-x: $layout-spacing-lg*0.6;
 
 	align-items: stretch;
 	display: flex;
 	flex-wrap: wrap;
     justify-content: space-between;
     background-color: $navbar-background-color;
-	padding: $layout-spacing-sm $layout-spacing-lg*0.6;
+	padding: $padding-y $padding-x;
 	color: $light-color;
-	
-	%navbar-item {
-		margin-right: $layout-spacing-sm;
+
+	h1, h2, h3, h4, h5, h6,
+	.h1, .h2, .h3, .h4, .h5, .h6 {
+		margin: 0;
 	}
 
-	.btn, a {
-		@extend %navbar-item;
+	.h1, h1 {
+		font-size: 2rem;
+	}
+
+	.btn-link {
+		color: currentColor;
 	}
 
     .navbar-primary {
@@ -41,12 +48,83 @@
 
 	.navbar-brand {
 		font-size: $font-size-lg;
-        text-decoration: none;
+		text-decoration: none;
+		display: flex;
+		align-items: center;
     }
     
     img.navbar-brand, .navbar-brand img {
         // Using logos instead of text as .navbar-brand
         display: block;
         max-height: 40px;
-    }
+	}
+	
+	&.navbar-branded {
+		padding: 0;
+		height: 6rem;
+
+		.navbar-brand {
+			position: relative;
+			width: 8rem;
+
+			.navbar-brand-logo {
+				position: absolute;
+				overflow: hidden;
+				top: 0; left: 0; right: 0; bottom: 0;
+
+				&:before {
+					content: '';
+					position: absolute;
+					right: -2rem;
+					top: 0; bottom: 0; left: 0;
+					transform: skewX(-20deg) translateX(-3.2rem);
+	
+					background: -moz-linear-gradient(270deg, $ridestyler-color-red 0%, $ridestyler-color-orange 100%); /* ff3.6+ */
+					background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $ridestyler-color-red), color-stop(100%, $ridestyler-color-orange)); /* safari4+,chrome */
+					background: -webkit-linear-gradient(270deg, $ridestyler-color-red 0%, $ridestyler-color-orange 100%); /* safari5.1+,chrome10+ */
+					background: -o-linear-gradient(270deg, $ridestyler-color-red 0%, $ridestyler-color-orange 100%); /* opera 11.10+ */
+					background: -ms-linear-gradient(270deg, $ridestyler-color-red 0%, $ridestyler-color-orange 100%); /* ie10+ */
+					background: linear-gradient(180deg, $ridestyler-color-red 0%, $ridestyler-color-orange 100%); /* w3c */
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{ie-hex-str($ridestyler-color-red)}', endColorstr='#{ie-hex-str($ridestyler-color-orange)}',GradientType=0 ); /* ie6-9 */
+				}
+	
+				&:after {
+					content: '';
+					background-image: url($ridestyler-logo-tagonly-white);
+					position: absolute;
+					left: 0;
+					top: 0;
+					bottom: 0;
+					right: 3rem;
+					background-size: 80%;
+					background-position: center;
+					background-repeat: no-repeat;
+				}
+			}
+
+			.icon {
+				position: absolute;
+				background-color: $bg-color;
+				border-radius: 50%;
+				color: $ridestyler-color-orange;
+				
+				height: 3rem;
+				width: 3rem;
+				top: 1.5rem;
+				right: 0;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			+ .navbar-section {
+				padding-left: $padding-x;
+			}
+		}
+
+		.navbar-section {
+			padding: $padding-y $padding-x;
+		}
+	}
 }
