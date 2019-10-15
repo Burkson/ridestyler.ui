@@ -597,7 +597,7 @@
 }
 
 .meter::-webkit-meter-even-less-good-value {
-  background: #e85600;
+  background: #f00;
 }
 
 .meter::-moz-meter-bar,
@@ -616,7 +616,7 @@
 }
 
 .meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
-  background: #e85600;
+  background: #f00;
 }
 
 .off-canvas {

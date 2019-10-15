@@ -319,6 +319,10 @@
   color: #0d112b;
 }
 
+.docs-footer .icon-brain {
+  color: pink;
+}
+
 .docs-ad {
   background: #e6ebf2;
   border-radius: .4rem;
