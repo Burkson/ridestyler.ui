@@ -1,50 +1,27 @@
 // Buttons
 .btn {
+	$border-radius: $border-radius-sm;
+
 	appearance: none;
-	background: $bg-color-light;
-	border: $border-width solid $primary-color;
-	border-radius: $border-radius;
-	color: $primary-color;
+	border: none;
+	border-top-right-radius: $border-radius;
+	border-top-left-radius: $border-radius;
+	border-bottom-left-radius: $border-radius;
+	border-bottom-right-radius: 0;
 	cursor: pointer;
 	display: inline-block;
 	font-weight: bold;
-	font-size: $font-size;
-	height: $control-size;
+	font-size: $font-size-button;
+	min-height: $button-size;
 	line-height: $line-height;
 	outline: none;
-	padding: $control-padding-y $control-padding-x;
+	padding: $button-padding-y $button-padding-x;
 	text-align: center;
 	text-decoration: none;
 	transition: background .2s, border .2s, box-shadow .2s, color .2s;
 	user-select: none;
 	vertical-align: middle;
-	white-space: nowrap;
-
-	&:focus {
-		@include control-shadow();
-	}
-
-	&:focus,
-	&:hover {
-		background: $secondary-color;
-		border-color: $primary-color-dark;
-		text-decoration: none;
-	}
-
-	&:active,
-	&.active {
-		background: $primary-color-dark;
-		border-color: darken($primary-color-dark, 5%);
-		color: $light-color;
-		text-decoration: none;
-
-		&.loading {
-			&::after {
-				border-bottom-color: $light-color;
-				border-left-color: $light-color;
-			}
-		}
-	}
+	text-decoration: none;
 
 	&[disabled],
 	&:disabled,
@@ -54,28 +31,26 @@
 		pointer-events: none;
 	}
 
+	// Round Button
+	&.round {
+		border-bottom-right-radius: $border-radius;
+	}
+
+	// Default Button
+	@include button-variant($backgroundColor: $gray-color-light, $activeColor: $gray-color-dark, $activeTextColor: $light-color, $textColor: $gray-color-dark);
+
 	// Primary Button
 	&.btn-primary {
-		@include button-variant($primary-color);
+		@include button-variant($backgroundColor: $primary-color, $activeColor: $primary-color-dark, $activeTextColor: $light-color, $textColor: $light-color);
 	}
 
-	// Secondary Button (default)
-	&, &.btn-secondary {
-		@include button-variant($secondary-color, darken($secondary-color, 2%), $gray-color-dark);
-	}
-
-	// Button Colors
-	&.btn-success {
-		@include button-variant($success-color);
-	}
-
-	&.btn-error {
-		@include button-variant($error-color);
+	// Secondary Button
+	&.btn-secondary {
+		@include button-variant($secondary-color, $secondary-color-dark, $light-color, $light-color);
 	}
 
 	&.btn-link, &.btn-unstyled {
 		background: transparent;
-		border-color: transparent;
 	}
 
 	&.btn-link {
@@ -98,14 +73,14 @@
 	// Button Sizes
 	&.btn-sm {
 		font-size: $font-size-sm;
-		height: $control-size-sm;
-		padding: $control-padding-y-sm $control-padding-x-sm;
+		min-height: $button-size-sm;
+		padding: $button-padding-y-sm $button-padding-x-sm;
 	}
 
 	&.btn-lg {
 		font-size: $font-size-lg;
-		height: $control-size-lg;
-		padding: $control-padding-y-lg $control-padding-x-lg;
+		min-height: $button-size-lg;
+		padding: $button-padding-y-lg $button-padding-x-lg;
 	}
 
 	// Button Block
@@ -160,8 +135,6 @@
 	display: inline-flex;
 
 	.btn {
-		flex: 1 0 auto;
-
 		&:first-child:not(:last-child) {
 			border-bottom-right-radius: 0;
 			border-top-right-radius: 0;
@@ -175,6 +148,7 @@
 		&:last-child:not(:first-child) {
 			border-bottom-left-radius: 0;
 			border-top-left-radius: 0;
+			border-bottom-right-radius: $border-radius;
 			margin-left: -$border-width;
 		}
 

@@ -205,28 +205,27 @@
               <div class="column col-12">
                 <button class="btn">default button</button>
                 <button class="btn btn-primary">primary button</button>
+                <button class="btn btn-secondary">secondary button</button>
                 <button class="btn btn-link">link button</button>
               </div>
             </div>
             <p>Add the <code>btn</code> class to &lt;a&gt;, &lt;input&gt; or &lt;button&gt; elements for a default button. 
-              There are classes <code>btn-primary</code> and <code>btn-link</code> for predefined primary and link buttons.
+              There are classes <code>btn-primary</code>, <code>btn-secondary</code> <code>btn-link</code> for predefined primary, secondary and link buttons.
             </p>
             <pre class="code" data-lang="HTML"><code><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn"</span>&gt;</span>default button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary"</span>&gt;</span>primary button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-link"</span>&gt;</span>link button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 </code></pre>
-            <h4 class="s-subtitle" id="buttons-colors">Button colors<a class="anchor" href="#buttons-colors" aria-hidden="true">#</a></h4>
+            <h4 class="s-subtitle" id="buttons-shapes">Button shapes<a class="anchor" href="#buttons-shapes" aria-hidden="true">#</a></h4>
+            <p>All buttons have a square bottom-right corner by default. Add a <code>round</code> class to the button to round it out.</p>
             <div class="docs-demo columns">
               <div class="column col-12">
-                <button class="btn btn-success">success button</button>
-                <button class="btn btn-error">error button</button>
+                <button class="btn btn-primary">default button</button>
+                <button class="btn round">round button</button>
               </div>
             </div>
-            <p>Add the <code>btn-success</code> or <code>btn-error</code> class for success (green) or error (red) button color.
-              If you need more button colors, please use <a href="../getting-started/custom.html#variables-buttons">button mixins</a> to create your own button color variants.
-            </p>
-            <pre class="code" data-lang="HTML"><code><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-success"</span>&gt;</span>success button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-error"</span>&gt;</span>error button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <pre class="code" data-lang="HTML"><code><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary"</span>&gt;</span>default button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn round"</span>&gt;</span>round button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 </code></pre>
             <h4 class="s-subtitle" id="buttons-sizes">Button sizes<a class="anchor" href="#buttons-sizes" aria-hidden="true">#</a></h4>
             <div class="docs-demo columns">
@@ -242,6 +241,9 @@
                 <button class="btn btn-primary btn-sm">small <i class="icon icon-arrow-down"></i></button>
                 <button class="btn btn-primary btn-sm">small button</button>
               </div>
+              <div class="column col-12">
+                <button class="btn btn-primary btn-block">block button</button>
+              </div>
             </div>
             <p>Add the <code>btn-sm</code> or <code>btn-lg</code> class for small or large button size. 
               Also, you can add the <code>btn-block</code> class for a full-width button.
@@ -251,16 +253,16 @@
 
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-block"</span>&gt;</span>block button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary btn-lg"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon-arrow-left"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> large<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon-arrow-left"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> normal<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary btn-sm"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon-arrow-left"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> small<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary btn-lg"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon-arrow-down"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> large<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon-arrow-down"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> normal<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary btn-sm"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon-arrow-down"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> small<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 </code></pre>
             <p>Please note that you could use the <code>btn-action</code> class for a square button, or add another <code>s-circle</code> class for a round button, which is often used as a Float Action Button (FAB).</p>
             <div class="docs-demo columns">
               <div class="column col-xs-12">
-                <button class="btn btn-action btn-primary btn-lg"><i class="icon icon-menu"></i></button>
-                <button class="btn btn-action btn-primary"><i class="icon icon-menu"></i></button>
-                <button class="btn btn-action btn-primary btn-sm"><i class="icon icon-menu"></i></button>
+                <button class="btn btn-action btn-primary btn-lg"><i class="icon icon-expand-arrows-alt"></i></button>
+                <button class="btn btn-action btn-primary"><i class="icon icon-expand-arrows-alt"></i></button>
+                <button class="btn btn-action btn-primary btn-sm"><i class="icon icon-expand-arrows-alt"></i></button>
               </div>
               <div class="column col-xs-12">
                 <button class="btn btn-action btn-primary btn-lg s-circle"><i class="icon icon-arrow-up"></i></button>
@@ -272,14 +274,6 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-action s-circle"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon-arrow-left"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 </code></pre>
             <h4 class="s-subtitle" id="buttons-states">Button states<a class="anchor" href="#buttons-states" aria-hidden="true">#</a></h4>
-            <p>Add the <code>active</code> class for active button state style.</p>
-            <div class="docs-demo columns">
-              <div class="column col-12">
-                <button class="btn active">default active</button>
-                <button class="btn btn-primary active">primary active</button>
-                <button class="btn btn-link active">link active</button>
-              </div>
-            </div>
             <p>Add the <code>disabled</code> class or the <code>disabled</code> attribute for disabled button state style.</p>
             <div class="docs-demo columns">
               <div class="column col-12">
@@ -297,6 +291,7 @@
               <div class="column col-12">
                 <button class="btn loading">default button</button>
                 <button class="btn btn-primary loading">primary button</button>
+                <button class="btn btn-secondary loading">primary button</button>
                 <button class="btn btn-link loading">link button</button>
               </div>
             </div>
@@ -322,14 +317,14 @@
               </div>
               <div class="column col-6 col-md-12">
                 <div class="btn-group">
-                  <button class="btn btn-sm active">first button</button>
+                  <button class="btn btn-sm">first button</button>
                   <button class="btn btn-sm">second button</button>
                   <button class="btn btn-sm">third button</button>
                 </div>
               </div>
               <div class="column col-6 col-md-12">
                 <div class="btn-group btn-group-block">
-                  <button class="btn btn-primary btn-sm active">first button</button>
+                  <button class="btn btn-primary btn-sm">first button</button>
                   <button class="btn btn-primary btn-sm">second button</button>
                   <button class="btn btn-primary btn-sm">third button</button>
                 </div>

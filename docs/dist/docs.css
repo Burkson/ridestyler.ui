@@ -179,7 +179,7 @@
 }
 
 .docs-content .docs-color .color-subtitle {
-  font-size: .75rem;
+  font-size: .875rem;
   opacity: .75;
 }
 
@@ -188,7 +188,7 @@
 }
 
 .docs-content .code .hljs-comment {
-  color: #7a8798;
+  color: #c7c7c7;
 }
 
 .docs-content .code .hljs-title,
@@ -315,7 +315,7 @@
 }
 
 .docs-footer {
-  color: #7a8798;
+  color: #c7c7c7;
   padding: .5rem;
 }
 
@@ -346,14 +346,14 @@
 }
 
 .docs-ad .carbon-wrap .carbon-text {
-  color: #4b5561;
+  color: #aeadad;
   display: block;
-  font-size: .75rem;
+  font-size: .875rem;
 }
 
 .docs-ad .carbon-poweredby {
-  color: #7a8798;
-  font-size: .75rem;
+  color: #c7c7c7;
+  font-size: .875rem;
 }
 
 /* Spectre Homepage style */
@@ -392,7 +392,7 @@
 }
 
 .section-footer {
-  color: #dce3ed;
+  color: #ed450f;
   padding: 1.8rem .75rem 1rem;
   position: relative;
   z-index: 200;
@@ -807,7 +807,7 @@
 }
 
 .algolia-autocomplete .algolia-docsearch-suggestion--content:before {
-  background: #b3bbc5;
+  background: #e1e0e0;
   content: "";
   display: block;
   height: 100%;
@@ -818,7 +818,7 @@
 }
 
 .algolia-autocomplete .algolia-docsearch-suggestion--category-header {
-  border-bottom: 1px solid #b3bbc5;
+  border-bottom: 1px solid #e1e0e0;
   color: #0d112b; 
   display: none;
   font-size: 1em;
@@ -834,7 +834,7 @@
 }
 
 .algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column {
-  color: #7a8798;
+  color: #c7c7c7;
   float: left;
   font-size: .9em;
   padding: 5.33333px 10.66667px;
@@ -845,7 +845,7 @@
 }
 
 .algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column:before {
-  background: #b3bbc5;
+  background: #e1e0e0;
   content: "";
   display: block;
   height: 100%;
@@ -866,7 +866,7 @@
 }
 
 .algolia-autocomplete .algolia-docsearch-suggestion--text {
-  color: #4b5561; 
+  color: #aeadad; 
   display: block;
   font-size: .85em;
   line-height: 1.2em;

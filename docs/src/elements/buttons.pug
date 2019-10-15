@@ -15,11 +15,12 @@ block docs-content
       .column.col-12
         button.btn default button
         button.btn.btn-primary primary button
+        button.btn.btn-secondary secondary button
         button.btn.btn-link link button
 
     p
       | Add the #[code btn] class to #{'<a>'}, #{'<input>'} or #{'<button>'} elements for a default button. 
-      | There are classes #[code btn-primary] and #[code btn-link] for predefined primary and link buttons.
+      | There are classes #[code btn-primary], #[code btn-secondary] #[code btn-link] for predefined primary, secondary and link buttons.
 
     pre.code(data-lang='HTML')
       code
@@ -28,24 +29,21 @@ block docs-content
           <button class="btn btn-primary">primary button</button>
           <button class="btn btn-link">link button</button>
 
-    +docs-subheading('buttons-colors', 'Button colors')
+    +docs-subheading('buttons-shapes', 'Button shapes')
+
+    p
+      | All buttons have a square bottom-right corner by default. Add a #[code round] class to the button to round it out.
 
     .docs-demo.columns
       .column.col-12
-        button.btn.btn-success success button
-        button.btn.btn-error error button
-
-    p
-      | Add the #[code btn-success] or #[code btn-error] class for success (green) or error (red) button color.
-      | If you need more button colors, please use 
-      a(href="../getting-started/custom.html#variables-buttons") button mixins
-      |  to create your own button color variants.
+        button.btn.btn-primary default button
+        button.btn.round round button
 
     pre.code(data-lang='HTML')
       code
         :highlight(lang="html")
-          <button class="btn btn-success">success button</button>
-          <button class="btn btn-error">error button</button>
+          <button class="btn btn-primary">default button</button>
+          <button class="btn round">round button</button>
 
     +docs-subheading('buttons-sizes', 'Button sizes')
 
@@ -65,6 +63,8 @@ block docs-content
           | small 
           i.icon.icon-arrow-down
         button.btn.btn-primary.btn-sm small button
+      .column.col-12
+        button.btn.btn-primary.btn-block block button
 
 
     p
@@ -79,9 +79,9 @@ block docs-content
 
           <button class="btn btn-block">block button</button>
 
-          <button class="btn btn-primary btn-lg"><i class="icon icon-arrow-left"></i> large</button>
-          <button class="btn btn-primary"><i class="icon icon-arrow-left"></i> normal</button>
-          <button class="btn btn-primary btn-sm"><i class="icon icon-arrow-left"></i> small</button>
+          <button class="btn btn-primary btn-lg"><i class="icon icon-arrow-down"></i> large</button>
+          <button class="btn btn-primary"><i class="icon icon-arrow-down"></i> normal</button>
+          <button class="btn btn-primary btn-sm"><i class="icon icon-arrow-down"></i> small</button>
 
     p
       | Please note that you could use the #[code btn-action] class for a square button, or add another #[code s-circle] class for a round button, which is often used as a Float Action Button (FAB).
@@ -89,11 +89,11 @@ block docs-content
     .docs-demo.columns
       .column.col-xs-12
         button.btn.btn-action.btn-primary.btn-lg
-          i.icon.icon-menu
+          i.icon.icon-expand-arrows-alt
         button.btn.btn-action.btn-primary
-          i.icon.icon-menu
+          i.icon.icon-expand-arrows-alt
         button.btn.btn-action.btn-primary.btn-sm
-          i.icon.icon-menu
+          i.icon.icon-expand-arrows-alt
       .column.col-xs-12
         button.btn.btn-action.btn-primary.btn-lg.s-circle
           i.icon.icon-arrow-up
@@ -109,15 +109,6 @@ block docs-content
           <button class="btn btn-action s-circle"><i class="icon icon-arrow-left"></i></button>
 
     +docs-subheading('buttons-states', 'Button states')
-
-    p
-      | Add the #[code active] class for active button state style.
-
-    .docs-demo.columns
-      .column.col-12
-        button.btn.active default active
-        button.btn.btn-primary.active primary active
-        button.btn.btn-link.active link active
 
     p
       | Add the #[code disabled] class or the #[code disabled] attribute for disabled button state style.
@@ -142,6 +133,7 @@ block docs-content
       .column.col-12
         button.btn.loading default button
         button.btn.btn-primary.loading primary button
+        button.btn.btn-secondary.loading primary button
         button.btn.btn-link.loading link button
 
     pre.code(data-lang='HTML')
@@ -166,12 +158,12 @@ block docs-content
           button.btn.btn-primary third button
       .column.col-6.col-md-12
         .btn-group
-          button.btn.btn-sm.active first button
+          button.btn.btn-sm first button
           button.btn.btn-sm second button
           button.btn.btn-sm third button
       .column.col-6.col-md-12
         .btn-group.btn-group-block
-          button.btn.btn-primary.btn-sm.active first button
+          button.btn.btn-primary.btn-sm first button
           button.btn.btn-primary.btn-sm second button
           button.btn.btn-primary.btn-sm third button
         
