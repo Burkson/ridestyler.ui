@@ -1,12 +1,12 @@
 // Label base style
 @mixin label-base() {
-  border-radius: $border-radius;
-  line-height: 1.25;
-  padding: .1rem .2rem;
-  @include label-variant($body-font-color, $secondary-color);
+	border-radius: $border-radius;
+	line-height: 1.25;
+	padding: .1rem .2rem;
+	@include label-variant($body-font-color, $gray-color-light);
 }
 
 @mixin label-variant($color: $light-color, $bg-color: $primary-color) {
-  background: $bg-color;
-  color: $color;
+	background: $bg-color;
+	color: $color;
 }
