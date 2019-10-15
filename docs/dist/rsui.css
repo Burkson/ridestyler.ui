@@ -6259,32 +6259,33 @@ summary.accordion-header::-webkit-details-marker {
 
 .badge[data-badge]::after,
 .badge:not([data-badge])::after {
-  background: #21b8f7;
+  background: #f3693c;
   background-clip: padding-box;
-  border-radius: .5rem;
+  border-radius: 1rem;
   box-shadow: 0 0 0 .1rem #fff;
   color: #fff;
   content: attr(data-badge);
   display: inline-block;
-  transform: translate(-.05rem, -.5rem);
+  transform: translate(-.05rem, -1.3rem);
+  z-index: 1;
 }
 
 .badge[data-badge]::after {
   font-size: .875rem;
-  height: .9rem;
   line-height: 1;
+  min-height: .9rem;
   min-width: .9rem;
-  padding: .1rem .2rem;
+  padding: .3rem .5rem;
   text-align: center;
   white-space: nowrap;
 }
 
 .badge:not([data-badge])::after,
 .badge[data-badge=""]::after {
-  height: 6px;
-  min-width: 6px;
+  height: 1rem;
+  min-width: 1rem;
   padding: 0;
-  width: 6px;
+  width: 1rem;
 }
 
 .badge.btn::after {
