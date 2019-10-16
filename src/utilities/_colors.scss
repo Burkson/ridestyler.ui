@@ -24,7 +24,7 @@
 
 @include bg-color-variant(".bg-dark", $dark-color);
 
-@include bg-color-variant(".bg-gray", $bg-color);
+@include bg-color-variant(".bg-gray", $bg-color-gray);
 
 @include bg-color-variant(".bg-success", $success-color);
 
@@ -33,3 +33,8 @@
 @include bg-color-variant(".bg-error", $error-color);
 
 @include bg-color-variant(".bg-ridestyler-orange", $ridestyler-color-orange);
+@include bg-color-variant(".bg-ridestyler-black", $ridestyler-color-black);
+@include bg-color-variant(".bg-ridestyler-dark-gray", $ridestyler-color-dark-gray);
+@include bg-color-variant(".bg-ridestyler-gray", $ridestyler-color-gray);
+@include bg-color-variant(".bg-ridestyler-red", $ridestyler-color-red);
+@include bg-color-variant(".bg-ridestyler-blue", $ridestyler-color-blue);
