@@ -4759,6 +4759,7 @@ html:lang(ko),
 
 .btn.btn-action {
   height: 3.5rem;
+  line-height: 0;
   min-height: 0;
   min-width: 0;
   padding-left: 0;
