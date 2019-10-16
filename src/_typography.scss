@@ -98,8 +98,8 @@ kbd {
 }
 
 mark {
-	@include label-variant($body-font-color, $highlight-color);
-	border-bottom: $unit-o solid darken($highlight-color, 15%);
+	@include label-variant($light-color, $ridestyler-color-orange);
+	border-bottom: $unit-o solid darken($ridestyler-color-orange, 15%);
 	border-radius: $border-radius;
 	padding: $unit-o $unit-h 0;
 }
