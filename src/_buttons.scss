@@ -91,16 +91,19 @@
 
 	// Button Action
 	&.btn-action {
-		width: $control-size;
+		width: 3.5rem;
+		height: 3.5rem;
 		padding-left: 0;
 		padding-right: 0;
 
 		&.btn-sm {
-			width: $control-size-sm;
+			width: 2.8rem;
+			height: 2.8rem;
 		}
 
 		&.btn-lg {
-			width: $control-size-lg;
+			width: 4.5rem;
+			height: 4.5rem;
 		}
 	}
 
