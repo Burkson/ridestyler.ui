@@ -4448,6 +4448,12 @@ header {
   text-transform: uppercase;
 }
 
+header.compact {
+  font-weight: normal;
+  padding: .4rem 3.2rem; 
+  text-transform: none;
+}
+
 html:lang(zh),
 html:lang(zh-Hans),
 .lang-zh,
@@ -6347,6 +6353,10 @@ summary.accordion-header::-webkit-details-marker {
   content: "";
   font-size: .875rem; 
   padding-right: .8rem;
+}
+
+.breadcrumb .breadcrumb-item.disabled {
+  opacity: .55;
 }
 
 .bar {
