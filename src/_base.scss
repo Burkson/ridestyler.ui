@@ -38,3 +38,9 @@ a {
 		color: $link-color-light;
 	}
 }
+::selection {
+	background: $primary-color; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+	background: $primary-color; /* Gecko Browsers */
+}
