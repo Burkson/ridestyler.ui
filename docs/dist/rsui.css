@@ -6595,9 +6595,7 @@ summary.accordion-header::-webkit-details-marker {
 }
 
 .menu {
-  background: #fff;
   border-radius: .4rem;
-  color: #0d112b; 
   list-style: none;
   margin: 0;
   min-width: 320px;
@@ -6630,14 +6628,14 @@ summary.accordion-header::-webkit-details-marker {
 
 .menu .menu-item > a:focus,
 .menu .menu-item > a:hover {
-  background: #f3693c;
-  color: #21b8f7;
+  background: #e6ebf2;
+  color: #30bdf8;
 }
 
 .menu .menu-item > a:active,
 .menu .menu-item > a.active {
-  background: #f3693c;
-  color: #21b8f7;
+  background: #21b8f7;
+  color: #fff;
 }
 
 .menu .menu-item .avatar:first-child {

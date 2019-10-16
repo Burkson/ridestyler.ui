@@ -1,13 +1,11 @@
 // Menus
 .menu {
-	background: $bg-color-light;
 	border-radius: $border-radius;
 	list-style: none;
 	margin: 0;
 	min-width: $control-width-sm;
 	padding: $layout-spacing-sm;
     z-index: $zindex-3;
-    color: $dark-color;
 
 	&.menu-nav {
 		background: transparent;
@@ -34,14 +32,14 @@
 
 			&:focus,
 			&:hover {
-				background: $secondary-color;
-				color: $primary-color;
+				background: $bg-color;
+				color: $primary-color-light;
 			}
 
 			&:active,
 			&.active {
-				background: $secondary-color;
-				color: $primary-color;
+				background: $primary-color;
+				color: $light-color
 			}
         }
         
