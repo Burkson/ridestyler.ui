@@ -6674,6 +6674,8 @@ summary.accordion-header::-webkit-details-marker {
 
 .modal:target .modal-overlay,
 .modal.active .modal-overlay {
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
   background: rgba(13, 17, 43, .75);
   bottom: 0;
   cursor: default;

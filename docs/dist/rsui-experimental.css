@@ -654,7 +654,9 @@
 }
 
 .off-canvas .off-canvas-overlay {
-  background: rgba(13, 17, 43, .5);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  background: rgba(13, 17, 43, .75);
   border-color: transparent;
   border-radius: 0;
   bottom: 0;

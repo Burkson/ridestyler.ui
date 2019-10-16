@@ -5,7 +5,7 @@ block content
   .docs-container.off-canvas.off-canvas-sidebar-show
     .docs-navbar
       a.off-canvas-toggle.btn.btn-link.btn-action(href='#sidebar')
-        i.icon.icon-menu
+        i.icon.icon-bars
       .btns.d-flex
         input.docs-search.form-input(type="text" placeholder="Search Docs")
         a.btn.ml-1(href='https://www.paypal.me/picturepan2' target='_blank') PayPal
@@ -108,7 +108,7 @@ block content
   
     a.off-canvas-overlay(href='#close')
     .off-canvas-content
-      #content.docs-content
+      #content.docs-content.container.grid-xl
         block docs-content
 
   script(type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js")
