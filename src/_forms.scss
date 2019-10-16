@@ -177,6 +177,9 @@ textarea.form-input {
 		transform: translateY(-50%);
 		width: $control-icon-size;
 		z-index: $zindex-0 + 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 }
 
