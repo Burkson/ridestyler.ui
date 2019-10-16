@@ -11,6 +11,7 @@ var fs = require('fs');
 var Handlebars = require('handlebars');
 var async = require('async');
 var sourcemaps = require('gulp-sourcemaps');
+var browserSync = require('browser-sync').create();
 
 var runTimestamp = Math.round(Date.now()/1000);
 
@@ -52,6 +53,14 @@ function buildSCSS() {
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(distPaths.source));
 }
+
+function copySCSSToDocs() {
+    return gulp.src(distPaths.source + '/**', {
+        base: distPaths.source
+    }).pipe(gulp.dest(distPaths.docs + '/dist'));
+}
+
+
 function replaceTokens() {
     return replace('{PACKAGE_VERSION}', version);
 }
@@ -139,19 +148,46 @@ var docTasks = {
 
 
 gulp.task('watch', function () {
-    gulp.watch(paths.source, gulp.parallel('scss'));
+    gulp.watch(paths.source, function (cb) {
+        buildSCSSAndCopyToDocs.th
+    });
     gulp.watch(paths.variables, gulp.series(docTasks.scssDocs));
     gulp.watch(paths.doc, gulp.series(docTasks.scssDocs));
     gulp.watch('./**/*.pug', gulp.series(docTasks.html));
 });
 
+// Static server
+gulp.task('serve', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./docs"
+        }
+    });
+    
+    gulp.watch(paths.source, gulp.series(
+        function () {
+            return buildSCSS().pipe(browserSync.stream());
+        }, 
+        copySCSSToDocs
+    ));
+    gulp.watch(paths.variables, function () {
+        return docTasks.scssDocs().pipe(browserSync.stream());
+    });
+    gulp.watch(paths.doc, function () {
+        return docTasks.scssDocs().pipe(browserSync.stream());
+    });
+    gulp.watch('./**/*.pug', function (done) {
+        docTasks.html()
+            .on('end', function () {
+                browserSync.reload();
+                done();
+            })
+    });
+});
+
 gulp.task('scss', gulp.series(
     buildSCSS, 
-    function copyToDocs() {
-        return gulp.src(distPaths.source + '/**', {
-            base: distPaths.source
-        }).pipe(gulp.dest(distPaths.docs + '/dist'));
-    }
+    copySCSSToDocs
 ));
 
 gulp.task('docs', gulp.parallel(

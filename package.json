@@ -17,9 +17,8 @@
     "sass": "src/index.scss",
     "scripts": {
         "build": "gulp build",
-        "watch": "gulp watch",
         "docs": "gulp docs",
-        "serve": "concurrently \"http-server docs\" \"npm run watch\""
+        "serve": "gulp serve"
     },
     "keywords": [
         "css",
@@ -38,7 +37,7 @@
     },
     "devDependencies": {
         "async": "^3.1.0",
-        "concurrently": "^5.0.0",
+        "browser-sync": "^2.26.7",
         "gulp": "^4.0.2",
         "gulp-autoprefixer": "latest",
         "gulp-clean-css": "latest",
@@ -50,7 +49,6 @@
         "gulp-sass": "latest",
         "gulp-sourcemaps": "^2.6.5",
         "handlebars": "^4.4.3",
-        "http-server": "^0.11.1",
         "jstransformer-highlight": "latest",
         "jstransformer-markdown-it": "latest"
     },
