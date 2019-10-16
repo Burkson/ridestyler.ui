@@ -388,6 +388,9 @@ textarea.form-input {
 		padding: $control-padding-y $control-padding-x;
 		white-space: nowrap;
 
+		display: flex;
+		align-items: center;
+
 		&.addon-sm {
 			font-size: $font-size-sm;
 			padding: $control-padding-y-sm $control-padding-x-sm;
