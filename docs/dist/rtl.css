@@ -98,10 +98,6 @@
   vertical-align: middle;
 }
 
-.icon {
-  display: inline-block;
-}
-
 .icon.icon-2x {
   font-size: 2rem;
 }
@@ -4785,14 +4781,12 @@ html:lang(ko),
   background: transparent;
   border: 0;
   color: currentColor;
-  line-height: 1.6rem;
-  margin-left: .4rem;
-  margin-right: -2px;
-  min-height: 2rem;
+  margin: 0;
+  min-height: 1.625rem;
   opacity: 1;
-  padding: .1rem;
+  padding: 0;
   text-decoration: none;
-  width: 2rem;
+  width: 1.625rem;
 }
 
 .btn.btn-clear:focus,
@@ -6533,6 +6527,7 @@ summary.accordion-header::-webkit-details-marker {
 
 .dropdown .menu {
   animation: slide-down .15s ease 1;
+  background-color: #fff;
   box-shadow: 0 .25rem .6rem rgba(13, 17, 43, .3);
   display: none;
   left: 0;
@@ -6968,14 +6963,13 @@ summary.accordion-header::-webkit-details-marker {
 
 .step .step-item a::before {
   background: #21b8f7;
-  border: .1rem solid #fff;
   border-radius: 50%;
   content: "";
   display: block;
   height: 1.2rem;
   left: 50%;
   position: absolute;
-  top: .4rem;
+  top: 0;
   transform: translateX(-50%);
   width: 1.2rem;
   z-index: 1;
@@ -7148,10 +7142,6 @@ summary.accordion-header::-webkit-details-marker {
 .toast.toast-error {
   background: rgba(255, 0, 0, .95);
   color: #fff;
-}
-
-.toast .btn-clear {
-  margin: .1rem;
 }
 
 .toast p:last-child {
