@@ -91,14 +91,17 @@
 
 	// Button Action
 	&.btn-action {
+		min-height: 0;
+		min-width: 0;
+
 		width: 3.5rem;
 		height: 3.5rem;
 		padding-left: 0;
 		padding-right: 0;
 
 		&.btn-sm {
-			width: 2.8rem;
-			height: 2.8rem;
+			width: 2rem;
+			height: 2rem;
 		}
 
 		&.btn-lg {

@@ -4787,14 +4787,16 @@ html:lang(ko),
 
 .btn.btn-action {
   height: 3.5rem;
+  min-height: 0;
+  min-width: 0;
   padding-left: 0;
   padding-right: 0; 
   width: 3.5rem;
 }
 
 .btn.btn-action.btn-sm {
-  height: 2.8rem; 
-  width: 2.8rem;
+  height: 2rem; 
+  width: 2rem;
 }
 
 .btn.btn-action.btn-lg {
@@ -6439,6 +6441,8 @@ summary.accordion-header::-webkit-details-marker {
   border: 0;
   border-radius: 50%;
   height: 1.2rem;
+  min-height: 0;
+  min-width: 0;
   padding: 0;
   position: absolute;
   right: 0;
