@@ -52,7 +52,8 @@ $off-canvas-breakpoint: $size-lg !default;
 	}
 
 	.off-canvas-overlay {
-		background: rgba($dark-color, .5);
+		background: rgba($dark-color, .75);
+		backdrop-filter: blur(2px);
 		border-color: transparent;
 		border-radius: 0;
 		bottom: 0;

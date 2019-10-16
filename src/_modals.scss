@@ -20,6 +20,7 @@
 
 		.modal-overlay {
 			background: rgba($dark-color, .75);
+			backdrop-filter: blur(2px);
 			bottom: 0;
 			cursor: default;
 			display: block;
