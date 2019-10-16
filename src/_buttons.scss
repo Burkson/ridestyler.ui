@@ -109,7 +109,7 @@
 		background: transparent;
 		border: 0;
 		color: currentColor;
-		height: $unit-5;
+		min-height: $unit-5;
 		line-height: $unit-4;
 		margin-left: $unit-1;
 		margin-right: -2px;
@@ -125,7 +125,8 @@
 		}
 
 		&::before {
-			content: "\2715";
+			@extend %icon;
+			content: $icon-code-times;
 		}
 	}
 }

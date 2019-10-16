@@ -84,7 +84,8 @@
   src: url("https://static.ridestyler.net/fonts/rsui-icons.eot?#iefix") format("eot"), url("https://static.ridestyler.net/fonts/rsui-icons.woff2") format("woff2"), url("https://static.ridestyler.net/fonts/rsui-icons.woff") format("woff"), url("https://static.ridestyler.net/fonts/rsui-icons.ttf") format("truetype"), url("https://static.ridestyler.net/fonts/rsui-icons.svg#rsui-icons") format("svg");
 }
 
-.icon {
+.icon,
+.btn.btn-clear::before {
   display: inline-block;
   font-family: "rsui-icons";
   -webkit-font-smoothing: antialiased;
@@ -4748,10 +4749,10 @@ html:lang(ko),
   background: transparent;
   border: 0;
   color: currentColor;
-  height: 2rem;
   line-height: 1.6rem;
   margin-left: .4rem;
   margin-right: -2px;
+  min-height: 2rem;
   opacity: 1;
   padding: .1rem;
   text-decoration: none;
@@ -4765,7 +4766,7 @@ html:lang(ko),
 }
 
 .btn.btn-clear::before {
-  content: "\2715";
+  content: "";
 }
 
 .btn-group {
@@ -7063,11 +7064,9 @@ summary.accordion-header::-webkit-details-marker {
 }
 
 .toast {
-  background: rgba(13, 17, 43, .95);
-  border: .05rem solid #0d112b;
-  border-color: #0d112b;
+  background: rgba(230, 235, 242, .95);
   border-radius: .4rem;
-  color: #fff;
+  color: #0d112b;
   display: block;
   padding: 1.2rem;
   width: 100%;
@@ -7075,28 +7074,28 @@ summary.accordion-header::-webkit-details-marker {
 
 .toast.toast-primary {
   background: rgba(33, 184, 247, .95);
-  border-color: #21b8f7;
+  color: #fff;
 }
 
 .toast.toast-secondary {
   background: rgba(243, 105, 60, .95);
-  border-color: #f3693c;
-  color: #0d112b;
+  color: #0d112b; 
+  color: #fff;
 }
 
 .toast.toast-success {
   background: rgba(50, 182, 67, .95);
-  border-color: #32b643;
+  color: #fff;
 }
 
 .toast.toast-warning {
   background: rgba(255, 183, 0, .95);
-  border-color: #ffb700;
+  color: #fff;
 }
 
 .toast.toast-error {
   background: rgba(255, 0, 0, .95);
-  border-color: #f00;
+  color: #fff;
 }
 
 .toast .btn-clear {
