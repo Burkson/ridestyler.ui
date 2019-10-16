@@ -28,10 +28,6 @@
 		@include toast-variant($error-color);
 	}
 
-	.btn-clear {
-		margin: $unit-h;
-	}
-
 	p {
 		&:last-child {
 			margin-bottom: 0;
