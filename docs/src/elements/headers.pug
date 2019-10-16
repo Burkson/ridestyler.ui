@@ -24,7 +24,7 @@ block docs-content
               | Wheel Co. 
               i.icon.icon-caret-down
         header
-          h2 Upload Your Photo
+          | Upload Your Photo
     
     p They look good below a #[a(href="../layout/navbar.html#navbar-branded") Navbar] or just fine 🕶 by themselves.
     
@@ -32,7 +32,25 @@ block docs-content
       code
         :highlight(lang="html")
           <header>
-            <h2>Upload Your Photo</h2>
+            Upload Your Photo
           </header>
+    
+    p Add a #[code .compact] class for less padding
+
+    .docs-demo.columns
+      .column
+        .navbar.navbar-branded
+          .navbar-brand
+            .navbar-brand-logo
+            i.icon.icon-car
+          section.navbar-section
+            h1 Augmented Reality
+          section.navbar-section
+            button.btn.btn-link
+              | Wheel Co. 
+              i.icon.icon-caret-down
+        header.compact.text-center.bg-ridestyler-gray Download our new app!
+        header
+          | Upload Your Photo
 
   include ../_layout/_footer.pug

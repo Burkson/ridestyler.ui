@@ -25,6 +25,8 @@
 
 .icon {
     @extend %icon;
+    
+    display: inline-block;
 
     &.icon-2x { font-size: 2rem; }
     &.icon-3x { font-size: 3rem; }

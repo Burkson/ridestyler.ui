@@ -1,29 +1,12 @@
 header {
     background-color: $bg-color;
     padding: $layout-spacing-sm $layout-spacing-lg;
+    text-transform: uppercase;
+    font-weight: 800;
 
-    h1, .h1,
-    h2, .h2,
-    h3, .h3,
-    h4, .h4,
-    h5, .h5,
-    h6, .h6 {
-        text-transform: uppercase;
-        margin: 0;
-    }
-
-    h1, .h1 {
-        font-size: 1.375rem;
-    }
-
-    h2, .h2 {
-        font-size: 1.2rem;
-    }
-
-    h3, .h3,
-    h4, .h4,
-    h5, .h5,
-    h6, .h6 {
-        font-size: 1rem;
+    &.compact {
+        font-weight: normal;
+        text-transform: none;
+        padding: $unit-1 $layout-spacing-lg;
     }
 }

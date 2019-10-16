@@ -204,29 +204,36 @@
             <h3 class="s-title">Breadcrumbs<a class="anchor" href="#breadcrumbs" aria-hidden="true">#</a></h3>
             <p>Breadcrumbs are used as navigational hierarchies to indicate current location.</p>
             <div class="docs-demo columns">
-              <div class="column col-12">
-                <ul class="breadcrumb">
-                  <li class="breadcrumb-item"><a class="tooltip" href="#breadcrumbs" data-tooltip="Home">Home</a></li>
-                  <li class="breadcrumb-item"><a class="tooltip" href="#breadcrumbs" data-tooltip="Settings">Settings</a></li>
-                </ul>
-              </div>
-              <div class="column col-12">
-                <ul class="breadcrumb">
-                  <li class="breadcrumb-item"><a class="tooltip" href="#breadcrumbs" data-tooltip="Home">Home</a></li>
-                  <li class="breadcrumb-item"><a class="tooltip" href="#breadcrumbs" data-tooltip="Settings">Settings</a></li>
-                  <li class="breadcrumb-item"><a class="tooltip" href="#breadcrumbs" data-tooltip="Change avatar">Change avatar</a></li>
-                </ul>
-              </div>
-              <div class="column col-12">
-                <ul class="breadcrumb">
-                  <li class="breadcrumb-item"><a class="tooltip" href="#breadcrumbs" data-tooltip="Home">Home</a></li>
-                  <li class="breadcrumb-item"><a class="tooltip" href="#breadcrumbs" data-tooltip="Settings">Settings</a></li>
-                  <li class="breadcrumb-item">Search result: <a class="tooltip" href="#breadcrumbs" data-tooltip="Search result: ridestyler.ui">ridestyler.ui</a></li>
-                </ul>
+              <div class="column">
+                <div class="navbar navbar-branded">
+                  <div class="navbar-brand">
+                    <div class="navbar-brand-logo"></div><i class="icon icon-car"></i>
+                  </div>
+                  <section class="navbar-section">
+                    <h1>Augmented Reality</h1>
+                  </section>
+                  <section class="navbar-section">
+                    <button class="btn btn-link">Wheel Co. <i class="icon icon-caret-down"></i></button>
+                  </section>
+                </div>
+                <header>
+                  <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="tooltip" href="#breadcrumbs" data-tooltip="Home">Home</a></li>
+                    <li class="breadcrumb-item"><a class="tooltip" href="#breadcrumbs" data-tooltip="Settings">Settings</a></li>
+                  </ul>
+                </header>
+                <header class="mt-1">
+                  <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="tooltip" href="#breadcrumbs" data-tooltip="Home">Home</a></li>
+                    <li class="breadcrumb-item"><a class="tooltip" href="#breadcrumbs" data-tooltip="Settings">Settings</a></li>
+                    <li class="breadcrumb-item disabled"><a class="tooltip" href="#breadcrumbs" data-tooltip="Change avatar">Change avatar</a></li>
+                  </ul>
+                </header>
               </div>
             </div>
             <p>Add a container element with the <code>breadcrumb</code> class.
               And add child elements with the <code>breadcrumb-item</code> class.
+              Breadcrumb items can have a <code>disabled</code> class to make the breadcrumb appear inactive.
             </p>
             <pre class="code" data-lang="HTML"><code><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breadcrumb"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breadcrumb-item"</span>&gt;</span>
@@ -235,7 +242,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breadcrumb-item"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Settings<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breadcrumb-item"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breadcrumb-item disabled"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Change avatar<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>

@@ -85,7 +85,8 @@
 }
 
 .icon,
-.btn.btn-clear::before {
+.btn.btn-clear::before,
+.breadcrumb .breadcrumb-item:not(:first-child)::before {
   display: inline-block;
   font-family: "rsui-icons";
   -webkit-font-smoothing: antialiased;
@@ -94,6 +95,10 @@
   line-height: 1;
   -moz-osx-font-smoothing: grayscale;
   vertical-align: middle;
+}
+
+.icon {
+  display: inline-block;
 }
 
 .icon.icon-2x {
@@ -4437,44 +4442,15 @@ dl dd {
 
 header {
   background-color: #e6ebf2;
+  font-weight: 800; 
   padding: .8rem 3.2rem;
-}
-
-header h1,
-header .h1,
-header h2,
-header .h2,
-header h3,
-header .h3,
-header h4,
-header .h4,
-header h5,
-header .h5,
-header h6,
-header .h6 {
-  margin: 0; 
   text-transform: uppercase;
 }
 
-header h1,
-header .h1 {
-  font-size: 1.375rem;
-}
-
-header h2,
-header .h2 {
-  font-size: 1.2rem;
-}
-
-header h3,
-header .h3,
-header h4,
-header .h4,
-header h5,
-header .h5,
-header h6,
-header .h6 {
-  font-size: 1rem;
+header.compact {
+  font-weight: normal;
+  padding: .4rem 3.2rem; 
+  text-transform: none;
 }
 
 html:lang(zh),
@@ -6353,29 +6329,33 @@ summary.accordion-header::-webkit-details-marker {
 
 .breadcrumb {
   list-style: none;
-  margin: .4rem 0;
-  padding: .4rem 0;
+  margin: 0;
 }
 
 .breadcrumb .breadcrumb-item {
-  color: #aeadad;
   display: inline-block;
   margin: 0;
-  padding: .4rem 0;
+}
+
+.breadcrumb .breadcrumb-item a {
+  color: currentColor; 
+  text-decoration: none;
+  vertical-align: middle;
 }
 
 .breadcrumb .breadcrumb-item:not(:last-child) {
   margin-right: .4rem;
 }
 
-.breadcrumb .breadcrumb-item:not(:last-child) a {
-  color: #aeadad;
-}
-
 .breadcrumb .breadcrumb-item:not(:first-child)::before {
   color: #aeadad;
-  content: "/";
+  content: "";
+  font-size: .875rem; 
   padding-right: .8rem;
+}
+
+.breadcrumb .breadcrumb-item.disabled {
+  opacity: .55;
 }
 
 .bar {
@@ -7433,7 +7413,7 @@ a.text-active:visited {
 }
 
 .bg-gray {
-  background: #e6ebf2 !important;
+  background: #c7c7c7 !important;
 }
 
 .bg-success {
@@ -7453,6 +7433,31 @@ a.text-active:visited {
 
 .bg-ridestyler-orange {
   background: #f3693c !important;
+  color: #fff;
+}
+
+.bg-ridestyler-black {
+  background: #0d112b !important;
+  color: #fff;
+}
+
+.bg-ridestyler-dark-gray {
+  background: #556172 !important;
+  color: #fff;
+}
+
+.bg-ridestyler-gray {
+  background: #7a8798 !important;
+  color: #fff;
+}
+
+.bg-ridestyler-red {
+  background: #e72320 !important;
+  color: #fff;
+}
+
+.bg-ridestyler-blue {
+  background: #21b8f7 !important;
   color: #fff;
 }
 
