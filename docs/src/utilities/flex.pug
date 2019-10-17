@@ -1,0 +1,63 @@
+extends ../_layout/_docs-layout.pug
+
+block variables
+  - var slug = 'flex'
+  - var parent = 'utilities'
+  - var title = 'Flex utilities - Utilities - ridestyler.ui CSS Framework'
+  - var description = 'Flex utilities are used for making working with flex easier. ridestyler.ui CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development.'
+
+block docs-content
+  +docs-heading('flex', 'Flex utilities')
+
+    p Flex utilities are used for making working with flex easier.
+
+    pre.code(data-lang='HTML')
+        code
+            :highlight(lang="html")
+                <!-- Flex direction -->
+                <div class="flex-row"></div>
+                <div class="flex-row-reverse"></div>
+                <div class="flex-column"></div>
+                <div class="flex-column-reverse"></div>
+
+                <!-- Flex wrap -->
+                <div class="flex-nowrap"></div>
+                <div class="flex-wrap"></div>
+                <div class="flex-wrap-reverse"></div>
+
+                <!-- Justify content -->
+                <div class="justify-end"></div>
+                <div class="justify-start"></div>
+                <div class="justify-center"></div>
+                <div class="justify-space-around"></div>
+                <div class="justify-space-between"></div>
+
+                <!-- Align items -->
+                <div class="align-start"></div>
+                <div class="align-center"></div>
+                <div class="align-end"></div>
+                <div class="align-stretch"></div>
+                <div class="align-baseline"></div>
+
+                <!-- Flex grow -->
+                <div class="flex-grow-0"></div>
+                <div class="flex-grow-1"></div>
+
+                <!-- Flex shrink -->
+                <div class="flex-shrink-0"></div>
+                <div class="flex-shrink-1"></div>
+
+
+                <!-- Flex basis -->
+                <div class="flex-basis-auto"></div>
+                <div class="flex-basis-0"></div>
+
+                <!-- Align self -->
+                <div class="align-self-auto"></div>
+                <div class="align-self-start"></div>
+                <div class="align-self-center"></div>
+                <div class="align-self-end"></div>
+                <div class="align-self-stretch"></div>
+                <div class="align-self-baseline"></div>
+
+  include ../_layout/_footer.pug
