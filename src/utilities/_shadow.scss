@@ -6,6 +6,10 @@
     @include shadow-variant($shadow-far);
 }
 
+.shadow-extra-far {
+    @include shadow-variant($shadow-extra-far);
+}
+
 .shadow-disabled {
     box-shadow: none !important;
 }

@@ -62,6 +62,7 @@ $sidebar-width: 14rem;
 
   .accordion {
     margin-bottom: .75rem;
+    max-height: 53rem;
 
     input {
       & ~ .accordion-header {

@@ -6481,6 +6481,23 @@ summary.accordion-header::-webkit-details-marker {
   border-bottom-right-radius: .4rem;
 }
 
+.card.card-action {
+  border-left: 3rem solid #556172;
+  transition: box-shadow 500ms cubic-bezier(.19, 1, .22, 1);
+}
+
+.card.card-action:hover {
+  box-shadow: 0 .5rem 1.1rem rgba(13, 17, 43, .3);
+}
+
+.card.card-action-primary {
+  border-left-color: #21b8f7;
+}
+
+.card.card-action-secondary {
+  border-left-color: #f3693c;
+}
+
 .chip {
   align-items: center;
   background: #e6ebf2;
@@ -8047,6 +8064,10 @@ a.text-active:visited {
 
 .shadow-far {
   box-shadow: 0 .25rem .6rem rgba(13, 17, 43, .3);
+}
+
+.shadow-extra-far {
+  box-shadow: 0 .5rem 1.1rem rgba(13, 17, 43, .3);
 }
 
 .shadow-disabled {

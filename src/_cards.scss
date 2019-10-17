@@ -47,4 +47,15 @@
 			}
 		}
 	}
+
+	&.card-action {
+		border-left: 3rem solid $ridestyler-color-dark-gray;
+		transition: box-shadow 500ms cubic-bezier(0.19, 1, 0.22, 1);
+
+		&:hover {
+			@include shadow-variant($shadow-extra-far);
+		}
+	}
+	&.card-action-primary { border-left-color: $primary-color; }
+	&.card-action-secondary { border-left-color: $secondary-color; }
 }

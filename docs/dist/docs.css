@@ -54,6 +54,7 @@
 
 .docs-sidebar .accordion {
   margin-bottom: .75rem;
+  max-height: 53rem;
 }
 
 .docs-sidebar .accordion .menu .menu-item > a {
