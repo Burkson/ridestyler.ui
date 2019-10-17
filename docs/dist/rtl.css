@@ -6484,6 +6484,11 @@ summary.accordion-header::-webkit-details-marker {
 
 .card.card-action {
   border-left: 3rem solid #556172;
+  transition: box-shadow 500ms cubic-bezier(.19, 1, .22, 1);
+}
+
+.card.card-action:hover {
+  box-shadow: 0 .5rem 1.1rem rgba(13, 17, 43, .3);
 }
 
 .card.card-action-primary {
