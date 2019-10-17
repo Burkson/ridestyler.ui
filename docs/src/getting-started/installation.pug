@@ -20,16 +20,13 @@ block docs-content
     p
       a.btn.btn-primary(href='https://github.com/Burkson/ridestyler.ui/releases', target='_blank') Download ridestyler.ui
     p
-      | Include RideStyler UI in your website or Web app #{'<head>'}. Also, you can add 
-      code ridestyler.ui-experimental.css
-      |  accordingly to add support for #[a(href="../experimentals.html") Experimental] components
+      | Include RideStyler UI in your website or Web app #{'<head>'}.
 
     //- install manually
     pre.code(data-lang='HTML')
       code
         :highlight(lang="html")
           <link rel="stylesheet" href="rsui.min.css">
-          <link rel="stylesheet" href="rsui-experimental.min.css">
       
     +docs-subheading('install-cdn', 'Install from CDN')
     p
@@ -40,7 +37,6 @@ block docs-content
       code
         :highlight(lang="html")
           <link rel="stylesheet" href="https://static.ridestyler.net/rs-ui/latest/rsui.min.css">
-          <link rel="stylesheet" href="https://static.ridestyler.net/rs-ui/latest/rsui-experimental.min.css">
 
     +docs-subheading('install-npm', 'Install with NPM')
 

@@ -14,7 +14,6 @@
     <link rel="shortcut icon" href="../img/favicons/favicon.ico">
     <link rel="icon" href="../img/favicons/favicon.png">
     <link rel="stylesheet" href="../dist/rsui.min.css">
-    <link rel="stylesheet" href="../dist/rsui-experimental.min.css">
     <link rel="stylesheet" href="../dist/docs.min.css">
     <link rel="canonical" href="https://burkson.github.io/ridestyler.ui/getting-started/custom.html">
   </head>
@@ -158,38 +157,6 @@
                 </ul>
               </div>
             </div>
-            <div class="accordion">
-              <input id="accordion-experimentals" type="checkbox" name="docs-accordion-checkbox" hidden=""/>
-              <label class="accordion-header c-hand" for="accordion-experimentals">Experimentals</label>
-              <div class="accordion-body">
-                <ul class="menu menu-nav">
-                  <li class="menu-item"><a href="../experimentals/viewer-360.html">360-Degree Viewer</a>
-                  </li>
-                  <li class="menu-item"><a href="../experimentals/autocomplete.html">Autocomplete</a>
-                  </li>
-                  <li class="menu-item"><a href="../experimentals/calendars.html">Calendars</a>
-                  </li>
-                  <li class="menu-item"><a href="../experimentals/carousels.html">Carousels</a>
-                  </li>
-                  <li class="menu-item"><a href="../experimentals/comparison.html">Comparison sliders</a>
-                  </li>
-                  <li class="menu-item"><a href="../experimentals/filters.html">Filters</a>
-                  </li>
-                  <li class="menu-item"><a href="../experimentals/meters.html">Meters</a>
-                  </li>
-                  <li class="menu-item"><a href="../experimentals/off-canvas.html">Off-canvas</a>
-                  </li>
-                  <li class="menu-item"><a href="../experimentals/parallax.html">Parallax</a>
-                  </li>
-                  <li class="menu-item"><a href="../experimentals/progress.html">Progress</a>
-                  </li>
-                  <li class="menu-item"><a href="../experimentals/sliders.html">Sliders</a>
-                  </li>
-                  <li class="menu-item"><a href="../experimentals/timelines.html">Timelines</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
           </div>
         </div>
       </div><a class="off-canvas-overlay" href="#close"></a>
@@ -234,14 +201,11 @@
             <h4 class="s-subtitle" id="folders">Folder structure<a class="anchor" href="#folders" aria-hidden="true">#</a></h4>
             <pre class="code"><code>ridestyler.ui/
 ├── dist/                           <span class="hljs-comment">// Build folder</span>
-│   ├── rs-ui-experimental.css
-│   ├── rs-ui-experimental.<span class="hljs-built_in">min</span>.css
 │   ├── rs-ui
 │   └── rs-ui.<span class="hljs-built_in">min</span>.css
 │
 ├── docs/
 │   ├── dist/                       <span class="hljs-comment">// Pre-built CSS folder</span>
-│   │   ├── rs-ui-experimental.<span class="hljs-built_in">min</span>.css
 │   │   └── rs-ui.<span class="hljs-built_in">min</span>.css
 |   ├── css/                        <span class="hljs-comment">// Built docs CSS files</span>
 │   │   └── docs.css
@@ -256,7 +220,6 @@
 │
 ├── src/                            <span class="hljs-comment">// Source Sass files</span>
 │   ├── <span class="hljs-keyword">index</span>.scss
-│   ├── experimental.scss
 │   ├── _mixins.scss
 │   ├── _variables.scss
 │   └── ...

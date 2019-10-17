@@ -13,6 +13,9 @@ var async = require('async');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var sassExporter = require('sass-export').exporter;
+const path = require('path');
+const glob = require('glob');
+const iconMatch = /^u[0-9A-F]{4}\-(.+)$/;
 
 var runTimestamp = Math.round(Date.now()/1000);
 
@@ -140,19 +143,26 @@ var docTasks = {
     },
     html() {
         const sassVariables = {};
-        const icons = [];
-        const iconCodeVariablePrefix = '$icon-code-';
+        const icons = (function () {
+            const icons = [];
+            
+            glob('./src/icons/**/*.svg', {}, (err, matches) => {
+                matches.forEach(match => {
+                    const fileName = path.basename(match, path.extname(match));
+                    const iconName = fileName.match(iconMatch)[1];
+
+                    icons.push(iconName);
+                })
+            });
+
+            return icons;
+        })();
 
         sassExporter({
             inputFiles: [
-                paths.variables,
-                './src/_icons.scss'
+                paths.variables
             ]
         }).getArray().forEach(variable => {
-            if (variable.name.startsWith(iconCodeVariablePrefix)) {
-                icons.push(variable.name.substr(iconCodeVariablePrefix.length));
-            }
-
             sassVariables[variable.name] = variable.compiledValue;
         });
 
@@ -198,7 +208,7 @@ gulp.task('serve', function() {
     gulp.watch(paths.doc, function () {
         return docTasks.scssDocs().pipe(browserSync.stream());
     });
-    gulp.watch('./**/*.pug', function (done) {
+    gulp.watch('./**/*.pug', function docsHtml (done) {
         docTasks.html()
             .on('end', function () {
                 browserSync.reload();
