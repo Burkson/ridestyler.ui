@@ -10,49 +10,37 @@ block docs-content
   +docs-heading('installation', 'Installation')
     
     p
-      | There are 5 ways to get started with ridestyler.ui CSS framework in your projects. You can either install manually, from CDN or use package managers.
+      | There are 3 ways to get started with the RideStyler UI CSS framework in your project. You can either install manually, from CDN or use a package manager.
 
     +docs-subheading('install-manually', 'Install manually')
     p
       | Download the compiled and minified 
-      a(href='https://github.com/picturepan2/ridestyler.ui/releases', target='_blank') ridestyler.ui CSS file
-      |  (core ~10KB min+gzip):
+      a(href='https://github.com/Burkson/ridestyler.ui/releases', target='_blank') RideStyler UI CSS file
+      |  (core ~17KB min+gzip):
     p
-      a.btn.btn-primary(href='https://github.com/picturepan2/ridestyler.ui/releases', target='_blank') Download ridestyler.ui
+      a.btn.btn-primary(href='https://github.com/Burkson/ridestyler.ui/releases', target='_blank') Download ridestyler.ui
     p
-      | Include 
-      code ridestyler.ui
-      |  located in 
-      strong /dist
-      |  in your website or Web app <head>. Also, you can add 
-      code ridestyler.ui-icons.css
-      |  and 
-      code ridestyler.ui-exp.css
-      |  accordingly.
+      | Include RideStyler UI in your website or Web app #{'<head>'}. Also, you can add 
+      code ridestyler.ui-experimental.css
+      |  accordingly to add support for #[a(href="../experimentals.html") Experimental] components
 
     //- install manually
     pre.code(data-lang='HTML')
       code
         :highlight(lang="html")
-          <link rel="stylesheet" href="ridestyler.ui.min.css">
-          <link rel="stylesheet" href="ridestyler.ui-exp.min.css">
-          <link rel="stylesheet" href="ridestyler.ui-icons.min.css">
+          <link rel="stylesheet" href="rsui.min.css">
+          <link rel="stylesheet" href="rsui-experimental.min.css">
       
     +docs-subheading('install-cdn', 'Install from CDN')
     p
-      | Alternatively, you can use the 
-      a(href='https://unpkg.com/', target='_blank') unpkg
-      |  or 
-      a(href='https://cdnjs.com/libraries/ridestyler.ui', target='_blank') cdnjs
-      |  CDN to load compiled ridestyler.ui.
+      | Alternatively, you can use our extremely fast CDN to load the files:
 
     //- install from CDN
     pre.code(data-lang='HTML')
       code
         :highlight(lang="html")
-          <link rel="stylesheet" href="https://unpkg.com/ridestyler.ui/dist/ridestyler.ui.min.css">
-          <link rel="stylesheet" href="https://unpkg.com/ridestyler.ui/dist/ridestyler.ui-exp.min.css">
-          <link rel="stylesheet" href="https://unpkg.com/ridestyler.ui/dist/ridestyler.ui-icons.min.css">
+          <link rel="stylesheet" href="https://static.ridestyler.net/rs-ui/latest/rsui.min.css">
+          <link rel="stylesheet" href="https://static.ridestyler.net/rs-ui/latest/rsui-experimental.min.css">
 
     +docs-subheading('install-npm', 'Install with NPM')
 
@@ -60,7 +48,7 @@ block docs-content
     pre.code.c-select-all(data-lang='Bash')
       code
         :highlight(lang="Bash")
-          npm install ridestyler.ui --save
+          npm install Burkson/ridestyler.ui --save
 
     +docs-subheading('install-yarn', 'Install with Yarn')
 
@@ -68,7 +56,7 @@ block docs-content
     pre.code.c-select-all(data-lang='Bash')
       code
         :highlight(lang="bash")
-          yarn add ridestyler.ui
+          yarn add git://github.com/Burkson/ridestyler.ui
 
     +docs-subheading('install-bower', 'Install from Bower')
 
@@ -76,6 +64,6 @@ block docs-content
     pre.code.c-select-all(data-lang='Bash')
       code
         :highlight(lang="bash")
-          bower install ridestyler.ui --save
+          bower install git://github.com/Burkson/ridestyler.ui --save
 
   include ../_layout/_footer.pug

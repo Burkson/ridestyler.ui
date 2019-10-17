@@ -16,13 +16,7 @@ block docs-content
       code .scss
       |  source files.
     p
-      a.btn.btn-primary(href='https://github.com/picturepan2/ridestyler.ui/', target='_blank') Sass Source Code
-    p
-      | If you are looking for Less version of ridestyler.ui, please switch to 
-      code Less
-      |  branch.
-    p
-      a.btn(href='https://github.com/picturepan2/ridestyler.ui/tree/less', target='_blank') Less Branch
+      a.btn.btn-primary(href='https://github.com/Burkson/ridestyler.ui/', target='_blank') Sass Source Code
 
     +docs-subheading('compiling', 'Compiling CSS')
 
@@ -51,59 +45,44 @@ block docs-content
     ul
       li
         code gulp build
-        |  - compile Sass to CSS and minify files (default)
+        |  - compile both the CSS and documentation
+      li
+        code gulp scss
+        |  - compile just the CSS
       li
         code gulp docs
-        |  - compile Docs related files
+        |  - compile just the documentation
+      li
+        code gulp fonts
+        |  - compile the icon font
       li
         code gulp watch
-        |  - watch file changes and re-compile CSS files
+        |  - watch file changes and re-compile CSS files and documentation as needed
+      li
+        code gulp serve
+        |  - start a web-server hosting the documentation; watch for file changes and live-reload as needed.
 
-    +docs-subheading('importing', 'Importing Sass')
+    +docs-subheading('importing', 'Importing SCSS')
     p
-      | It is recommended to customize ridestyler.ui by importing Sass source files to your projects. In this way, you can keep ridestyler.ui up to date without conflicts, since ridestyler.ui code and your custom code are separate.
+      | It is recommended to customize ridestyler.ui by importing SCSS source files to your projects. In this way, you can keep ridestyler.ui up to date without conflicts, since ridestyler.ui code and your custom code are separate.
     ul
       li
         | First, create your own project and install ridestyler.ui via 
-        a(href='#installation') NPM or other package managers
+        a(href='./installation.html#install-npm') NPM or other package managers
         | .
-      li
-        | Then create your 
-        code project-name.scss
-        |  file in the root folder. You can use 
-        code project-name.scss
-        |  to define your variables.
-      li Compile the Sass file to CSS to get the custom version of ridestyler.ui.
+      li Then inside your on SCSS file override variables as needed and import ridestyler.ui
+      li Compile the SCSS file to CSS to get the custom version of ridestyler.ui.
 
     //- importing
-    pre.code(data-lang='Sass')
+    pre.code(data-lang='SCSS')
       code
         :highlight(lang="scss")
-          // Example of project-name.scss
           // Define variables to override default ones
           $primary-color: #2e5bec;
           $dark-color: #3e396b;
 
           // Import full ridestyler.ui source code
-          @import "node_modules/ridestyler.ui/src/ridestyler.ui";
-
-    p
-      | Alternatively, you can create custom 
-      code _variables.scss
-      |  and import it to 
-      code project-name.scss
-      | .
-
-    //- custom variables
-    pre.code(data-lang='Sass')
-      code
-        :highlight(lang="scss")
-          // Example of project-name.scss
-          @import "variables";
-
-          // Import only the needed components
-          @import "node_modules/ridestyler.ui/src/buttons";
-          @import "node_modules/ridestyler.ui/src/forms";
+          @import "~ridestyler.ui";
 
     +docs-subheading('folders', 'Folder structure')
 
@@ -113,38 +92,29 @@ block docs-content
         :highlight
           ridestyler.ui/
           ├── dist/                           // Build folder
-          │   ├── ridestyler.ui-exp.css
-          │   ├── ridestyler.ui-exp.min.css
-          │   ├── ridestyler.ui-icons.css
-          │   ├── ridestyler.ui-icons.min.css
-          │   ├── ridestyler.ui
-          │   └── ridestyler.ui.min.css
+          │   ├── rs-ui-experimental.css
+          │   ├── rs-ui-experimental.min.css
+          │   ├── rs-ui
+          │   └── rs-ui.min.css
           │
           ├── docs/
           │   ├── dist/                       // Pre-built CSS folder
-          │   │   ├── ridestyler.ui-exp.css
-          │   │   ├── ridestyler.ui-exp.min.css
-          │   │   ├── ridestyler.ui-icons.css
-          │   │   ├── ridestyler.ui-icons.min.css
-          │   │   ├── ridestyler.ui
-          │   │   └── ridestyler.ui.min.css
-          |   ├── css/                        // Docs CSS files
+          │   │   ├── rs-ui-experimental.min.css
+          │   │   └── rs-ui.min.css
+          |   ├── css/                        // Built docs CSS files
           │   │   └── docs.css
           |   ├── src/
           │   │   ├── scss                    // Docs Sass files
           │   │   │   └── docs.scss
           │   │   ├── index.pug               // Docs Pug files
           │   │   └── ...
-          │   ├── examples/                   // Example tempalte
-          │   │   └── starter.html
           │   ├── ../
           │   ├── index.html
           │   └── ...
           │
           ├── src/                            // Source Sass files
-          │   ├── ridestyler.ui.scss
-          │   ├── ridestyler.ui-icons.scss
-          │   ├── ridestyler.ui-exp.scss
+          │   ├── index.scss
+          │   ├── experimental.scss
           │   ├── _mixins.scss
           │   ├── _variables.scss
           │   └── ...
@@ -166,61 +136,70 @@ block docs-content
 
     .columns
       .column.col-2.col-md-6
-        .docs-color(style='background:#5755d9;color:#fff;')
-          .color-title #5755d9
-          .color-subtitle Primary
+        .docs-color.bg-primary
+          .color-title #{sass['$primary-color']}
+          .color-subtitle $primary-color
       .column.col-2.col-md-6
-        .docs-color(style='background:#f1f1fc;color:#5755d9;')
-          .color-title #f1f1fc
-          .color-subtitle Secondary
+        .docs-color.bg-secondary
+          .color-title #{sass['$secondary-color']}
+          .color-subtitle $secondary-color
     .columns
       .column.col-2.col-md-6
-        .docs-color(style='background:#32b643;color:#fff;')
-          .color-title #32b643
-          .color-subtitle Success
+        .docs-color.bg-success
+          .color-title #{sass['$success-color']}
+          .color-subtitle $success-color
       .column.col-2.col-md-6
-        .docs-color(style='background:#ffb700;color:#fff;')
-          .color-title #ffb700
-          .color-subtitle Warning
+        .docs-color.bg-warning
+          .color-title #{sass['$warning-color']}
+          .color-subtitle $warning-color
       .column.col-2.col-md-6
-        .docs-color(style='background:#e85600;color:#fff;')
-          .color-title #e85600
-          .color-subtitle Error
+        .docs-color.bg-error
+          .color-title #{sass['$error-color']}
+          .color-subtitle $error-color
     .columns
       .column.col-2.col-md-6
-        .docs-color(style='background:#303742;color:#fff;')
-          .color-title #303742
-          .color-subtitle Dark
+        .docs-color.bg-dark
+          .color-title #{sass['$dark-color']}
+          .color-subtitle $dark-color
       .column.col-2.col-md-6
-        .docs-color(style='background:#66758c;color:#fff;')
-          .color-title #66758c
-          .color-subtitle Gray dark
+        .docs-color.bg-gray
+          .color-title #{sass['$gray-color']}
+          .color-subtitle $gray-color
+    .columns
       .column.col-2.col-md-6
-        .docs-color(style='background:#bcc3ce;color:#fff;')
-          .color-title #bcc3ce
-          .color-subtitle Gray
+        .docs-color.bg-ridestyler-orange
+          .color-title #{sass['$ridestyler-color-orange']}
+          .color-subtitle $ridestyler-color-orange
       .column.col-2.col-md-6
-        .docs-color(style='background:#f7f8f9;color:#66758c;')
-          .color-title #f7f8f9
-          .color-subtitle Gray light
+        .docs-color.bg-ridestyler-black
+          .color-title #{sass['$ridestyler-color-black']}
+          .color-subtitle $ridestyler-color-black
       .column.col-2.col-md-6
-        .docs-color(style='background:#fff;color:#bcc3ce;')
-          .color-title #fff
-          .color-subtitle Light
+        .docs-color.bg-ridestyler-dark-gray
+          .color-title #{sass['$ridestyler-color-dark-gray']}
+          .color-subtitle $ridestyler-color-dark-gray
+      .column.col-2.col-md-6
+        .docs-color.bg-ridestyler-gray
+          .color-title #{sass['$ridestyler-color-gray']}
+          .color-subtitle $ridestyler-color-gray
+      .column.col-2.col-md-6
+        .docs-color.bg-ridestyler-red
+          .color-title #{sass['$ridestyler-color-red']}
+          .color-subtitle $ridestyler-color-red
+      .column.col-2.col-md-6
+        .docs-color.bg-ridestyler-blue
+          .color-title #{sass['$ridestyler-color-blue']}
+          .color-subtitle $ridestyler-color-blue
 
     +docs-subheading('variables-buttons', 'Variables - Button mixins')
 
     p
-      | There are 2 button variant mixins in 
+      | There is a button variant mixin in 
       code _mixins.scss
       |  to generate different color variants.
     ul
       li
         | @mixin button-variant(
-        code $color
-        | : $primary-color);
-      li
-        | @mixin button-outline-variant(
         code $color
         | : $primary-color);
 
@@ -233,60 +212,11 @@ block docs-content
             @include button-variant($success-color);
           }
 
-          <!-- outlined button with the success color -->
-          .btn-outline-success {
-            @include button-outline-variant($success-color);
-          }
-
     +docs-subheading('variables-sizes', 'Variables - Sizes')
 
     p
       | The default REM (root em) size in ridestyler.ui is 
-      code 20px
+      code #{sass['$html-font-size']}
       | .
-    p
-      | Please note in the Chinese/Japanese/Korean version, Chrome uses 12px as default minimum font size. That is why ridestyler.ui sets rem default html font size to 
-      code 20px
-      | , which is relatively easy to calculate.
-    p
-      | ridestyler.ui uses 
-      code 4px
-      |  as the unit size. Sizes of components are based on the unit size.
-
-    +docs-subheading('variables-custom-prefix', 'Variables - Custom prefix')
-    p
-      | There is also a way to add custom prefix to all CSS classes. You can use 
-      a(href='https://www.npmjs.com/package/gulp-css-prefix', target='_blank') gulp-css-prefix
-      |  plugin and add a new Gulp task to enable it.
-
-    //- custom prefix
-    pre.code(data-lang='Bash')
-      code
-        :highlight(lang="Bash")
-          npm install gulp-css-prefix
-
-    p
-      | To add 
-      code ridestyler.ui-
-      |  to all classes, you can add the Gulp task to 
-      code gulpfile.js
-      |  file.
-
-    //- custom prefix
-    pre.code
-      code
-        :highlight(lang="JavaScript")
-          var cssPrefix = require('gulp-css-prefix');
-      
-          gulp.task('prefix', function() {
-            gulp.src('./dist/*.css')
-                .pipe(cssPrefix('ridestyler.ui-'))
-                .pipe(gulp.dest('./dist'))
-          });
-
-    p
-      | After you compile your version of ridestyler.ui in the /dist, run 
-      code gulp prefix
-      |  in the directory of ridestyler.ui.
 
   include ../_layout/_footer.pug

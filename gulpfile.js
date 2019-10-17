@@ -12,6 +12,7 @@ var Handlebars = require('handlebars');
 var async = require('async');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
+var sassExporter = require('sass-export').exporter;
 
 var runTimestamp = Math.round(Date.now()/1000);
 
@@ -138,9 +139,30 @@ var docTasks = {
             .pipe(gulp.dest(distPaths.docs + '/dist'))
     },
     html() {
+        const sassVariables = {};
+        const icons = [];
+        const iconCodeVariablePrefix = '$icon-code-';
+
+        sassExporter({
+            inputFiles: [
+                paths.variables,
+                './src/_icons.scss'
+            ]
+        }).getArray().forEach(variable => {
+            if (variable.name.startsWith(iconCodeVariablePrefix)) {
+                icons.push(variable.name.substr(iconCodeVariablePrefix.length));
+            }
+
+            sassVariables[variable.name] = variable.compiledValue;
+        });
+
         return gulp.src('docs/src/**/!(_)*.pug')
             .pipe(pug({
-                pretty: true
+                pretty: true,
+                locals: {
+                    sass: sassVariables,
+                    icons: icons
+                }
             }))
             .pipe(gulp.dest('./docs/'))
     }
@@ -151,7 +173,7 @@ gulp.task('watch', function () {
     gulp.watch(paths.source, function (cb) {
         buildSCSSAndCopyToDocs.th
     });
-    gulp.watch(paths.variables, gulp.series(docTasks.scssDocs));
+    gulp.watch(paths.variables, gulp.parallel(docTasks.scssDocs, docTasks.html));
     gulp.watch(paths.doc, gulp.series(docTasks.scssDocs));
     gulp.watch('./**/*.pug', gulp.series(docTasks.html));
 });

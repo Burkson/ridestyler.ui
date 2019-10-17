@@ -11,9 +11,6 @@
     <meta property="og:url" content="https://burkson.github.io/ridestyler.ui/getting-started/custom.html">
     <meta property="og:title" content="Custom - Getting started - ridestyler.ui CSS Framework">
     <meta property="og:description" content="ridestyler.ui CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development. ridestyler.ui provides basic styles for typography and elements, flexbox based responsive layout system, pure CSS components and utilities with best practice coding and consistent design language.">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@ridestyler.uicss">
-    <meta name="twitter:creator" content="@picturepan2">
     <link rel="shortcut icon" href="../img/favicons/favicon.ico">
     <link rel="icon" href="../img/favicons/favicon.png">
     <link rel="stylesheet" href="../dist/rsui.min.css">
@@ -201,9 +198,7 @@
           <div class="container" id="custom">
             <h3 class="s-title">Custom version<a class="anchor" href="#custom" aria-hidden="true">#</a></h3>
             <p>You can customize your version of ridestyler.ui by editing Sass files in <code>/src</code> directory or removing unneeded components from <code>.scss</code> source files.</p>
-            <p><a class="btn btn-primary" href="https://github.com/picturepan2/ridestyler.ui/" target="_blank">Sass Source Code</a></p>
-            <p>If you are looking for Less version of ridestyler.ui, please switch to <code>Less</code> branch.</p>
-            <p><a class="btn" href="https://github.com/picturepan2/ridestyler.ui/tree/less" target="_blank">Less Branch</a></p>
+            <p><a class="btn btn-primary" href="https://github.com/Burkson/ridestyler.ui/" target="_blank">Sass Source Code</a></p>
             <h4 class="s-subtitle" id="compiling">Compiling CSS<a class="anchor" href="#compiling" aria-hidden="true">#</a></h4>
             <p>ridestyler.ui uses <a href="http://gulpjs.com/" target="_blank">Gulp</a> for compiling CSS. Firstly you need to <a href="https://www.npmjs.com/get-npm" target="_blank">install NPM</a>, which is used to manage Gulp and other dependencies.</p>
             <p>Then, you can build the CSS file from the command line:</p>
@@ -215,74 +210,59 @@
             </ol>
             <p>All available Gulp tasks:</p>
             <ul>
-              <li><code>gulp build</code> - compile Sass to CSS and minify files (default)</li>
-              <li><code>gulp docs</code> - compile Docs related files</li>
-              <li><code>gulp watch</code> - watch file changes and re-compile CSS files</li>
+              <li><code>gulp build</code> - compile both the CSS and documentation</li>
+              <li><code>gulp scss</code> - compile just the CSS</li>
+              <li><code>gulp docs</code> - compile just the documentation</li>
+              <li><code>gulp fonts</code> - compile the icon font</li>
+              <li><code>gulp watch</code> - watch file changes and re-compile CSS files and documentation as needed</li>
+              <li><code>gulp serve</code> - start a web-server hosting the documentation; watch for file changes and live-reload as needed.</li>
             </ul>
-            <h4 class="s-subtitle" id="importing">Importing Sass<a class="anchor" href="#importing" aria-hidden="true">#</a></h4>
-            <p>It is recommended to customize ridestyler.ui by importing Sass source files to your projects. In this way, you can keep ridestyler.ui up to date without conflicts, since ridestyler.ui code and your custom code are separate.</p>
+            <h4 class="s-subtitle" id="importing">Importing SCSS<a class="anchor" href="#importing" aria-hidden="true">#</a></h4>
+            <p>It is recommended to customize ridestyler.ui by importing SCSS source files to your projects. In this way, you can keep ridestyler.ui up to date without conflicts, since ridestyler.ui code and your custom code are separate.</p>
             <ul>
-              <li>First, create your own project and install ridestyler.ui via <a href="#installation">NPM or other package managers</a>.</li>
-              <li>Then create your <code>project-name.scss</code> file in the root folder. You can use <code>project-name.scss</code> to define your variables.</li>
-              <li>Compile the Sass file to CSS to get the custom version of ridestyler.ui.</li>
+              <li>First, create your own project and install ridestyler.ui via <a href="./installation.html#install-npm">NPM or other package managers</a>.</li>
+              <li>Then inside your on SCSS file override variables as needed and import ridestyler.ui</li>
+              <li>Compile the SCSS file to CSS to get the custom version of ridestyler.ui.</li>
             </ul>
-            <pre class="code" data-lang="Sass"><code><span class="hljs-comment">// Example of project-name.scss</span>
-<span class="hljs-comment">// Define variables to override default ones</span>
+            <pre class="code" data-lang="SCSS"><code><span class="hljs-comment">// Define variables to override default ones</span>
 <span class="hljs-variable">$primary-color</span>: <span class="hljs-number">#2e5bec</span>;
 <span class="hljs-variable">$dark-color</span>: <span class="hljs-number">#3e396b</span>;
 
 <span class="hljs-comment">// Import full ridestyler.ui source code</span>
-@<span class="hljs-keyword">import</span> <span class="hljs-string">"node_modules/ridestyler.ui/src/ridestyler.ui"</span>;
-</code></pre>
-            <p>Alternatively, you can create custom <code>_variables.scss</code> and import it to <code>project-name.scss</code>.</p>
-            <pre class="code" data-lang="Sass"><code><span class="hljs-comment">// Example of project-name.scss</span>
-@<span class="hljs-keyword">import</span> <span class="hljs-string">"variables"</span>;
-
-<span class="hljs-comment">// Import only the needed components</span>
-@<span class="hljs-keyword">import</span> <span class="hljs-string">"node_modules/ridestyler.ui/src/buttons"</span>;
-@<span class="hljs-keyword">import</span> <span class="hljs-string">"node_modules/ridestyler.ui/src/forms"</span>;
+@<span class="hljs-keyword">import</span> <span class="hljs-string">"~ridestyler.ui"</span>;
 </code></pre>
             <h4 class="s-subtitle" id="folders">Folder structure<a class="anchor" href="#folders" aria-hidden="true">#</a></h4>
             <pre class="code"><code>ridestyler.ui/
-├── <span class="hljs-built_in">dist</span>/                           <span class="hljs-comment">// Build folder</span>
-│   ├── ridestyler.ui-<span class="hljs-built_in">exp</span>.css
-│   ├── ridestyler.ui-<span class="hljs-built_in">exp</span>.<span class="hljs-built_in">min</span>.css
-│   ├── ridestyler.ui-icons.css
-│   ├── ridestyler.ui-icons.<span class="hljs-built_in">min</span>.css
-│   ├── ridestyler.ui
-│   └── ridestyler.ui.<span class="hljs-built_in">min</span>.css
+├── dist/                           <span class="hljs-comment">// Build folder</span>
+│   ├── rs-ui-experimental.css
+│   ├── rs-ui-experimental.<span class="hljs-built_in">min</span>.css
+│   ├── rs-ui
+│   └── rs-ui.<span class="hljs-built_in">min</span>.css
 │
 ├── docs/
-│   ├── <span class="hljs-built_in">dist</span>/                       <span class="hljs-comment">// Pre-built CSS folder</span>
-│   │   ├── ridestyler.ui-<span class="hljs-built_in">exp</span>.css
-│   │   ├── ridestyler.ui-<span class="hljs-built_in">exp</span>.<span class="hljs-built_in">min</span>.css
-│   │   ├── ridestyler.ui-icons.css
-│   │   ├── ridestyler.ui-icons.<span class="hljs-built_in">min</span>.css
-│   │   ├── ridestyler.ui
-│   │   └── ridestyler.ui.<span class="hljs-built_in">min</span>.css
-|   ├── css/                        <span class="hljs-comment">// Docs CSS files</span>
+│   ├── dist/                       <span class="hljs-comment">// Pre-built CSS folder</span>
+│   │   ├── rs-ui-experimental.<span class="hljs-built_in">min</span>.css
+│   │   └── rs-ui.<span class="hljs-built_in">min</span>.css
+|   ├── css/                        <span class="hljs-comment">// Built docs CSS files</span>
 │   │   └── docs.css
 |   ├── src/
 │   │   ├── scss                    <span class="hljs-comment">// Docs Sass files</span>
 │   │   │   └── docs.scss
-│   │   ├── index.pug               <span class="hljs-comment">// Docs Pug files</span>
+│   │   ├── <span class="hljs-keyword">index</span>.pug               <span class="hljs-comment">// Docs Pug files</span>
 │   │   └── ...
-│   ├── examples/                   <span class="hljs-comment">// Example tempalte</span>
-│   │   └── starter.html
 │   ├── ../
-│   ├── index.html
+│   ├── <span class="hljs-keyword">index</span>.html
 │   └── ...
 │
 ├── src/                            <span class="hljs-comment">// Source Sass files</span>
-│   ├── ridestyler.ui.scss
-│   ├── ridestyler.ui-icons.scss
-│   ├── ridestyler.ui-<span class="hljs-built_in">exp</span>.scss
+│   ├── <span class="hljs-keyword">index</span>.scss
+│   ├── experimental.scss
 │   ├── _mixins.scss
 │   ├── _variables.scss
 │   └── ...
 │
 ├── gulpfile.js
-├── <span class="hljs-keyword">package</span>.json
+├── package.json
 └── ...
 </code></pre>
             <h4 class="s-subtitle" id="variables">Variables<a class="anchor" href="#variables" aria-hidden="true">#</a></h4>
@@ -290,104 +270,102 @@
             <h4 class="s-subtitle" id="variables-colors">Variables - Colors<a class="anchor" href="#variables-colors" aria-hidden="true">#</a></h4>
             <div class="columns">
               <div class="column col-2 col-md-6">
-                <div class="docs-color" style="background:#5755d9;color:#fff;">
-                  <div class="color-title">#5755d9</div>
-                  <div class="color-subtitle">Primary</div>
+                <div class="docs-color bg-primary">
+                  <div class="color-title">#21B8F7</div>
+                  <div class="color-subtitle">$primary-color</div>
                 </div>
               </div>
               <div class="column col-2 col-md-6">
-                <div class="docs-color" style="background:#f1f1fc;color:#5755d9;">
-                  <div class="color-title">#f1f1fc</div>
-                  <div class="color-subtitle">Secondary</div>
+                <div class="docs-color bg-secondary">
+                  <div class="color-title">#F3693C</div>
+                  <div class="color-subtitle">$secondary-color</div>
                 </div>
               </div>
             </div>
             <div class="columns">
               <div class="column col-2 col-md-6">
-                <div class="docs-color" style="background:#32b643;color:#fff;">
+                <div class="docs-color bg-success">
                   <div class="color-title">#32b643</div>
-                  <div class="color-subtitle">Success</div>
+                  <div class="color-subtitle">$success-color</div>
                 </div>
               </div>
               <div class="column col-2 col-md-6">
-                <div class="docs-color" style="background:#ffb700;color:#fff;">
+                <div class="docs-color bg-warning">
                   <div class="color-title">#ffb700</div>
-                  <div class="color-subtitle">Warning</div>
+                  <div class="color-subtitle">$warning-color</div>
                 </div>
               </div>
               <div class="column col-2 col-md-6">
-                <div class="docs-color" style="background:#e85600;color:#fff;">
-                  <div class="color-title">#e85600</div>
-                  <div class="color-subtitle">Error</div>
+                <div class="docs-color bg-error">
+                  <div class="color-title">#ff0000</div>
+                  <div class="color-subtitle">$error-color</div>
                 </div>
               </div>
             </div>
             <div class="columns">
               <div class="column col-2 col-md-6">
-                <div class="docs-color" style="background:#303742;color:#fff;">
-                  <div class="color-title">#303742</div>
-                  <div class="color-subtitle">Dark</div>
+                <div class="docs-color bg-dark">
+                  <div class="color-title">#0D112B</div>
+                  <div class="color-subtitle">$dark-color</div>
                 </div>
               </div>
               <div class="column col-2 col-md-6">
-                <div class="docs-color" style="background:#66758c;color:#fff;">
-                  <div class="color-title">#66758c</div>
-                  <div class="color-subtitle">Gray dark</div>
+                <div class="docs-color bg-gray">
+                  <div class="color-title">#c7c7c7</div>
+                  <div class="color-subtitle">$gray-color</div>
+                </div>
+              </div>
+            </div>
+            <div class="columns">
+              <div class="column col-2 col-md-6">
+                <div class="docs-color bg-ridestyler-orange">
+                  <div class="color-title">#F3693C</div>
+                  <div class="color-subtitle">$ridestyler-color-orange</div>
                 </div>
               </div>
               <div class="column col-2 col-md-6">
-                <div class="docs-color" style="background:#bcc3ce;color:#fff;">
-                  <div class="color-title">#bcc3ce</div>
-                  <div class="color-subtitle">Gray</div>
+                <div class="docs-color bg-ridestyler-black">
+                  <div class="color-title">#0D112B</div>
+                  <div class="color-subtitle">$ridestyler-color-black</div>
                 </div>
               </div>
               <div class="column col-2 col-md-6">
-                <div class="docs-color" style="background:#f7f8f9;color:#66758c;">
-                  <div class="color-title">#f7f8f9</div>
-                  <div class="color-subtitle">Gray light</div>
+                <div class="docs-color bg-ridestyler-dark-gray">
+                  <div class="color-title">#556172</div>
+                  <div class="color-subtitle">$ridestyler-color-dark-gray</div>
                 </div>
               </div>
               <div class="column col-2 col-md-6">
-                <div class="docs-color" style="background:#fff;color:#bcc3ce;">
-                  <div class="color-title">#fff</div>
-                  <div class="color-subtitle">Light</div>
+                <div class="docs-color bg-ridestyler-gray">
+                  <div class="color-title">#7A8798</div>
+                  <div class="color-subtitle">$ridestyler-color-gray</div>
+                </div>
+              </div>
+              <div class="column col-2 col-md-6">
+                <div class="docs-color bg-ridestyler-red">
+                  <div class="color-title">#E72320</div>
+                  <div class="color-subtitle">$ridestyler-color-red</div>
+                </div>
+              </div>
+              <div class="column col-2 col-md-6">
+                <div class="docs-color bg-ridestyler-blue">
+                  <div class="color-title">#21B8F7</div>
+                  <div class="color-subtitle">$ridestyler-color-blue</div>
                 </div>
               </div>
             </div>
             <h4 class="s-subtitle" id="variables-buttons">Variables - Button mixins<a class="anchor" href="#variables-buttons" aria-hidden="true">#</a></h4>
-            <p>There are 2 button variant mixins in <code>_mixins.scss</code> to generate different color variants.</p>
+            <p>There is a button variant mixin in <code>_mixins.scss</code> to generate different color variants.</p>
             <ul>
               <li>@mixin button-variant(<code>$color</code>: $primary-color);</li>
-              <li>@mixin button-outline-variant(<code>$color</code>: $primary-color);</li>
             </ul>
             <pre class="code" data-lang="Sass"><code>&lt;!-- filled <span class="hljs-selector-tag">button</span> with the success <span class="hljs-attribute">color</span> --&gt;
 <span class="hljs-selector-class">.btn-success</span> {
   @<span class="hljs-keyword">include</span> button-variant(<span class="hljs-variable">$success-color</span>);
 }
-
-&lt;!-- outlined <span class="hljs-selector-tag">button</span> with the success <span class="hljs-attribute">color</span> --&gt;
-<span class="hljs-selector-class">.btn-outline-success</span> {
-  @<span class="hljs-keyword">include</span> button-outline-variant(<span class="hljs-variable">$success-color</span>);
-}
 </code></pre>
             <h4 class="s-subtitle" id="variables-sizes">Variables - Sizes<a class="anchor" href="#variables-sizes" aria-hidden="true">#</a></h4>
-            <p>The default REM (root em) size in ridestyler.ui is <code>20px</code>.</p>
-            <p>Please note in the Chinese/Japanese/Korean version, Chrome uses 12px as default minimum font size. That is why ridestyler.ui sets rem default html font size to <code>20px</code>, which is relatively easy to calculate.</p>
-            <p>ridestyler.ui uses <code>4px</code> as the unit size. Sizes of components are based on the unit size.</p>
-            <h4 class="s-subtitle" id="variables-custom-prefix">Variables - Custom prefix<a class="anchor" href="#variables-custom-prefix" aria-hidden="true">#</a></h4>
-            <p>There is also a way to add custom prefix to all CSS classes. You can use <a href="https://www.npmjs.com/package/gulp-css-prefix" target="_blank">gulp-css-prefix</a> plugin and add a new Gulp task to enable it.</p>
-            <pre class="code" data-lang="Bash"><code>npm install gulp-css-prefix
-</code></pre>
-            <p>To add <code>ridestyler.ui-</code> to all classes, you can add the Gulp task to <code>gulpfile.js</code> file.</p>
-            <pre class="code"><code><span class="hljs-keyword">var</span> cssPrefix = <span class="hljs-built_in">require</span>(<span class="hljs-string">'gulp-css-prefix'</span>);
-
-gulp.task(<span class="hljs-string">'prefix'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-  gulp.src(<span class="hljs-string">'./dist/*.css'</span>)
-      .pipe(cssPrefix(<span class="hljs-string">'ridestyler.ui-'</span>))
-      .pipe(gulp.dest(<span class="hljs-string">'./dist'</span>))
-});
-</code></pre>
-            <p>After you compile your version of ridestyler.ui in the /dist, run <code>gulp prefix</code> in the directory of ridestyler.ui.</p>
+            <p>The default REM (root em) size in ridestyler.ui is <code>16px</code>.</p>
           </div>
           <div class="docs-footer container grid-lg" id="copyright">
             <p><a href="https://github.com/Burkson/ridestyler.ui" target="_blank">GitHub</a> · <a href="https://ridestyler.com" target="_blank">RideStyler</a> · Version <span class="version"></span></p>

@@ -1,0 +1,26 @@
+{
+  "name": "ridestyler.ui",
+  "description": "ridestyler.ui - RideStyler's branded CSS framework",
+  "main": "src/index.scss",
+  "keywords": [
+    "css",
+    "framework",
+    "flexbox",
+    "responsive",
+    "mobile-friendly",
+    "front-end",
+    "sass",
+    "modern",
+    "RideStyler",
+    "Burkson"
+  ],
+  "homepage": "https://github.com/Burkson/ridestyler.ui",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true
+}
