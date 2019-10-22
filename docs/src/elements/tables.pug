@@ -90,7 +90,7 @@ block docs-content
               td 22 September 1995
 
     p
-      | Use the #[code table-striped] class to #{'<table>'} to add zebra striped style.
+      | Add the #[code table-striped] class to #{'<table>'} to add zebra striped style.
       | For hoverable table rows, you can add the #[code table-hover] class to enable hover style.
     p
       | Use the #[code active] class to make #{'<tr>'} element highlighted.
@@ -119,7 +119,7 @@ block docs-content
 
     .docs-demo.columns
       .column.col-12
-        table.table.table-scroll
+        table.table.table-scroll(style="max-height:100px")
           thead
             tr
               th Name
@@ -166,6 +166,132 @@ block docs-content
         :highlight(lang="html")
           <table class="table table-scroll">
             ...
+          </table>
+          
+    +docs-subheading('tables-rounded', 'Rounded Tables')
+    
+    .docs-demo.columns
+      .column.col-12
+        table.table.table-striped.table-hover.table-rounded
+          thead
+            tr
+              th Name
+              th Genre
+              th Release date
+          tbody
+            tr
+              td The Shawshank Redemption
+              td Crime, Drama
+              td 14 October 1994
+            tr
+              td The Godfather
+              td Crime, Drama
+              td 24 March 1972
+            tr
+              td Schindler's List
+              td Biography, Drama, History
+              td 4 February 1994
+            tr.active
+              td Se7en
+              td Crime, Drama, Mystery
+              td 22 September 1995
+
+    p
+      | Add the #[code table-rounded] class to #{'<table>'} to give tables a rounded border.
+
+    pre.code(data-lang='HTML')
+      code
+        :highlight(lang="html")
+          <table class="table table-striped table-hover table-rounded">
+            <thead>
+              <tr>
+                <th>name</th>
+                <th>genre</th>
+                <th>release date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>The Shawshank Redemption</td>
+                <td>Crime, Drama</td>
+                <td>14 October 1994</td>
+              </tr>
+            </tbody>
+          </table>
+    
+    +docs-subheading('tables-secondary-headings', 'Secondary Headings')
+
+    .docs-demo.columns
+      .column.col-12
+        table.table.table-striped
+          thead
+            tr
+              th(colspan=3) Tire
+              th(colspan=4) Wheel
+              th Lug
+          tbody
+            tr
+              th(colspan=2) OE Size
+              th Serv Desc
+              
+              th Bolt
+              th Diameter
+              th Width
+              th Hub
+
+              th Thread
+            tr
+              td F
+              td(rowspan=2) 275/55R20
+              td(rowspan=2) 111T
+              td(rowspan=2) 6 x 135mm
+              td 17" - 24"
+              td 5" - 8"
+              td(rowspan=2) 87.1mm
+              td(rowspan=2) 14mm x 1.5 Nut
+            tr
+              td R
+              td 17" - 24"
+              td 5" - 8"
+    p
+      | #{'<th>'} elements inside of a #{'<tbody>'} will get a secondary heading treament.
+    pre.code(data-lang="HTML")
+      code
+        :highlight(lang="html")
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th colspan="3">Tire</th>
+                <th colspan="4">Wheel</th>
+                <th>Lug</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th colspan="2">OE Size</th>
+                <th>Serv Desc</th>
+                <th>Bolt</th>
+                <th>Diameter</th>
+                <th>Width</th>
+                <th>Hub</th>
+                <th>Thread</th>
+              </tr>
+              <tr>
+                <td>F</td>
+                <td rowspan="2">275/55R20</td>
+                <td rowspan="2">111T</td>
+                <td rowspan="2">6 x 135mm</td>
+                <td>17" - 24"</td>
+                <td>5" - 8"</td>
+                <td rowspan="2">87.1mm</td>
+                <td rowspan="2">14mm x 1.5 Nut</td>
+              </tr>
+              <tr>
+                <td>R</td>
+                <td>17" - 24"</td>
+                <td>5" - 8"</td>
+              </tr>
+            </tbody>
           </table>
 
   include ../_layout/_footer.pug

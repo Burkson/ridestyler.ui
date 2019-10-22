@@ -1,6 +1,5 @@
 // Tables
 .table {
-	border-spacing: 0;
 	width: 100%;
 
 	@if $rtl==true {
@@ -12,56 +11,32 @@
     td,
 	th {
 		padding: $unit-1 $unit-2;
-	}
-
-    tr {
-        &:first-child {
-            td, th {
-                &:first-child {
-                    border-top-left-radius: $border-radius;
-                }
-                &:last-child {
-                    border-top-right-radius: $border-radius;
-                }
-            }
-        }
     }
 
-    tbody {
-        tr {
-            td, th {
-                border-bottom: $border-width solid $gray-color;
-
-                &:first-child {
-                    border-left: $border-width solid $border-color;
-                }
-                &:last-child {
-                    border-right: $border-width solid $border-color;
-                }
-            }
-
-            &:last-child {
-                td, th {
-                    border-bottom: $border-width solid $border-color;
-
-                    &:first-child {
-                        border-bottom-left-radius: $border-radius;
-                    }
-                    &:last-child {
-                        border-bottom-right-radius: $border-radius;
-                    }
-                }
-            }
-        }
+    th {
+        text-transform: uppercase;
     }
     
-    thead {
-        th {
-            background-color: $border-color;
-            color: $light-color;
+    $headerColor: $ridestyler-color-dark-gray;
+    $subheaderColor: $ridestyler-color-gray;
+
+    &.table-rounded {
+        border-spacing: 0;
+
+        tr {
+            &:first-child {
+                td, th {
+                    &:first-child {
+                        border-top-left-radius: $border-radius;
+                    }
+                    &:last-child {
+                        border-top-right-radius: $border-radius;
+                    }
+                }
+            }
         }
 
-        + tbody {
+        thead + tbody {
             tr {
                 &:first-child {
                     td, th {
@@ -74,6 +49,48 @@
                     }
                 }
             }
+        }
+    
+        tbody {
+            tr {
+                td, th {
+                    border-bottom: $border-width solid $gray-color;
+    
+                    &:first-child {
+                        border-left: $border-width solid $headerColor;
+                    }
+                    &:last-child {
+                        border-right: $border-width solid $headerColor;
+                    }
+                }
+    
+                &:last-child {
+                    td, th {
+                        border-bottom: $border-width solid $headerColor;
+    
+                        &:first-child {
+                            border-bottom-left-radius: $border-radius;
+                        }
+                        &:last-child {
+                            border-bottom-right-radius: $border-radius;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    thead {
+        th {
+            background-color: $headerColor;
+            color: $light-color;
+        }
+    }
+
+    tbody {
+        th {
+            background-color: $subheaderColor;
+            color: $light-color;
         }
     }
 
