@@ -21,26 +21,10 @@ body {
 	text-rendering: optimizeLegibility;
 }
 
-a {
-	color: $link-color;
-	outline: none;
-	text-decoration: underline;
+@mixin selection {
+	background: $primary-color;
+	color: $light-color;
+}
 
-	&:focus,
-	&:hover,
-	&:active,
-	&.active {
-		color: $link-color-dark;
-		text-decoration: underline;
-	}
-
-	&:visited {
-		color: $link-color-light;
-	}
-}
-::selection {
-	background: $primary-color; /* WebKit/Blink Browsers */
-}
-::-moz-selection {
-	background: $primary-color; /* Gecko Browsers */
-}
+::selection { @include selection; }
+::-moz-selection { @include selection; }

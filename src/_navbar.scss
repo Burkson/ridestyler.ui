@@ -21,8 +21,9 @@
 		font-size: 2rem;
 	}
 
-	.btn-link {
-		color: currentColor;
+	a {
+		color: inherit;
+		margin: 0 $layout-spacing-sm;
 	}
 
     .navbar-primary {

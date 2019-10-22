@@ -1,0 +1,61 @@
+extends ../_layout/_docs-layout.pug
+
+block variables
+  - var slug = 'links'
+  - var parent = 'elements'
+  - var title = 'Links - Elements - ridestyler.ui CSS Framework'
+  - var description = 'Links include styles for giving elements a hyper-link treatment. ridestyler.ui CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development.'
+
+block docs-content
+  +docs-heading('links', 'Links')
+
+    p Links include styles for giving elements an hyper-link treatment. 
+
+    .docs-demo.columns
+      .column.col-12
+        span.link default link
+      .column.col-12
+        span.link.link-primary primary link 
+      .column.col-12
+        span.link.link-secondary secondary link
+    
+    p
+      | Add the #[code link] class to #{'<span>'} or #{'<button>'} elements for a default link. 
+      | There are classes #[code link-primary] and #[code link-secondary] for predefined primary and secondary links.
+
+    +docs-subheading('links-anchor', 'Anchors')
+    
+    p By default #{'<a>'} tags are #[code .link.link-primary]. 
+
+    blockquote Lorem ipsum #[a(href="#") dolor] sit amet consectetur, adipisicing elit. Necessitatibus, cumque! Quaerat quis at odit nesciunt, ab laborum voluptatem, corporis, possimus doloremque fugit pariatur quisquam animi repellat soluta nemo. Deserunt, non.
+
+    +docs-subheading('links-button', 'Button Links')
+
+    p
+      | Adding the #[code link] class to a #{'<button>'} gives it the same treatment as the text around it.
+    
+    .toast
+      | Would you like the #[button.link.link-primary Red Pill] or the #[button.link.link-secondary Blue Pill]?
+    
+    pre.code(data-lang='HTML')
+      code
+        :highlight(lang="html")
+          <div class="toast">
+            Would you like the
+            <button class="link link-primary">Red Pill</button> or the
+            <button class="link link-secondary">Blue Pill</button>?
+          </div>
+    
+    .navbar
+      .navbar-brand RideStyler
+      section.navbar-section
+        button.link User Name
+    pre.code(data-lang="HTML")
+      code
+        :highlight(lang="HTML")
+          <div class="navbar">
+            <div class="navbar-brand">RideStyler</div>
+            <section class="navbar-section">
+              <button class="link">User Name</button>
+            </section>
+          </div>

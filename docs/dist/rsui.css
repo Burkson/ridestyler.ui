@@ -4248,34 +4248,19 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-a {
-  color: #21b8f7;
-  outline: none;
-  text-decoration: underline;
-}
-
-a:focus,
-a:hover,
-a:active,
-a.active {
-  color: #067bac;
-  text-decoration: underline;
-}
-
-a:visited {
-  color: #83d7fb;
-}
-
 ::-moz-selection {
-  background: #21b8f7; /* WebKit/Blink Browsers */
+  background: #21b8f7;
+  color: #fff;
 }
 
 ::selection {
-  background: #21b8f7; /* WebKit/Blink Browsers */
+  background: #21b8f7;
+  color: #fff;
 }
 
 ::-moz-selection {
-  background: #21b8f7; /* Gecko Browsers */
+  background: #21b8f7;
+  color: #fff;
 }
 
 h1,
@@ -4434,6 +4419,41 @@ dl dt {
 
 dl dd {
   margin: .8rem 0 1.6rem 0;
+}
+
+.link,
+a {
+  color: inherit;
+  cursor: pointer; 
+  outline: none;
+  text-decoration: none;
+}
+
+.link:focus,
+a:focus,
+.link:active,
+a:active,
+.active.link,
+a.active {
+  outline-offset: .1rem; 
+  outline-style: solid;
+  outline-width: thin;
+}
+
+.link.link-primary,
+a {
+  color: #21b8f7;
+}
+
+.link.link-secondary {
+  color: #f3693c;
+}
+
+button.link {
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
 }
 
 header {
@@ -4716,28 +4736,6 @@ html:lang(ko),
 .btn.btn-secondary.loading::after {
   border-bottom-color: #fff;
   border-left-color: #fff;
-}
-
-.btn.btn-link,
-.btn.btn-unstyled {
-  background: transparent;
-}
-
-.btn.btn-link {
-  color: #21b8f7;
-}
-
-.btn.btn-link:focus,
-.btn.btn-link:hover,
-.btn.btn-link:active,
-.btn.btn-link.active {
-  color: #067bac;
-}
-
-.btn.btn-unstyled {
-  color: currentColor; 
-  font-family: "Open Sans", "Segoe UI", Tahoma, sans-serif;
-  font-weight: normal;
 }
 
 .btn.btn-sm {
@@ -6034,8 +6032,9 @@ video.video-responsive::before {
   font-size: 2rem;
 }
 
-.navbar .btn-link {
-  color: currentColor;
+.navbar a {
+  color: inherit;
+  margin: 0 .8rem;
 }
 
 .navbar .navbar-primary {

@@ -49,27 +49,6 @@
 		@include button-variant($secondary-color, $secondary-color-dark, $light-color, $light-color);
 	}
 
-	&.btn-link, &.btn-unstyled {
-		background: transparent;
-	}
-
-	&.btn-link {
-		color: $link-color;
-
-		&:focus,
-		&:hover,
-		&:active,
-		&.active {
-			color: $link-color-dark;
-		}
-	}
-
-	&.btn-unstyled {
-		font-family: $body-font-family;
-		font-weight: normal;
-		color: currentColor;
-	}
-
 	// Button Sizes
 	&.btn-sm {
 		font-size: $font-size-sm;

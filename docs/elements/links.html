@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Badges - Components - ridestyler.ui CSS Framework</title>
+    <title>Links - Elements - ridestyler.ui CSS Framework</title>
     <meta charset="utf-8">
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="Badges are often used as unread number indicators. ridestyler.ui CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development.">
+    <meta name="description" content="Links include styles for giving elements a hyper-link treatment. ridestyler.ui CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development.">
     <meta name="author" content="Byron Carasco">
-    <meta property="og:url" content="https://burkson.github.io/ridestyler.ui/components/badges.html">
-    <meta property="og:title" content="Badges - Components - ridestyler.ui CSS Framework">
-    <meta property="og:description" content="Badges are often used as unread number indicators. ridestyler.ui CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development.">
+    <meta property="og:url" content="https://burkson.github.io/ridestyler.ui/elements/links.html">
+    <meta property="og:title" content="Links - Elements - ridestyler.ui CSS Framework">
+    <meta property="og:description" content="Links include styles for giving elements a hyper-link treatment. ridestyler.ui CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development.">
     <link rel="shortcut icon" href="../img/favicons/favicon.ico">
     <link rel="icon" href="../img/favicons/favicon.png">
     <link rel="stylesheet" href="../dist/rsui.min.css">
     <link rel="stylesheet" href="../dist/docs.min.css">
-    <link rel="canonical" href="https://burkson.github.io/ridestyler.ui/components/badges.html">
+    <link rel="canonical" href="https://burkson.github.io/ridestyler.ui/elements/links.html">
   </head>
   <body>
     <div class="docs-container off-canvas off-canvas-sidebar-show">
@@ -46,7 +46,7 @@
               </div>
             </div>
             <div class="accordion">
-              <input id="accordion-elements" type="checkbox" name="docs-accordion-checkbox" hidden=""/>
+              <input id="accordion-elements" type="checkbox" name="docs-accordion-checkbox" hidden="" checked="checked"/>
               <label class="accordion-header c-hand" for="accordion-elements">Elements</label>
               <div class="accordion-body">
                 <ul class="menu menu-nav">
@@ -88,7 +88,7 @@
               </div>
             </div>
             <div class="accordion">
-              <input id="accordion-components" type="checkbox" name="docs-accordion-checkbox" hidden="" checked="checked"/>
+              <input id="accordion-components" type="checkbox" name="docs-accordion-checkbox" hidden=""/>
               <label class="accordion-header c-hand" for="accordion-components">Components</label>
               <div class="accordion-body">
                 <ul class="menu menu-nav">
@@ -166,56 +166,44 @@
       </div><a class="off-canvas-overlay" href="#close"></a>
       <div class="off-canvas-content">
         <div class="docs-content container grid-xl" id="content">
-          <div class="container" id="badges">
-            <h3 class="s-title">Badges<a class="anchor" href="#badges" aria-hidden="true">#</a></h3>
-            <p>Badges are often used as unread number indicators.</p>
+          <div class="container" id="links">
+            <h3 class="s-title">Links<a class="anchor" href="#links" aria-hidden="true">#</a></h3>
+            <p>Links include styles for giving elements an hyper-link treatment. </p>
             <div class="docs-demo columns">
-              <div class="column col-3 col-xs-6"><span class="badge" data-badge="">Notifications</span></div>
-              <div class="column col-3 col-xs-6"><span class="badge" data-badge="8">Notifications</span></div>
-              <div class="column col-3 col-xs-6"><span class="badge" data-badge="88">Notifications</span></div>
-              <div class="column col-3 col-xs-6"><span class="badge" data-badge="888">Notifications</span></div>
+              <div class="column col-12"><span class="link">default link</span></div>
+              <div class="column col-12"><span class="link link-primary">primary link </span></div>
+              <div class="column col-12"><span class="link link-secondary">secondary link</span></div>
             </div>
-            <p>Add the <code>badge</code> class to non self closing elements.
-              And add the <code>data-badge</code> attribute to define the content of a badge.
-              The badge will appear in the top-right direction of the element.
+            <p>Add the <code>link</code> class to &lt;span&gt; or &lt;button&gt; elements for a default link. 
+              There are classes <code>link-primary</code> and <code>link-secondary</code> for predefined primary and secondary links.
             </p>
-            <p>If there is no <code>data-badge</code> or the attribute is not specified, the badge will appear as a dot.</p>
-            <div class="docs-demo columns">
-              <div class="column col-sm-12">
-                <button class="btn badge" data-badge="">Button</button>
-                <button class="btn badge" data-badge="8">Button</button>
-              </div>
-              <div class="column col-sm-12">
-                <button class="btn btn-primary badge" data-badge="">Button</button>
-                <button class="btn btn-primary badge" data-badge="8">Button</button>
-              </div>
-              <div class="column col-sm-12">
-                <figure class="avatar avatar-xl badge" data-badge="8" data-initial="YZ"><img src="../img/avatar-1.png" alt="YZ"></figure>
-                <figure class="avatar avatar-lg badge" data-badge="8" data-initial="YZ"><img src="../img/avatar-2.png" alt="YZ"></figure>
-                <figure class="avatar badge" data-badge="8" data-initial="YZ"><img src="../img/avatar-3.png" alt="YZ"></figure>
-              </div>
+            <h4 class="s-subtitle" id="links-anchor">Anchors<a class="anchor" href="#links-anchor" aria-hidden="true">#</a></h4>
+            <p>By default &lt;a&gt; tags are <code>.link.link-primary</code>. </p>
+            <blockquote>Lorem ipsum <a href="#">dolor</a> sit amet consectetur, adipisicing elit. Necessitatibus, cumque! Quaerat quis at odit nesciunt, ab laborum voluptatem, corporis, possimus doloremque fugit pariatur quisquam animi repellat soluta nemo. Deserunt, non.</blockquote>
+            <h4 class="s-subtitle" id="links-button">Button Links<a class="anchor" href="#links-button" aria-hidden="true">#</a></h4>
+            <p>Adding the <code>link</code> class to a &lt;button&gt; gives it the same treatment as the text around it.</p>
+            <div class="toast">Would you like the 
+              <button class="link link-primary">Red Pill</button> or the 
+              <button class="link link-secondary">Blue Pill</button>?
             </div>
-            <p>Badges support <code>button</code> and <code>avatars</code> elements as well.</p>
-            <pre class="code" data-lang="HTML"><code><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"badge"</span>&gt;</span>
-  Notifications
-<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"badge"</span> <span class="hljs-attr">data-badge</span>=<span class="hljs-string">"8"</span>&gt;</span>
-  Notifications
-<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn badge"</span> <span class="hljs-attr">data-badge</span>=<span class="hljs-string">"8"</span>&gt;</span>
-  Button
-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"avatar badge"</span> <span class="hljs-attr">data-badge</span>=<span class="hljs-string">"8"</span> <span class="hljs-attr">data-initial</span>=<span class="hljs-string">"YZ"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"img/avatar-3.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"YZ"</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+            <pre class="code" data-lang="HTML"><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"toast"</span>&gt;</span>
+  Would you like the
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"link link-primary"</span>&gt;</span>Red Pill<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span> or the
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"link link-secondary"</span>&gt;</span>Blue Pill<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>?
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
-          </div>
-          <div class="docs-footer container grid-lg" id="copyright">
-            <p><a href="https://github.com/Burkson/ridestyler.ui" target="_blank">GitHub</a> · <a href="https://ridestyler.com" target="_blank">RideStyler</a> · Version <span class="version"></span></p>
-            <p>Built with <i class="icon icon-brain"></i>s by <a href="https://www.ridestyler.com" target="_blank">RideStyler</a>.</p>
+            <div class="navbar">
+              <div class="navbar-brand">RideStyler</div>
+              <section class="navbar-section">
+                <button class="link">User Name</button>
+              </section>
+            </div>
+            <pre class="code" data-lang="HTML"><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar-brand"</span>&gt;</span>RideStyler<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar-section"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"link"</span>&gt;</span>User Name<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
           </div>
         </div>
       </div>

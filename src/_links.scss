@@ -1,0 +1,38 @@
+%link {
+	color: inherit;
+	outline: none;
+	text-decoration: none;
+	cursor: pointer;
+
+	&:focus,
+	&:active,
+	&.active {
+		outline-style: solid;
+		outline-width: thin;
+		outline-offset: 0.1rem;
+	}
+}
+
+.link {
+	@extend %link;
+
+	&.link-primary {
+		color: $primary-color;
+	}
+
+	&.link-secondary {
+		color: $secondary-color;
+	}
+}
+
+a {
+	@extend %link;
+	@extend .link.link-primary;
+}
+
+button.link {
+	-webkit-appearance: none;
+	background: none;
+	border: none;
+	padding: 0;
+}
