@@ -6546,6 +6546,7 @@ summary.accordion-header::-webkit-details-marker {
   animation: slide-down .15s ease 1;
   background-color: #fff;
   box-shadow: 0 .25rem .6rem rgba(13, 17, 43, .3);
+  color: #0d112b;
   display: none;
   left: 0;
   max-height: 50vh;

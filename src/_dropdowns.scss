@@ -5,6 +5,7 @@
 
 	.menu {
 		background-color: $bg-color-light;
+		color: $body-font-color;
         @include shadow-variant($shadow-far);
 		animation: slide-down .15s ease 1;
 		display: none;

@@ -6,6 +6,36 @@ block variables
   - var title = 'Navbar - Layout - ridestyler.ui CSS Framework'
   - var description = 'Navbar is a layout container that appears in the header of apps and websites. ridestyler.ui CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development.'
 
+mixin user-menu-example
+  span.dropdown.dropdown-right
+    button.btn.btn-link.dropdown-toggle
+      | Wheel Co. 
+      i.icon.icon-caret-down
+    ul.menu
+      li.menu-item
+        .tile.tile-centered
+          .tile-icon
+            img.avatar(src="../img/avatar-4.png" alt="Avatar")
+          .tile-content
+            | Steve Rogers
+      li.divider
+      li.menu-item
+        a.active(href="#menus")
+          | My profile
+        .menu-badge
+          label.form-checkbox
+            input(type="checkbox")
+            i.form-icon
+            | Public
+      li.menu-item
+        a(href="#menus")
+          | Settings
+        .menu-badge
+          label.label.label-primary 2
+      li.menu-item
+        a(href="#menus")
+          | Logout
+
 block docs-content
   +docs-heading('navbar', 'Navbar')
 
@@ -16,9 +46,7 @@ block docs-content
         .navbar
           .navbar-brand RideStyler
           section.navbar-section
-            button.btn.btn-link
-              | Wheel Co. 
-              i.icon.icon-caret-down
+            +user-menu-example
 
     p
       | The navbar component can include logo brand, nav links and buttons, search box or any combination of those elements.
@@ -32,10 +60,12 @@ block docs-content
               <a href="..." class="navbar-brand">RideStyler</a>
             </section>
             <section class="navbar-section">
-              <div class="input-group input-inline">
-                <input class="form-input" type="text" placeholder="search">
-                <button class="btn btn-primary input-group-btn">Search</button>
-              </div>
+              <span class="dropdown dropdown-right">
+                <button class="btn btn-link dropdown-toggle">Wheel Co. <i class="icon icon-caret-down"></i></button>
+                <ul class="menu">
+                  ...
+                </ul>
+              </span>
             </section>
           </header>
     
@@ -56,9 +86,7 @@ block docs-content
           section.navbar-section
             h1 Calculators
           section.navbar-section
-            button.btn.btn-link
-              | Wheel Co. 
-              i.icon.icon-caret-down
+            +user-menu-example
     
     pre.code(data-lang="HTML")
       code
@@ -72,7 +100,12 @@ block docs-content
               <h1>Calculators</h1>
             </section>
             <section class="navbar-section">
-              <button class="btn btn-link">Wheel Co. <i class="icon icon-caret-down"></i></button>
+              <span class="dropdown dropdown-right">
+                <button class="btn btn-link dropdown-toggle">Wheel Co. <i class="icon icon-caret-down"></i></button>
+                <ul class="menu">
+                  ...
+                </ul>
+              </span>
             </section>
           </div>
     
