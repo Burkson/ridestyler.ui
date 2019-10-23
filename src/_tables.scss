@@ -1,8 +1,8 @@
-// Tables
-.table {
-    $headerColor: $ridestyler-color-dark-gray;
-    $subheaderColor: $ridestyler-color-gray;
 
+$headerColor: $ridestyler-color-dark-gray;
+$subheaderColor: $ridestyler-color-gray;
+
+.table {
 	width: 100%;
 
 	@if $rtl==true {
@@ -82,5 +82,69 @@
 				}
 			}
 		}
-	}
+    }
+}
+
+.table-sticky-headers {
+    // The code for sticky headers is modified from BootstrapVue's sticky headers: https://github.com/bootstrap-vue/bootstrap-vue/blob/dev/src/components/table/_table.scss
+
+    overflow-y: auto;
+
+    // Annoyingly, when overflow-y is set, browsers convert
+    // 'overflow-x: visible' to 'overflow-x: auto' - so it becomes
+    // responsive in the x axis automatically
+    // Default `max-height` before a scrollbar will show
+    // We don't use `height` as table could be shorter than this value
+    max-height: 20vh;
+
+    > .table {
+        // Reset `margin-bottom` to we don't get a space after
+        // the table inside the scroll area
+        margin-bottom: 0;
+    }
+
+    @media print {
+        overflow-y: visible !important;
+        max-height: none !important;
+    }
+
+    
+    @supports (position: sticky) {
+        // Positioning of sticky headers
+        > .table > thead > tr > th {
+            // Header cells need to be sticky on top
+            position: sticky;
+            top: 0;
+            z-index: $zindex-1;
+        }
+
+        // Positioning of sticky columns
+        > .table {
+            > thead,
+            > tbody,
+            > tfoot {
+                > tr > .table-sticky-column {
+                    position: sticky;
+                    left: 0;
+                }
+            }
+
+            > thead {
+                > tr > .table-sticky-column {
+                    // z-index needs to be higher than sticky columns and
+                    // sticky headers for correct layering
+                    z-index: $zindex-2;
+                }
+            }
+
+            > tbody,
+            > tfoot {
+                > tr > .table-sticky-column {
+                    // z-index needs to be lower than sticky header that
+                    // is also a sticky column
+                    z-index: $zindex-1;
+                }
+            }
+        }
+    }
 }

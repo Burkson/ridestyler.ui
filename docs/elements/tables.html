@@ -395,6 +395,195 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
 </code></pre>
+            <h4 class="s-subtitle" id="tables-fixed-headers">Fixed Headers<a class="anchor" href="#tables-fixed-headers" aria-hidden="true">#</a></h4>
+            <div class="docs-demo columns">
+              <div class="column col-12 table-sticky-headers">
+                <table class="table table-striped-even table-hover">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Language</th>
+                      <th>People Using</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr> 
+                      <td>1</td>
+                      <td>JavaScript</td>
+                      <td>1 Billion</td>
+                    </tr>
+                    <tr> 
+                      <td>2</td>
+                      <td>C#</td>
+                      <td>500 Million</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>PHP</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>PHP</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>PHP</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>PHP</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td>PHP</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>8</td>
+                      <td>PHP</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>9</td>
+                      <td>PHP</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>10</td>
+                      <td>PHP</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>11</td>
+                      <td>PHP</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>12</td>
+                      <td>PHP</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>13</td>
+                      <td>PHP</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>14</td>
+                      <td>PHP</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>15</td>
+                      <td>PHP</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>16</td>
+                      <td>PHP</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>17</td>
+                      <td>PHP</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>18</td>
+                      <td>PHP</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>19</td>
+                      <td>PHP</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>20</td>
+                      <td>PHP</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>21</td>
+                      <td>PHP</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>22</td>
+                      <td>PHP</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>23</td>
+                      <td>PHP</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>24</td>
+                      <td>PHP</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>25</td>
+                      <td>PHP</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>26</td>
+                      <td>PHP</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>27</td>
+                      <td>PHP</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>28</td>
+                      <td>PHP</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>29</td>
+                      <td>PHP</td>
+                      <td>1</td>
+                    </tr>
+                    <tr> 
+                      <td>30</td>
+                      <td>Fortran</td>
+                      <td>-100</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <p>Wrap your table with a <code>table-sticky-headers</code> element to have sticky table headers. Adjust the <code>max-height</code> as needed. 
+              The <code>th</code> cells in your table's <code>thead</code> will become fixed when the table's <code>height</code> becomes bigger then it's <code>max-height</code>.
+              Browsers without <code>position: sticky</code> support will fallback to non-scrolling tables.
+            </p>
+            <pre class="code" data-lang="HTML"><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"table-sticky-headers"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"table table-striped table-hover"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>name<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>genre<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>release date<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"active"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>The Shawshank Redemption<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Crime, Drama<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>14 October 1994<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
           </div>
           <div class="docs-footer container grid-lg" id="copyright">
             <p><a href="https://github.com/Burkson/ridestyler.ui" target="_blank">GitHub</a> · <a href="https://ridestyler.com" target="_blank">RideStyler</a> · Version <span class="version"></span></p>

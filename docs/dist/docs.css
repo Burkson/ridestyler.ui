@@ -102,7 +102,7 @@
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-    z-index: 99;
+    z-index: 199;
   }
   .docs-content .s-title::before,
   .docs-content .s-subtitle::before {

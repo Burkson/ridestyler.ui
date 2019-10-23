@@ -124,7 +124,7 @@ $sidebar-width: 14rem;
     @supports (position: sticky) {
       position: sticky;
       top: 0;
-      z-index: $zindex-1 - 1;
+      z-index: $zindex-2 - 1;
 
       &::before {
         background: $light-color;
