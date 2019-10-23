@@ -1,5 +1,8 @@
 // Tables
 .table {
+    $headerColor: $ridestyler-color-dark-gray;
+    $subheaderColor: $ridestyler-color-gray;
+
 	width: 100%;
 
 	@if $rtl==true {
@@ -17,77 +20,23 @@
         text-transform: uppercase;
     }
     
-    $headerColor: $ridestyler-color-dark-gray;
-    $subheaderColor: $ridestyler-color-gray;
-
-    &.table-rounded {
-        border-spacing: 0;
-
-        tr {
-            &:first-child {
-                td, th {
-                    &:first-child {
-                        border-top-left-radius: $border-radius;
-                    }
-                    &:last-child {
-                        border-top-right-radius: $border-radius;
-                    }
-                }
-            }
-        }
-
-        thead + tbody {
-            tr {
-                &:first-child {
-                    td, th {
-                        &:first-child {
-                            border-top-left-radius: 0;
-                        }
-                        &:last-child {
-                            border-top-right-radius: 0;
-                        }
-                    }
-                }
-            }
-        }
-    
-        tbody {
-            tr {
-                td, th {
-                    border-bottom: $border-width solid $gray-color;
-    
-                    &:first-child {
-                        border-left: $border-width solid $headerColor;
-                    }
-                    &:last-child {
-                        border-right: $border-width solid $headerColor;
-                    }
-                }
-    
-                &:last-child {
-                    td, th {
-                        border-bottom: $border-width solid $headerColor;
-    
-                        &:first-child {
-                            border-bottom-left-radius: $border-radius;
-                        }
-                        &:last-child {
-                            border-bottom-right-radius: $border-radius;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    
     thead {
         th {
             background-color: $headerColor;
             color: $light-color;
         }
+        tr {
+            display: block;
+            position: relative;
+        }
     }
 
     tbody {
+        display: block;
+        overflow: auto;
+        width: 100%;
+        max-height: 30vh;
+
         th {
             background-color: $subheaderColor;
             color: $light-color;
@@ -104,10 +53,23 @@
         &.table-hover tbody tr:nth-of-type(odd):hover {
             background: $bg-color-dark;
         }
-	}
+    }
+    
+    &.table-striped-even {
+        tbody {
+			tr:nth-of-type(even) {
+				background: $bg-color;
+			}
+        }
+        
+        &.table-hover tbody tr:nth-of-type(even):hover {
+            background: $bg-color-dark;
+        }
+    }
 
 	&,
-	&.table-striped {
+    &.table-striped,
+    &.table-striped-even {
 		tbody {
 			tr {
 				&.active {
@@ -129,13 +91,5 @@
 				}
 			}
 		}
-	}
-
-	// Scollable tables
-	&.table-scroll {
-		display: block;
-		overflow-x: auto;
-		padding-bottom: .75rem;
-		white-space: nowrap;
 	}
 }

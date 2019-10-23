@@ -90,89 +90,15 @@ block docs-content
               td 22 September 1995
 
     p
-      | Add the #[code table-striped] class to #{'<table>'} to add zebra striped style.
+      | Add the #[code table-striped] class to #{'<table>'} to highlight odd rows.
       | For hoverable table rows, you can add the #[code table-hover] class to enable hover style.
     p
-      | Use the #[code active] class to make #{'<tr>'} element highlighted.
-
-    pre.code(data-lang='HTML')
-      code
-        :highlight(lang="html")
-          <table class="table table-striped table-hover">
-            <thead>
-              <tr>
-                <th>name</th>
-                <th>genre</th>
-                <th>release date</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="active">
-                <td>The Shawshank Redemption</td>
-                <td>Crime, Drama</td>
-                <td>14 October 1994</td>
-              </tr>
-            </tbody>
-          </table>
-
-    +docs-subheading('tables-scroll', 'Scrollable tables')
+      | Use the #[code active] class to make #{'<tr>'} element highlighted. Use the #[code table-striped-even] to highlight even 
+      | rows instead of odd.
 
     .docs-demo.columns
       .column.col-12
-        table.table.table-scroll(style="max-height:100px")
-          thead
-            tr
-              th Name
-              th Rating
-              th Duration
-              th Genre
-              th Release date
-              th Director
-          tbody
-            tr
-              td The Shawshank Redemption
-              td R
-              td 2h 22min
-              td Crime, Drama
-              td 14 October 1994
-              td Frank Darabont
-            tr
-              td The Godfather
-              td R
-              td 2h 55min
-              td Crime, Drama
-              td 24 March 1972
-              td Francis Ford Coppola
-            tr
-              td Schindler's List
-              td R
-              td 3h 15min
-              td Biography, Drama, History
-              td 4 February 1994
-              td Steven Spielberg
-            tr
-              td Se7en
-              td R
-              td 2h 7min
-              td Crime, Drama, Mystery
-              td 22 September 1995
-              td David Fincher
-
-    p
-      | Add the #[code table-scroll] class to #{'<table>'} to have a horizontally scrollable table.
-
-    pre.code(data-lang='HTML')
-      code
-        :highlight(lang="html")
-          <table class="table table-scroll">
-            ...
-          </table>
-          
-    +docs-subheading('tables-rounded', 'Rounded Tables')
-    
-    .docs-demo.columns
-      .column.col-12
-        table.table.table-striped.table-hover.table-rounded
+        table.table.table-striped-even.table-hover
           thead
             tr
               th Name
@@ -196,13 +122,10 @@ block docs-content
               td Crime, Drama, Mystery
               td 22 September 1995
 
-    p
-      | Add the #[code table-rounded] class to #{'<table>'} to give tables a rounded border.
-
     pre.code(data-lang='HTML')
       code
         :highlight(lang="html")
-          <table class="table table-striped table-hover table-rounded">
+          <table class="table table-striped table-hover">
             <thead>
               <tr>
                 <th>name</th>
@@ -211,7 +134,7 @@ block docs-content
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr class="active">
                 <td>The Shawshank Redemption</td>
                 <td>Crime, Drama</td>
                 <td>14 October 1994</td>

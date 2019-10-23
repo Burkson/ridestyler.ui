@@ -4542,63 +4542,21 @@ html:lang(ko),
   text-transform: uppercase;
 }
 
-.table.table-rounded {
-  border-spacing: 0;
-}
-
-.table.table-rounded tr:first-child td:first-child,
-.table.table-rounded tr:first-child th:first-child {
-  border-top-left-radius: .4rem;
-}
-
-.table.table-rounded tr:first-child td:last-child,
-.table.table-rounded tr:first-child th:last-child {
-  border-top-right-radius: .4rem;
-}
-
-.table.table-rounded thead + tbody tr:first-child td:first-child,
-.table.table-rounded thead + tbody tr:first-child th:first-child {
-  border-top-left-radius: 0;
-}
-
-.table.table-rounded thead + tbody tr:first-child td:last-child,
-.table.table-rounded thead + tbody tr:first-child th:last-child {
-  border-top-right-radius: 0;
-}
-
-.table.table-rounded tbody tr td,
-.table.table-rounded tbody tr th {
-  border-bottom: .05rem solid #c7c7c7;
-}
-
-.table.table-rounded tbody tr td:first-child,
-.table.table-rounded tbody tr th:first-child {
-  border-left: .05rem solid #556172;
-}
-
-.table.table-rounded tbody tr td:last-child,
-.table.table-rounded tbody tr th:last-child {
-  border-right: .05rem solid #556172;
-}
-
-.table.table-rounded tbody tr:last-child td,
-.table.table-rounded tbody tr:last-child th {
-  border-bottom: .05rem solid #556172;
-}
-
-.table.table-rounded tbody tr:last-child td:first-child,
-.table.table-rounded tbody tr:last-child th:first-child {
-  border-bottom-left-radius: .4rem;
-}
-
-.table.table-rounded tbody tr:last-child td:last-child,
-.table.table-rounded tbody tr:last-child th:last-child {
-  border-bottom-right-radius: .4rem;
-}
-
 .table thead th {
   background-color: #556172;
   color: #fff;
+}
+
+.table thead tr {
+  display: block;
+  position: relative;
+}
+
+.table tbody {
+  display: block;
+  max-height: 30vh; 
+  overflow: auto;
+  width: 100%;
 }
 
 .table tbody th {
@@ -4614,25 +4572,28 @@ html:lang(ko),
   background: #d3d8df;
 }
 
+.table.table-striped-even tbody tr:nth-of-type(even) {
+  background: #e6ebf2;
+}
+
+.table.table-striped-even.table-hover tbody tr:nth-of-type(even):hover {
+  background: #d3d8df;
+}
+
 .table tbody tr.active,
-.table.table-striped tbody tr.active {
+.table.table-striped tbody tr.active,
+.table.table-striped-even tbody tr.active {
   background: #f3693c;
 }
 
 .table.table-hover tbody tr.active:hover,
-.table.table-striped.table-hover tbody tr.active:hover {
+.table.table-striped.table-hover tbody tr.active:hover,
+.table.table-striped-even.table-hover tbody tr.active:hover {
   background: #ed450f;
 }
 
 .table.table-hover tbody tr:hover {
   background: #c7c7c7;
-}
-
-.table.table-scroll {
-  display: block;
-  overflow-x: auto;
-  padding-bottom: .75rem;
-  white-space: nowrap;
 }
 
 .btn {
