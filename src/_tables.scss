@@ -1,25 +1,24 @@
-
 $headerColor: $ridestyler-color-dark-gray;
 $subheaderColor: $ridestyler-color-gray;
 
 .table {
-	width: 100%;
+    width: 100%;
 
-	@if $rtl==true {
-		text-align: right;
-	} @else {
-		text-align: left;
+    @if $rtl==true {
+        text-align: right;
+    } @else {
+        text-align: left;
     }
-    
+
     td,
-	th {
-		padding: $unit-1 $unit-2;
+    th {
+        padding: $unit-1 $unit-2;
     }
 
     th {
         text-transform: uppercase;
     }
-    
+
     thead {
         th {
             background-color: $headerColor;
@@ -34,54 +33,54 @@ $subheaderColor: $ridestyler-color-gray;
         }
     }
 
-	&.table-striped {
-		tbody {
-			tr:nth-of-type(odd) {
-				background: $bg-color;
-			}
+    &.table-striped {
+        tbody {
+            tr:nth-of-type(odd) {
+                background: $bg-color;
+            }
         }
-        
+
         &.table-hover tbody tr:nth-of-type(odd):hover {
             background: $bg-color-dark;
         }
     }
-    
+
     &.table-striped-even {
         tbody {
-			tr:nth-of-type(even) {
-				background: $bg-color;
-			}
+            tr:nth-of-type(even) {
+                background: $bg-color;
+            }
         }
-        
+
         &.table-hover tbody tr:nth-of-type(even):hover {
             background: $bg-color-dark;
         }
     }
 
-	&,
+    &,
     &.table-striped,
     &.table-striped-even {
-		tbody {
-			tr {
-				&.active {
-					background: $active-color;
-				}
-			}
-		}
-        
+        tbody {
+            tr {
+                &.active {
+                    background: $active-color;
+                }
+            }
+        }
+
         &.table-hover tbody tr.active:hover {
             background: darken($active-color, 10%);
         }
-	}
+    }
 
-	&.table-hover {
-		tbody {
-			tr {
-				&:hover {
-					background: $gray-color;
-				}
-			}
-		}
+    &.table-hover {
+        tbody {
+            tr {
+                &:hover {
+                    background: $gray-color;
+                }
+            }
+        }
     }
 }
 
@@ -104,14 +103,41 @@ $subheaderColor: $ridestyler-color-gray;
         max-height: none !important;
     }
 
-    
     @supports (position: sticky) {
-        // Positioning of sticky headers
-        > .table > thead > tr > th {
-            // Header cells need to be sticky on top
-            position: sticky;
-            top: 0;
-            z-index: $zindex-1;
+        > .table {
+            // Positioning of sticky headers
+            > thead > tr > th {
+                // Header cells need to be sticky on top
+                position: sticky;
+                top: 0;
+                z-index: $zindex-1;
+            }
+
+            > thead,
+            > tbody,
+            > tfoot {
+                > tr > .table-sticky-column {
+                    position: sticky;
+                    left: 0;
+                }
+            }
+
+            > thead {
+                > tr > .table-sticky-column {
+                    // z-index needs to be higher than sticky columns and
+                    // sticky headers for correct layering
+                    z-index: $zindex-1 + 1;
+                }
+            }
+
+            > tbody,
+            > tfoot {
+                > tr > .table-sticky-column {
+                    // z-index needs to be lower than sticky header that
+                    // is also a sticky column
+                    z-index: $zindex-1;
+                }
+            }
         }
     }
 }

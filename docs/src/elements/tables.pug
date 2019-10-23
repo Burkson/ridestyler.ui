@@ -225,34 +225,34 @@ block docs-content
           - var extraColumnCount=20;
           thead
             tr
-              th #
+              th.table-sticky-column #
               th Language
               th People Using
               - for (let j=0; j < extraColumnCount; j++)
                 th="Col "+j
           tbody
             tr 
-              td 1
+              th.table-sticky-column 1
               td JavaScript
               td 1 Billion
               - for (let j=0; j < extraColumnCount; j++)
                 td=j
             tr 
-              td 2
+              th.table-sticky-column 2
               td C#
               td 500 Million
               - for (let j=0; j < extraColumnCount; j++)
                 td=j
             - for (var i=3; i < 30; i++) {
               tr
-                td= i
+                th.table-sticky-column= i
                 td PHP
                 td 1
                 - for (let j=0; j < extraColumnCount; j++)
                   td=j
             - }
             tr 
-              td= i
+              th.table-sticky-column= i
               td Fortran
               td -100
               - for (let j=0; j < extraColumnCount; j++)
@@ -260,8 +260,13 @@ block docs-content
 
     p
       | Wrap your table with a #[code table-responsive] element to make it respond by scrolling vertically and horizontally. The table will automatically get a #[code max-height], 
-      | adjust it #[code max-height] as needed. The #[code th] cells in your table's #[code thead] will become fixed when the table's #[code height] becomes bigger then it's #[code max-height].
-      | Browsers without #[code position: sticky] support will fallback to no sticky-headers. While printing #[code overflow] and #[code max-height] will be reset.
+      | adjust it #[code max-height] as needed.
+    
+    p
+      | The #[code th] cells in your table's #[code thead] will become fixed when the table overflows its height.
+      | Browsers without #[code position: sticky] support will fallback to no sticky-headers. While printing #[code overflow] and #[code max-height] will be reset. 
+      | Add the #[code table-sticky-column] to every #{'<th>'} and #{'<td>'} in a column make the column sticky as well.
+
 
     pre.code(data-lang='HTML')
       code
@@ -270,14 +275,14 @@ block docs-content
             <table class="table table-striped table-hover">
               <thead>
                 <tr>
-                  <th>name</th>
+                  <th class="table-sticky-column">name</th>
                   <th>genre</th>
                   <th>release date</th>
                 </tr>
               </thead>
               <tbody>
                 <tr class="active">
-                  <td>The Shawshank Redemption</td>
+                  <td class="table-sticky-column">The Shawshank Redemption</td>
                   <td>Crime, Drama</td>
                   <td>14 October 1994</td>
                 </tr>
