@@ -4584,24 +4584,24 @@ html:lang(ko),
   background: #c7c7c7;
 }
 
-.table-sticky-headers {
+.table-responsive {
   max-height: 20vh; 
-  overflow-y: auto;
+  overflow: auto;
 }
 
-.table-sticky-headers > .table {
+.table-responsive > .table {
   margin-bottom: 0;
 }
 
 @media print {
-  .table-sticky-headers {
+  .table-responsive {
     max-height: none !important; 
-    overflow-y: visible !important;
+    overflow: visible !important;
   }
 }
 
 @supports ((position: -webkit-sticky) or (position: sticky)) {
-  .table-sticky-headers > .table > thead > tr > th {
+  .table-responsive > .table > thead > tr > th {
     position: sticky;
     position: -webkit-sticky;
     top: 0;

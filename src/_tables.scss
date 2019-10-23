@@ -85,14 +85,10 @@ $subheaderColor: $ridestyler-color-gray;
     }
 }
 
-.table-sticky-headers {
+.table-responsive {
     // The code for sticky headers is modified from BootstrapVue's sticky headers: https://github.com/bootstrap-vue/bootstrap-vue/blob/dev/src/components/table/_table.scss
 
-    overflow-y: auto;
-
-    // Annoyingly, when overflow-y is set, browsers convert
-    // 'overflow-x: visible' to 'overflow-x: auto' - so it becomes
-    // responsive in the x axis automatically
+    overflow: auto;
     // Default `max-height` before a scrollbar will show
     // We don't use `height` as table could be shorter than this value
     max-height: 20vh;
@@ -104,7 +100,7 @@ $subheaderColor: $ridestyler-color-gray;
     }
 
     @media print {
-        overflow-y: visible !important;
+        overflow: visible !important;
         max-height: none !important;
     }
 
