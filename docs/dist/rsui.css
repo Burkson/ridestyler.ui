@@ -4547,18 +4547,6 @@ html:lang(ko),
   color: #fff;
 }
 
-.table thead tr {
-  display: block;
-  position: relative;
-}
-
-.table tbody {
-  display: block;
-  max-height: 30vh; 
-  overflow: auto;
-  width: 100%;
-}
-
 .table tbody th {
   background-color: #7a8798;
   color: #fff;
