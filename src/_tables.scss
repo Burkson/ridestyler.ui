@@ -117,34 +117,5 @@ $subheaderColor: $ridestyler-color-gray;
             top: 0;
             z-index: $zindex-1;
         }
-
-        // Positioning of sticky columns
-        > .table {
-            > thead,
-            > tbody,
-            > tfoot {
-                > tr > .table-sticky-column {
-                    position: sticky;
-                    left: 0;
-                }
-            }
-
-            > thead {
-                > tr > .table-sticky-column {
-                    // z-index needs to be higher than sticky columns and
-                    // sticky headers for correct layering
-                    z-index: $zindex-2;
-                }
-            }
-
-            > tbody,
-            > tfoot {
-                > tr > .table-sticky-column {
-                    // z-index needs to be lower than sticky header that
-                    // is also a sticky column
-                    z-index: $zindex-1;
-                }
-            }
-        }
     }
 }

@@ -4607,20 +4607,6 @@ html:lang(ko),
     top: 0;
     z-index: 100;
   }
-  .table-sticky-headers > .table > thead > tr > .table-sticky-column,
-  .table-sticky-headers > .table > tbody > tr > .table-sticky-column,
-  .table-sticky-headers > .table > tfoot > tr > .table-sticky-column {
-    left: 0; 
-    position: sticky;
-    position: -webkit-sticky;
-  }
-  .table-sticky-headers > .table > thead > tr > .table-sticky-column {
-    z-index: 200;
-  }
-  .table-sticky-headers > .table > tbody > tr > .table-sticky-column,
-  .table-sticky-headers > .table > tfoot > tr > .table-sticky-column {
-    z-index: 100;
-  }
 }
 
 .btn {
