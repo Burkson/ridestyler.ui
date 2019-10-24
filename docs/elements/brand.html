@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Toasts - Components - ridestyler.ui CSS Framework</title>
+    <title>Brand - Elements - ridestyler.ui CSS Framework</title>
     <meta charset="utf-8">
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="Toasts are used to show alert or information to users. ridestyler.ui CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development.">
+    <meta name="description" content="Brand elements include RideStyler branded logos and other goodies. ridestyler.ui CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development.">
     <meta name="author" content="Byron Carasco">
-    <meta property="og:url" content="https://burkson.github.io/ridestyler.ui/components/toasts.html">
-    <meta property="og:title" content="Toasts - Components - ridestyler.ui CSS Framework">
-    <meta property="og:description" content="Toasts are used to show alert or information to users. ridestyler.ui CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development.">
+    <meta property="og:url" content="https://burkson.github.io/ridestyler.ui/elements/brand.html">
+    <meta property="og:title" content="Brand - Elements - ridestyler.ui CSS Framework">
+    <meta property="og:description" content="Brand elements include RideStyler branded logos and other goodies. ridestyler.ui CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development.">
     <link rel="shortcut icon" href="../img/favicons/favicon.ico">
     <link rel="icon" href="../img/favicons/favicon.png">
     <link rel="stylesheet" href="../dist/rsui.min.css">
     <link rel="stylesheet" href="../dist/docs.min.css">
-    <link rel="canonical" href="https://burkson.github.io/ridestyler.ui/components/toasts.html">
+    <link rel="canonical" href="https://burkson.github.io/ridestyler.ui/elements/brand.html">
   </head>
   <body>
     <div class="docs-container off-canvas off-canvas-sidebar-show">
@@ -50,7 +50,7 @@
               </div>
             </div>
             <div class="accordion">
-              <input id="accordion-elements" type="checkbox" name="docs-accordion-checkbox" hidden=""/>
+              <input id="accordion-elements" type="checkbox" name="docs-accordion-checkbox" hidden="" checked="checked"/>
               <label class="accordion-header c-hand" for="accordion-elements">Elements</label>
               <div class="accordion-body">
                 <ul class="menu menu-nav">
@@ -94,7 +94,7 @@
               </div>
             </div>
             <div class="accordion">
-              <input id="accordion-components" type="checkbox" name="docs-accordion-checkbox" hidden="" checked="checked"/>
+              <input id="accordion-components" type="checkbox" name="docs-accordion-checkbox" hidden=""/>
               <label class="accordion-header c-hand" for="accordion-components">Components</label>
               <div class="accordion-body">
                 <ul class="menu menu-nav">
@@ -172,62 +172,55 @@
       </div><a class="off-canvas-overlay" href="#close"></a>
       <div class="off-canvas-content">
         <div class="docs-content container grid-xl" id="content">
-          <div class="container" id="toasts">
-            <h3 class="s-title">Toasts<a class="anchor" href="#toasts" aria-hidden="true">#</a></h3>
-            <p>Toasts are used to show alert or information to users.</p>
+          <div class="container" id="brand">
+            <h3 class="s-title">Brand<a class="anchor" href="#brand" aria-hidden="true">#</a></h3>
+            <p>Brand elements include RideStyler branded logos and other goodies. </p>
+            <h4 class="s-subtitle" id="brand-logos">Logos<a class="anchor" href="#brand-logos" aria-hidden="true">#</a></h4>
+            <p>Add one of the following classes to an element to style its background with the corresponding logo.</p>
             <div class="docs-demo columns">
-              <div class="column col-9 col-sm-12">
-                <div class="toast">
-                  <button class="btn btn-clear float-right"></button>
-                  <h6>Toast Title</h6>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <div class="column col-6 col-xs-12">
+                <div class="card card-action">
+                  <div class="card-body">
+                    <div class="ridestyler-logo-text"></div><code>.ridestyler-logo-text</code>
+                  </div>
                 </div>
               </div>
-              <div class="column col-9 col-sm-12">
-                <div class="toast toast-primary">
-                  <button class="btn btn-clear float-right"></button>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <div class="column col-6 col-xs-12">
+                <div class="card card-action">
+                  <div class="card-body">
+                    <div class="ridestyler-logo-icon"></div><code>.ridestyler-logo-icon</code>
+                  </div>
+                </div>
+              </div>
+              <div class="column col-6 col-xs-12">
+                <div class="card card-action">
+                  <div class="card-body">
+                    <div class="ridestyler-logo-full"></div><code>.ridestyler-logo-full</code>
+                  </div>
+                </div>
+              </div>
+              <div class="column col-6 col-xs-12">
+                <div class="card card-action card-action-primary bg-dark">
+                  <div class="card-body">
+                    <div class="ridestyler-logo-full light"></div><code>.ridestyler-logo-full.light</code>
+                  </div>
+                </div>
+              </div>
+              <div class="column col-6 col-xs-12">
+                <div class="card card-action">
+                  <div class="card-body">
+                    <div class="ridestyler-logo-tagonly"></div><code>.ridestyler-logo-tagonly</code>
+                  </div>
+                </div>
+              </div>
+              <div class="column col-6 col-xs-12">
+                <div class="card card-action card-action-primary bg-dark">
+                  <div class="card-body">
+                    <div class="ridestyler-logo-tagonly light"></div><code>.ridestyler-logo-tagonly.light</code>
+                  </div>
                 </div>
               </div>
             </div>
-            <p>Add a container element with the <code>toast</code> class.
-              You can add any text within the container, and even icons. 
-              You may also add a close button with the <code>btn-clear</code> class if you need.
-            </p>
-            <pre class="code" data-lang="HTML"><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"toast"</span>&gt;</span>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-</code></pre>
-            <div class="docs-demo columns">
-              <div class="column col-sm-12">
-                <div class="toast toast-success">
-                  <button class="btn btn-clear float-right"></button>
-                  <p>Toast success</p>
-                </div>
-              </div>
-              <div class="column col-sm-12">
-                <div class="toast toast-warning">
-                  <button class="btn btn-clear float-right"></button>
-                  <p>Toast warning</p>
-                </div>
-              </div>
-              <div class="column col-sm-12">
-                <div class="toast toast-error">
-                  <button class="btn btn-clear float-right"></button>
-                  <p>Toast error</p>
-                </div>
-              </div>
-            </div>
-            <p>And you can add the <code>toast-primary</code>, <code>toast-success</code>, <code>toast-warning</code> or <code>toast-error</code> class for additional toast colors.</p>
-            <pre class="code" data-lang="HTML"><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"toast toast-primary"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-clear float-right"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-</code></pre>
-          </div>
-          <div class="docs-footer container grid-lg" id="copyright">
-            <p><a href="https://github.com/Burkson/ridestyler.ui" target="_blank">GitHub</a> · <a href="https://ridestyler.com" target="_blank">RideStyler</a> · Version <span class="version"></span></p>
-            <p>Built with <i class="icon icon-brain"></i>s by <a href="https://www.ridestyler.com" target="_blank">RideStyler</a>.</p>
           </div>
         </div>
       </div>

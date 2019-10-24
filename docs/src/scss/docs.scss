@@ -42,7 +42,7 @@ $sidebar-width: 14rem;
     right: 1.5rem;
     top: 1rem;
     width: 14rem;
-    justify-content: end;
+    justify-content: flex-end;
   }
 }
 
@@ -464,6 +464,7 @@ $sidebar-width: 14rem;
 
     .off-canvas-content {
       width: 100%;
+      padding: 0 !important;
     }
   }
 
@@ -601,7 +602,19 @@ $off-canvas-breakpoint: $size-lg !default;
 	flex-flow: nowrap;
 	height: 100%;
 	position: relative;
-	width: 100%;
+  width: 100%;
+  
+  .navbar-center {
+    position: absolute;
+    left: 50%;
+    width: 188px;
+    margin-left: -(188px)/2;
+    height: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
 	.off-canvas-toggle {
 		display: block;
@@ -680,6 +693,10 @@ $off-canvas-breakpoint: $size-lg !default;
 @media (min-width: $off-canvas-breakpoint) {
 	.off-canvas {
 		&.off-canvas-sidebar-show {
+      .navbar-center {
+        display: none;
+      }
+
 			.off-canvas-toggle {
 				display: none;
 			}

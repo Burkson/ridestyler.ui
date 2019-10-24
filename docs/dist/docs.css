@@ -31,15 +31,12 @@
 }
 
 .docs-navbar .btns {
+  -ms-flex-pack: end;
+  justify-content: flex-end; 
   position: absolute;
   right: 1.5rem;
   top: 1rem;
   width: 14rem;
-}
-
-.docs-navbar .algolia-autocomplete {
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
 }
 
 .docs-sidebar .docs-nav {
@@ -443,6 +440,7 @@
     z-index: 300;
   }
   .off-canvas .off-canvas-content {
+    padding: 0 !important; 
     width: 100%;
   }
   .docs-sidebar .docs-brand {
@@ -550,6 +548,21 @@
   width: 100%;
 }
 
+.off-canvas .navbar-center {
+  align-items: center;
+  display: flex;
+  display: -ms-flexbox;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  height: 100%;
+  justify-content: center; 
+  left: 50%;
+  margin-left: -94px;
+  position: absolute;
+  top: 0;
+  width: 188px;
+}
+
 .off-canvas .off-canvas-toggle {
   display: block;
   left: 1.2rem; 
@@ -607,6 +620,9 @@
 }
 
 @media (min-width: 960px) {
+  .off-canvas.off-canvas-sidebar-show .navbar-center {
+    display: none;
+  }
   .off-canvas.off-canvas-sidebar-show .off-canvas-toggle {
     display: none;
   }
