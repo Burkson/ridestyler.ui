@@ -1,0 +1,50 @@
+extends ../_layout/_docs-layout.pug
+
+block variables
+  - var slug = 'brand'
+  - var parent = 'elements'
+  - var title = 'Brand - Elements - ridestyler.ui CSS Framework'
+  - var description = 'Brand elements include RideStyler branded logos and other goodies. ridestyler.ui CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development.'
+
+block docs-content
+  +docs-heading('brand', 'Brand')
+
+    p
+      | Brand elements include RideStyler branded logos and other goodies. 
+
+    +docs-subheading('brand-logos', 'Logos')
+
+    p Add one of the following classes to an element to style its background with the corresponding logo.
+
+    .docs-demo.columns
+      .column.col-6.col-xs-12
+        .card.card-action
+            .card-body
+              .ridestyler-logo-text
+              code .ridestyler-logo-text
+      .column.col-6.col-xs-12
+        .card.card-action
+            .card-body
+              .ridestyler-logo-icon
+              code .ridestyler-logo-icon
+      .column.col-6.col-xs-12
+        .card.card-action
+            .card-body
+              .ridestyler-logo-full
+              code .ridestyler-logo-full
+      .column.col-6.col-xs-12
+        .card.card-action.card-action-primary.bg-dark
+            .card-body
+              .ridestyler-logo-full.light
+              code .ridestyler-logo-full.light
+      .column.col-6.col-xs-12
+        .card.card-action
+            .card-body
+              .ridestyler-logo-tagonly
+              code .ridestyler-logo-tagonly
+      .column.col-6.col-xs-12
+        .card.card-action.card-action-primary.bg-dark
+            .card-body
+              .ridestyler-logo-tagonly.light
+              code .ridestyler-logo-tagonly.light
+                
