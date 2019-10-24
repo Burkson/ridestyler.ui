@@ -1,4 +1,5 @@
-// Navbar
+$branded-navbar-height: 6rem;
+
 .navbar {
 	$navbar-background-color: $ridestyler-color-black;
 	$padding-y: $layout-spacing-sm;
@@ -62,11 +63,13 @@
 	
 	&.navbar-branded {
 		padding: 0;
-		height: 6rem;
+		height: $branded-navbar-height;
 
 		.navbar-brand {
 			position: relative;
 			width: 8rem;
+			height: $branded-navbar-height;
+			flex-shrink: 0;
 
 			.navbar-brand-logo {
 				position: absolute;
@@ -109,9 +112,11 @@
 				border-radius: 50%;
 				color: $ridestyler-color-orange;
 				
-				height: 3rem;
-				width: 3rem;
-				top: 1.5rem;
+				$size: 3rem;
+
+				height: $size;
+				width: $size;
+				top: ($branded-navbar-height - $size) / 2;
 				right: 0;
 
 				display: flex;
@@ -126,6 +131,54 @@
 
 		.navbar-section {
 			padding: $padding-y $padding-x;
+		}
+	}
+}
+
+@media (max-width: $size-sm) {
+	.navbar {
+		.h1, h1 {
+			font-size: 1.6rem !important;
+		}
+
+		&.navbar-branded {
+			.navbar-brand + .navbar-section {
+				padding-left: 1rem;
+			}
+
+			.navbar-section {
+				padding: $layout-spacing-sm $layout-spacing-sm;
+			}
+		}
+	}
+}
+@media (max-width: $size-xs) {
+	.navbar {
+		.h1, h1 {
+			font-size: 1.3rem !important;
+		}
+		
+		&.navbar-branded {
+			.navbar-brand {
+				width: 7rem;
+
+				+ .navbar-section {
+					padding-left: 0.75rem;
+				}
+
+				.icon {
+					$size: 2.5rem;
+
+					width: $size;
+					height: $size;
+					
+					top: ($branded-navbar-height - $size) / 2;
+				}
+			}
+
+			.navbar-section {
+				padding: $layout-spacing-sm*.8 $layout-spacing-sm*.8;
+			}
 		}
 	}
 }

@@ -4263,6 +4263,12 @@ body {
   color: #fff;
 }
 
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -6091,6 +6097,9 @@ video.video-responsive::before {
 }
 
 .navbar.navbar-branded .navbar-brand {
+  -ms-flex-negative: 0;
+  flex-shrink: 0; 
+  height: 6rem;
   position: relative;
   width: 8rem;
 }
@@ -6150,6 +6159,40 @@ video.video-responsive::before {
 
 .navbar.navbar-branded .navbar-section {
   padding: .8rem 1.92rem;
+}
+
+@media (max-width: 600px) {
+  .navbar .h1,
+  .navbar h1 {
+    font-size: 1.6rem !important;
+  }
+  .navbar.navbar-branded .navbar-brand + .navbar-section {
+    padding-left: 1rem;
+  }
+  .navbar.navbar-branded .navbar-section {
+    padding: .8rem .8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .h1,
+  .navbar h1 {
+    font-size: 1.3rem !important;
+  }
+  .navbar.navbar-branded .navbar-brand {
+    width: 7rem;
+  }
+  .navbar.navbar-branded .navbar-brand + .navbar-section {
+    padding-left: .75rem;
+  }
+  .navbar.navbar-branded .navbar-brand .icon {
+    height: 2.5rem;
+    top: 1.75rem; 
+    width: 2.5rem;
+  }
+  .navbar.navbar-branded .navbar-section {
+    padding: .64rem .64rem;
+  }
 }
 
 .accordion input:checked ~ .accordion-header .icon,
