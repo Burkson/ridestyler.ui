@@ -5935,6 +5935,9 @@ video.video-responsive::before {
 }
 
 @media (max-width: 480px) {
+  .container {
+    padding: 1.2rem 1.2rem;
+  }
   .col-xs-12,
   .col-xs-11,
   .col-xs-10,

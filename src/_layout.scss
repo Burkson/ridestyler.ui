@@ -380,6 +380,10 @@
   }
 }
 @media (max-width: $size-xs) {
+  .container {
+    padding: $layout-spacing $layout-spacing;
+  }
+
   .col-xs-12,
   .col-xs-11,
   .col-xs-10,
