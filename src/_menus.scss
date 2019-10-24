@@ -77,3 +77,10 @@
 		}
 	}
 }
+
+@media (max-width: $size-xs) {
+	.menu {
+		min-width: 120px;
+		max-width: 85vw;
+	}
+}
