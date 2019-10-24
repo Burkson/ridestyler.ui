@@ -49,6 +49,7 @@ $off-canvas-breakpoint: $size-lg !default;
 		flex: 1 1 auto;
 		height: 100%;
 		padding: $layout-spacing $layout-spacing $layout-spacing 4rem;
+		overflow: auto;
 	}
 
 	.off-canvas-overlay {
