@@ -6694,13 +6694,12 @@ summary.accordion-header::-webkit-details-marker {
 
 .modal:target .modal-overlay,
 .modal.active .modal-overlay {
-  -webkit-backdrop-filter: blur(2px);
-  backdrop-filter: blur(2px);
   background: rgba(13, 17, 43, .75);
   bottom: 0;
   cursor: default;
   display: block;
   left: 0;
+  outline: none; 
   position: absolute;
   right: 0;
   top: 0;
@@ -6758,6 +6757,10 @@ summary.accordion-header::-webkit-details-marker {
 .modal-container .modal-footer {
   padding: .8rem;
   text-align: right;
+}
+
+.modal-container .modal-footer .btn {
+  margin-right: 1.2rem;
 }
 
 .nav {

@@ -85,5 +85,9 @@
 	.modal-footer {
 		padding: $modal-padding;
 		text-align: right;
+
+		.btn {
+			margin-right: $layout-spacing;
+		}
 	}
 }
