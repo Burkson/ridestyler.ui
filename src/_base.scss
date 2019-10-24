@@ -28,3 +28,9 @@ body {
 
 ::selection { @include selection; }
 ::-moz-selection { @include selection; }
+
+@media (max-width: $size-xs) {
+	html {
+		font-size: 14px;
+	}
+}
