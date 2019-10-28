@@ -27,7 +27,7 @@
 
 a {
 	@extend %link;
-	@extend .link.link-primary;
+	@extend .link, .link-primary;
 }
 
 button.link {
