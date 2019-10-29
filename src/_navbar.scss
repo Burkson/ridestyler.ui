@@ -22,9 +22,14 @@ $branded-navbar-height: 6rem;
 		font-size: 2rem;
 	}
 
-	a {
+	.link {
 		color: inherit;
-		margin: 0 $layout-spacing-sm;
+		margin-left: $layout-spacing-sm;
+
+		&.active {
+			outline: none;
+			color: $active-color;
+		}
 	}
 
     .navbar-primary {

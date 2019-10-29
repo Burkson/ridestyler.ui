@@ -6046,9 +6046,16 @@ video.video-responsive::before {
   font-size: 2rem;
 }
 
+.navbar .link,
 .navbar a {
   color: inherit;
-  margin: 0 .8rem;
+  margin-left: .8rem;
+}
+
+.navbar .link.active,
+.navbar a.active {
+  color: #f3693c; 
+  outline: none;
 }
 
 .navbar .navbar-primary {

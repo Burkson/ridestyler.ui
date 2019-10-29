@@ -179,7 +179,8 @@
               <div class="column">
                 <div class="navbar">
                   <div class="navbar-brand">RideStyler</div>
-                  <section class="navbar-section"><span class="dropdown dropdown-right">
+                  <div class="navbar-section"><a href="#">Wheels</a><a class="active" href="#">Tires</a></div>
+                  <div class="navbar-section"><span class="dropdown dropdown-right">
                       <button class="link dropdown-toggle">Wheel Co. <i class="icon icon-caret-down"></i></button>
                       <ul class="menu">
                         <li class="menu-item">
@@ -203,17 +204,22 @@
                         </li>
                         <li class="menu-item"><a href="#menus">Logout</a></li>
                       </ul></span>
-                  </section>
+                  </div>
                 </div>
               </div>
             </div>
             <p>
               The navbar component can include logo brand, nav links and buttons, search box or any combination of those elements.
-              Each section with the <code>navbar-section</code> class will be evenly distributed in the container.
+              Each section with the <code>navbar-section</code> class will be evenly distributed in the container. Add a <code>active</code>
+              class to links to make them active.
             </p>
             <pre class="code" data-lang="HTML"><code><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar-section"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"..."</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar-brand"</span>&gt;</span>RideStyler<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar-section"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"..."</span> &gt;</span>Wheels<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"..."</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"active"</span>&gt;</span>Tires<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar-section"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown dropdown-right"</span>&gt;</span>

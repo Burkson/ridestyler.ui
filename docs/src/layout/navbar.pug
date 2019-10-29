@@ -45,12 +45,16 @@ block docs-content
       .column
         .navbar
           .navbar-brand RideStyler
-          section.navbar-section
+          .navbar-section
+            a(href="#") Wheels
+            a.active(href="#") Tires
+          .navbar-section
             +user-menu-example
 
     p
       | The navbar component can include logo brand, nav links and buttons, search box or any combination of those elements.
-      | Each section with the #[code navbar-section] class will be evenly distributed in the container.
+      | Each section with the #[code navbar-section] class will be evenly distributed in the container. Add a #[code active]
+      | class to links to make them active.
 
     pre.code(data-lang='HTML')
       code
@@ -58,6 +62,10 @@ block docs-content
           <header class="navbar">
             <section class="navbar-section">
               <a href="..." class="navbar-brand">RideStyler</a>
+            </section>
+            <section class="navbar-section">
+              <a href="..." >Wheels</a>
+              <a href="..." class="active">Tires</a>
             </section>
             <section class="navbar-section">
               <span class="dropdown dropdown-right">
