@@ -6,12 +6,18 @@
 	border-radius: $border-radius;
 	display: flex;
 	flex-direction: column;
-    @include shadow-variant($shadow-far);
-    
-    .card-header {
-        border-top-left-radius: $border-radius;
-        border-top-right-radius: $border-radius;
-    }
+	@include shadow-variant($shadow-far);
+
+	.card-header, .card-body, .card-image, .card-footer {
+		&:first-child {
+			border-top-left-radius: $border-radius;
+        	border-top-right-radius: $border-radius;
+		}
+		&:last-child {
+			border-bottom-left-radius: $border-radius;
+        	border-bottom-right-radius: $border-radius;
+		}
+	}
 
 	.card-header,
 	.card-body,
