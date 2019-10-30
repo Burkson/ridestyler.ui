@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*! ridestyler.ui RTL */
-/*! ridestyler.ui v0.0.0 */
+/*! ridestyler.ui v1.0.0 */
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
@@ -4878,10 +4878,10 @@ legend {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: #fff;
+  background-color: #fff;
   background-image: none;
-  border: .05rem solid #556172;
-  border-radius: .4rem;
+  border: none;
+  border-bottom: 1px solid #556172;
   color: #0d112b;
   display: block;
   font-size: 1rem;
@@ -4889,14 +4889,14 @@ legend {
   line-height: 1.625rem;
   max-width: 100%;
   outline: none;
-  padding: .5375rem .8rem;
+  padding: .3375rem .6rem;
   position: relative;
-  transition: background .2s, border .2s, box-shadow .2s, color .2s;
+  transition: background-color .2s, border-bottom .2s, box-shadow .2s, color .2s;
   width: 100%;
 }
 
 .form-input:focus {
-  border-color: #21b8f7;
+  border-bottom: 2px solid #556172;
 }
 
 .form-input:-ms-input-placeholder {
@@ -4933,6 +4933,11 @@ legend {
   height: auto;
 }
 
+form.form-full .form-input,
+textarea.form-input {
+  border: 1px solid #556172;
+}
+
 textarea.form-input,
 textarea.form-input.input-lg,
 textarea.form-input.input-sm {
@@ -4956,12 +4961,9 @@ textarea.form-input.input-sm {
 }
 
 .form-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: #fff; 
-  border: .05rem solid #0d112b;
-  border-radius: .4rem;
+  background-color: #fff; 
+  border: none;
+  border-bottom: 1px solid #0d112b;
   color: inherit;
   font-size: 1rem;
   height: 2.8rem;
@@ -4973,11 +4975,7 @@ textarea.form-input.input-sm {
 }
 
 .form-select:focus {
-  border-color: #21b8f7;
-}
-
-.form-select::-ms-expand {
-  display: none;
+  border-bottom: 2px solid #556172;
 }
 
 .form-select.select-sm {
@@ -4994,6 +4992,7 @@ textarea.form-input.input-sm {
 
 .form-select[size],
 .form-select[multiple] {
+  border: 1px solid #556172; 
   height: auto;
   padding: .5375rem .8rem;
 }
@@ -5001,11 +5000,6 @@ textarea.form-input.input-sm {
 .form-select[size] option,
 .form-select[multiple] option {
   padding: .1rem .4rem;
-}
-
-.form-select:not([multiple]):not([size]) {
-  background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23667189'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E") no-repeat right .35rem center/.4rem .5rem;
-  padding-right: 2.4rem;
 }
 
 .has-icon-left,
@@ -5247,36 +5241,25 @@ textarea.form-input.input-sm {
   z-index: 1;
 }
 
-.input-group .form-input:first-child:not(:last-child),
-.input-group .form-select:first-child:not(:last-child),
-.input-group .input-group-addon:first-child:not(:last-child),
-.input-group .input-group-btn:first-child:not(:last-child) {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-}
-
-.input-group .form-input:not(:first-child):not(:last-child),
-.input-group .form-select:not(:first-child):not(:last-child),
-.input-group .input-group-addon:not(:first-child):not(:last-child),
-.input-group .input-group-btn:not(:first-child):not(:last-child) {
+.input-group .form-input,
+.input-group .form-select,
+.input-group .input-group-addon {
   border-radius: 0;
-  margin-left: -.05rem;
 }
 
-.input-group .form-input:last-child:not(:first-child),
-.input-group .form-select:last-child:not(:first-child),
-.input-group .input-group-addon:last-child:not(:first-child),
-.input-group .input-group-btn:last-child:not(:first-child) {
+.input-group .form-input,
+.input-group .form-select,
+.input-group .input-group-addon,
+.input-group .input-group-btn {
   border-bottom-left-radius: 0;
+  border-left: none;
+  border-right: none;
+  border-top: none;
   border-top-left-radius: 0;
-  margin-left: -.05rem;
 }
 
-.input-group .form-input:focus,
-.input-group .form-select:focus,
-.input-group .input-group-addon:focus,
-.input-group .input-group-btn:focus {
-  z-index: 2;
+.input-group .form-input:focus {
+  border-bottom: 1px solid #21b8f7;
 }
 
 .input-group .form-select {
@@ -5535,9 +5518,22 @@ video.video-responsive::before {
 }
 
 .container {
+  padding: 1.2rem 3.2rem;
+}
+
+.columns {
+  margin-left: -1.2rem;
+  margin-right: -1.2rem;
+}
+
+.column {
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+}
+
+.container {
   margin-left: auto;
   margin-right: auto;
-  padding: 1.2rem 3.2rem;
   width: 100%;
 }
 
@@ -5574,8 +5570,6 @@ video.video-responsive::before {
   display: -ms-flexbox;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-left: -3.2rem;
-  margin-right: -3.2rem;
 }
 
 .columns.col-gapless {
@@ -5598,8 +5592,6 @@ video.video-responsive::before {
   -ms-flex: 1;
   flex: 1;
   max-width: 100%;
-  padding-left: 1.2rem;
-  padding-right: 1.2rem;
 }
 
 .column.col-12,
@@ -5950,6 +5942,10 @@ video.video-responsive::before {
   .columns {
     margin-left: -1.2rem;
     margin-right: -1.2rem;
+  }
+  .column {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
   }
   .col-xs-12,
   .col-xs-11,
@@ -6499,9 +6495,20 @@ summary.accordion-header::-webkit-details-marker {
   flex-direction: column;
 }
 
-.card .card-header {
+.card .card-header:first-child,
+.card .card-body:first-child,
+.card .card-image:first-child,
+.card .card-footer:first-child {
   border-top-left-radius: .4rem;
   border-top-right-radius: .4rem;
+}
+
+.card .card-header:last-child,
+.card .card-body:last-child,
+.card .card-image:last-child,
+.card .card-footer:last-child {
+  border-bottom-left-radius: .4rem;
+  border-bottom-right-radius: .4rem;
 }
 
 .card .card-header,
@@ -7483,17 +7490,14 @@ a.text-active:visited {
 
 .bg-primary {
   background: #21b8f7 !important;
-  color: #fff;
 }
 
 .bg-secondary {
   background: #f3693c !important;
-  color: #fff;
 }
 
 .bg-dark {
   background: #0d112b !important;
-  color: #fff;
 }
 
 .bg-gray {
@@ -7502,47 +7506,38 @@ a.text-active:visited {
 
 .bg-success {
   background: #32b643 !important;
-  color: #fff;
 }
 
 .bg-warning {
   background: #ffb700 !important;
-  color: #fff;
 }
 
 .bg-error {
   background: #f00 !important;
-  color: #fff;
 }
 
 .bg-ridestyler-orange {
   background: #f3693c !important;
-  color: #fff;
 }
 
 .bg-ridestyler-black {
   background: #0d112b !important;
-  color: #fff;
 }
 
 .bg-ridestyler-dark-gray {
   background: #556172 !important;
-  color: #fff;
 }
 
 .bg-ridestyler-gray {
   background: #7a8798 !important;
-  color: #fff;
 }
 
 .bg-ridestyler-red {
   background: #e72320 !important;
-  color: #fff;
 }
 
 .bg-ridestyler-blue {
   background: #21b8f7 !important;
-  color: #fff;
 }
 
 .c-hand {
