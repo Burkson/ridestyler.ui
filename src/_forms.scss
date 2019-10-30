@@ -35,10 +35,10 @@ legend {
 // Form element: Input
 .form-input {
 	appearance: none;
-	background: $bg-color-light;
+	background-color: $bg-color-light;
 	background-image: none;
-	border: $border-width solid $border-color;
-	border-radius: $border-radius;
+	border: none;
+	border-bottom: 1px solid $border-color;
 	color: $body-font-color;
 	display: block;
 	font-size: $font-size;
@@ -46,13 +46,13 @@ legend {
 	line-height: $line-height;
 	max-width: 100%;
 	outline: none;
-	padding: $control-padding-y $control-padding-x;
+	padding: $control-padding-y-sm $control-padding-x-sm;
 	position: relative;
-	transition: background .2s, border .2s, box-shadow .2s, color .2s;
+	transition: background-color .2s, border-bottom .2s, box-shadow .2s, color .2s;
 	width: 100%;
 
 	&:focus {
-		border-color: $primary-color;
+		border-bottom: 2px solid $border-color;
 	}
 
 	&::placeholder {
@@ -84,6 +84,10 @@ legend {
 	}
 }
 
+form.form-full .form-input, textarea.form-input {
+	border: 1px solid $border-color;
+}
+
 // Form element: Textarea
 textarea.form-input {
 
@@ -113,9 +117,8 @@ textarea.form-input {
 
 // Form element: Select
 .form-select {
-	appearance: none;
-	border: $border-width solid $border-color-dark;
-	border-radius: $border-radius;
+	border: none;
+	border-bottom: 1px solid $border-color-dark;
 	color: inherit;
 	font-size: $font-size;
 	height: $control-size;
@@ -124,14 +127,10 @@ textarea.form-input {
 	padding: $control-padding-y $control-padding-x;
 	vertical-align: middle;
 	width: 100%;
-	background: $bg-color-light;
+	background-color: $bg-color-light;
 
 	&:focus {
-		border-color: $primary-color;
-	}
-
-	&::-ms-expand {
-		display: none;
+		border-bottom: 2px solid $border-color;
 	}
 
 	// Select sizes
@@ -152,15 +151,11 @@ textarea.form-input {
 	&[multiple] {
 		height: auto;
 		padding: $control-padding-y $control-padding-x;
+		border: 1px solid $border-color;
 
 		option {
 			padding: $unit-h $unit-1;
 		}
-	}
-
-	&:not([multiple]):not([size]) {
-		background: $bg-color-light url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23667189'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E") no-repeat right .35rem center / .4rem .5rem;
-		padding-right: $control-icon-size + $control-padding-x;
 	}
 }
 
@@ -412,29 +407,26 @@ textarea.form-input {
 	.input-group-btn {
 		z-index: $zindex-0;
 	}
+	.form-input,
+	.form-select,
+	.input-group-addon {
+		border-radius: 0;
+	}
 
 	.form-input,
 	.form-select,
 	.input-group-addon,
 	.input-group-btn {
-		&:first-child:not(:last-child) {
-			border-bottom-right-radius: 0;
-			border-top-right-radius: 0;
-		}
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		border-bottom-left-radius: 0;
+		border-top-left-radius: 0;
+	}
 
-		&:not(:first-child):not(:last-child) {
-			border-radius: 0;
-			margin-left: -$border-width;
-		}
-
-		&:last-child:not(:first-child) {
-			border-bottom-left-radius: 0;
-			border-top-left-radius: 0;
-			margin-left: -$border-width;
-		}
-
+	.form-input {
 		&:focus {
-			z-index: $zindex-0 + 1;
+			border-bottom: 1px solid $primary-color;
 		}
 	}
 
