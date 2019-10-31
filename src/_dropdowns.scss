@@ -24,8 +24,7 @@
 	}
 
 	&.active .menu,
-	.dropdown-toggle:focus+.menu,
-	.menu:hover {
+	.dropdown-toggle:focus+.menu {
 		display: block;
 	}
 

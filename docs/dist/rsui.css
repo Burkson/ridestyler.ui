@@ -6626,8 +6626,7 @@ summary.accordion-header::-webkit-details-marker {
 }
 
 .dropdown.active .menu,
-.dropdown .dropdown-toggle:focus + .menu,
-.dropdown .menu:hover {
+.dropdown .dropdown-toggle:focus + .menu {
   display: block;
 }
 
