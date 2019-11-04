@@ -4610,8 +4610,7 @@ header {
 
 header.compact {
   font-weight: normal;
-  padding: .4rem 3.2rem; 
-  text-transform: none;
+  padding: .4rem 3.2rem;
 }
 
 html:lang(zh),
