@@ -4298,45 +4298,56 @@ h6.header,
 
 h1,
 .h1 {
-  font-family: "Geomanist", "Open Sans", "Segoe UI", Tahoma, sans-serif;
   font-size: 4.625rem;
-  font-weight: bold; 
-  margin-bottom: 1rem;
 }
 
 h2,
 .h2 {
-  font-family: "Geomanist", "Open Sans", "Segoe UI", Tahoma, sans-serif;
   font-size: 2.75rem;
-  font-weight: bold; 
-  margin-bottom: 1rem;
 }
 
 h3,
 .h3 {
-  font-family: "Geomanist", "Open Sans", "Segoe UI", Tahoma, sans-serif;
   font-size: 2rem;
-  font-weight: bold; 
-  margin-bottom: 1rem;
 }
 
 h4,
 .h4 {
-  font-family: "Geomanist", "Open Sans", "Segoe UI", Tahoma, sans-serif;
   font-size: 1.375rem;
-  font-weight: bold; 
-  margin-bottom: .5rem;
 }
 
 h5,
 .h5 {
-  font-size: 1rem;
-  margin-bottom: .5rem;
+  font-size: .8rem;
 }
 
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+  font-family: "Geomanist", "Open Sans", "Segoe UI", Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  margin-bottom: 1rem;
+}
+
+h4,
+.h4,
+h5,
+.h5,
 h6,
 .h6 {
-  font-size: .8rem;
   margin-bottom: .5rem;
 }
 
@@ -4428,6 +4439,134 @@ dl dd {
   margin: .8rem 0 1.6rem 0;
 }
 
+.navbar h1,
+.navbar .h1,
+header h1,
+header .h1 {
+  font-size: 2.775rem;
+}
+
+.navbar h2,
+.navbar .h2,
+header h2,
+header .h2 {
+  font-size: 1.65rem;
+}
+
+.navbar h3,
+.navbar .h3,
+header h3,
+header .h3 {
+  font-size: 1.2rem;
+}
+
+.navbar h4,
+.navbar .h4,
+header h4,
+header .h4 {
+  font-size: .825rem;
+}
+
+.navbar h5,
+.navbar .h5,
+header h5,
+header .h5 {
+  font-size: .48rem;
+}
+
+.navbar h1,
+.navbar h2,
+.navbar h3,
+.navbar h4,
+.navbar h5,
+.navbar h6,
+.navbar .h1,
+.navbar .h2,
+.navbar .h3,
+.navbar .h4,
+.navbar .h5,
+.navbar .h6,
+header h1,
+header h2,
+header h3,
+header h4,
+header h5,
+header h6,
+header .h1,
+header .h2,
+header .h3,
+header .h4,
+header .h5,
+header .h6 {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .navbar h1,
+  .navbar .h1,
+  header h1,
+  header .h1 {
+    font-size: 1.999998rem;
+  }
+  .navbar h2,
+  .navbar .h2,
+  header h2,
+  header .h2 {
+    font-size: 1.189188rem;
+  }
+  .navbar h3,
+  .navbar .h3,
+  header h3,
+  header .h3 {
+    font-size: .864864rem;
+  }
+  .navbar h4,
+  .navbar .h4,
+  header h4,
+  header .h4 {
+    font-size: .594594rem;
+  }
+  .navbar h5,
+  .navbar .h5,
+  header h5,
+  header .h5 {
+    font-size: .3459456rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar h1,
+  .navbar .h1,
+  header h1,
+  header .h1 {
+    font-size: 1.60000025rem;
+  }
+  .navbar h2,
+  .navbar .h2,
+  header h2,
+  header .h2 {
+    font-size: .9513515rem;
+  }
+  .navbar h3,
+  .navbar .h3,
+  header h3,
+  header .h3 {
+    font-size: .691892rem;
+  }
+  .navbar h4,
+  .navbar .h4,
+  header h4,
+  header .h4 {
+    font-size: .47567575rem;
+  }
+  .navbar h5,
+  .navbar .h5,
+  header h5,
+  header .h5 {
+    font-size: .2767568rem;
+  }
+}
+
 .link,
 a {
   color: inherit;
@@ -4467,14 +4606,12 @@ button.link {
 header {
   background-color: #e6ebf2;
   font-weight: 800; 
-  padding: .8rem 3.2rem;
-  text-transform: uppercase;
+  padding: 1.6rem 3.2rem;
 }
 
 header.compact {
   font-weight: normal;
-  padding: .4rem 3.2rem; 
-  text-transform: none;
+  padding: .4rem 3.2rem;
 }
 
 html:lang(zh),
@@ -6024,26 +6161,6 @@ video.video-responsive::before {
   padding: .8rem 1.92rem;
 }
 
-.navbar h1,
-.navbar h2,
-.navbar h3,
-.navbar h4,
-.navbar h5,
-.navbar h6,
-.navbar .h1,
-.navbar .h2,
-.navbar .h3,
-.navbar .h4,
-.navbar .h5,
-.navbar .h6 {
-  margin: 0;
-}
-
-.navbar .h1,
-.navbar h1 {
-  font-size: 2rem;
-}
-
 .navbar .link,
 .navbar a {
   color: inherit;
@@ -6134,7 +6251,7 @@ video.video-responsive::before {
 }
 
 .navbar.navbar-branded .navbar-brand .navbar-brand-logo:after {
-  background-image: url("http://static.ridestyler.net/images/ridestyler_logo_tagonly_nobg_white.svg");
+  background-image: url("https://static.ridestyler.net/images/ridestyler_logo_tagonly_nobg_white.svg");
   background-position: center;
   background-repeat: no-repeat; 
   background-size: 80%;
@@ -6172,10 +6289,6 @@ video.video-responsive::before {
 }
 
 @media (max-width: 600px) {
-  .navbar .h1,
-  .navbar h1 {
-    font-size: 1.6rem !important;
-  }
   .navbar.navbar-branded .navbar-brand + .navbar-section {
     padding-left: 1rem;
   }
@@ -6185,10 +6298,6 @@ video.video-responsive::before {
 }
 
 @media (max-width: 480px) {
-  .navbar .h1,
-  .navbar h1 {
-    font-size: 1.3rem !important;
-  }
   .navbar.navbar-branded .navbar-brand {
     width: 7rem;
   }
@@ -6679,13 +6788,16 @@ summary.accordion-header::-webkit-details-marker {
 }
 
 .menu .menu-item > a {
+  margin: -.3375rem -.6rem;
+  padding: .3375rem .6rem;
+}
+
+.menu .menu-item > a {
   align-items: center; 
   color: inherit;
   display: flex;
   display: -ms-flexbox;
   -ms-flex-align: center;
-  margin: -.3375rem -.6rem;
-  padding: .3375rem .6rem;
   text-decoration: none;
 }
 
@@ -6732,6 +6844,38 @@ summary.accordion-header::-webkit-details-marker {
 
 .menu .menu-badge .label {
   margin-right: .8rem;
+}
+
+.menu.sidebar {
+  border-radius: 0;
+  border-right: 1px solid #e6ebf2;
+  font-size: 1.2rem;
+  padding-right: 0;
+}
+
+.menu.sidebar .menu-item {
+  font-family: "Geomanist", "Open Sans", "Segoe UI", Tahoma, sans-serif;
+  font-weight: bold; 
+  padding: .5375rem .8rem;
+}
+
+.menu.sidebar .menu-item > a {
+  margin: -.5375rem -.8rem;
+  padding: .5375rem .8rem;
+}
+
+.menu.sidebar .menu-item + .menu-item {
+  margin-top: 0;
+}
+
+.menu.sidebar .menu-item > a {
+  outline: none;
+}
+
+.menu.sidebar .menu-item > a:active,
+.menu.sidebar .menu-item > a.active {
+  background: #e6ebf2;
+  color: #0d112b;
 }
 
 @media (max-width: 480px) {
@@ -7340,14 +7484,14 @@ summary.accordion-header::-webkit-details-marker {
 }
 
 .ridestyler-logo-tagonly {
-  background-image: url("http://static.ridestyler.net/images/ridestyler_logo_tagonly_nobg_black.svg");
+  background-image: url("https://static.ridestyler.net/images/ridestyler_logo_tagonly_nobg_black.svg");
   background-size: 100% 100%; 
   height: 100px;
   width: 100px;
 }
 
 .ridestyler-logo-tagonly.light {
-  background-image: url("http://static.ridestyler.net/images/ridestyler_logo_tagonly_nobg_white.svg");
+  background-image: url("https://static.ridestyler.net/images/ridestyler_logo_tagonly_nobg_white.svg");
 }
 
 @keyframes loading {

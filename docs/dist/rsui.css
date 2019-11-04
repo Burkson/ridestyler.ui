@@ -6250,7 +6250,7 @@ video.video-responsive::before {
 }
 
 .navbar.navbar-branded .navbar-brand .navbar-brand-logo:after {
-  background-image: url("http://static.ridestyler.net/images/ridestyler_logo_tagonly_nobg_white.svg");
+  background-image: url("https://static.ridestyler.net/images/ridestyler_logo_tagonly_nobg_white.svg");
   background-position: center;
   background-repeat: no-repeat; 
   background-size: 80%;
@@ -7483,14 +7483,14 @@ summary.accordion-header::-webkit-details-marker {
 }
 
 .ridestyler-logo-tagonly {
-  background-image: url("http://static.ridestyler.net/images/ridestyler_logo_tagonly_nobg_black.svg");
+  background-image: url("https://static.ridestyler.net/images/ridestyler_logo_tagonly_nobg_black.svg");
   background-size: 100% 100%; 
   height: 100px;
   width: 100px;
 }
 
 .ridestyler-logo-tagonly.light {
-  background-image: url("http://static.ridestyler.net/images/ridestyler_logo_tagonly_nobg_white.svg");
+  background-image: url("https://static.ridestyler.net/images/ridestyler_logo_tagonly_nobg_white.svg");
 }
 
 @keyframes loading {
