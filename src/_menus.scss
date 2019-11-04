@@ -1,4 +1,13 @@
-// Menus
+@mixin menuItemSize($menu-item-padding-x, $menu-item-padding-y) {
+	padding: $menu-item-padding-y $menu-item-padding-x;
+
+	
+	&>a {
+		margin: (-$menu-item-padding-y) (-$menu-item-padding-x);
+		padding: $menu-item-padding-y $menu-item-padding-x;
+	}
+}
+
 .menu {
 	border-radius: $border-radius;
 	list-style: none;
@@ -13,18 +22,14 @@
 	}
 
 	.menu-item {
-		$menu-item-padding-x: $control-padding-x-sm;
-		$menu-item-padding-y: $control-padding-y-sm;
+		@include menuItemSize($control-padding-x-sm, $control-padding-y-sm);
 
 		margin-top: 0;
-		padding: $menu-item-padding-y $menu-item-padding-x;
 		position: relative;
 		text-decoration: none;
 
 		&>a {
 			color: inherit;
-			margin: (-$menu-item-padding-y) (-$menu-item-padding-x);
-			padding: $menu-item-padding-y $menu-item-padding-x;
             text-decoration: none;
             
             display: flex;
@@ -74,6 +79,33 @@
 
 		.label {
 			margin-right: $unit-2;
+		}
+	}
+
+	&.sidebar {
+		font-size: 1.2rem;
+		border-right: 1px solid $bg-color;
+		border-radius: 0;
+		padding-right: 0;
+		
+		.menu-item {
+			@include menuItemSize($control-padding-x, $control-padding-y);	
+
+			font-family: $heading-font-family;
+			font-weight: bold;
+
+			&+.menu-item {
+				margin-top: 0;
+			}
+
+			&>a {
+				outline: none;
+				&:active,
+				&.active {
+					background: $bg-color;
+					color: $body-font-color
+				}
+			}
 		}
 	}
 }

@@ -6787,13 +6787,16 @@ summary.accordion-header::-webkit-details-marker {
 }
 
 .menu .menu-item > a {
+  margin: -.3375rem -.6rem;
+  padding: .3375rem .6rem;
+}
+
+.menu .menu-item > a {
   align-items: center; 
   color: inherit;
   display: flex;
   display: -ms-flexbox;
   -ms-flex-align: center;
-  margin: -.3375rem -.6rem;
-  padding: .3375rem .6rem;
   text-decoration: none;
 }
 
@@ -6840,6 +6843,38 @@ summary.accordion-header::-webkit-details-marker {
 
 .menu .menu-badge .label {
   margin-right: .8rem;
+}
+
+.menu.sidebar {
+  border-radius: 0;
+  border-right: 1px solid #e6ebf2;
+  font-size: 1.2rem;
+  padding-right: 0;
+}
+
+.menu.sidebar .menu-item {
+  font-family: "Geomanist", "Open Sans", "Segoe UI", Tahoma, sans-serif;
+  font-weight: bold; 
+  padding: .5375rem .8rem;
+}
+
+.menu.sidebar .menu-item > a {
+  margin: -.5375rem -.8rem;
+  padding: .5375rem .8rem;
+}
+
+.menu.sidebar .menu-item + .menu-item {
+  margin-top: 0;
+}
+
+.menu.sidebar .menu-item > a {
+  outline: none;
+}
+
+.menu.sidebar .menu-item > a:active,
+.menu.sidebar .menu-item > a.active {
+  background: #e6ebf2;
+  color: #0d112b;
 }
 
 @media (max-width: 480px) {
