@@ -228,7 +228,6 @@ textarea.form-input {
 	}
 
 	.form-icon {
-		border: $border-width solid $border-color-dark;
 		cursor: pointer;
 		display: inline-block;
 		position: absolute;
@@ -255,6 +254,7 @@ textarea.form-input {
 		left: 0;
 		top: ($control-size-sm - $control-icon-size) / 2;
 		width: $control-icon-size;
+		border: 1px solid $gray-color;
 	}
 
 	input {
@@ -336,10 +336,10 @@ textarea.form-input {
 	.form-icon {
 		background: $gray-color;
 		background-clip: padding-box;
-		border-radius: $unit-2 + $border-width;
-		height: $unit-4 + $border-width * 2;
+		border-radius: $unit-2;
+		height: $unit-4;
 		left: 0;
-		top: ($control-size-sm - $unit-4) / 2 - $border-width;
+		top: ($control-size-sm - $unit-4) / 2 ;
 		width: $unit-8;
 
 		&::before {
@@ -359,7 +359,7 @@ textarea.form-input {
 	input {
 		&:checked+.form-icon {
 			&::before {
-				left: $unit-4 - $border-width;
+				left: $unit-4;
 			}
 		}
 

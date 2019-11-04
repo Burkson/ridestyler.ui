@@ -5214,7 +5214,6 @@ textarea.form-input.input-sm {
 .form-checkbox .form-icon,
 .form-radio .form-icon,
 .form-switch .form-icon {
-  border: .05rem solid #0d112b;
   cursor: pointer;
   display: inline-block;
   position: absolute;
@@ -5238,6 +5237,7 @@ textarea.form-input.input-sm {
 .form-checkbox .form-icon,
 .form-radio .form-icon {
   background: #fff;
+  border: 1px solid #c7c7c7; 
   height: 1.6rem;
   left: 0;
   top: .4rem;
@@ -5309,10 +5309,10 @@ textarea.form-input.input-sm {
 .form-switch .form-icon {
   background: #c7c7c7;
   background-clip: padding-box;
-  border-radius: .85rem;
-  height: 1.7rem;
+  border-radius: .8rem;
+  height: 1.6rem;
   left: 0;
-  top: .35rem;
+  top: .4rem;
   width: 3.2rem;
 }
 
@@ -5330,7 +5330,7 @@ textarea.form-input.input-sm {
 }
 
 .form-switch input:checked + .form-icon::before {
-  left: 1.55rem;
+  left: 1.6rem;
 }
 
 .form-switch input:active + .form-icon::before {
