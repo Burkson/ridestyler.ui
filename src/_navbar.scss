@@ -13,15 +13,6 @@ $branded-navbar-height: 6rem;
 	padding: $padding-y $padding-x;
 	color: $light-color;
 
-	h1, h2, h3, h4, h5, h6,
-	.h1, .h2, .h3, .h4, .h5, .h6 {
-		margin: 0;
-	}
-
-	.h1, h1 {
-		font-size: 2rem;
-	}
-
 	.link {
 		color: inherit;
 		margin-left: $layout-spacing-sm;
@@ -142,10 +133,6 @@ $branded-navbar-height: 6rem;
 
 @media (max-width: $size-sm) {
 	.navbar {
-		.h1, h1 {
-			font-size: 1.6rem !important;
-		}
-
 		&.navbar-branded {
 			.navbar-brand + .navbar-section {
 				padding-left: 1rem;
@@ -159,10 +146,6 @@ $branded-navbar-height: 6rem;
 }
 @media (max-width: $size-xs) {
 	.navbar {
-		.h1, h1 {
-			font-size: 1.3rem !important;
-		}
-		
 		&.navbar-branded {
 			.navbar-brand {
 				width: 7rem;

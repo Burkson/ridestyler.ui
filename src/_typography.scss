@@ -24,52 +24,36 @@ h6, .h6 {
 
 $heading-padding-sm: 0.5rem;
 $heading-padding-lg: 1rem;
+$heading-sizes: 4.625rem, 2.75rem, 2rem, 1.375rem, .8rem;
 
-h1,
-.h1 {
-    font-size: 4.625rem;
+@mixin headingSizes($modifier: 1) {
+	@for $i from 1 through length($heading-sizes) {
+		h#{$i}, .h#{$i} {
+			font-size: nth($heading-sizes, $i) * $modifier;
+		}
+	}
+}
+
+@include headingSizes();
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4 {
+	font-family: $heading-font-family;
+    font-weight: bold;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
 	margin-bottom: $heading-padding-lg;
-
-	font-family: $heading-font-family;
-    font-weight: bold;
 }
 
-h2,
-.h2 {
-	font-size: 2.75rem;
-	margin-bottom: $heading-padding-lg;
-
-	font-family: $heading-font-family;
-    font-weight: bold;
-}
-
-h3,
-.h3 {
-	font-size: 2rem;
-	margin-bottom: $heading-padding-lg;
-
-	font-family: $heading-font-family;
-    font-weight: bold;
-}
-
-h4,
-.h4 {
-	font-size: 1.375rem;
-	margin-bottom: $heading-padding-sm;
-
-	font-family: $heading-font-family;
-    font-weight: bold;
-}
-
-h5,
-.h5 {
-	font-size: 1rem;
-	margin-bottom: $heading-padding-sm;
-}
-
-h6,
-.h6 {
-	font-size: .8rem;
+h4, .h4,
+h5, .h5,
+h6, .h6
+{
 	margin-bottom: $heading-padding-sm;
 }
 
@@ -154,5 +138,21 @@ dl {
 
 	dd {
 		margin: $unit-2 0 $unit-4 0;
+	}
+}
+
+.navbar, header {
+	@include headingSizes(0.6);
+	
+	h1, h2, h3, h4, h5, h6,
+	.h1, .h2, .h3, .h4, .h5, .h6 {
+		margin: 0;
+	}
+
+	@media (max-width: $size-sm) {
+		@include headingSizes(0.432432);
+	}
+	@media (max-width: $size-xs) {
+		@include headingSizes(0.345946);
 	}
 }
