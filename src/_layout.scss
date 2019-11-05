@@ -1,7 +1,7 @@
 // Layout
 @mixin containerSize($paddingX, $paddingY) {
   .container {
-    padding: $paddingX $paddingY;
+    padding: $paddingY $paddingX ;
   }
   
   .columns {
