@@ -4729,6 +4729,34 @@ html:lang(ko),
   background: #c7c7c7;
 }
 
+.table.table-mini {
+  width: auto;
+}
+
+.table.table-mini th {
+  font-size: .6875rem;
+}
+
+.table.table-mini td {
+  font-size: .75rem;
+}
+
+.table.table-mini thead tr th {
+  background: transparent; 
+  color: #0d112b;
+  padding: 0 2px;
+}
+
+.table.table-mini tbody tr th {
+  background: transparent; 
+  color: #0d112b;
+  padding: 0 4px 0 2px;
+}
+
+.table.table-mini tbody tr td {
+  padding: 0 2px;
+}
+
 .table-responsive {
   max-height: 20vh; 
   overflow: auto;
@@ -5215,7 +5243,6 @@ textarea.form-input.input-sm {
 .form-checkbox .form-icon,
 .form-radio .form-icon,
 .form-switch .form-icon {
-  border: .05rem solid #0d112b;
   cursor: pointer;
   display: inline-block;
   position: absolute;
@@ -5239,6 +5266,7 @@ textarea.form-input.input-sm {
 .form-checkbox .form-icon,
 .form-radio .form-icon {
   background: #fff;
+  border: 1px solid #c7c7c7; 
   height: 1.6rem;
   left: 0;
   top: .4rem;
@@ -5310,10 +5338,10 @@ textarea.form-input.input-sm {
 .form-switch .form-icon {
   background: #c7c7c7;
   background-clip: padding-box;
-  border-radius: .85rem;
-  height: 1.7rem;
+  border-radius: .8rem;
+  height: 1.6rem;
   left: 0;
-  top: .35rem;
+  top: .4rem;
   width: 3.2rem;
 }
 
@@ -5331,7 +5359,7 @@ textarea.form-input.input-sm {
 }
 
 .form-switch input:checked + .form-icon::before {
-  left: 1.55rem;
+  left: 1.6rem;
 }
 
 .form-switch input:active + .form-icon::before {
@@ -5655,7 +5683,7 @@ video.video-responsive::before {
 }
 
 .container {
-  padding: 1.2rem 3.2rem;
+  padding: 3.2rem 1.2rem;
 }
 
 .columns {

@@ -4728,6 +4728,34 @@ html:lang(ko),
   background: #c7c7c7;
 }
 
+.table.table-mini {
+  width: auto;
+}
+
+.table.table-mini th {
+  font-size: .6875rem;
+}
+
+.table.table-mini td {
+  font-size: .75rem;
+}
+
+.table.table-mini thead tr th {
+  background: transparent; 
+  color: #0d112b;
+  padding: 0 2px;
+}
+
+.table.table-mini tbody tr th {
+  background: transparent; 
+  color: #0d112b;
+  padding: 0 4px 0 2px;
+}
+
+.table.table-mini tbody tr td {
+  padding: 0 2px;
+}
+
 .table-responsive {
   max-height: 20vh; 
   overflow: auto;
