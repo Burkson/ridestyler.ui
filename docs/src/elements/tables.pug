@@ -289,5 +289,54 @@ block docs-content
               </tbody>
             </table>
           </div>
+
+    +docs-subheading('tables-mini', 'Mini tables')
+
+    .docs-demo.columns
+      .column.col-12
+        table.table.table-mini.table-striped-even
+          thead
+            tr
+              th 
+              th Min
+              th Max
+          tbody
+            tr
+              th Width
+              td 5"
+              td 7"
+            tr
+              th Diameter
+              td 16"
+              td 21"
+
+    p
+      | Add the #[code table-mini] class to any #{'<table>'} element. 
+      | The class will reduce font sizes and padding, and remove the header background.
+
+    pre.code(data-lang='HTML')
+      code
+        :highlight(lang="html")
+          <table class="table table-mini table-striped-even">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Min</th>
+                <th>Max</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Width</th>
+                <td>5"</td>
+                <td>7"</td>
+              </tr>
+              <tr>
+                <th>Diameter</th>
+                <td>16"</td>
+                <td>21"</td>
+              </tr>
+            </tbody>
+          </table>
   
   include ../_layout/_footer.pug

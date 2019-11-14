@@ -82,6 +82,37 @@ $subheaderColor: $ridestyler-color-gray;
             }
         }
     }
+
+    &.table-mini {
+        width: auto;
+        th {
+            font-size: $font-size-xxs;
+        }
+        td {
+            font-size: $font-size-xs;
+        }
+        thead {
+            tr {
+                th {
+                    padding: 0 2px;
+                    color: $dark-color;
+                    background: transparent;
+                }
+            }
+        }
+        tbody {
+            tr {
+                th {
+                    padding: 0 4px 0 2px;
+                    color: $dark-color;
+                    background: transparent;
+                }
+                td {
+                    padding: 0 2px;
+                }
+            }
+        }
+    }
 }
 
 .table-responsive {
