@@ -21,6 +21,11 @@ body {
 	text-rendering: optimizeLegibility;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 @mixin selection {
 	background: $primary-color;
 	color: $light-color;
