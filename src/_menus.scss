@@ -89,7 +89,7 @@
 		font-size: 1.2rem;
 		border-right: 1px solid $bg-color;
 		border-radius: 0;
-		padding-right: 0;
+		padding: 0;
 		
 		.menu-item {
 			@include menuItemSize($control-padding-x, $control-padding-y);	
@@ -100,9 +100,14 @@
 			&+.menu-item {
 				margin-top: 0;
 			}
-
 			&>a {
 				outline: none;
+				
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				display: block;
+
 				&:active,
 				&.active {
 					background: $bg-color;
