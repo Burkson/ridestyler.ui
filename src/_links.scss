@@ -3,14 +3,6 @@
 	outline: none;
 	text-decoration: none;
 	cursor: pointer;
-
-	&:focus,
-	&:active,
-	&.active {
-		outline-style: solid;
-		outline-width: thin;
-		outline-offset: 0.1rem;
-	}
 }
 
 .link {
