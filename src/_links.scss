@@ -7,6 +7,11 @@
 	&:focus {
 		outline: thin dotted;
 	}
+
+	&.disabled {
+		color: $gray-color;
+		cursor: not-allowed;
+	}
 }
 
 .link {
