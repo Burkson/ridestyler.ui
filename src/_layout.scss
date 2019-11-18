@@ -14,7 +14,7 @@
   }
 }
 
-@include containerSize($layout-spacing, $layout-spacing-lg);
+@include containerSize($layout-spacing-lg, $layout-spacing-lg);
 
 .container {
   margin-left: auto;
