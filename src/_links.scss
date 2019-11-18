@@ -3,6 +3,10 @@
 	outline: none;
 	text-decoration: none;
 	cursor: pointer;
+
+	&:focus {
+		outline: thin dotted;
+	}
 }
 
 .link {
