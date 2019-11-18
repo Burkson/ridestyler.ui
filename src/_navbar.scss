@@ -13,14 +13,17 @@ $branded-navbar-height: 6rem;
 	padding: $padding-y $padding-x;
 	color: $light-color;
 
-	.link {
+	%link {
 		color: inherit;
-		margin-left: $layout-spacing-sm;
-
+		
 		&.active {
 			outline: none;
 			color: $active-color;
 		}
+	}
+
+	.btn, %link, .navbar-brand {
+		margin-right: $layout-spacing-sm;
 	}
 
     .navbar-primary {
@@ -35,6 +38,11 @@ $branded-navbar-height: 6rem;
 
 		&:not(:first-child):last-child {
 			justify-content: flex-end;
+
+			.btn, %link, .navbar-brand {
+				margin-right: 0;
+				margin-left: $layout-spacing-sm;
+			}
 		}
 	}
 
