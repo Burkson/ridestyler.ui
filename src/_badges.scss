@@ -8,8 +8,7 @@
     &::after {
       background: $active-color;
       background-clip: padding-box;
-      border-radius: 1rem;
-      box-shadow: 0 0 0 .1rem $bg-color-light;
+      border-radius: $unit-1 $unit-1 0 $unit-1;
       color: $light-color;
       content: attr(data-badge);
       display: inline-block;
