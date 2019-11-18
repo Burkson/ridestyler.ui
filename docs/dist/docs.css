@@ -1,6 +1,6 @@
 /*! ridestyler.ui Docs */
 .version::after {
-  content: "1.0.0";
+  content: "1.1.0";
 }
 
 .off-canvas .off-canvas-toggle {
