@@ -49,6 +49,16 @@
 		@include button-variant($secondary-color, $secondary-color-dark, $light-color, $light-color);
 	}
 
+	// Success button
+	&.btn-success {
+        @include button-variant($success-color, darken($success-color, 10%), $light-color, $light-color);
+    }
+
+	// Error button
+    &.btn-error {
+        @include button-variant($error-color, darken($error-color, 10%), $light-color, $light-color);
+    }
+
 	// Button Sizes
 	&.btn-sm {
 		font-size: $font-size-sm;
