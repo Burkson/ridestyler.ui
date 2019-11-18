@@ -16,18 +16,18 @@
 			width: $unit-8;
 		}
 	}
+}
 
-	&.container, &.column {
-		&:before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            
-            background: rgba($light-color, .75);
-        }
+.loading.container, .loading.column, form.loading {
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0; left: 0; right: 0; bottom: 0;
+		
+		background:  rgba($light-color, .75);
+	}
 
-        &:before, &:after {
-            z-index: $zindex-1;
-        }
+	&:before, &:after {
+		z-index: $zindex-1;
 	}
 }

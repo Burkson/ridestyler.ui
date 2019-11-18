@@ -31,12 +31,27 @@ block docs-content
           <div class="loading"></div>
           <div class="loading loading-lg"></div>
     
-    p You can also add the #[code loading] class to #[code .container] or #[code .column] elements.
+    p You can also add the #[code loading] class to #[code .container], #[code form] or #[code .column] elements.
 
     .docs-demo.columns
       .column.col-12.loading
         h1 Header 1
         | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam asperiores nobis assumenda consequatur expedita enim eius cumque fugit optio libero. Aliquid nam ut pariatur eaque voluptates exercitationem, deleniti suscipit molestias.
+    
+
+    .docs-demo.columns
+      .column.col-9.col-sm-12
+        form.form-horizontal(action="#forms").loading
+          .form-group
+            .col-3
+              label.form-label(for="input-example-8") Email
+            .col-9
+              input#input-example-8.form-input(type="email" placeholder="Email" value="ridestyler.ui@example.com" pattern="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$")
+          .form-group
+            .col-3
+              label.form-label(for="input-example-9") URL
+            .col-9
+              input#input-example-9.form-input(type="url" placeholder="URL" value="https://github.com/Burkson/ridestyler.ui")
 
 
   include ../_layout/_footer.pug
