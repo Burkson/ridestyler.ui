@@ -1,28 +1,28 @@
 // Display
 .d-block {
-  display: block;
+  display: block !important;
 }
 .d-inline {
-  display: inline;
+  display: inline !important;
 }
 .d-inline-block {
-  display: inline-block;
+  display: inline-block !important;
 }
 .d-flex {
-  display: flex;
+  display: flex !important;
 }
 .d-inline-flex {
-  display: inline-flex;
+  display: inline-flex !important;
 }
 .d-none,
 .d-hide {
   display: none !important;
 }
 .d-visible {
-  visibility: visible;
+  visibility: visible !important;
 }
 .d-invisible {
-  visibility: hidden;
+  visibility: hidden !important;
 }
 .text-hide {
   background: transparent;
