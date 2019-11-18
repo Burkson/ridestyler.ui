@@ -12,13 +12,16 @@
 	border-radius: $border-radius;
 	list-style: none;
 	margin: 0;
-	min-width: $control-width-sm;
 	padding: $layout-spacing-sm;
     z-index: $zindex-3;
 
 	&.menu-nav {
 		background: transparent;
 		box-shadow: none;
+	}
+
+	.dropdown & {
+		min-width: $control-size-sm;
 	}
 
 	.menu-item {
