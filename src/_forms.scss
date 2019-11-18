@@ -214,6 +214,7 @@ textarea.form-input {
 	min-height: $control-size-sm;
 	padding: (($control-size-sm - $line-height) / 2) $control-padding-x (($control-size-sm - $line-height) / 2) ($control-icon-size + $control-padding-x);
 	position: relative;
+	cursor: pointer;
 
 	input {
 		clip: rect(0, 0, 0, 0);
