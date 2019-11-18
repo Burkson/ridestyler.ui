@@ -32,13 +32,32 @@ legend {
 	}
 }
 
+.form-input, .form-select {
+	border: none;
+	border-width: $border-width-lg;
+	border-bottom-style: solid;
+	border-color: $border-color-light;
+
+	&:focus {
+		border-color: $border-color;
+	}
+}
+
+%bordered-input {
+	border-style: solid;
+	border-width: $border-width-lg;
+}
+
+form.form-full .form-input, textarea.form-input {
+	@extend %bordered-input;
+}
+
 // Form element: Input
 .form-input {
 	appearance: none;
 	background-color: $bg-color-light;
 	background-image: none;
-	border: none;
-	border-bottom: 1px solid $border-color;
+	
 	color: $body-font-color;
 	display: block;
 	font-size: $font-size;
@@ -50,10 +69,6 @@ legend {
 	position: relative;
 	transition: background-color .2s, border-bottom .2s, box-shadow .2s, color .2s;
 	width: 100%;
-
-	&:focus {
-		border-bottom: 2px solid $border-color;
-	}
 
 	&::placeholder {
 		color: $gray-color;
@@ -82,10 +97,6 @@ legend {
 	&[type="file"] {
 		height: auto;
 	}
-}
-
-form.form-full .form-input, textarea.form-input {
-	border: 1px solid $border-color;
 }
 
 // Form element: Textarea
@@ -117,8 +128,6 @@ textarea.form-input {
 
 // Form element: Select
 .form-select {
-	border: none;
-	border-bottom: 1px solid $border-color-dark;
 	color: inherit;
 	font-size: $font-size;
 	height: $control-size;
@@ -128,10 +137,6 @@ textarea.form-input {
 	vertical-align: middle;
 	width: 100%;
 	background-color: $bg-color-light;
-
-	&:focus {
-		border-bottom: 2px solid $border-color;
-	}
 
 	// Select sizes
 	&.select-sm {
@@ -149,9 +154,10 @@ textarea.form-input {
 	// Multiple select
 	&[size],
 	&[multiple] {
+		@extend %bordered-input;
+		
 		height: auto;
 		padding: $control-padding-y $control-padding-x;
-		border: 1px solid $border-color;
 
 		option {
 			padding: $unit-h $unit-1;
