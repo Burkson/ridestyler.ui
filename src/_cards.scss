@@ -61,6 +61,10 @@
 		&:hover {
 			@include shadow-variant($shadow-extra-far);
 		}
+
+		@at-root a#{&} {
+			color: inherit;
+		}
 	}
 	&.card-action-primary { border-left-color: $primary-color; }
 	&.card-action-secondary { border-left-color: $secondary-color; }
