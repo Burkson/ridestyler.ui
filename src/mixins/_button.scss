@@ -1,25 +1,35 @@
 // Button variant mixin
-@mixin button-variant($backgroundColor: $primary-color, $activeColor: $primary-color-dark, $activeTextColor: $light-color, $textColor: $body-font-color) {
-  background: $backgroundColor;
+@mixin button-variant(
+    $backgroundColor: $primary-color,
+    $activeColor: $primary-color-dark,
+    $activeTextColor: $light-color,
+    $textColor: $body-font-color
+) {
+    background: $backgroundColor;
 
-  &, &:visited {
-    color: $textColor;
-  }
-  
-  &:focus,
-  &:hover {
-    background: darken($activeColor, 2%);
-    color: $activeTextColor;
-  }
-  &:active,
-  &.active {
-    background: darken($activeColor, 7%);
-    color: $activeTextColor;
-  }
-  &.loading {
-    &::after {
-      border-bottom-color: $activeTextColor;
-      border-left-color: $activeTextColor;
+    &,
+    &:visited {
+        color: $textColor;
     }
-  }
+
+    &:focus,
+    &:hover {
+        background: darken($activeColor, 2%);
+        color: $activeTextColor;
+    }
+    
+    &:active,
+    &.active {
+        background: darken($activeColor, 7%);
+        color: $activeTextColor;
+    }
+
+    &.loading {
+        color: transparentize($textColor, 0.75);
+
+        &::after {
+            border-bottom-color: $activeTextColor;
+            border-left-color: $activeTextColor;
+        }
+    }
 }
