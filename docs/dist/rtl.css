@@ -4845,7 +4845,7 @@ html:lang(ko),
 
 .btn,
 .btn:visited {
-  color: #aeadad;
+  color: #0d112b;
 }
 
 .btn:focus,
@@ -4858,6 +4858,10 @@ html:lang(ko),
 .btn.active {
   background: #9c9c9c;
   color: #fff;
+}
+
+.btn.loading {
+  color: rgba(13, 17, 43, .25);
 }
 
 .btn.loading::after {
@@ -4886,6 +4890,10 @@ html:lang(ko),
   color: #fff;
 }
 
+.btn.btn-primary.loading {
+  color: rgba(255, 255, 255, .25);
+}
+
 .btn.btn-primary.loading::after {
   border-bottom-color: #fff;
   border-left-color: #fff;
@@ -4910,6 +4918,10 @@ html:lang(ko),
 .btn.btn-secondary.active {
   background: #cc3c0d;
   color: #fff;
+}
+
+.btn.btn-secondary.loading {
+  color: rgba(255, 255, 255, .25);
 }
 
 .btn.btn-secondary.loading::after {
@@ -4938,6 +4950,10 @@ html:lang(ko),
   color: #fff;
 }
 
+.btn.btn-success.loading {
+  color: rgba(255, 255, 255, .25);
+}
+
 .btn.btn-success.loading::after {
   border-bottom-color: #fff;
   border-left-color: #fff;
@@ -4962,6 +4978,10 @@ html:lang(ko),
 .btn.btn-error.active {
   background: #a80000;
   color: #fff;
+}
+
+.btn.btn-error.loading {
+  color: rgba(255, 255, 255, .25);
 }
 
 .btn.btn-error.loading::after {
@@ -7108,8 +7128,10 @@ a.card.card-action {
   text-align: right;
 }
 
-.modal-container .modal-footer .btn {
-  margin-right: 1.2rem;
+.modal-container .modal-footer .btn,
+.modal-container .modal-footer .link,
+.modal-container .modal-footer a {
+  margin-left: 1.2rem;
 }
 
 .nav {
@@ -7983,7 +8005,8 @@ a.text-active:visited {
 .loading.container:before,
 .loading.column:before,
 form.loading:before {
-  background: rgba(255, 255, 255, .75); 
+  background: rgba(255, 255, 255, .75);
+  border-radius: inherit; 
   bottom: 0;
   content: "";
   left: 0;

@@ -54,6 +54,10 @@
   max-height: 53rem;
 }
 
+.docs-sidebar .accordion .accordion-header {
+  font-weight: bold;
+}
+
 .docs-sidebar .accordion .menu .menu-item > a {
   background: transparent;
   display: inline-block;

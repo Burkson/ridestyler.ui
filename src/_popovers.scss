@@ -1,65 +1,249 @@
 // Popovers
 .popover {
-  display: inline-block;
-  position: relative;
+    display: inline-block;
+    position: relative;
+    $triangle-size: 1rem;
+    $triangle-color: $secondary-color;
+    $padding: $layout-spacing;
 
-  .popover-container {
-    left: 50%;
-    opacity: 0;
-    padding: $layout-spacing;
-    position: absolute;
-    top: 0;
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform .2s;
-    width: $control-width-sm;
-    z-index: $zindex-3;
-  }
-
-  *:focus + .popover-container,
-  &:hover .popover-container {
-    display: block;
-    opacity: 1;
-    transform: translate(-50%, -100%) scale(1);
-  }
-
-  &.popover-right {
     .popover-container {
-      left: 100%;
-      top: 50%;
+        left: 50%;
+        opacity: 0;
+        padding: $padding;
+        position: absolute;
+        top: 0;
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform 0.2s;
+        width: $control-width-sm;
+        z-index: $zindex-3;
+
+        > .card {
+            position: relative;
+
+            &:after {
+                content: '';
+    
+                width: 0;
+                height: 0;
+                border-left: $triangle-size/2 solid transparent;
+                border-right: $triangle-size/2 solid transparent;
+                border-top: $triangle-size solid $triangle-color;
+    
+                position: absolute;
+                bottom: -$triangle-size;
+                left: 50%;
+                margin-left: -$triangle-size/2;
+            }
+        }
     }
 
     *:focus + .popover-container,
     &:hover .popover-container {
-      transform: translate(0, -50%) scale(1);
-    }
-  }
-
-  &.popover-bottom {
-    .popover-container {
-      left: 50%;
-      top: 100%;
+        display: block;
+        opacity: 1;
+        transform: translate(-50%, -100%) scale(1);
     }
 
-    *:focus + .popover-container,
-    &:hover .popover-container {
-      transform: translate(-50%, 0) scale(1);
-    }
-  }
+    &.popover-right {
+        .popover-container {
+            left: 100%;
+            top: 50%;
 
-  &.popover-left {
-    .popover-container {
-      left: 0;
-      top: 50%;
+            > .card:after {
+                border-left: none;
+                border-top: $triangle-size/2 solid transparent;
+                border-bottom: $triangle-size/2 solid transparent;
+                border-right: $triangle-size solid $triangle-color;
+    
+                position: absolute;
+                left: -$triangle-size;
+                top: 50%;
+                bottom: auto;
+                margin-top: -$triangle-size/2;
+                margin-left: 0;
+            }
+        }
+
+        *:focus + .popover-container,
+        &:hover .popover-container {
+            transform: translate(0, -50%) scale(1);
+        }
     }
 
-    *:focus + .popover-container,
-    &:hover .popover-container {
-      transform: translate(-100%, -50%) scale(1);
-    }
-  }
+    &.popover-top-right {
+        .popover-container {
+            left: 100%;
+            top: 0;
+            margin-top: $padding;
 
-  .card {
-    @include shadow-variant($shadow-close);
-    border: 0;
-  }
+            > .card {
+                border-bottom-left-radius: 0;
+
+                &:after {
+                    border-bottom: $triangle-size solid $triangle-color;
+                    border-left: $triangle-size solid transparent;
+                    border-right: none;
+                    border-top: none;
+        
+                    position: absolute;
+                    left: -$triangle-size;
+                    margin-left: 0;
+                    bottom: 0;
+                }
+            }
+        }
+
+        *:focus + .popover-container,
+        &:hover .popover-container {
+            transform: translate(0, -100%) scale(1);
+        }
+    }
+
+    &.popover-bottom-right {
+        .popover-container {
+            left: 100%;
+            top: 100%;
+            margin-top: -$padding;
+
+            > .card {
+                border-top-left-radius: 0;
+
+                &:after {
+                    border-top: $triangle-size solid $triangle-color;
+                    border-left: $triangle-size solid transparent;
+                    border-right: none;
+                    border-bottom: none;
+        
+                    position: absolute;
+                    left: -$triangle-size;
+                    top: 0;
+                    bottom: auto;
+                    margin-left: 0;
+                }
+            }
+        }
+
+        *:focus + .popover-container,
+        &:hover .popover-container {
+            transform: translate(0, 0) scale(1);
+        }
+    }
+
+    &.popover-bottom-left {
+        .popover-container {
+            left: 0;
+            top: 100%;
+            margin-top: -$padding;
+
+            > .card {
+                border-top-right-radius: 0;
+
+                &:after {
+                    border-top: $triangle-size solid $triangle-color;
+                    border-right: $triangle-size solid transparent;
+                    border-left: none;
+                    border-bottom: none;
+        
+                    position: absolute;
+                    left: 100%;
+                    top: 0;
+                    bottom: auto;
+                    margin-left: 0;
+                }
+            }
+        }
+
+        *:focus + .popover-container,
+        &:hover .popover-container {
+            transform: translate(-100%, 0) scale(1);
+        }
+    }
+
+    &.popover-top-left {
+        .popover-container {
+            left: 0;
+            top: 0;
+            margin-top: $padding;
+            margin-left: 0;
+
+            > .card {
+                border-bottom-right-radius: 0;
+
+                &:after {
+                    border-bottom: $triangle-size solid $triangle-color;
+                    border-right: $triangle-size solid transparent;
+                    border-left: none;
+                    border-top: none;
+        
+                    position: absolute;
+                    left: 100%;
+                    top: 100%;
+                    bottom: auto;
+                    margin-left: 0;
+                    margin-top: -$triangle-size;
+                }
+            }
+        }
+
+        *:focus + .popover-container,
+        &:hover .popover-container {
+            transform: translate(-100%, -100%) scale(1);
+        }
+    }
+
+    &.popover-bottom {
+        .popover-container {
+            left: 50%;
+            top: 100%;
+
+            > .card:after {
+                border-top: none;
+                border-left: $triangle-size/2 solid transparent;
+                border-right: $triangle-size/2 solid transparent;
+                border-bottom: $triangle-size solid $triangle-color;
+    
+                position: absolute;
+                left: 50%;
+                top: -$triangle-size;
+                bottom: auto;
+                margin-left: -$triangle-size/2;
+            }
+        }
+
+        *:focus + .popover-container,
+        &:hover .popover-container {
+            transform: translate(-50%, 0) scale(1);
+        }
+    }
+
+    &.popover-left {
+        .popover-container {
+            left: 0;
+            top: 50%;
+
+            > .card:after {
+                border-right: none;
+                border-top: $triangle-size/2 solid transparent;
+                border-bottom: $triangle-size/2 solid transparent;
+                border-left: $triangle-size solid $triangle-color;
+    
+                position: absolute;
+                left: 100%;
+                top: 50%;
+                bottom: auto;
+                margin-top: -$triangle-size/2;
+                margin-left: 0;
+            }
+        }
+
+        *:focus + .popover-container,
+        &:hover .popover-container {
+            transform: translate(-100%, -50%) scale(1);
+        }
+    }
+
+    .card {
+        @include shadow-variant($shadow-close);
+        border: 0;
+    }
 }
