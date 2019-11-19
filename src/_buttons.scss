@@ -37,7 +37,7 @@
 	}
 
 	// Default Button
-	@include button-variant($backgroundColor: $gray-color-light, $activeColor: $gray-color-dark, $activeTextColor: $light-color, $textColor: $gray-color-dark);
+	@include button-variant($backgroundColor: $gray-color-light, $activeColor: $gray-color-dark, $activeTextColor: $light-color, $textColor: $body-font-color);
 
 	// Primary Button
 	&.btn-primary {
