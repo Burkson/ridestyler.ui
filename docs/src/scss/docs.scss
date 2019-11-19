@@ -61,6 +61,10 @@ $sidebar-width: 14rem;
     margin-bottom: .75rem;
     max-height: 53rem;
 
+    .accordion-header {
+      font-weight: bold;
+    }
+
     input {
       & ~ .accordion-header {
         // color: lighten($dark-color, 10%);
