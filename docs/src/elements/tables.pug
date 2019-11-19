@@ -220,43 +220,44 @@ block docs-content
     +docs-subheading('tables-responsive', 'Responsive tables')
 
     .docs-demo.columns
-      .column.col-12.table-responsive
-        table.table.table-striped-even.table-hover
-          - var extraColumnCount=20;
-          thead
-            tr
-              th.table-sticky-column #
-              th Language
-              th People Using
-              - for (let j=0; j < extraColumnCount; j++)
-                th="Col "+j
-          tbody
-            tr 
-              th.table-sticky-column 1
-              td JavaScript
-              td 1 Billion
-              - for (let j=0; j < extraColumnCount; j++)
-                td=j
-            tr 
-              th.table-sticky-column 2
-              td C#
-              td 500 Million
-              - for (let j=0; j < extraColumnCount; j++)
-                td=j
-            - for (var i=3; i < 30; i++) {
+      .column.col-12
+        .table-responsive
+          table.table.table-striped-even.table-hover
+            - var extraColumnCount=20;
+            thead
               tr
-                th.table-sticky-column= i
-                td PHP
-                td 1
+                th.table-sticky-column #
+                th Language
+                th People Using
+                - for (let j=0; j < extraColumnCount; j++)
+                  th="Col "+j
+            tbody
+              tr 
+                th.table-sticky-column 1
+                td JavaScript
+                td 1 Billion
                 - for (let j=0; j < extraColumnCount; j++)
                   td=j
-            - }
-            tr 
-              th.table-sticky-column= i
-              td Fortran
-              td -100
-              - for (let j=0; j < extraColumnCount; j++)
-                td=j
+              tr 
+                th.table-sticky-column 2
+                td C#
+                td 500 Million
+                - for (let j=0; j < extraColumnCount; j++)
+                  td=j
+              - for (var i=3; i < 30; i++) {
+                tr
+                  th.table-sticky-column= i
+                  td PHP
+                  td 1
+                  - for (let j=0; j < extraColumnCount; j++)
+                    td=j
+              - }
+              tr 
+                th.table-sticky-column= i
+                td Fortran
+                td -100
+                - for (let j=0; j < extraColumnCount; j++)
+                  td=j
 
     p
       | Wrap your table with a #[code table-responsive] element to make it respond by scrolling vertically and horizontally. The table will automatically get a #[code max-height], 
