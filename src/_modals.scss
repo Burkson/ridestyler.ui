@@ -86,8 +86,8 @@
 		padding: $modal-padding;
 		text-align: right;
 
-		.btn {
-			margin-right: $layout-spacing;
+		.btn, %link {
+			margin-left: $layout-spacing;
 		}
 	}
 }
