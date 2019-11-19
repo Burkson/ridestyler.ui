@@ -5,9 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2019-11-19
+
+**Fixed**:
+
+- Margin for the buttons and links in the modals have been moved from the right, to the left. Let's hope they stay there.
+- `.btn` elements with a `loading` class will now have more transparent text
+
+**Added**:
+
+- Padding for the breakpoints `md`, `sm` and `xs` have been set to `$unit-1`, `$unit-2` and `$unit-3` respectively. Default padding is currently `$unit-8`.
+
+**Updated**:
+
+- The default `.btn` text color now matches the body color. This makes it look less disabled.
+
 ## [1.1.0] - 2019-11-18
 
-### Added
+**Added**:
 
 - Pointer cursor to switches, radios and checkboxes
 - [Loading utilities](../../utilities/loading.html) for `form`, `.container` and `.column` elements
@@ -17,7 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [Mini-tables](../../elements/tables.html#tables-mini)
 - [Sidebar menus](../../components/menu.html#menu-sidebar)
 
-### Fixed
+**Fixed**:
 
 - Element spacing on navbar
 - Sidebar links padding & highlighting
@@ -29,7 +44,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Navbar images to be served over HTTPS
 - Navbar would appear under some elements (increased z-index)
 
-### Updates
+**Updates**:
 
 - Button text is now smaller
 - Outline for links is now less obtrusive (dotted, matching font color)
