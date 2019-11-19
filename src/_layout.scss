@@ -275,6 +275,8 @@
   }
 }
 @media (max-width: $size-md) {
+  @include containerSize($unit-3, $unit-3);
+
   .col-md-12,
   .col-md-11,
   .col-md-10,
@@ -337,6 +339,8 @@
   }
 }
 @media (max-width: $size-sm) {
+  @include containerSize($unit-2, $unit-2);
+
   .col-sm-12,
   .col-sm-11,
   .col-sm-10,
@@ -399,7 +403,7 @@
   }
 }
 @media (max-width: $size-xs) {
-  @include containerSize($layout-spacing, $layout-spacing);
+  @include containerSize($unit-1, $unit-1);
 
   .col-xs-12,
   .col-xs-11,
