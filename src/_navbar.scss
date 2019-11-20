@@ -113,8 +113,10 @@ $branded-navbar-height: 6rem;
 			.icon {
 				position: absolute;
 				background-color: $bg-color;
-				border-radius: 50%;
 				color: $ridestyler-color-orange;
+
+				border: none; // I can be a button
+				border-radius: 50%; // I'm a circle 
 				
 				$size: 3rem;
 
