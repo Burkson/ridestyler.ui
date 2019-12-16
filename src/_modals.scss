@@ -28,9 +28,11 @@
 			right: 0;
 			top: 0;
 			outline: none;
+			z-index: $zindex-0 - 1;
 		}
 
 		.modal-container {
+			position: relative;
 			animation: slide-down .2s ease 1;
 			z-index: $zindex-0;
 		}
