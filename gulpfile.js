@@ -178,16 +178,6 @@ var docTasks = {
     }
 };
 
-
-gulp.task('watch', function () {
-    gulp.watch(paths.source, function (cb) {
-        buildSCSSAndCopyToDocs.th
-    });
-    gulp.watch(paths.variables, gulp.parallel(docTasks.scssDocs, docTasks.html));
-    gulp.watch(paths.doc, gulp.series(docTasks.scssDocs));
-    gulp.watch('./**/*.pug', gulp.series(docTasks.html));
-});
-
 // Static server
 gulp.task('serve', function() {
     browserSync.init({
