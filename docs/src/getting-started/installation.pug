@@ -21,12 +21,21 @@ block docs-content
       a.btn.btn-primary(href='https://github.com/Burkson/ridestyler.ui/releases', target='_blank') Download ridestyler.ui
     p
       | Include RideStyler UI in your website or Web app #{'<head>'}.
-
+    
     //- install manually
     pre.code(data-lang='HTML')
       code
         :highlight(lang="html")
           <link rel="stylesheet" href="rsui.min.css">
+    
+    p
+      | Or choose the icons build to only include icons.
+
+    //- install manually (icons)
+    pre.code(data-lang='HTML')
+      code
+        :highlight(lang="html")
+          <link rel="stylesheet" href="rsui-icons.min.css">
       
     +docs-subheading('install-cdn', 'Install from CDN')
     p
@@ -37,6 +46,14 @@ block docs-content
       code
         :highlight(lang="html")
           <link rel="stylesheet" href="https://static.ridestyler.net/rs-ui/latest/rsui.min.css">
+    p
+      | You can also load the icons build from the CDN:
+
+    //- install from CDN
+    pre.code(data-lang='HTML')
+      code
+        :highlight(lang="html")
+          <link rel="stylesheet" href="https://static.ridestyler.net/rs-ui/latest/rsui-icons.min.css">
 
     +docs-subheading('install-npm', 'Install with NPM')
 

@@ -1,0 +1,1 @@
+.dropdown-component:not(.active) .dropdown-toggle:focus+.menu{display:none}

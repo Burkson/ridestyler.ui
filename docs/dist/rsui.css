@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*! ridestyler.ui v1.2.0 */
+/*! ridestyler.ui v1.3.0 */
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
@@ -4254,11 +4254,6 @@ body {
   padding: 0;
 }
 
-::-moz-selection {
-  background: #f3693c;
-  color: #fff;
-}
-
 ::selection {
   background: #f3693c;
   color: #fff;
@@ -6418,10 +6413,11 @@ video.video-responsive::before {
 .navbar.navbar-branded .navbar-brand .icon {
   align-items: center;
   background-color: #e6ebf2;
+  border: none;
   border-radius: 50%;
   color: #f3693c;
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-align: center;
   -ms-flex-pack: center;
   height: 3rem;
@@ -7089,15 +7085,17 @@ a.card.card-action {
   cursor: default;
   display: block;
   left: 0;
-  outline: none; 
+  outline: none;
   position: absolute;
   right: 0;
   top: 0;
+  z-index: 0;
 }
 
 .modal:target .modal-container,
 .modal.active .modal-container {
   animation: slide-down .2s ease 1;
+  position: relative;
   z-index: 1;
 }
 

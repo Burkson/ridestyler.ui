@@ -92,15 +92,18 @@ block docs-content
         :highlight
           ridestyler.ui/
           ├── dist/                           // Build folder
-          │   ├── rs-ui
-          │   └── rs-ui.min.css
+          │   ├── rsui.css
+          │   ├── rsui.min.css
+          │   ├── rsui-icons.css              // Icons-only build
+          │   └── rsui-icons.min.css
           │
           ├── docs/
           │   ├── dist/                       // Pre-built CSS folder
-          │   │   └── rs-ui.min.css
-          |   ├── css/                        // Built docs CSS files
+          │   │   ├── rsui.min.css
+          │   │   └── rsui-icons.min.css
+          │   ├── css/                        // Built docs CSS files
           │   │   └── docs.css
-          |   ├── src/
+          │   ├── src/
           │   │   ├── scss                    // Docs Sass files
           │   │   │   └── docs.scss
           │   │   ├── index.pug               // Docs Pug files

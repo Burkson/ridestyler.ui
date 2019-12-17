@@ -211,31 +211,34 @@
             <h4 class="s-subtitle" id="folders">Folder structure<a class="anchor" href="#folders" aria-hidden="true">#</a></h4>
             <pre class="code"><code>ridestyler.ui/
 ├── dist/                           <span class="hljs-comment">// Build folder</span>
-│   ├── rs-ui
-│   └── rs-ui.<span class="hljs-built_in">min</span>.css
+│   ├── rsui<span class="hljs-selector-class">.css</span>
+│   ├── rsui<span class="hljs-selector-class">.min</span><span class="hljs-selector-class">.css</span>
+│   ├── rsui-icons<span class="hljs-selector-class">.css</span>              <span class="hljs-comment">// Icons-only build</span>
+│   └── rsui-icons<span class="hljs-selector-class">.min</span><span class="hljs-selector-class">.css</span>
 │
 ├── docs/
 │   ├── dist/                       <span class="hljs-comment">// Pre-built CSS folder</span>
-│   │   └── rs-ui.<span class="hljs-built_in">min</span>.css
-|   ├── css/                        <span class="hljs-comment">// Built docs CSS files</span>
-│   │   └── docs.css
-|   ├── src/
+│   │   ├── rsui<span class="hljs-selector-class">.min</span><span class="hljs-selector-class">.css</span>
+│   │   └── rsui-icons<span class="hljs-selector-class">.min</span><span class="hljs-selector-class">.css</span>
+│   ├── css/                        <span class="hljs-comment">// Built docs CSS files</span>
+│   │   └── docs<span class="hljs-selector-class">.css</span>
+│   ├── src/
 │   │   ├── scss                    <span class="hljs-comment">// Docs Sass files</span>
-│   │   │   └── docs.scss
-│   │   ├── <span class="hljs-keyword">index</span>.pug               <span class="hljs-comment">// Docs Pug files</span>
+│   │   │   └── docs<span class="hljs-selector-class">.scss</span>
+│   │   ├── index<span class="hljs-selector-class">.pug</span>               <span class="hljs-comment">// Docs Pug files</span>
 │   │   └── ...
 │   ├── ../
-│   ├── <span class="hljs-keyword">index</span>.html
+│   ├── index<span class="hljs-selector-class">.html</span>
 │   └── ...
 │
 ├── src/                            <span class="hljs-comment">// Source Sass files</span>
-│   ├── <span class="hljs-keyword">index</span>.scss
-│   ├── _mixins.scss
-│   ├── _variables.scss
+│   ├── index<span class="hljs-selector-class">.scss</span>
+│   ├── _mixins<span class="hljs-selector-class">.scss</span>
+│   ├── _variables<span class="hljs-selector-class">.scss</span>
 │   └── ...
 │
-├── gulpfile.js
-├── package.json
+├── gulpfile<span class="hljs-selector-class">.js</span>
+├── package<span class="hljs-selector-class">.json</span>
 └── ...
 </code></pre>
             <h4 class="s-subtitle" id="variables">Variables<a class="anchor" href="#variables" aria-hidden="true">#</a></h4>
