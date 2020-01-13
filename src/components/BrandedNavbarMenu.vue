@@ -57,10 +57,10 @@ export default {
     },
     methods: {
         accountClick: function() {
-            if(!settings.demo) window.location.href = "https://account.ridestyler.com/";
+            if(!this.settings.demo) window.location.href = "https://account.ridestyler.com/";
         },
         logoutClick: function() {
-            if(!settings.demo){
+            if(!this.settings.demo){
                 window.ridestyler.auth.signOut().then(() => {
                     window.location.reload();
                 });
