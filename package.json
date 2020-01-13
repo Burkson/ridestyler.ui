@@ -18,9 +18,11 @@
     "main": "src/index.scss",
     "sass": "src/index.scss",
     "scripts": {
-        "build": "gulp build",
+        "build": "npm run componentBuild && npm run gulpBuild",
+        "gulpBuild": "gulp build",
         "docs": "gulp docs",
-        "serve": "gulp serve"
+        "serve": "gulp serve",
+        "componentBuild": "vue-cli-service build --target lib --name rsui src/components/rsui-components.js"
     },
     "keywords": [
         "css",

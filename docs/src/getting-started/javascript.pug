@@ -1,0 +1,118 @@
+extends ../_layout/_docs-layout.pug
+
+block variables
+  - var slug = 'javascript'
+  - var parent = 'getting-started'
+  - var title = 'Javascript - Getting Started - ridestyler.ui CSS Framework'
+  - var description = 'ridestyler.ui CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development. ridestyler.ui provides basic styles for typography and elements, flexbox based responsive layout system, pure CSS components and utilities with best practice coding and consistent design language.'
+
+block docs-content
+  +docs-heading('javascript', 'Javascript')
+    
+    +docs-subheading('rs-ui-components', 'RS Custom Components')
+    p Custom built vue components made useable in vue or standard html.
+
+    pre.code(data-lang="HTML")
+      code
+        :highlight(lang="html")
+          <div class="navbar navbar-branded">
+            <div class="navbar-brand">
+              <div class="navbar-brand-logo"></div>
+              <i class="icon icon-car"></i>
+            </div>
+            <section class="navbar-section">
+              <h1>Calculators</h1>
+            </section>
+            <branded-navbar-menu :settings="userSettings" />
+          </div>
+
+    p 
+      | Adding our custom components to HTML is easy, just create a target for your component, in this 
+      | example we will be adding the BrandedNavbarMenu component to an empty div with the id #[code branded-navbar-menu].
+
+    pre.code(data-lang="HTML")
+      code
+        :highlight(lang="HTML")
+          <div class="navbar navbar-branded">
+            <div class="navbar-brand">
+              <div class="navbar-brand-logo"></div>
+              <i class="icon icon-car"></i>
+            </div>
+            <section class="navbar-section">
+              <h1>Calculators</h1>
+            </section>
+            <div id="branded-navbar-menu"></div>
+          </div>
+    
+    p
+      | Next, you'll want to add a script reference to vue and the rsui components to your footer so we can tell our page
+      | where to look for our component. We recommend placing these two scripts right above the closing body tag.
+
+    pre.code(data-lang="HTML")
+      code
+        :highlight(lang="HTML")
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.6.11">
+            <script type="text/javascript" src="https://static.ridestyler.net/rs-ui/latest/components/rsui.umd.js">
+          </body>
+
+    p
+      | or you can import any of our components from the cdn below if you're using a module system:
+
+    pre.code(data-lang="HTML")
+      code
+        :highlight(lang="Javascript")
+            @import "ridestyler.ui/src/components/BrandedNavbarMenu";
+
+    p
+      | Now that we have a reference to vue and our components we can go ahead and initialize our component with Vue.
+      | You'll need to start by creating a new Vue instance, and rendering the component into our #[code branded-navbar-menu] div.
+      | Which will look something like this:
+    
+    pre.code(data-lang="HTML")
+      code
+        :highlight(lang="HTML")
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.6.11" />
+            <script type="text/javascript" src="https://static.ridestyler.net/rs-ui/latest/components/rsui.umd.js" />
+            <script type="text/javascript">
+                new Vue({
+                    render: h => h(rsui.components.BrandedNavbarMenu, { 
+                        props: {
+                            settings: {
+                                theme: Your active theme object (not required), 
+                                user: Your active user object (not required), 
+                                organization: Your active organization object (not required)
+                            },
+                        },
+                    })
+                }).$mount('#branded-navbar-menu')
+            </script>
+          </body>
+    
+    p 
+      | That's it! Your component will be rendered in the #[code branded-navbar-menu] div. 
+
+    .docs-demo.columns
+      .column
+        .navbar.navbar-branded
+          .navbar-brand
+            .navbar-brand-logo
+            i.icon.icon-car
+          section.navbar-section
+            h1 Calculators
+          #branded-navbar-menu
+
+  include ../_layout/_footer.pug
+
+block scripts
+    script
+        | new Vue({
+        |   render: h => h(rsui.components.BrandedNavbarMenu, { 
+        |   props: {
+        |       settings: {
+        |         theme: { CompanyLogoLight: '../img/avatar-4.png' }, 
+        |         user: { UserName: 'Steve Rogers' }, 
+        |         organization: { OrganizationName: "Steve Roger's Wheels" },
+        |         demo: true
+        |       },
+        |   },})
+        | }).$mount('#branded-navbar-menu')

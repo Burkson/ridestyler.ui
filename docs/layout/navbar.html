@@ -15,7 +15,6 @@
     <link rel="icon" href="../img/favicons/favicon.png">
     <link rel="stylesheet" href="../dist/rsui.min.css">
     <link rel="stylesheet" href="../dist/docs.min.css">
-    <link rel="canonical" href="https://burkson.github.io/ridestyler.ui/layout/navbar.html">
   </head>
   <body>
     <div class="docs-container off-canvas off-canvas-sidebar-show">
@@ -43,6 +42,8 @@
                   <li class="menu-item"><a href="../getting-started/custom.html">Custom version</a>
                   </li>
                   <li class="menu-item"><a href="../getting-started/browsers.html">Browser support</a>
+                  </li>
+                  <li class="menu-item"><a href="../getting-started/javascript.html">Javascript</a>
                   </li>
                   <li class="menu-item"><a href="../getting-started/whatsnew.html">What's new</a>
                   </li>
@@ -232,10 +233,11 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 </code></pre>
             <h4 class="s-subtitle" id="navbar-branded">Branded<a class="anchor" href="#navbar-branded" aria-hidden="true">#</a></h4>
-            <p>You can use <code>navbar-branded</code> class to use the branded navbar styling. Add a 
-              <code>.navbar-brand</code> with a <code>.navbar-brand-logo</code> element inside of it to get 
-              the branded logo. Add an <code>.icon</code> element and put your logo inside of it to 
-              get your app's logo overlaid ontop.
+            <p>
+              You can use the branded navbar menu component to quickly add a customizable dropdown menu. Add a 
+              branded-navbar-menu element inside of the DOM and add any available settings as a prop. 
+              if you haven't any availble settings the component will make all the necessary calls, 
+              just be sure you have the ridestyler api included on your page. Checkout out the <a href="../getting-started/javascript.html#rs-ui-components" target="_blank">Javascript </a>page for more information on how to setup a custom component.
             </p>
             <div class="docs-demo columns">
               <div class="column">
@@ -246,31 +248,7 @@
                   <section class="navbar-section">
                     <h1>Calculators</h1>
                   </section>
-                  <section class="navbar-section"><span class="dropdown dropdown-right">
-                      <button class="link dropdown-toggle">Wheel Co. <i class="icon icon-caret-down"></i></button>
-                      <ul class="menu">
-                        <li class="menu-item">
-                          <div class="tile tile-centered">
-                            <div class="tile-icon"><img class="avatar" src="../img/avatar-4.png" alt="Avatar"/></div>
-                            <div class="tile-content">Steve Rogers</div>
-                          </div>
-                        </li>
-                        <li class="divider"></li>
-                        <li class="menu-item"><a class="active" href="#menus">My profile</a>
-                          <div class="menu-badge">
-                            <label class="form-checkbox">
-                              <input type="checkbox"/><i class="form-icon"></i>Public
-                            </label>
-                          </div>
-                        </li>
-                        <li class="menu-item"><a href="#menus">Settings</a>
-                          <div class="menu-badge">
-                            <label class="label label-primary">2</label>
-                          </div>
-                        </li>
-                        <li class="menu-item"><a href="#menus">Logout</a></li>
-                      </ul></span>
-                  </section>
+                  <div id="branded-navbar-menu"></div>
                 </div>
               </div>
             </div>
@@ -282,14 +260,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar-section"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Calculators<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar-section"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown dropdown-right"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"link dropdown-toggle"</span>&gt;</span>Wheel Co. <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon-caret-down"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"menu"</span>&gt;</span>
-        ...
-      <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">branded-navbar-menu</span> <span class="hljs-attr">:settings</span>=<span class="hljs-string">"yourSettingsObject"</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
             <h4 class="s-subtitle" id="navbar-centered">Centered<a class="anchor" href="#navbar-centered" aria-hidden="true">#</a></h4>
@@ -327,5 +298,20 @@
         </div>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11" type="text/javascript"></script>
+    <script src="../dist/components/rsui.umd.js" type="text/javascript"></script>
   </body>
 </html>
+<script>
+  new Vue({
+    render: h => h(rsui.components.BrandedNavbarMenu, { 
+    props: {
+        settings: {
+          theme: { CompanyLogoLight: '../img/avatar-4.png' }, 
+          user: { UserName: 'Steve Rogers' }, 
+          organization: { OrganizationName: "Wheel Co." },
+          demo: true
+        },
+    },})
+  }).$mount('#branded-navbar-menu')
+</script>

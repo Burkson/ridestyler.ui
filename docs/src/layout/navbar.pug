@@ -80,10 +80,12 @@ block docs-content
     +docs-subheading('navbar-branded', 'Branded')
 
     p
-      | You can use #[code navbar-branded] class to use the branded navbar styling. Add a 
-      | #[code .navbar-brand] with a #[code .navbar-brand-logo] element inside of it to get 
-      | the branded logo. Add an #[code .icon] element and put your logo inside of it to 
-      | get your app's logo overlaid ontop.
+      | You can use the branded navbar menu component to quickly add a customizable dropdown menu. Add a 
+      | branded-navbar-menu element inside of the DOM and add any available settings as a prop. 
+      | if you haven't any availble settings the component will make all the necessary calls, 
+      | just be sure you have the ridestyler api included on your page. Checkout out the 
+      a(href='../getting-started/javascript.html#rs-ui-components', target='_blank') Javascript 
+      | page for more information on how to setup a custom component.
 
     .docs-demo.columns
       .column
@@ -93,8 +95,7 @@ block docs-content
             i.icon.icon-car
           section.navbar-section
             h1 Calculators
-          section.navbar-section
-            +user-menu-example
+          #branded-navbar-menu
     
     pre.code(data-lang="HTML")
       code
@@ -107,14 +108,7 @@ block docs-content
             <section class="navbar-section">
               <h1>Calculators</h1>
             </section>
-            <section class="navbar-section">
-              <span class="dropdown dropdown-right">
-                <button class="link dropdown-toggle">Wheel Co. <i class="icon icon-caret-down"></i></button>
-                <ul class="menu">
-                  ...
-                </ul>
-              </span>
-            </section>
+            <branded-navbar-menu :settings="yourSettingsObject" />
           </div>
     
     +docs-subheading('navbar-centered', 'Centered')
@@ -152,3 +146,17 @@ block docs-content
           </header>
 
   include ../_layout/_footer.pug
+
+block scripts
+    script
+      | new Vue({
+      |   render: h => h(rsui.components.BrandedNavbarMenu, { 
+      |   props: {
+      |       settings: {
+      |         theme: { CompanyLogoLight: '../img/avatar-4.png' }, 
+      |         user: { UserName: 'Steve Rogers' }, 
+      |         organization: { OrganizationName: "Wheel Co." },
+      |         demo: true
+      |       },
+      |   },})
+      | }).$mount('#branded-navbar-menu')
