@@ -260,7 +260,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar-section"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Calculators<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">branded-navbar-menu</span> <span class="hljs-attr">:settings</span>=<span class="hljs-string">"yourSettingsObject"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">branded-navbar-menu</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
             <h4 class="s-subtitle" id="navbar-centered">Centered<a class="anchor" href="#navbar-centered" aria-hidden="true">#</a></h4>
@@ -304,14 +304,14 @@
 </html>
 <script>
   new Vue({
-    render: h => h(rsui.components.BrandedNavbarMenu, { 
-    props: {
-        settings: {
-          theme: { CompanyLogoLight: '../img/avatar-4.png' }, 
-          user: { UserName: 'Steve Rogers' }, 
-          organization: { OrganizationName: "Wheel Co." },
-          demo: true
-        },
-    },})
-  }).$mount('#branded-navbar-menu')
+    extends: rsui.components.BrandedNavbarMenu,
+    propsData: { 
+      demo: {
+         theme: { CompanyLogoLight: '../img/avatar-4.png' }, 
+         user: { UserName: 'Steve Rogers' }, 
+         organization: { OrganizationName: "Steve Roger's Wheels" },
+      }
+    },
+    el: '#branded-navbar-menu'
+  })
 </script>

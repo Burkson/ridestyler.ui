@@ -23,7 +23,7 @@ block docs-content
             <section class="navbar-section">
               <h1>Calculators</h1>
             </section>
-            <branded-navbar-menu :settings="userSettings" />
+            <branded-navbar-menu />
           </div>
 
     p 
@@ -61,7 +61,7 @@ block docs-content
     pre.code(data-lang="HTML")
       code
         :highlight(lang="Javascript")
-            import "ridestyler.ui/src/components/BrandedNavbarMenu";
+            import BrandedNavbarMenu from "ridestyler.ui/src/components/BrandedNavbarMenu";
 
     p
       | Now that we have a reference to vue and our components we can go ahead and initialize our component with Vue.
@@ -75,16 +75,9 @@ block docs-content
             <script type="text/javascript" src="https://static.ridestyler.net/rs-ui/latest/components/rsui.umd.js" />
             <script type="text/javascript">
                 new Vue({
-                    render: h => h(rsui.components.BrandedNavbarMenu, { 
-                        props: {
-                            settings: {
-                                theme: Your active theme object (not required), 
-                                user: Your active user object (not required), 
-                                organization: Your active organization object (not required)
-                            },
-                        },
-                    })
-                }).$mount('#branded-navbar-menu')
+                  extends: rsui.components.BrandedNavbarMenu,
+                  el: '#branded-navbar-menu'
+                })
             </script>
           </body>
     
@@ -106,13 +99,13 @@ block docs-content
 block scripts
     script
         | new Vue({
-        |   render: h => h(rsui.components.BrandedNavbarMenu, { 
-        |   props: {
-        |       settings: {
-        |         theme: { CompanyLogoLight: '../img/avatar-4.png' }, 
-        |         user: { UserName: 'Steve Rogers' }, 
-        |         organization: { OrganizationName: "Steve Roger's Wheels" },
-        |         demo: true
-        |       },
-        |   },})
-        | }).$mount('#branded-navbar-menu')
+        |   extends: rsui.components.BrandedNavbarMenu,
+        |   propsData: { 
+        |     demo: {
+        |        theme: { CompanyLogoLight: '../img/avatar-4.png' }, 
+        |        user: { UserName: 'Steve Rogers' }, 
+        |        organization: { OrganizationName: "Steve Roger's Wheels" },
+        |     }
+        |   },
+        |   el: '#branded-navbar-menu'
+        | })

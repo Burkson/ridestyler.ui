@@ -108,7 +108,7 @@ block docs-content
             <section class="navbar-section">
               <h1>Calculators</h1>
             </section>
-            <branded-navbar-menu :settings="yourSettingsObject" />
+            <branded-navbar-menu />
           </div>
     
     +docs-subheading('navbar-centered', 'Centered')
@@ -149,14 +149,14 @@ block docs-content
 
 block scripts
     script
-      | new Vue({
-      |   render: h => h(rsui.components.BrandedNavbarMenu, { 
-      |   props: {
-      |       settings: {
-      |         theme: { CompanyLogoLight: '../img/avatar-4.png' }, 
-      |         user: { UserName: 'Steve Rogers' }, 
-      |         organization: { OrganizationName: "Wheel Co." },
-      |         demo: true
-      |       },
-      |   },})
-      | }).$mount('#branded-navbar-menu')
+        | new Vue({
+        |   extends: rsui.components.BrandedNavbarMenu,
+        |   propsData: { 
+        |     demo: {
+        |        theme: { CompanyLogoLight: '../img/avatar-4.png' }, 
+        |        user: { UserName: 'Steve Rogers' }, 
+        |        organization: { OrganizationName: "Steve Roger's Wheels" },
+        |     }
+        |   },
+        |   el: '#branded-navbar-menu'
+        | })

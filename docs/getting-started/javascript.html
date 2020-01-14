@@ -185,7 +185,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"navbar-section"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Calculators<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">branded-navbar-menu</span> <span class="hljs-attr">:settings</span>=<span class="hljs-string">"userSettings"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">branded-navbar-menu</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
             <p>
@@ -212,7 +212,7 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 </span></span></span></span></code></pre>
             <p>or you can import any of our components from the cdn below if you're using a module system:</p>
-            <pre class="code" data-lang="HTML"><code>@<span class="hljs-keyword">import</span> <span class="hljs-string">"ridestyler.ui/src/components/BrandedNavbarMenu"</span>;
+            <pre class="code" data-lang="HTML"><code><span class="hljs-keyword">import</span> BrandedNavbarMenu <span class="hljs-keyword">from</span> <span class="hljs-string">"ridestyler.ui/src/components/BrandedNavbarMenu"</span>;
 </code></pre>
             <p>
               Now that we have a reference to vue and our components we can go ahead and initialize our component with Vue.
@@ -221,18 +221,11 @@
             </p>
             <pre class="code" data-lang="HTML"><code>  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/vue@2.6.11"</span> /&gt;</span><span class="handlebars"><span class="xml">
   <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://static.ridestyler.net/rs-ui/latest/components/rsui.umd.js"</span> /&gt;</span><span class="handlebars"><span class="xml">
-  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span>&gt;</span><span class="javascript">
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span>&gt;</span><span class="actionscript">
       <span class="hljs-keyword">new</span> Vue({
-          <span class="hljs-attr">render</span>: <span class="hljs-function"><span class="hljs-params">h</span> =&gt;</span> h(rsui.components.BrandedNavbarMenu, { 
-              <span class="hljs-attr">props</span>: {
-                  <span class="hljs-attr">settings</span>: {
-                      <span class="hljs-attr">theme</span>: Your active theme object (not required), 
-                      <span class="hljs-attr">user</span>: Your active user object (not required), 
-                      <span class="hljs-attr">organization</span>: Your active organization object (not required)
-                  },
-              },
-          })
-      }).$mount(<span class="hljs-string">'#branded-navbar-menu'</span>)
+        <span class="hljs-keyword">extends</span>: rsui.components.BrandedNavbarMenu,
+        el: <span class="hljs-string">'#branded-navbar-menu'</span>
+      })
   </span></span></span></span></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 </code></pre>
@@ -265,14 +258,14 @@
 </html>
 <script>
   new Vue({
-    render: h => h(rsui.components.BrandedNavbarMenu, { 
-    props: {
-        settings: {
-          theme: { CompanyLogoLight: '../img/avatar-4.png' }, 
-          user: { UserName: 'Steve Rogers' }, 
-          organization: { OrganizationName: "Steve Roger's Wheels" },
-          demo: true
-        },
-    },})
-  }).$mount('#branded-navbar-menu')
+    extends: rsui.components.BrandedNavbarMenu,
+    propsData: { 
+      demo: {
+         theme: { CompanyLogoLight: '../img/avatar-4.png' }, 
+         user: { UserName: 'Steve Rogers' }, 
+         organization: { OrganizationName: "Steve Roger's Wheels" },
+      }
+    },
+    el: '#branded-navbar-menu'
+  })
 </script>

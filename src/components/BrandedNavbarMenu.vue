@@ -23,10 +23,10 @@
                 <li class="divider"></li>
                 <slot name="menu-item"></slot>
                 <li class="menu-item">
-                    <a href="#" @click.prevent @mousedown="accountClick()">My Account</a>
+                    <a href="#" @click.prevent="accountClick()">My Account</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#" @click.prevent @mousedown="logoutClick()">Logout</a>
+                    <a href="#" @click.prevent="logoutClick()">Logout</a>
                 </li>
             </ul>
         </span>
@@ -41,26 +41,21 @@ export default {
     data() {
         return {
             isLoaded: false,
-            userTheme: this.settings.theme,
-            userOrg: this.settings.organization,
-            userInfo: this.settings.user,
+            userTheme: undefined,
+            userOrg: undefined,
+            userInfo: undefined,
             dropdownActive: false
         };
     },
     props: {
-        settings: {
-            theme: Object, 
-            organization: Object, 
-            user: Object,
-            demo: Boolean
-        }
+        demo: Object
     },
     methods: {
         accountClick: function() {
-            if(!this.settings.demo) window.location.href = "https://account.ridestyler.com/";
+            if(!this.demo) window.location.href = "https://account.ridestyler.com/";
         },
         logoutClick: function() {
-            if(!this.settings.demo){
+            if(!this.demo){
                 window.ridestyler.auth.signOut().then(() => {
                     window.location.reload();
                 });
@@ -73,7 +68,8 @@ export default {
             settings = null,
             self = this;
 
-        if (!this.userTheme) {
+        if(!this.demo){
+
             theme = new Promise((resolve, reject) => {
                 window.ridestyler.ajax.send({
                     action: "Client/GetTheme",
@@ -84,8 +80,7 @@ export default {
                 });
             });
             processes.push(theme);
-        }
-        if(!this.userInfo || !this.userOrg){
+
             settings = new Promise((resolve, reject) => {
                 window.ridestyler.ajax.send({
                     action: 'auth/status',
@@ -99,9 +94,7 @@ export default {
                 })
             });
             processes.push(settings);
-        }
 
-        if(processes.length){
             Promise.all(processes).then((response) => {
                 if (response) this.isLoaded = true;
             }).catch(() => {
@@ -109,6 +102,9 @@ export default {
                 console.error('There was an issue loading your settings');
             });
         } else {
+            this.userInfo = this.demo.user;
+            this.userTheme = this.demo.theme;
+            this.userOrg = this.demo.organization;
             this.isLoaded = true;
         }
 
