@@ -548,12 +548,12 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7bf67e2d-vue-loader-template"}!C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/BrandedNavbarMenu.vue?vue&type=template&id=ccb2b2b4&
+// CONCATENATED MODULE: C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"f91c5e56-vue-loader-template"}!C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/BrandedNavbarMenu.vue?vue&type=template&id=b68ababa&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',{staticClass:"navbar-section"},[(_vm.isLoaded)?_c('span',{staticClass:"dropdown dropdown-right"},[_c('button',{staticClass:"link toggle-dropdown",on:{"click":function($event){_vm.dropdownActive = !_vm.dropdownActive}}},[_vm._v(" "+_vm._s(_vm.userOrg.OrganizationName)+" "),(_vm.userTheme)?_c('i',{staticClass:"icon icon-caret-down"}):_vm._e()]),_c('ul',{staticClass:"menu",class:{ 'drop-active': _vm.dropdownActive },attrs:{"id":"accountDropdown"}},[_c('li',{staticClass:"menu-item"},[_c('div',{staticClass:"tile tile-centered no-wrap"},[_c('div',{staticClass:"tile-icon"},[(_vm.userTheme && _vm.userTheme.CompanyLogoLight)?_c('img',{staticClass:"avatar",attrs:{"src":_vm.userTheme.CompanyLogoLight,"alt":_vm.username + ' Avatar'}}):_c('i',{staticClass:"avatar icon icon-user"})]),_c('div',{staticClass:"tile-content"},[_vm._v(_vm._s(_vm.username))])])]),_c('li',{staticClass:"divider"}),_vm._t("menu-item"),_c('li',{staticClass:"menu-item"},[_c('a',{attrs:{"href":"#"},on:{"click":function($event){$event.preventDefault();return _vm.accountClick()}}},[_vm._v("My Account")])]),_c('li',{staticClass:"menu-item"},[_c('a',{attrs:{"href":"#"},on:{"click":function($event){$event.preventDefault();return _vm.logoutClick()}}},[_vm._v("Logout")])])],2)]):_c('span',{staticClass:"loading d-block px-3"})])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/BrandedNavbarMenu.vue?vue&type=template&id=ccb2b2b4&
+// CONCATENATED MODULE: ./src/components/BrandedNavbarMenu.vue?vue&type=template&id=b68ababa&
 
 // CONCATENATED MODULE: C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/BrandedNavbarMenu.vue?vue&type=script&lang=js&
 //
@@ -627,43 +627,44 @@ var staticRenderFns = []
             self = this;
 
         if(!this.demo){
+            window.ridestyler.user.ready.done(function(){
+                theme = new Promise((resolve, reject) => {
+                    window.ridestyler.ajax.send({
+                        action: "Client/GetTheme",
+                        callback: (response) => {
+                            self.userTheme = response.Theme;
+                            response.Success ? resolve(response) : reject(response);
+                        }
+                    });
+                });
+                processes.push(theme);
 
-            theme = new Promise((resolve, reject) => {
-                window.ridestyler.ajax.send({
-                    action: "Client/GetTheme",
-                    callback: (response) => {
-                        self.userTheme = response.Theme;
-                        response.Success ? resolve(response) : reject(response);
-                    }
+                settings = new Promise((resolve, reject) => {
+                    window.ridestyler.ajax.send({
+                        action: 'auth/status',
+                        callback: function(response) {
+                            if (typeof response.User !== 'undefined') {
+                                self.userInfo = response.User;
+                                self.userOrg = response.ActiveOrganization;
+                            }
+                            response.Success ? resolve(response) : reject(response);
+                        }
+                    })
+                });
+                processes.push(settings);
+
+                Promise.all(processes).then(() => {
+                    self.isLoaded = true;
+                }).catch(() => {
+                    self.isLoaded = false;
+                    console.error('There was an issue loading your settings');
                 });
             });
-            processes.push(theme);
-
-            settings = new Promise((resolve, reject) => {
-                window.ridestyler.ajax.send({
-                    action: 'auth/status',
-                    callback: function(response) {
-                        if (typeof response.User !== 'undefined') {
-                            self.userInfo = response.User;
-                            self.userOrg = response.ActiveOrganization;
-                        }
-                        response.Success ? resolve(response) : reject(response);
-                    }
-                })
-            });
-            processes.push(settings);
-
-            Promise.all(processes).then((response) => {
-                if (response) this.isLoaded = true;
-            }).catch(() => {
-                this.isLoaded = false;
-                console.error('There was an issue loading your settings');
-            });
         } else {
-            this.userInfo = this.demo.user;
-            this.userTheme = this.demo.theme;
-            this.userOrg = this.demo.organization;
-            this.isLoaded = true;
+            self.userInfo = self.demo.user;
+            self.userTheme = self.demo.theme;
+            self.userOrg = self.demo.organization;
+            self.isLoaded = true;
         }
 
         document.body.addEventListener('click', (e) => {
