@@ -69,43 +69,44 @@ export default {
             self = this;
 
         if(!this.demo){
+            window.ridestyler.user.ready.done(function(){
+                theme = new Promise((resolve, reject) => {
+                    window.ridestyler.ajax.send({
+                        action: "Client/GetTheme",
+                        callback: (response) => {
+                            self.userTheme = response.Theme;
+                            response.Success ? resolve(response) : reject(response);
+                        }
+                    });
+                });
+                processes.push(theme);
 
-            theme = new Promise((resolve, reject) => {
-                window.ridestyler.ajax.send({
-                    action: "Client/GetTheme",
-                    callback: (response) => {
-                        self.userTheme = response.Theme;
-                        response.Success ? resolve(response) : reject(response);
-                    }
+                settings = new Promise((resolve, reject) => {
+                    window.ridestyler.ajax.send({
+                        action: 'auth/status',
+                        callback: function(response) {
+                            if (typeof response.User !== 'undefined') {
+                                self.userInfo = response.User;
+                                self.userOrg = response.ActiveOrganization;
+                            }
+                            response.Success ? resolve(response) : reject(response);
+                        }
+                    })
+                });
+                processes.push(settings);
+
+                Promise.all(processes).then(() => {
+                    self.isLoaded = true;
+                }).catch(() => {
+                    self.isLoaded = false;
+                    console.error('There was an issue loading your settings');
                 });
             });
-            processes.push(theme);
-
-            settings = new Promise((resolve, reject) => {
-                window.ridestyler.ajax.send({
-                    action: 'auth/status',
-                    callback: function(response) {
-                        if (typeof response.User !== 'undefined') {
-                            self.userInfo = response.User;
-                            self.userOrg = response.ActiveOrganization;
-                        }
-                        response.Success ? resolve(response) : reject(response);
-                    }
-                })
-            });
-            processes.push(settings);
-
-            Promise.all(processes).then((response) => {
-                if (response) this.isLoaded = true;
-            }).catch(() => {
-                this.isLoaded = false;
-                console.error('There was an issue loading your settings');
-            });
         } else {
-            this.userInfo = this.demo.user;
-            this.userTheme = this.demo.theme;
-            this.userOrg = this.demo.organization;
-            this.isLoaded = true;
+            self.userInfo = self.demo.user;
+            self.userTheme = self.demo.theme;
+            self.userOrg = self.demo.organization;
+            self.isLoaded = true;
         }
 
         document.body.addEventListener('click', (e) => {
