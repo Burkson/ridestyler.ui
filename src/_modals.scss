@@ -46,13 +46,23 @@
 	}
 
 	&.modal-lg {
-		.modal-overlay {
-			background: $bg-color-light;
-		}
-
 		.modal-container {
 			box-shadow: none;
 			max-width: $control-width-lg;
+		}
+	}
+
+	&.modal-xl {
+		.modal-container {
+			box-shadow: none;
+			max-width: $control-width-xl;
+		}
+	}
+
+	&.modal-full {
+		.modal-container {
+			max-width: 90vw;
+			max-height: 90vh;
 		}
 	}
 }

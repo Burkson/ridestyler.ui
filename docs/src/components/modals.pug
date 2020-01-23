@@ -73,9 +73,12 @@ block docs-content
           
     +docs-subheading('modals-sizes', 'Modal sizes')
 
+    p
+      | Use the #[code modal-sm], #[code modal-lg], #[code modal-xl] or #[code modal-full] classes for different sizes.
+
     .docs-demo.columns
-      .column.col-6.col-xs-12
-        a.btn.btn-primary(href="#example-modal-2") Open small size Modal
+      .column.col-3.col-xs-12
+        a.btn.btn-primary(href="#example-modal-2") Open small modal
         #example-modal-2.modal.modal-sm
           a.modal-overlay(href="#modals-sizes" aria-label="Close")
           .modal-container(role="document")
@@ -101,14 +104,8 @@ block docs-content
             .modal-footer
               button.btn.btn-primary Submit
               a.link.link-primary(href="#modals-sizes" aria-label="Close") Close
-
-    p
-      | Use the #[code modal-sm] class for a smaller modal dialog.
-      | The container max width is #[code 320px].
-
-    .docs-demo.columns
-      .column
-        a.btn.btn-primary(href="#example-modal-3") Open large size Modal
+      .column.col-3.col-xs-12
+        a.btn.btn-primary(href="#example-modal-3") Open large modal
         #example-modal-3.modal.modal-lg
           a.modal-overlay(href="#modals-sizes" aria-label="Close")
           .modal-container(role="document")
@@ -136,10 +133,64 @@ block docs-content
             .modal-footer
               button.btn.btn-primary Share
               a.link.link-primary(href="#modals-sizes") Close
-
-    p
-      | Use the #[code modal-lg] class for a full size modal.
-      | The container max width is #[code 960px].
+      .column.col-3.col-xs-12
+        a.btn.btn-primary(href="#example-modal-5") Open extra large modal
+        #example-modal-5.modal.modal-xl
+          a.modal-overlay(href="#modals-sizes" aria-label="Close")
+          .modal-container(role="document")
+            .modal-header
+              a.btn.btn-clear.float-right(href="#modals-sizes" aria-label="Close")
+              .modal-title.h5 Modal title
+            .modal-body
+              .content
+                p This is the content inside the modal.
+                h4 Lorem ipsum
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent risus leo, dictum in vehicula sit amet, feugiat tempus tellus. Duis quis sodales risus. Etiam euismod ornare consequat.
+                p
+                  | Climb leg rub face on everything give attitude nap all day for under the bed. Chase mice attack feet but rub face on everything hopped up on goofballs.
+                h4 Cupcake ipsum
+                p
+                  | Jelly-o sesame snaps halvah croissant oat cake cookie. Cheesecake bear claw topping. Chupa chups apple pie carrot cake chocolate cake caramels.
+                p
+                  | De braaaiiiins apocalypsi gorger omero prefrontal cortex undead survivor fornix dictum mauris. Hi brains mindless mortuis limbic cortex soulless creaturas optic nerve.
+                h4 Candy ipsum
+                p
+                  | Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar.
+                p
+                  | Caerphilly swiss fromage frais. Brie cheese and wine fromage frais chalk and cheese danish fontina smelly cheese who moved my cheese cow.
+            .modal-footer
+              button.btn.btn-primary Share
+              a.link.link-primary(href="#modals-sizes") Close
+      .column.col-3.col-xs-12
+        a.btn.btn-primary(href="#example-modal-6") Open full modal
+        #example-modal-6.modal.modal-full
+          a.modal-overlay(href="#modals-sizes" aria-label="Close")
+          .modal-container(role="document")
+            .modal-header
+              a.btn.btn-clear.float-right(href="#modals-sizes" aria-label="Close")
+              .modal-title.h5 Modal title
+            .modal-body
+              .content
+                p This is the content inside the modal.
+                h4 Lorem ipsum
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent risus leo, dictum in vehicula sit amet, feugiat tempus tellus. Duis quis sodales risus. Etiam euismod ornare consequat.
+                p
+                  | Climb leg rub face on everything give attitude nap all day for under the bed. Chase mice attack feet but rub face on everything hopped up on goofballs.
+                h4 Cupcake ipsum
+                p
+                  | Jelly-o sesame snaps halvah croissant oat cake cookie. Cheesecake bear claw topping. Chupa chups apple pie carrot cake chocolate cake caramels.
+                p
+                  | De braaaiiiins apocalypsi gorger omero prefrontal cortex undead survivor fornix dictum mauris. Hi brains mindless mortuis limbic cortex soulless creaturas optic nerve.
+                h4 Candy ipsum
+                p
+                  | Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar.
+                p
+                  | Caerphilly swiss fromage frais. Brie cheese and wine fromage frais chalk and cheese danish fontina smelly cheese who moved my cheese cow.
+            .modal-footer
+              button.btn.btn-primary Share
+              a.link.link-primary(href="#modals-sizes") Close
 
     pre.code(data-lang='HTML')
       code

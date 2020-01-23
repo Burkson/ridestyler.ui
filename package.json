@@ -1,6 +1,6 @@
 {
     "name": "ridestyler.ui",
-    "version": "1.4.3",
+    "version": "1.4.4",
     "author": {
         "name": "Byron Carasco",
         "email": "byron@burkson.com",
@@ -40,6 +40,7 @@
         "url": "https://github.com/Burkson/ridestyler.ui/issues"
     },
     "devDependencies": {
+        "@vue/cli-service": "^4.1.2",
         "async": "^3.1.0",
         "browser-sync": "^2.26.7",
         "glob": "^7.1.4",
@@ -56,7 +57,10 @@
         "handlebars": "^4.4.3",
         "jstransformer-highlight": "latest",
         "jstransformer-markdown-it": "latest",
-        "sass-export": "^1.0.6"
+        "sass-export": "^1.0.6",
+        "sass-loader": "^8.0.2",
+        "vue-template-compiler": "^2.6.11",
+        "node-sass": "^4.13.1"
     },
     "browserslist": [
         "last 4 Chrome versions",
