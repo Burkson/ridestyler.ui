@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*! ridestyler.ui RTL */
-/*! ridestyler.ui v1.4.3 */
+/*! ridestyler.ui v1.4.4 */
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
@@ -4255,6 +4255,11 @@ body {
   padding: 0;
 }
 
+::-moz-selection {
+  background: #f3693c;
+  color: #fff;
+}
+
 ::selection {
   background: #f3693c;
   color: #fff;
@@ -4370,11 +4375,11 @@ abbr[title] {
 }
 
 kbd {
-  background: #0d112b;
   background: #e1e0e0;
+  background: #0d112b;
   border-radius: .4rem;
-  color: #fff;
   color: #0d112b;
+  color: #fff;
   font-size: .875rem; 
   line-height: 1.25;
   padding: .1rem .2rem;
@@ -4776,8 +4781,8 @@ html:lang(ko),
 
 @supports ((position: -webkit-sticky) or (position: sticky)) {
   .table-responsive > .table > thead > tr > th {
-    position: sticky;
     position: -webkit-sticky;
+    position: sticky;
     top: 0;
     z-index: 100;
   }
@@ -4785,8 +4790,8 @@ html:lang(ko),
   .table-responsive > .table > tbody > tr > .table-sticky-column,
   .table-responsive > .table > tfoot > tr > .table-sticky-column {
     left: 0; 
-    position: sticky;
     position: -webkit-sticky;
+    position: sticky;
   }
   .table-responsive > .table > thead > tr > .table-sticky-column {
     z-index: 101;
@@ -5044,8 +5049,8 @@ html:lang(ko),
 }
 
 .btn-group {
-  display: inline-flex; 
   display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .btn-group .btn:first-child:not(:last-child) {
@@ -5073,8 +5078,8 @@ html:lang(ko),
 }
 
 .btn-group.btn-group-block {
-  display: flex; 
   display: -ms-flexbox;
+  display: flex;
 }
 
 .btn-group.btn-group-block .btn {
@@ -5444,8 +5449,8 @@ textarea.form-input.input-sm {
 }
 
 .input-group {
-  display: flex; 
   display: -ms-flexbox;
+  display: flex;
 }
 
 .input-group .input-group-addon {
@@ -5453,8 +5458,8 @@ textarea.form-input.input-sm {
   background: #e6ebf2;
   border: .05rem solid #0d112b;
   border-radius: .4rem;
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-align: center;
   line-height: 1.625rem;
   padding: .5375rem .8rem;
@@ -5509,8 +5514,8 @@ textarea.form-input.input-sm {
 }
 
 .input-group.input-inline {
-  display: inline-flex; 
   display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .has-success .form-input,
@@ -5605,8 +5610,8 @@ input.disabled + .form-icon {
 }
 
 .form-horizontal .form-group {
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -5657,11 +5662,11 @@ input.disabled + .form-icon {
 }
 
 code {
-  background: #fcf2f2;
   background: #e1e0e0;
+  background: #fcf2f2;
   border-radius: .4rem;
-  color: #d73e48;
   color: #0d112b;
+  color: #d73e48;
   font-size: 85%; 
   line-height: 1.25;
   padding: .1rem .2rem;
@@ -5808,8 +5813,8 @@ video.video-responsive::before {
 }
 
 .columns {
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -5831,8 +5836,8 @@ video.video-responsive::before {
 }
 
 .columns.columns-equal-height .column {
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
 }
@@ -6285,8 +6290,8 @@ video.video-responsive::before {
   align-items: stretch;
   background-color: #0d112b;
   color: #fff; 
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-align: stretch;
   -ms-flex-pack: justify;
   -ms-flex-wrap: wrap;
@@ -6315,15 +6320,15 @@ video.video-responsive::before {
 
 .navbar .navbar-primary {
   align-items: center; 
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-align: center;
 }
 
 .navbar .navbar-section {
   align-items: center;
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex: 1 0 0;
   flex: 1 0 0; 
   -ms-flex-align: center;
@@ -6344,8 +6349,8 @@ video.video-responsive::before {
 
 .navbar .navbar-center {
   align-items: center;
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto; 
   -ms-flex-align: center;
@@ -6353,8 +6358,8 @@ video.video-responsive::before {
 
 .navbar .navbar-brand {
   align-items: center; 
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-align: center;
   font-size: 1.25rem;
   text-decoration: none;
@@ -6668,8 +6673,8 @@ summary.accordion-header::-webkit-details-marker {
 .bar {
   background: #d3d8df;
   border-radius: .4rem;
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   height: 1.6rem;
@@ -6746,8 +6751,8 @@ summary.accordion-header::-webkit-details-marker {
   background: #fff;
   border-radius: .4rem;
   box-shadow: 0 .25rem .6rem rgba(13, 17, 43, .3); 
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
 }
@@ -6840,8 +6845,8 @@ a.card.card-action {
   align-items: center;
   background: #e6ebf2;
   border-radius: 5rem;
-  display: inline-flex;
   display: -ms-inline-flexbox;
+  display: inline-flex;
   -ms-flex-align: center;
   font-size: 90%;
   height: 2.4rem;
@@ -6961,8 +6966,8 @@ a.card.card-action {
 .menu .menu-item > a {
   align-items: center; 
   color: inherit;
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-align: center;
   text-decoration: none;
 }
@@ -6999,8 +7004,8 @@ a.card.card-action {
 
 .menu .menu-badge {
   align-items: center;
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-align: center;
   height: 100%;
   position: absolute;
@@ -7073,8 +7078,8 @@ a.card.card-action {
 
 .modal:target,
 .modal.active {
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   opacity: 1;
   z-index: 400;
 }
@@ -7105,21 +7110,27 @@ a.card.card-action {
   padding: 0 .8rem;
 }
 
-.modal.modal-lg .modal-overlay {
-  background: #fff;
-}
-
 .modal.modal-lg .modal-container {
   box-shadow: none;
   max-width: 960px;
+}
+
+.modal.modal-xl .modal-container {
+  box-shadow: none;
+  max-width: 1280px;
+}
+
+.modal.modal-full .modal-container {
+  max-height: 90vh; 
+  max-width: 90vw;
 }
 
 .modal-container {
   background: #fff;
   border-radius: .4rem;
   box-shadow: 0 .25rem .6rem rgba(13, 17, 43, .3);
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
   max-height: 75vh;
@@ -7155,8 +7166,8 @@ a.card.card-action {
 }
 
 .nav {
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
   list-style: none;
@@ -7190,8 +7201,8 @@ a.card.card-action {
 }
 
 .pagination {
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   list-style: none;
   margin: .4rem 0;
   padding: .4rem 0;
@@ -7252,8 +7263,8 @@ a.card.card-action {
   background: #fff;
   border-radius: .4rem;
   box-shadow: 0 .25rem .6rem rgba(13, 17, 43, .3); 
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
 }
@@ -7501,8 +7512,8 @@ a.card.card-action {
 }
 
 .step {
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   list-style: none;
@@ -7570,8 +7581,8 @@ a.card.card-action {
 .tab {
   align-items: center;
   border-bottom: .05rem solid #556172;
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-align: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -7637,8 +7648,8 @@ a.card.card-action {
 .tile {
   align-content: space-between;
   align-items: flex-start;
-  display: flex; 
   display: -ms-flexbox;
+  display: flex; 
   -ms-flex-align: start;
   -ms-flex-line-pack: justify;
 }
@@ -7700,8 +7711,8 @@ a.card.card-action {
 
 .toast.toast-secondary {
   background: rgba(243, 105, 60, .95);
-  color: #0d112b; 
   color: #fff;
+  color: #0d112b;
 }
 
 .toast.toast-success {
@@ -8058,13 +8069,13 @@ a.text-active:visited {
 }
 
 .d-flex {
-  display: flex !important; 
   display: -ms-flexbox !important;
+  display: flex !important;
 }
 
 .d-inline-flex {
-  display: inline-flex !important; 
   display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
 }
 
 .d-none,
@@ -8235,8 +8246,8 @@ form.loading:after {
 }
 
 .p-sticky {
-  position: sticky !important; 
   position: -webkit-sticky !important;
+  position: sticky !important;
 }
 
 .p-centered {
@@ -8248,8 +8259,8 @@ form.loading:after {
 
 .flex-centered {
   align-items: center;
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-align: center;
   -ms-flex-pack: center;
   justify-content: center;
