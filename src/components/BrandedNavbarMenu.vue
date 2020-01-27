@@ -69,7 +69,7 @@ export default {
             self = this;
 
         if(!this.demo){
-            window.ridestyler.user.ready.done(function(){
+            ridestyler.events.on('auth-changed', function(){
                 theme = new Promise((resolve, reject) => {
                     window.ridestyler.ajax.send({
                         action: "Client/GetTheme",
