@@ -100,8 +100,8 @@
 @supports ((position: -webkit-sticky) or (position: sticky)) {
   .docs-content .s-title,
   .docs-content .s-subtitle {
-    position: -webkit-sticky;
     position: sticky;
+    position: -webkit-sticky;
     top: 0;
     z-index: 199;
   }
@@ -239,8 +239,8 @@
   background: #21b8f7;
   border-radius: .4rem;
   color: #fff;
-  display: -ms-flexbox;
   display: flex;
+  display: -ms-flexbox;
   -ms-flex-align: center;
   -ms-flex-line-pack: distribute;
   font-size: 1.2rem;
@@ -284,8 +284,8 @@
   align-items: center;
   border-radius: .4rem;
   color: #0d112b;
-  display: -ms-inline-flexbox;
   display: inline-flex;
+  display: -ms-inline-flexbox;
   -ms-flex-align: center;
   font-size: .7rem;
   height: 2rem;
@@ -543,8 +543,8 @@
 }
 
 .off-canvas {
-  display: -ms-flexbox;
   display: flex;
+  display: -ms-flexbox;
   -ms-flex-flow: nowrap;
   flex-flow: nowrap;
   height: 100%;
@@ -554,8 +554,8 @@
 
 .off-canvas .navbar-center {
   align-items: center;
-  display: -ms-flexbox;
   display: flex;
+  display: -ms-flexbox;
   -ms-flex-align: center;
   -ms-flex-pack: center;
   height: 100%;
