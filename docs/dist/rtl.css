@@ -7301,6 +7301,7 @@ a.card.card-action {
 }
 
 .popover .popover-container > .card {
+  border-bottom: #f3693c .3rem solid; 
   position: relative;
 }
 
@@ -7329,6 +7330,11 @@ a.card.card-action {
   top: 50%;
 }
 
+.popover.popover-right .popover-container > .card {
+  border-bottom: none; 
+  border-left: #f3693c .3rem solid;
+}
+
 .popover.popover-right .popover-container > .card:after {
   border-bottom: .5rem solid transparent;
   border-left: none;
@@ -7354,7 +7360,9 @@ a.card.card-action {
 }
 
 .popover.popover-top-right .popover-container > .card {
+  border-bottom: none; 
   border-bottom-left-radius: 0;
+  border-left: #f3693c .3rem solid;
 }
 
 .popover.popover-top-right .popover-container > .card:after {
@@ -7380,6 +7388,8 @@ a.card.card-action {
 }
 
 .popover.popover-bottom-right .popover-container > .card {
+  border-bottom: none; 
+  border-left: #f3693c .3rem solid;
   border-top-left-radius: 0;
 }
 
@@ -7407,6 +7417,8 @@ a.card.card-action {
 }
 
 .popover.popover-bottom-left .popover-container > .card {
+  border-bottom: none; 
+  border-right: #f3693c .3rem solid;
   border-top-right-radius: 0;
 }
 
@@ -7435,7 +7447,9 @@ a.card.card-action {
 }
 
 .popover.popover-top-left .popover-container > .card {
+  border-bottom: none; 
   border-bottom-right-radius: 0;
+  border-right: #f3693c .3rem solid;
 }
 
 .popover.popover-top-left .popover-container > .card:after {
@@ -7461,6 +7475,11 @@ a.card.card-action {
   top: 100%;
 }
 
+.popover.popover-bottom .popover-container > .card {
+  border-bottom: none; 
+  border-top: #f3693c .3rem solid;
+}
+
 .popover.popover-bottom .popover-container > .card:after {
   border-bottom: 1rem solid #f3693c;
   border-left: .5rem solid transparent;
@@ -7481,6 +7500,11 @@ a.card.card-action {
 .popover.popover-left .popover-container {
   left: 0;
   top: 50%;
+}
+
+.popover.popover-left .popover-container > .card {
+  border-bottom: none; 
+  border-right: #f3693c .3rem solid;
 }
 
 .popover.popover-left .popover-container > .card:after {

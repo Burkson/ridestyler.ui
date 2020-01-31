@@ -2,6 +2,7 @@
 .popover {
     display: inline-block;
     position: relative;
+    $border-size: .3rem;
     $triangle-size: 1rem;
     $triangle-color: $secondary-color;
     $padding: $layout-spacing;
@@ -19,6 +20,7 @@
 
         > .card {
             position: relative;
+            border-bottom: $triangle-color $border-size solid;
 
             &:after {
                 content: '';
@@ -49,18 +51,23 @@
             left: 100%;
             top: 50%;
 
-            > .card:after {
-                border-left: none;
-                border-top: $triangle-size/2 solid transparent;
-                border-bottom: $triangle-size/2 solid transparent;
-                border-right: $triangle-size solid $triangle-color;
-    
-                position: absolute;
-                left: -$triangle-size;
-                top: 50%;
-                bottom: auto;
-                margin-top: -$triangle-size/2;
-                margin-left: 0;
+            > .card {
+                border-left: $triangle-color $border-size solid;
+                border-bottom: none;
+
+                &:after {
+                    border-left: none;
+                    border-top: $triangle-size/2 solid transparent;
+                    border-bottom: $triangle-size/2 solid transparent;
+                    border-right: $triangle-size solid $triangle-color;
+        
+                    position: absolute;
+                    left: -$triangle-size;
+                    top: 50%;
+                    bottom: auto;
+                    margin-top: -$triangle-size/2;
+                    margin-left: 0;
+                }
             }
         }
 
@@ -78,6 +85,8 @@
 
             > .card {
                 border-bottom-left-radius: 0;
+                border-left: $triangle-color $border-size solid;
+                border-bottom: none;
 
                 &:after {
                     border-bottom: $triangle-size solid $triangle-color;
@@ -107,6 +116,8 @@
 
             > .card {
                 border-top-left-radius: 0;
+                border-left: $triangle-color $border-size solid;
+                border-bottom: none;
 
                 &:after {
                     border-top: $triangle-size solid $triangle-color;
@@ -137,6 +148,8 @@
 
             > .card {
                 border-top-right-radius: 0;
+                border-right: $triangle-color $border-size solid;
+                border-bottom: none;
 
                 &:after {
                     border-top: $triangle-size solid $triangle-color;
@@ -168,6 +181,8 @@
 
             > .card {
                 border-bottom-right-radius: 0;
+                border-right: $triangle-color $border-size solid;
+                border-bottom: none;
 
                 &:after {
                     border-bottom: $triangle-size solid $triangle-color;
@@ -196,17 +211,22 @@
             left: 50%;
             top: 100%;
 
-            > .card:after {
-                border-top: none;
-                border-left: $triangle-size/2 solid transparent;
-                border-right: $triangle-size/2 solid transparent;
-                border-bottom: $triangle-size solid $triangle-color;
-    
-                position: absolute;
-                left: 50%;
-                top: -$triangle-size;
-                bottom: auto;
-                margin-left: -$triangle-size/2;
+            > .card {
+                border-top: $triangle-color $border-size solid;
+                border-bottom: none;
+
+                &:after {
+                    border-top: none;
+                    border-left: $triangle-size/2 solid transparent;
+                    border-right: $triangle-size/2 solid transparent;
+                    border-bottom: $triangle-size solid $triangle-color;
+        
+                    position: absolute;
+                    left: 50%;
+                    top: -$triangle-size;
+                    bottom: auto;
+                    margin-left: -$triangle-size/2;
+                }
             }
         }
 
@@ -221,18 +241,23 @@
             left: 0;
             top: 50%;
 
-            > .card:after {
-                border-right: none;
-                border-top: $triangle-size/2 solid transparent;
-                border-bottom: $triangle-size/2 solid transparent;
-                border-left: $triangle-size solid $triangle-color;
-    
-                position: absolute;
-                left: 100%;
-                top: 50%;
-                bottom: auto;
-                margin-top: -$triangle-size/2;
-                margin-left: 0;
+            > .card {
+                border-right: $triangle-color $border-size solid;
+                border-bottom: none;
+
+                &:after {
+                    border-right: none;
+                    border-top: $triangle-size/2 solid transparent;
+                    border-bottom: $triangle-size/2 solid transparent;
+                    border-left: $triangle-size solid $triangle-color;
+        
+                    position: absolute;
+                    left: 100%;
+                    top: 50%;
+                    bottom: auto;
+                    margin-top: -$triangle-size/2;
+                    margin-left: 0;
+                }
             }
         }
 
