@@ -14,7 +14,7 @@ To use the framework you can either:
 To install from the CDN just add a reference to the CSS:
 
 ```html
-<link rel="stylesheet" href="https://static.ridestyler.net/rs-ui/latest/rsui.min.css">
+<link rel="stylesheet" href="https://static.ridestyler.com/rs-ui/latest/rsui.min.css">
 ```
 
 ### From NPM
