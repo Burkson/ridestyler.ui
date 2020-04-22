@@ -6,6 +6,12 @@
 		& .accordion-header {
 			.icon {
 				transform: rotate(90deg);
+				&.icon-accordion {
+					transform: rotate(0deg);
+					&:after {
+						content: $icon-code-minus;
+					}
+				}
 			}
 		}
 
@@ -15,11 +21,26 @@
 	}
 
 	.accordion-header {
-		display: block;
+		display: flex; 
 		padding: $unit-1 $unit-2;
 
 		.icon {
 			transition: transform .25s;
+			&.icon-accordion {
+				transition: transform .4s;
+				&:after {
+					content: $icon-code-plus;
+					display: block;
+					width: 2em;
+					height: 2em;
+					border-radius: 50%;
+					border: .2em solid $primary-color;
+					line-height: 1.6em;
+					text-align: center;
+					box-sizing: border-box;
+					color: $primary-color;
+				}
+			}
 		}
 	}
 

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*! ridestyler.ui RTL */
-/*! ridestyler.ui v1.4.6 */
+/*! ridestyler.ui v1.4.7 */
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
@@ -6468,18 +6468,46 @@ video.video-responsive::before {
   transform: rotate(90deg);
 }
 
+.accordion input:checked ~ .accordion-header .icon.icon-accordion,
+.accordion[open] .accordion-header .icon.icon-accordion {
+  transform: rotate(0deg);
+}
+
+.accordion input:checked ~ .accordion-header .icon.icon-accordion:after,
+.accordion[open] .accordion-header .icon.icon-accordion:after {
+  content: "";
+}
+
 .accordion input:checked ~ .accordion-body,
 .accordion[open] .accordion-body {
   max-height: 50rem;
 }
 
 .accordion .accordion-header {
-  display: block;
+  display: flex;
+  display: -ms-flexbox;
   padding: .4rem .8rem;
 }
 
 .accordion .accordion-header .icon {
   transition: transform .25s;
+}
+
+.accordion .accordion-header .icon.icon-accordion {
+  transition: transform .4s;
+}
+
+.accordion .accordion-header .icon.icon-accordion:after {
+  border: .2em solid #21b8f7;
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: #21b8f7; 
+  content: "";
+  display: block;
+  height: 2em;
+  line-height: 1.6em;
+  text-align: center;
+  width: 2em;
 }
 
 .accordion .accordion-body {
