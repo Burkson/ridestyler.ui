@@ -180,7 +180,7 @@
               <div class="column col-6 col-md-12">
                 <div class="accordion">
                   <input id="accordion-1" type="radio" name="accordion-radio" hidden="" checked="">
-                  <label class="accordion-header c-hand" for="accordion-1">Elements<i class="icon icon-accordion ml-2"></i></label>
+                  <label class="accordion-header justify-space-between c-hand" for="accordion-1">Elements<i class="icon icon-accordion ml-2"></i></label>
                   <div class="accordion-body">
                     <ul class="menu menu-nav">
                       <li class="menu-item"><a href="#accordions">Element 1</a></li>
@@ -190,7 +190,7 @@
                 </div>
                 <div class="accordion">
                   <input id="accordion-2" type="radio" name="accordion-radio" hidden="">
-                  <label class="accordion-header c-hand" for="accordion-2">Layout<i class="icon icon-accordion ml-2"></i></label>
+                  <label class="accordion-header justify-space-between c-hand" for="accordion-2">Layout<i class="icon icon-accordion ml-2"></i></label>
                   <div class="accordion-body">
                     <ul class="menu menu-nav">
                       <li class="menu-item"><a href="#accordions">Layout 1</a></li>
@@ -200,7 +200,7 @@
                 </div>
                 <div class="accordion">
                   <input id="accordion-3" type="radio" name="accordion-radio" hidden="">
-                  <label class="accordion-header c-hand" for="accordion-3">Components<i class="icon icon-accordion ml-2"></i></label>
+                  <label class="accordion-header justify-space-between c-hand" for="accordion-3">Components<i class="icon icon-accordion ml-2"></i></label>
                   <div class="accordion-body">
                     <ul class="menu menu-nav">
                       <li class="menu-item"><a href="#accordions">Component 1</a></li>
@@ -212,7 +212,7 @@
               <div class="column col-6 col-md-12">
                 <div class="accordion">
                   <input id="accordion-4" type="checkbox" name="accordion-checkbox" hidden="" checked="">
-                  <label class="accordion-header c-hand" for="accordion-4">Elements</label>
+                  <label class="accordion-header justify-space-between c-hand" for="accordion-4">Elements</label>
                   <div class="accordion-body">
                     <ul class="menu menu-nav">
                       <li class="menu-item"><a href="#accordions">Element 1</a></li>
@@ -280,6 +280,43 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
 </code></pre>
+            <h4 class="s-subtitle" id="accordion-component">Component<a class="anchor" href="#accordion-component" aria-hidden="true">#</a></h4>
+            <p>
+              You can use the accordion component to quickly add a set of customizable accordions. Add a 
+              accordion element inside of the DOM and add any available settings as a prop. Available slots 
+              include: <code>header</code> and <code>body</code>.
+            </p>
+            <pre class="code" data-lang="HTML"><code><span class="hljs-comment">&lt;!-- Accordion component example --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">Accordion</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"accordion-radio"</span> 
+  <span class="hljs-attr">:exclusive</span>=<span class="hljs-string">"true"</span> 
+  <span class="hljs-attr">:scroll-into-view</span>=<span class="hljs-string">"true"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:header</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span>Lorem ipsum dolor sit amet<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:body</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- Accordions content --&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">Accordion</span>&gt;</span>
+</code></pre>
+            <h4>props</h4>
+            <ul>
+              <li><strong>name</strong> - default: unique name string. Optional input name, useful for mutually exclusive Accordions</li>
+              <li><strong>id</strong> - default: unique id string. Optional input id</li>
+              <li><strong>exclusive</strong> - default: false. Set to true for mutually exclusive Accordions (with same input names)</li>
+              <li><strong>scroll-into-view</strong> - default: false. Set to true for auto scroll to top of current accordion when expanded</li>
+            </ul>
+            <h4>events</h4>
+            <ul>
+              <li><strong>expanded</strong> - Event emitted when accordion finishes expanding.</li>
+              <li><strong>collapsed</strong> - Event emitted when accordion finishes collapsing.</li>
+            </ul>
+            <h4>slots</h4>
+            <ul>
+              <li><strong>header</strong> - The slot for adding content to the accordion header.</li>
+              <li><strong>body</strong> - The slot for adding content to the accordion body.</li>
+            </ul>
+            <p>Checkout out the <a href="../getting-started/javascript.html#rs-ui-components" target="_blank">Javascript </a>page for more information on how to setup a custom component.</p>
           </div>
           <div class="docs-footer container grid-lg" id="copyright">
             <p><a href="https://github.com/Burkson/ridestyler.ui" target="_blank">GitHub</a> · <a href="https://ridestyler.com" target="_blank">RideStyler</a> · Version <span class="version"></span></p>
