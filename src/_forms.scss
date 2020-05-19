@@ -33,9 +33,10 @@ legend {
 }
 
 .form-input, .form-select {
-	border: none;
-	border-width: $border-width-lg;
-	border-bottom-style: solid;
+	border-radius: $border-radius-sm;
+	background-color: $bg-color;
+	border-width: $border-width;
+	border-style: solid;
 	border-color: $border-color-light;
 
 	&:focus {
@@ -43,19 +44,9 @@ legend {
 	}
 }
 
-%bordered-input {
-	border-style: solid;
-	border-width: $border-width-lg;
-}
-
-form.form-full .form-input, textarea.form-input {
-	@extend %bordered-input;
-}
-
 // Form element: Input
 .form-input {
 	appearance: none;
-	background-color: $bg-color-light;
 	background-image: none;
 	
 	color: $body-font-color;
@@ -154,8 +145,6 @@ textarea.form-input {
 	// Multiple select
 	&[size],
 	&[multiple] {
-		@extend %bordered-input;
-		
 		height: auto;
 		padding: $control-padding-y $control-padding-x;
 

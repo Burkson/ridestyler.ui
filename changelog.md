@@ -5,9 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.7] - 2020-5-19
+
+**Updated**:
+
+- Updated all inputs to use a rounded border
+
 ## [1.4.6] - 2020-2-5
 
-**Added**:
+**Updated**:
 
 - Updated all of the old static.ridestyler.net references
 
