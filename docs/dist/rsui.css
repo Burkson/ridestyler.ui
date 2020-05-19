@@ -5113,7 +5113,7 @@ legend {
 
 .form-input,
 .form-select {
-  background-color: #e6ebf2;
+  background-color: #fff;
   border-color: #c7c7c7; 
   border-radius: .3rem;
   border-style: solid;
@@ -5200,7 +5200,6 @@ textarea.form-input.input-sm {
 }
 
 .form-select {
-  background-color: #fff; 
   color: inherit;
   font-size: 1rem;
   height: 2.8rem;

@@ -34,7 +34,7 @@ legend {
 
 .form-input, .form-select {
 	border-radius: $border-radius-sm;
-	background-color: $bg-color;
+	background-color: $bg-color-light;
 	border-width: $border-width;
 	border-style: solid;
 	border-color: $border-color-light;
@@ -127,7 +127,6 @@ textarea.form-input {
 	padding: $control-padding-y $control-padding-x;
 	vertical-align: middle;
 	width: 100%;
-	background-color: $bg-color-light;
 
 	// Select sizes
 	&.select-sm {
