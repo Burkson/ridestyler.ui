@@ -792,12 +792,12 @@ var component = normalizeComponent(
 )
 
 /* harmony default export */ var BrandedNavbarMenu = (component.exports);
-// CONCATENATED MODULE: C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"5d78bc5b-vue-loader-template"}!C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/ToggleNav.vue?vue&type=template&id=76e11da0&
-var ToggleNavvue_type_template_id_76e11da0_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('ul',{staticClass:"nav",attrs:{"id":"toggle-wrapper"}},[_vm._t("default")],2)}
-var ToggleNavvue_type_template_id_76e11da0_staticRenderFns = []
+// CONCATENATED MODULE: C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"5d78bc5b-vue-loader-template"}!C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/ToggleNav.vue?vue&type=template&id=75fc7594&
+var ToggleNavvue_type_template_id_75fc7594_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('ul',{directives:[{name:"show",rawName:"v-show",value:(_vm.isVisible),expression:"isVisible"}],staticClass:"nav"},[_vm._t("default")],2)}
+var ToggleNavvue_type_template_id_75fc7594_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/ToggleNav.vue?vue&type=template&id=76e11da0&
+// CONCATENATED MODULE: ./src/components/ToggleNav.vue?vue&type=template&id=75fc7594&
 
 // CONCATENATED MODULE: C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/ToggleNav.vue?vue&type=script&lang=js&
 //
@@ -811,32 +811,20 @@ var ToggleNavvue_type_template_id_76e11da0_staticRenderFns = []
     name: "ToggleNav",
     data() {
         return {
-            toggleNavWrapper: document.getElementById('toggle-wrapper')
+            isVisible: false,
         };
     },
     mounted() {
-        if(this.toggleSwitch) {
-            if(this.toggleNavWrapper){
-                addListener(this.toggleSwitch, 'click', function(){
-                    let wrapperDisplay = this.toggleNavWrapper.style.display;
-                    if(wrapperDisplay == 'none') wrapperDisplay = 'block';
-                    else wrapperDisplay = 'none';
-                    this.toggleNavWrapper.style.display = wrapperDisplay;
-                });
-            } else console.error("Sorry, we couldn't find a .nav under your .nav-toggle element");
-        } else console.error("Sorry, the toggle switch you provided is invalid or undefined");
-    },
-    methods() {
-        function addListener(element, type, callback){
-            if(element && type && callback) element.addEventListener(type, callback);
-        }
+        const self = this;
+        if(this.toggleSwitch) this.toggleSwitch.addEventListener('click', () => {self.isVisible = !self.isVisible;});
+        else console.error("Sorry, the toggle switch you provided is invalid or undefined");
     },
     computed: {
         toggleSwitch(){
             return document.querySelector(this.toggleSelector);
         }
     },
-    prop: {
+    props: {
         toggleSelector: String
     },
 });
@@ -853,8 +841,8 @@ var ToggleNavvue_type_template_id_76e11da0_staticRenderFns = []
 
 var ToggleNav_component = normalizeComponent(
   components_ToggleNavvue_type_script_lang_js_,
-  ToggleNavvue_type_template_id_76e11da0_render,
-  ToggleNavvue_type_template_id_76e11da0_staticRenderFns,
+  ToggleNavvue_type_template_id_75fc7594_render,
+  ToggleNavvue_type_template_id_75fc7594_staticRenderFns,
   false,
   null,
   null,
