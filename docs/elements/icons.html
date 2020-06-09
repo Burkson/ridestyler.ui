@@ -263,9 +263,9 @@
               use the variable in the <code>:before</code> or <code>:after</code> pseudo-class.
             </p>
             <pre class="code" data-lang="SCSS"><code><span class="hljs-selector-class">.my-custom-icon</span> {
-  @<span class="hljs-keyword">extend</span> %icon;
+  <span class="hljs-keyword">@extend</span> %icon;
 
-  &amp;:before {
+  &amp;<span class="hljs-selector-pseudo">:before</span> {
     <span class="hljs-attribute">content</span>: <span class="hljs-variable">$icon-code-camera-retro</span>;
   }
 }</code></pre>

@@ -67,4 +67,63 @@ block docs-content
             </li>
           </ul>
 
+    +docs-subheading('accordion-component', 'Component')
+
+    p
+      | You can use the ToggleNav component to quickly hide and show inner nav-items.
+      | instead of wrapping your #[code nav-items] in a #[code nav], wrap them in a ToggleNav element and add any available nav-items.
+      | Lastly, add a selector to your toggle switch element and add the selector to your ToggleNav element as a #[code toggleSelector] prop to initiate your toggle switch.
+
+    pre.code(data-lang='HTML')
+      code
+        :highlight(lang="html")
+          <!-- ToggleNav component example -->
+          <ul class="nav">
+            <li class="nav-item">
+              <a href="#">Elements</a>
+            </li>
+            <li class="nav-item active">
+              <a href="#" id="nav-toggle">Layout</a>
+              <ToggleNav toggleSelector="#nav-toggle">
+                <li class="nav-item">
+                  <a href="#">Flexbox grid</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#">Responsive</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#">Navbar</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#">Empty states</a>
+                </li>
+              </ToggleNav>
+            </li>
+            <li class="nav-item">
+              <a href="#">Components</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Utilities</a>
+            </li>
+          </ul>
+
+    h4 props
+
+    ul
+      li
+        strong toggleSelector
+        |  - the id or class selector on the element you want used as the toggle switch.
+
+    p
+      | Checkout out the 
+      a(href='../getting-started/javascript.html#rs-ui-components', target='_blank') Javascript 
+      | page for more information on how to setup a custom component.
+
   include ../_layout/_footer.pug
+  
+block scripts
+  script
+      | new Vue({
+      |   extends: rsui.components.ToggleNav,
+      |   el: '#toggle-nav'
+      | })
