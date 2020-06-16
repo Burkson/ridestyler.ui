@@ -3,8 +3,13 @@
   display: flex;
   flex-direction: column;
   list-style: none;
-  margin: $unit-1 0;
-
+  margin: 0 0;
+  &.toggle-nav {
+      display: none;
+      &.active-nav {
+          display: block;
+      }
+  }
   .nav-item {
     a {
       color: $gray-color-dark;
@@ -28,7 +33,9 @@
   }
 
   & .nav {
-    margin-bottom: $unit-2;
+    margin-bottom: 0;
     margin-left: $unit-4;
   }
 }
+
+
