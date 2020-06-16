@@ -225,14 +225,15 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 </code></pre>
-            <h4 class="s-subtitle" id="accordion-component">Component<a class="anchor" href="#accordion-component" aria-hidden="true">#</a></h4>
+            <h4 class="s-subtitle" id="branded-nav-column">BrandedNavColumn<a class="anchor" href="#branded-nav-column" aria-hidden="true">#</a></h4>
             <p>
-              You can use the ToggleNav component to quickly hide and show inner nav-items.
-              instead of wrapping your <code>nav-items</code> in a <code>nav</code>, wrap them in a ToggleNav element and add any available nav-items.
-              Lastly, add a selector to your toggle switch element and add the selector to your ToggleNav element as a <code>toggleSelector</code> prop to initiate your toggle switch.
+              You can use the BrandedNavColumn component to quickly give your app a RideStyler branded navigation system.
+              Instead of wrapping your <code>nav-items</code> in a <code>nav</code>, wrap them inside of the BrandedNavColumn element and add any available nav-items.
+              You can add inner-navigation systems as well, just add a template wrapper with the prop <code>v-slot:inner</code> and place your nav-items inside.
+              Lastly you can place items in the footer of your nav by placing them in a template wrapper with the prop <code>v-slot:footer</code>.
             </p>
-            <pre class="code" data-lang="HTML"><code><span class="hljs-comment">&lt;!-- ToggleNav component example --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav"</span>&gt;</span>
+            <pre class="code" data-lang="HTML"><code><span class="hljs-comment">&lt;!-- BrandedNavColumn component example --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">branded-nav-column</span> <span class="hljs-attr">:currentRoute</span>=<span class="hljs-string">"window.location.href"</span> <span class="hljs-attr">:helpLinksEnabled</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">homeLink</span>=<span class="hljs-string">"/"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-item"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Elements<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
@@ -252,6 +253,52 @@
         <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Empty states<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">ToggleNav</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:inner</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-item"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Components<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-slot:footer</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-item"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Utilities<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">branded-nav-column</span>&gt;</span>
+</code></pre>
+            <h4>props</h4>
+            <ul>
+              <li><strong>helpLinksEnabled</strong> - true or false depending on if you want help/support links available in your nav</li>
+              <li> <strong>currentRoute</strong> - the current path at which your browser is located. This will trigger the nav to close on mobile screens when updated</li>
+              <li><strong>homeLink</strong> - the path of your home page. This will be used when clicking the logo at the top of the nav</li>
+            </ul>
+            <h4 class="s-subtitle" id="togglenav">ToggleNav<a class="anchor" href="#togglenav" aria-hidden="true">#</a></h4>
+            <p>
+              You can use the ToggleNav component to quickly hide and show inner nav-items.
+              instead of wrapping your <code>nav-items</code> in a <code>nav</code>, wrap them in a ToggleNav element and add any available nav-items.
+              Lastly, add a selector to your toggle switch element and add the selector to your ToggleNav element as a <code>toggleSelector</code> prop to initiate your toggle switch.
+            </p>
+            <pre class="code" data-lang="HTML"><code><span class="hljs-comment">&lt;!-- ToggleNav component example --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-item"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Elements<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-item active"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"nav-toggle"</span>&gt;</span>Layout<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">toggle-nav</span> <span class="hljs-attr">toggleSelector</span>=<span class="hljs-string">"#nav-toggle"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Flexbox grid<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Responsive<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Navbar<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Empty states<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">toggle-nav</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-item"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Components<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>

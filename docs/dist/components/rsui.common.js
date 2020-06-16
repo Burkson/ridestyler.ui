@@ -792,6 +792,13 @@ var component = normalizeComponent(
 )
 
 /* harmony default export */ var BrandedNavbarMenu = (component.exports);
+// CONCATENATED MODULE: C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"5d78bc5b-vue-loader-template"}!C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/BrandedNavColumn.vue?vue&type=template&id=f9f5491c&
+var BrandedNavColumnvue_type_template_id_f9f5491c_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"column branded-nav-column",class:{ 'branded-nav-minimized' : !_vm.isNavVisible && _vm.isMobile }},[_c('div',{staticClass:"branded-top-item m-0"},[(_vm.$router)?_c('router-link',{staticClass:"light m-0 d-inline-block",class:[ _vm.isMobile ? 'ridestyler-logo-icon' : 'ridestyler-logo-full w-100' ],attrs:{"to":_vm.homeLink,"id":"ridestyler-home"},nativeOn:{"click":function($event){_vm.isNavVisible = false}}}):_c('a',{staticClass:"light m-0 d-inline-block",class:[ _vm.isMobile ? 'ridestyler-logo-icon' : 'ridestyler-logo-full w-100' ],attrs:{"href":_vm.homeLink,"id":"ridestyler-home"},nativeOn:{"click":function($event){_vm.isNavVisible = false}}}),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.isMobile),expression:"isMobile"}],staticClass:"icon icon-bars branded-nav-burger",on:{"click":function($event){_vm.isNavVisible = !_vm.isNavVisible}}})],1),_c('ul',{directives:[{name:"show",rawName:"v-show",value:(_vm.isNavVisible || !_vm.isMobile),expression:"isNavVisible || !isMobile"}],staticClass:"nav m-0"},[_vm._t("default"),(_vm.helpLinksEnabled)?_c('li',{staticClass:"nav-item"},[_c('a',{staticClass:"help-toggle nav-toggle",attrs:{"href":"#","title":"Help","alt":"Help"}},[_vm._v("Help")]),_c('toggle-nav',{attrs:{"toggleSelector":".help-toggle"}},[_c('a',{attrs:{"href":"https://kb.ridestyler.com/","target":"_blank","alt":"Knowledge Base","title":"Knowledge Base"}},[_vm._v("Knowledge Base")]),_c('a',{attrs:{"href":"http://kb.ridestyler.com/submit-a-ticket/","target":"_blank","alt":"Support Request","title":"Support Request"}},[_vm._v("Support Request")])])],1):_vm._e(),(_vm.isMobile && this.$slots.inner)?_c('li',{staticClass:"inner"},[_vm._t("inner")],2):_vm._e(),(this.$slots.footer)?_c('li',{staticClass:"nav-item footer"},[_vm._t("footer")],2):_vm._e()],2)])}
+var BrandedNavColumnvue_type_template_id_f9f5491c_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/BrandedNavColumn.vue?vue&type=template&id=f9f5491c&
+
 // CONCATENATED MODULE: C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"5d78bc5b-vue-loader-template"}!C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/ToggleNav.vue?vue&type=template&id=06ab9159&
 var ToggleNavvue_type_template_id_06ab9159_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('ul',{staticClass:"nav toggle-nav",attrs:{"id":_vm.navSelector + '-nav'}},[_vm._t("default")],2)}
 var ToggleNavvue_type_template_id_06ab9159_staticRenderFns = []
@@ -875,6 +882,92 @@ var ToggleNav_component = normalizeComponent(
 )
 
 /* harmony default export */ var ToggleNav = (ToggleNav_component.exports);
+// CONCATENATED MODULE: C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/BrandedNavColumn.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ var BrandedNavColumnvue_type_script_lang_js_ = ({
+    name: "BrandedNavColumn",
+    data() {
+        return {
+            isNavVisible: false,
+            breakPointTwoColumn: 840,
+            isMobile: false
+        }
+    },
+    mounted(){
+        const self = this;
+        
+        self.isMobile = window.innerWidth < self.breakPointTwoColumn;
+
+        window.addEventListener('resize', function(e){
+            const innerWidth = e.target.innerWidth;
+            if(innerWidth < self.breakPointTwoColumn) self.isMobile = true;
+            else self.isMobile = false;
+        });
+    },
+    props: {
+        currentRoute: String,
+        helpLinksEnabled: Boolean,
+        homeLink: String
+    },
+    watch: {
+        currentRoute(){
+            this.isNavVisible = false
+        }
+    },
+    components: {
+        ToggleNav: ToggleNav,
+    },
+});
+
+// CONCATENATED MODULE: ./src/components/BrandedNavColumn.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_BrandedNavColumnvue_type_script_lang_js_ = (BrandedNavColumnvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/components/BrandedNavColumn.vue
+
+
+
+
+
+/* normalize component */
+
+var BrandedNavColumn_component = normalizeComponent(
+  components_BrandedNavColumnvue_type_script_lang_js_,
+  BrandedNavColumnvue_type_template_id_f9f5491c_render,
+  BrandedNavColumnvue_type_template_id_f9f5491c_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var BrandedNavColumn = (BrandedNavColumn_component.exports);
 // CONCATENATED MODULE: C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"5d78bc5b-vue-loader-template"}!C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/Accordion.vue?vue&type=template&id=b19dbbae&
 var Accordionvue_type_template_id_b19dbbae_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"accordion"},[(_vm.exclusive)?_c('input',{ref:"accordionRadio",attrs:{"id":_vm.localId,"type":"radio","name":_vm.localName,"hidden":""}}):_c('input',{ref:"accordionCheckbox",attrs:{"id":_vm.localId,"type":"checkbox","name":_vm.localName,"hidden":""}}),_c('label',{staticClass:"accordion-header c-hand justify-space-between",attrs:{"for":_vm.localId}},[_c('div',{staticClass:"accordion-header-content"},[_vm._t("header")],2),_c('i',{staticClass:"icon icon-accordion ml-2"})]),_c('div',{ref:"accordionBody",staticClass:"accordion-body"},[_vm._t("body")],2)])}
 var Accordionvue_type_template_id_b19dbbae_staticRenderFns = []
@@ -984,7 +1077,8 @@ var Accordion_component = normalizeComponent(
 
 
 
-const components = { BrandedNavbarMenu : BrandedNavbarMenu, ToggleNav : ToggleNav, Accordion : Accordion };
+
+const components = { BrandedNavbarMenu : BrandedNavbarMenu, BrandedNavColumn : BrandedNavColumn, ToggleNav : ToggleNav, Accordion : Accordion };
 // CONCATENATED MODULE: C:/Users/blake/AppData/Roaming/npm/node_modules/@vue/cli-service/lib/commands/build/entry-lib-no-default.js
 /* concated harmony reexport components */__webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 

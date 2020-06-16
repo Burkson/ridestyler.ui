@@ -67,18 +67,19 @@ block docs-content
             </li>
           </ul>
 
-    +docs-subheading('accordion-component', 'Component')
+    +docs-subheading('branded-nav-column', 'BrandedNavColumn')
 
     p
-      | You can use the ToggleNav component to quickly hide and show inner nav-items.
-      | instead of wrapping your #[code nav-items] in a #[code nav], wrap them in a ToggleNav element and add any available nav-items.
-      | Lastly, add a selector to your toggle switch element and add the selector to your ToggleNav element as a #[code toggleSelector] prop to initiate your toggle switch.
+      | You can use the BrandedNavColumn component to quickly give your app a RideStyler branded navigation system.
+      | Instead of wrapping your #[code nav-items] in a #[code nav], wrap them inside of the BrandedNavColumn element and add any available nav-items.
+      | You can add inner-navigation systems as well, just add a template wrapper with the prop #[code v-slot:inner] and place your nav-items inside.
+      | Lastly you can place items in the footer of your nav by placing them in a template wrapper with the prop #[code v-slot:footer].
 
     pre.code(data-lang='HTML')
       code
         :highlight(lang="html")
-          <!-- ToggleNav component example -->
-          <ul class="nav">
+          <!-- BrandedNavColumn component example -->
+          <branded-nav-column :currentRoute="window.location.href" :helpLinksEnabled="false" homeLink="/">
             <li class="nav-item">
               <a href="#">Elements</a>
             </li>
@@ -98,6 +99,64 @@ block docs-content
                   <a href="#">Empty states</a>
                 </li>
               </ToggleNav>
+            </li>
+            <template v-slot:inner>
+              <li class="nav-item">
+                <a href="#">Components</a>
+              </li>
+            </template>
+            <template v-slot:footer>
+              <li class="nav-item">
+                <a href="#">Utilities</a>
+              </li>
+            </template>
+          </branded-nav-column>
+
+    h4 props
+
+    ul
+      li
+        strong helpLinksEnabled
+        |  - true or false depending on if you want help/support links available in your nav
+      li 
+        strong currentRoute
+        |  - the current path at which your browser is located. This will trigger the nav to close on mobile screens when updated
+      li
+        strong homeLink
+        |  - the path of your home page. This will be used when clicking the logo at the top of the nav
+
+
+    +docs-subheading('togglenav', 'ToggleNav')
+
+    p
+      | You can use the ToggleNav component to quickly hide and show inner nav-items.
+      | instead of wrapping your #[code nav-items] in a #[code nav], wrap them in a ToggleNav element and add any available nav-items.
+      | Lastly, add a selector to your toggle switch element and add the selector to your ToggleNav element as a #[code toggleSelector] prop to initiate your toggle switch.
+
+    pre.code(data-lang='HTML')
+      code
+        :highlight(lang="html")
+          <!-- ToggleNav component example -->
+          <ul class="nav">
+            <li class="nav-item">
+              <a href="#">Elements</a>
+            </li>
+            <li class="nav-item active">
+              <a href="#" id="nav-toggle">Layout</a>
+              <toggle-nav toggleSelector="#nav-toggle">
+                <li class="nav-item">
+                  <a href="#">Flexbox grid</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#">Responsive</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#">Navbar</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#">Empty states</a>
+                </li>
+              </toggle-nav>
             </li>
             <li class="nav-item">
               <a href="#">Components</a>
