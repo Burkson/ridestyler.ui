@@ -7326,7 +7326,7 @@ a.card.card-action {
     z-index: 2;
   }
   .column.branded-nav-column.branded-nav-minimized {
-    height: 100%;
+    height: auto;
     min-height: auto;
     position: relative;
   }

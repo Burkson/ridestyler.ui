@@ -120,7 +120,7 @@
     display: block;
     z-index: 2;
     &.branded-nav-minimized {
-      height: 100%;
+      height: auto;
       min-height: auto;
       position: relative;
     }
