@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*! ridestyler.ui RTL */
-/*! ridestyler.ui v1.5.2 */
+/*! ridestyler.ui v1.5.3 */
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
@@ -5554,12 +5554,24 @@ textarea.form-input.input-sm {
   border-color: #f00;
 }
 
+.form-input:not(:-ms-input-placeholder):invalid {
+  border-color: #f00;
+}
+
 .form-input:not(:placeholder-shown):invalid {
   border-color: #f00;
 }
 
+.form-input:not(:-ms-input-placeholder):invalid:focus {
+  background: white;
+}
+
 .form-input:not(:placeholder-shown):invalid:focus {
   background: white;
+}
+
+.form-input:not(:-ms-input-placeholder):invalid + .form-input-hint {
+  color: #f00;
 }
 
 .form-input:not(:placeholder-shown):invalid + .form-input-hint {
@@ -7293,6 +7305,13 @@ a.card.card-action {
   width: 100%;
 }
 
+.column.branded-nav-column li.nav-item.footer {
+  bottom: 30px;
+  position: absolute;
+  text-align: center; 
+  width: 100%;
+}
+
 .column.branded-nav-column .branded-nav-burger {
   color: #fff;
 }
@@ -7339,10 +7358,6 @@ a.card.card-action {
     display: block;
     margin-left: 0;
     padding: .5rem 0;
-  }
-  .column.branded-nav-column .footer {
-    margin: 30px 0 20px; 
-    position: relative;
   }
   .column.branded-nav-column .inner {
     background: #1b1f38;
