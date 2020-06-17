@@ -31,7 +31,7 @@ export default {
     data() {
         return {
             isNavVisible: false,
-            breakPointTwoColumn: 840,
+            breakPointTwoColumn: 960,
             isMobile: false
         }
     },
