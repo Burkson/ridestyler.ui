@@ -1,10 +1,6 @@
 {
     "name": "ridestyler.ui",
-<<<<<<< Updated upstream
-    "version": "1.5.3",
-=======
     "version": "1.5.5",
->>>>>>> Stashed changes
     "author": {
         "name": "Byron Carasco",
         "email": "byron@burkson.com",

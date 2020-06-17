@@ -819,12 +819,12 @@ var component = normalizeComponent(
 )
 
 /* harmony default export */ var BrandedNavbarMenu = (component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"15ad2d9c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/BrandedNavColumn.vue?vue&type=template&id=f9f5491c&
-var BrandedNavColumnvue_type_template_id_f9f5491c_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"column branded-nav-column",class:{ 'branded-nav-minimized' : !_vm.isNavVisible && _vm.isMobile }},[_c('div',{staticClass:"branded-top-item m-0"},[(_vm.$router)?_c('router-link',{staticClass:"light m-0 d-inline-block",class:[ _vm.isMobile ? 'ridestyler-logo-icon' : 'ridestyler-logo-full w-100' ],attrs:{"to":_vm.homeLink,"id":"ridestyler-home"},nativeOn:{"click":function($event){_vm.isNavVisible = false}}}):_c('a',{staticClass:"light m-0 d-inline-block",class:[ _vm.isMobile ? 'ridestyler-logo-icon' : 'ridestyler-logo-full w-100' ],attrs:{"href":_vm.homeLink,"id":"ridestyler-home"},nativeOn:{"click":function($event){_vm.isNavVisible = false}}}),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.isMobile),expression:"isMobile"}],staticClass:"icon icon-bars branded-nav-burger",on:{"click":function($event){_vm.isNavVisible = !_vm.isNavVisible}}})],1),_c('ul',{directives:[{name:"show",rawName:"v-show",value:(_vm.isNavVisible || !_vm.isMobile),expression:"isNavVisible || !isMobile"}],staticClass:"nav m-0"},[_vm._t("default"),(_vm.helpLinksEnabled)?_c('li',{staticClass:"nav-item"},[_c('a',{staticClass:"help-toggle nav-toggle",attrs:{"href":"#","title":"Help","alt":"Help"}},[_vm._v("Help")]),_c('toggle-nav',{attrs:{"toggleSelector":".help-toggle"}},[_c('a',{attrs:{"href":"https://kb.ridestyler.com/","target":"_blank","alt":"Knowledge Base","title":"Knowledge Base"}},[_vm._v("Knowledge Base")]),_c('a',{attrs:{"href":"http://kb.ridestyler.com/submit-a-ticket/","target":"_blank","alt":"Support Request","title":"Support Request"}},[_vm._v("Support Request")])])],1):_vm._e(),(_vm.isMobile && this.$slots.inner)?_c('li',{staticClass:"inner"},[_vm._t("inner")],2):_vm._e(),(this.$slots.footer)?_c('li',{staticClass:"nav-item footer"},[_vm._t("footer")],2):_vm._e()],2)])}
-var BrandedNavColumnvue_type_template_id_f9f5491c_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"15ad2d9c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/BrandedNavColumn.vue?vue&type=template&id=716d1f5a&
+var BrandedNavColumnvue_type_template_id_716d1f5a_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"column branded-nav-column",class:{ 'branded-nav-minimized' : !_vm.isNavVisible && _vm.isMobile }},[_c('div',{staticClass:"branded-top-item m-0"},[(_vm.$router)?_c('router-link',{staticClass:"light m-0 d-inline-block",class:[ _vm.isMobile ? 'ridestyler-logo-icon' : 'ridestyler-logo-full w-100' ],attrs:{"to":_vm.homeLink,"id":"ridestyler-home"},nativeOn:{"click":function($event){_vm.isNavVisible = false}}}):_c('a',{staticClass:"light m-0 d-inline-block",class:[ _vm.isMobile ? 'ridestyler-logo-icon' : 'ridestyler-logo-full w-100' ],attrs:{"href":_vm.homeLink,"id":"ridestyler-home"},nativeOn:{"click":function($event){_vm.isNavVisible = false}}}),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.isMobile),expression:"isMobile"}],staticClass:"icon icon-bars branded-nav-burger",on:{"click":function($event){_vm.isNavVisible = !_vm.isNavVisible}}})],1),_c('ul',{directives:[{name:"show",rawName:"v-show",value:(_vm.isNavVisible || !_vm.isMobile),expression:"isNavVisible || !isMobile"}],staticClass:"nav m-0"},[_vm._t("default"),(_vm.helpLinksEnabled)?_c('li',{staticClass:"nav-item"},[_c('a',{staticClass:"help-toggle nav-toggle",attrs:{"href":"#","title":"Help","alt":"Help"}},[_vm._v("Help")]),_c('toggle-nav',{attrs:{"toggleSelector":".help-toggle"}},[_c('a',{attrs:{"href":"https://kb.ridestyler.com/","target":"_blank","alt":"Knowledge Base","title":"Knowledge Base"}},[_vm._v("Knowledge Base")]),_c('a',{attrs:{"href":"http://kb.ridestyler.com/submit-a-ticket/","target":"_blank","alt":"Support Request","title":"Support Request"}},[_vm._v("Support Request")])])],1):_vm._e(),(_vm.isMobile && this.$slots.inner)?_c('li',{staticClass:"inner"},[_vm._t("inner")],2):_vm._e(),(this.$slots.footer)?_c('li',{staticClass:"nav-item footer"},[_vm._t("footer")],2):_vm._e()],2)])}
+var BrandedNavColumnvue_type_template_id_716d1f5a_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/BrandedNavColumn.vue?vue&type=template&id=f9f5491c&
+// CONCATENATED MODULE: ./src/components/BrandedNavColumn.vue?vue&type=template&id=716d1f5a&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"15ad2d9c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/ToggleNav.vue?vue&type=template&id=06ab9159&
 var ToggleNavvue_type_template_id_06ab9159_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('ul',{staticClass:"nav toggle-nav",attrs:{"id":_vm.navSelector + '-nav'}},[_vm._t("default")],2)}
@@ -943,7 +943,7 @@ var ToggleNav_component = normalizeComponent(
     data() {
         return {
             isNavVisible: false,
-            breakPointTwoColumn: 840,
+            breakPointTwoColumn: 960,
             isMobile: false
         }
     },
@@ -985,8 +985,8 @@ var ToggleNav_component = normalizeComponent(
 
 var BrandedNavColumn_component = normalizeComponent(
   components_BrandedNavColumnvue_type_script_lang_js_,
-  BrandedNavColumnvue_type_template_id_f9f5491c_render,
-  BrandedNavColumnvue_type_template_id_f9f5491c_staticRenderFns,
+  BrandedNavColumnvue_type_template_id_716d1f5a_render,
+  BrandedNavColumnvue_type_template_id_716d1f5a_staticRenderFns,
   false,
   null,
   null,
