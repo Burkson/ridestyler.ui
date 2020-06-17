@@ -97,6 +97,12 @@
     align-items: center;
     justify-content: space-between;
   }
+  li.nav-item.footer {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+  }
   .branded-nav-burger {
     color: $light-color;
   }
@@ -151,10 +157,6 @@
         display: block;
         padding: 0.5rem 0;
       }
-    }
-    .footer {
-      position: relative;
-      margin: 30px 0 20px;
     }
     .inner {
       background: $ridestyler-color-navy;
