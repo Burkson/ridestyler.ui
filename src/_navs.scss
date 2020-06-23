@@ -44,7 +44,7 @@
 
   padding: 0;
   background: $ridestyler-color-navy;
-  position: relative;
+  position: fixed;
   min-height: 100vh;
   z-index: 1;
   .nav {
@@ -119,6 +119,7 @@
     padding-right: 0;
     display: block;
     z-index: 2;
+    position: relative;
     &.branded-nav-minimized {
       height: auto;
       min-height: auto;
