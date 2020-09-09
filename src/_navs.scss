@@ -120,6 +120,12 @@
     display: block;
     z-index: 2;
     position: relative;
+    li.nav-item.footer {
+      position: relative;
+      width: 100%;
+      bottom: 0;
+      padding: 25px 0;
+    }
     &.branded-nav-minimized {
       height: auto;
       min-height: auto;

@@ -5,38 +5,44 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.5.6] - 2020-17-9
+## [1.5.7] - 2020-9-9
+
+**Fixes**:
+
+- Fixes bug in styling on BrandedNavColumn component
+
+## [1.5.6] - 2020-7-17
 
 **Updated**:
 
 - Updated styling on BrandedNavColumn component
 
-## [1.5.5] - 2020-17-9
+## [1.5.5] - 2020-7-17
 
 **Fixed**:
 
 - Fixes responsive styling on the BrandedNavColumn component
 
 
-## [1.5.4] - 2020-17-9
+## [1.5.4] - 2020-7-17
 
 **Fixed**:
 
 - Fixes styling on the BrandedNavColumn component
 
-## [1.5.3] - 2020-17-9
+## [1.5.3] - 2020-7-17
 
 **Added**:
 
 - Adds styling to the BrandedNavColumn component
 
-## [1.5.2] - 2020-16-9
+## [1.5.2] - 2020-7-16
 
 **Added**:
 
 - Added BrandedNavColumn component
 
-## [1.5.1] - 2020-15-9
+## [1.5.1] - 2020-7-15
 
 **Fixed**:
 
