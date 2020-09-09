@@ -7326,6 +7326,12 @@ a.card.card-action {
     text-align: center;
     z-index: 2;
   }
+  .column.branded-nav-column li.nav-item.footer {
+    bottom: 0;
+    padding: 25px 0; 
+    position: relative;
+    width: 100%;
+  }
   .column.branded-nav-column.branded-nav-minimized {
     height: auto;
     min-height: auto;
