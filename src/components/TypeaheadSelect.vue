@@ -1,50 +1,111 @@
 <template>
-    <div>
-        <div class="dropdown" :class="{ active: menuVisible && filteredKeyValues.length > 0 }">
-            <input type="text" :ref="id" class="form-select" :size="size" v-model="inputValue" v-on:focus="onFocus" v-on:blur="onBlur" :placeholder="selectedValue" />
-            <ul class="menu" v-on:mousedown="onMouseDown" v-on:mouseup="onMouseUp">
-                <li class="menu-item" v-for="keyValue in filteredKeyValues" :key="keyValue.key">
-                    <a href="#" v-on:focus="onItemFocus" v-on:blur="onItemBlur" v-on:click="onItemClick(keyValue.key, keyValue.value)">
-                        {{ keyValue.value }}
-                    </a>
-                </li>
-            </ul>
-        </div>
+    <div class="dropdown" :class="{ 'active': menuVisible && filteredKeyValues.length > 0, 'd-hide': !loaded }">
+        <input type="hidden" :name="name" :value="selectedKey">
+        <input type="text" class="form-select" v-model="inputValue" :size="size" :placeholder="selectedValue" @focus="onFocus" @blur="onBlur">
+        <ul class="menu" @mousedown="onMouseDown" @mouseup="onMouseUp">
+            <li class="menu-item" v-for="keyValue in filteredKeyValues" :key="keyValue.key">
+                <a href="#" :class="{ active: keyValue.key === selectedKey }" @focus="onItemFocus" @blur="onItemBlur" @click="onItemClick(keyValue.key, keyValue.value)">
+                    {{ keyValue.value }}
+                </a>
+            </li>
+        </ul>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'TypeAheadSelect',
-    components: {},
+    name: 'TypeaheadSelect',
     props: {
         keyValues: { type: Array },
-        id: { type: String }
+        name: { type: String } // Name attribute for input
     },
     data: function() {
         return {
-            size: 10, // initial width in characters of the input
-            filteredKeyValues: [], // used to populate the dropdown
-            inputValue: "", // text in the input box
-            selectedValue: "", // currently selected value
-            selectedKey: "", // currently selected key (unique id for that selected value)
-            menuVisible: false, // flag to show/hide menu
-            inputFocused: false, // keep track of when the input has focus
-            itemFocused: false, // keep track when a menu item has focus
-            menuMouseDown: false // needed for IE because dragging scrollbar makes input lose focus
+            loaded: false, // Flag set when loaded
+            size: 10, // Initial width on characters of the input.
+            filteredKeyValues: [], // Used to populate the dropdown.
+            inputValue: "", // Text in the input box.
+            selectedValue: "", // Currently selected value.
+            selectedKey: "", // Currently selected key.
+            menuVisible: false, // Flag to show/hide menu.
+            inputFocused: false, // Keep track of when the input has focus.
+            itemFocused: false, // Keep track when a menu item has focus.
+            menuMouseDown: false // Needed for IE because dragging scrollbar makes input lose focus.
         }
     },
+    mounted: function(){
+        document.body.addEventListener('keydown', this.onKeyDown, true);
+    },
     methods: {
+
+        // Scrolls to the selected item in the menu.
+        _scrollToSelected(){
+            var el = this.$el.querySelector(" a.active").parentElement;
+            var parent = el.parentElement;
+            var top = 0;
+            if(el != parent.firstElementChild) {
+                var style = window.getComputedStyle ? getComputedStyle(el, null) : el.currentStyle;
+                top = el.offsetTop - parseInt(style.marginTop);
+            }
+            parent.scrollTo(0, top);
+        },
+
+        // Hides menu.
         _hideMenu(force) {
             var self = this;
-            // timeout is used to protect against strange event edge cases
+            // Timeout is used to protect against strange event edge cases
             setTimeout(function(){ 
                 if((!self.inputFocused && !self.itemFocused && !self.mouseDown) || force) {
                     self.inputValue = self.selectedValue;
                     self.menuVisible = false;
                     self.itemFocused = false;
                 }
-            }, force ? 1 : 50);
+            }, force ? 1 : 100);
+        },
+        onKeyDown(e) {
+            if(this.inputFocused || this.itemFocused) {
+
+                var keyCode = e.keyCode;
+
+                if((keyCode === 40 || keyCode === 38) && this.filteredKeyValues.length > 0) {
+
+                    var menu = this.$el.querySelector("ul"),
+                        scrollTop = menu.scrollTop,
+                        menuHeight = menu.scrollHeight,
+                        items = menu.children;
+
+                    // Index of the item that is in the users view.
+                    var scrolledIndex = this.filteredKeyValues.length - Math.round((menuHeight - scrollTop) / (menuHeight / this.filteredKeyValues.length));
+
+                    var focusItem = null;
+
+                    if(this.inputFocused) {
+                        focusItem = items[scrolledIndex].firstChild;
+                    } else if(this.itemFocused) {
+                        
+                        // Get currently focused item.
+                        var currentlyFocusedItem = document.activeElement;
+                        var parent = currentlyFocusedItem.parentElement;
+
+                        // Get next item based on up or down arrow pressed.
+                        var nextItem = keyCode == 40 ? parent.nextSibling : parent.previousSibling;
+
+                        if(nextItem != null) {
+                            focusItem = nextItem.firstChild;
+                        } else {
+                            focusItem = keyCode == 40 ? items[0].firstChild : items[items.length - 1].firstChild;
+                        }
+                    }
+
+                    focusItem.focus();
+                    
+                    e.preventDefault();
+
+                } else if(keyCode === 13 && this.inputFocused) {
+                    this.$el.querySelector(".form-select").blur();
+                    e.preventDefault();
+                }
+            }
         },
         onMouseUp() {
             this.mouseDown = false;
@@ -56,6 +117,9 @@ export default {
             this.inputValue = ""; 
             this.inputFocused = true;
             this.menuVisible = true;
+
+            // Timeout is used to make sure the menu is displayed before scrollTo is called.
+            setTimeout(this._scrollToSelected, 10);
         },
         onItemBlur() {
             this.itemFocused = false;
@@ -80,8 +144,14 @@ export default {
         }
     },
     watch: {
+        filteredKeyValues() {
+            // If filtered values changed, make sure it's scrolled to the top...
+            if(this.filteredKeyValues.length !== this.keyValues.length) {
+                this.$el.querySelector("ul").scrollTo(0, 0);
+            }
+        },
         inputValue() {
-            // filter out the menu every time the user types something
+            // Filter out the menu every time the user types something
             this.filteredKeyValues.length = 0;
             for(var n = 0; n < this.keyValues.length; n++) {
                 if(this.keyValues[n].value.toLowerCase().indexOf(this.inputValue.toLowerCase()) !== -1) {
@@ -91,8 +161,7 @@ export default {
         },
         keyValues() {
             if(this.keyValues.length > 0) {
-
-                // find the max length item to resize the input accordingly
+                // Find the max length item to resize the input accordingly
                 var maxSize = this.size;
                 for(var n = 0; n < this.keyValues.length; n++) {
                     if(this.keyValues[n].value.length > maxSize) {
@@ -101,13 +170,15 @@ export default {
                 }
                 this.size = maxSize;
 
-                // select the first item
+                // Select the first item
                 this.selectedKey = this.keyValues[0].key;
                 this.selectedValue = this.keyValues[0].value;
                 this.inputValue = this.keyValues[0].value;
 
-                // tell the parent to load the first item
+                // Tell the parent to load the first item
                 this.$emit("itemSelected", this.selectedKey);
+
+                this.loaded = true;
             }
         }
     }
