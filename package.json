@@ -1,6 +1,6 @@
 {
     "name": "ridestyler.ui",
-    "version": "1.5.9",
+    "version": "1.5.10",
     "author": {
         "name": "Byron Carasco",
         "email": "byron@burkson.com",
@@ -60,7 +60,7 @@
         "sass-export": "^1.0.6",
         "sass-loader": "^8.0.2",
         "vue-template-compiler": "^2.6.11",
-        "node-sass": "^4.13.1"
+        "node-sass": "^4.14.1"
     },
     "browserslist": [
         "last 4 Chrome versions",

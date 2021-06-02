@@ -1,6 +1,6 @@
 /*! ridestyler.ui Docs */
 .version::after {
-  content: "1.5.7";
+  content: "1.5.10";
 }
 
 .off-canvas .off-canvas-toggle {
@@ -49,9 +49,14 @@
   width: 14rem;
 }
 
+.docs-sidebar .accordion input:checked ~ .accordion-body,
+.docs-sidebar .accordion[open] .accordion-body {
+  max-height: 60rem !important;
+}
+
 .docs-sidebar .accordion {
   margin-bottom: .75rem;
-  max-height: 53rem;
+  max-height: 63rem;
 }
 
 .docs-sidebar .accordion .accordion-header {
@@ -97,11 +102,10 @@
   position: static;
 }
 
-@supports ((position: -webkit-sticky) or (position: sticky)) {
+@supports (position: sticky) {
   .docs-content .s-title,
   .docs-content .s-subtitle {
     position: sticky;
-    position: -webkit-sticky;
     top: 0;
     z-index: 199;
   }
@@ -212,8 +216,6 @@
 
 .docs-content .c-select-all {
   -webkit-user-select: all;
-  -moz-user-select: all;
-  -ms-user-select: all;
   user-select: all;
 }
 
@@ -239,8 +241,8 @@
   background: #21b8f7;
   border-radius: .4rem;
   color: #fff;
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-align: center;
   -ms-flex-line-pack: distribute;
   font-size: 1.2rem;
@@ -284,8 +286,8 @@
   align-items: center;
   border-radius: .4rem;
   color: #0d112b;
-  display: inline-flex;
   display: -ms-inline-flexbox;
+  display: inline-flex;
   -ms-flex-align: center;
   font-size: .7rem;
   height: 2rem;
@@ -543,8 +545,8 @@
 }
 
 .off-canvas {
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-flow: nowrap;
   flex-flow: nowrap;
   height: 100%;
@@ -554,8 +556,8 @@
 
 .off-canvas .navbar-center {
   align-items: center;
-  display: flex;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-align: center;
   -ms-flex-pack: center;
   height: 100%;

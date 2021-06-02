@@ -557,7 +557,7 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"15ad2d9c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/BrandedNavbarMenu.vue?vue&type=template&id=68eb5334&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"f6a1c092-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/BrandedNavbarMenu.vue?vue&type=template&id=68eb5334&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',{staticClass:"navbar-section"},[(_vm.isLoaded)?_c('span',{staticClass:"dropdown dropdown-right"},[_c('button',{staticClass:"link toggle-dropdown",on:{"click":function($event){_vm.dropdownActive = !_vm.dropdownActive}}},[_vm._v(" "+_vm._s(_vm.userOrg.OrganizationName)+" "),(_vm.userTheme)?_c('i',{staticClass:"icon icon-caret-down"}):_vm._e()]),_c('ul',{staticClass:"menu",class:{ 'drop-active': _vm.dropdownActive },attrs:{"id":"accountDropdown"}},[_c('li',{staticClass:"menu-item"},[_c('div',{staticClass:"tile tile-centered no-wrap"},[_c('div',{staticClass:"tile-icon"},[(_vm.userTheme && _vm.userTheme.CompanyLogoLight)?_c('img',{staticClass:"avatar",attrs:{"src":_vm.userTheme.CompanyLogoLight,"alt":_vm.username + ' Avatar'}}):_c('i',{staticClass:"avatar icon icon-user"})]),_c('div',{staticClass:"tile-content"},[_vm._v(_vm._s(_vm.username))])])]),_c('li',{staticClass:"divider"}),_vm._t("menu-item"),_c('li',{staticClass:"menu-item"},[_c('a',{attrs:{"href":"#"},on:{"click":function($event){$event.preventDefault();return _vm.accountClick()}}},[_vm._v("My Account")])]),_c('li',{staticClass:"menu-item"},[_c('a',{attrs:{"href":"#"},on:{"click":function($event){$event.preventDefault();return _vm.logoutClick()}}},[_vm._v("Logout")])])],2)]):_c('span',{staticClass:"loading d-block px-3"})])}
 var staticRenderFns = []
 
@@ -810,14 +810,14 @@ var component = normalizeComponent(
 )
 
 /* harmony default export */ var BrandedNavbarMenu = (component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"15ad2d9c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/BrandedNavColumn.vue?vue&type=template&id=716d1f5a&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"f6a1c092-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/BrandedNavColumn.vue?vue&type=template&id=716d1f5a&
 var BrandedNavColumnvue_type_template_id_716d1f5a_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"column branded-nav-column",class:{ 'branded-nav-minimized' : !_vm.isNavVisible && _vm.isMobile }},[_c('div',{staticClass:"branded-top-item m-0"},[(_vm.$router)?_c('router-link',{staticClass:"light m-0 d-inline-block",class:[ _vm.isMobile ? 'ridestyler-logo-icon' : 'ridestyler-logo-full w-100' ],attrs:{"to":_vm.homeLink,"id":"ridestyler-home"},nativeOn:{"click":function($event){_vm.isNavVisible = false}}}):_c('a',{staticClass:"light m-0 d-inline-block",class:[ _vm.isMobile ? 'ridestyler-logo-icon' : 'ridestyler-logo-full w-100' ],attrs:{"href":_vm.homeLink,"id":"ridestyler-home"},nativeOn:{"click":function($event){_vm.isNavVisible = false}}}),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.isMobile),expression:"isMobile"}],staticClass:"icon icon-bars branded-nav-burger",on:{"click":function($event){_vm.isNavVisible = !_vm.isNavVisible}}})],1),_c('ul',{directives:[{name:"show",rawName:"v-show",value:(_vm.isNavVisible || !_vm.isMobile),expression:"isNavVisible || !isMobile"}],staticClass:"nav m-0"},[_vm._t("default"),(_vm.helpLinksEnabled)?_c('li',{staticClass:"nav-item"},[_c('a',{staticClass:"help-toggle nav-toggle",attrs:{"href":"#","title":"Help","alt":"Help"}},[_vm._v("Help")]),_c('toggle-nav',{attrs:{"toggleSelector":".help-toggle"}},[_c('a',{attrs:{"href":"https://kb.ridestyler.com/","target":"_blank","alt":"Knowledge Base","title":"Knowledge Base"}},[_vm._v("Knowledge Base")]),_c('a',{attrs:{"href":"http://kb.ridestyler.com/submit-a-ticket/","target":"_blank","alt":"Support Request","title":"Support Request"}},[_vm._v("Support Request")])])],1):_vm._e(),(_vm.isMobile && this.$slots.inner)?_c('li',{staticClass:"inner"},[_vm._t("inner")],2):_vm._e(),(this.$slots.footer)?_c('li',{staticClass:"nav-item footer"},[_vm._t("footer")],2):_vm._e()],2)])}
 var BrandedNavColumnvue_type_template_id_716d1f5a_staticRenderFns = []
 
 
 // CONCATENATED MODULE: ./src/components/BrandedNavColumn.vue?vue&type=template&id=716d1f5a&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"15ad2d9c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/ToggleNav.vue?vue&type=template&id=06ab9159&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"f6a1c092-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/ToggleNav.vue?vue&type=template&id=06ab9159&
 var ToggleNavvue_type_template_id_06ab9159_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('ul',{staticClass:"nav toggle-nav",attrs:{"id":_vm.navSelector + '-nav'}},[_vm._t("default")],2)}
 var ToggleNavvue_type_template_id_06ab9159_staticRenderFns = []
 
@@ -986,7 +986,7 @@ var BrandedNavColumn_component = normalizeComponent(
 )
 
 /* harmony default export */ var BrandedNavColumn = (BrandedNavColumn_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"15ad2d9c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Accordion.vue?vue&type=template&id=b19dbbae&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"f6a1c092-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Accordion.vue?vue&type=template&id=b19dbbae&
 var Accordionvue_type_template_id_b19dbbae_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"accordion"},[(_vm.exclusive)?_c('input',{ref:"accordionRadio",attrs:{"id":_vm.localId,"type":"radio","name":_vm.localName,"hidden":""}}):_c('input',{ref:"accordionCheckbox",attrs:{"id":_vm.localId,"type":"checkbox","name":_vm.localName,"hidden":""}}),_c('label',{staticClass:"accordion-header c-hand justify-space-between",attrs:{"for":_vm.localId}},[_c('div',{staticClass:"accordion-header-content"},[_vm._t("header")],2),_c('i',{staticClass:"icon icon-accordion ml-2"})]),_c('div',{ref:"accordionBody",staticClass:"accordion-body"},[_vm._t("body")],2)])}
 var Accordionvue_type_template_id_b19dbbae_staticRenderFns = []
 
@@ -1090,13 +1090,243 @@ var Accordion_component = normalizeComponent(
 )
 
 /* harmony default export */ var Accordion = (Accordion_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"f6a1c092-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/TypeaheadSelect.vue?vue&type=template&id=494cb251&
+var TypeaheadSelectvue_type_template_id_494cb251_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"dropdown",class:{ 'active': _vm.menuVisible && _vm.filteredKeyValues.length > 0, 'd-hide': !_vm.loaded }},[_c('input',{attrs:{"type":"hidden","name":_vm.name},domProps:{"value":_vm.selectedKey}}),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.inputValue),expression:"inputValue"}],staticClass:"form-select",attrs:{"type":"text","size":_vm.size,"placeholder":_vm.selectedValue},domProps:{"value":(_vm.inputValue)},on:{"focus":_vm.onFocus,"blur":_vm.onBlur,"input":function($event){if($event.target.composing){ return; }_vm.inputValue=$event.target.value}}}),_c('ul',{staticClass:"menu",on:{"mousedown":_vm.onMouseDown,"mouseup":_vm.onMouseUp}},_vm._l((_vm.filteredKeyValues),function(keyValue){return _c('li',{key:keyValue.key,staticClass:"menu-item"},[_c('a',{class:{ active: keyValue.key === _vm.selectedKey },attrs:{"href":"#"},on:{"focus":_vm.onItemFocus,"blur":_vm.onItemBlur,"click":function($event){return _vm.onItemClick(keyValue.key, keyValue.value)}}},[_vm._v(" "+_vm._s(keyValue.value)+" ")])])}),0)])}
+var TypeaheadSelectvue_type_template_id_494cb251_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/TypeaheadSelect.vue?vue&type=template&id=494cb251&
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/TypeaheadSelect.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ var TypeaheadSelectvue_type_script_lang_js_ = ({
+    name: 'TypeaheadSelect',
+    props: {
+        keyValues: { type: Array },
+        name: { type: String } // Name attribute for input
+    },
+    data: function() {
+        return {
+            loaded: false, // Flag set when loaded
+            size: 10, // Initial width on characters of the input.
+            filteredKeyValues: [], // Used to populate the dropdown.
+            inputValue: "", // Text in the input box.
+            selectedValue: "", // Currently selected value.
+            selectedKey: "", // Currently selected key.
+            menuVisible: false, // Flag to show/hide menu.
+            inputFocused: false, // Keep track of when the input has focus.
+            itemFocused: false, // Keep track when a menu item has focus.
+            menuMouseDown: false // Needed for IE because dragging scrollbar makes input lose focus.
+        }
+    },
+    mounted: function(){
+        this.init();
+        document.body.addEventListener('keydown', this.onKeyDown, true);
+    },
+    methods: {
+        // Scrolls to the selected item in the menu.
+        _scrollToSelected(){
+            var el = this.$el.querySelector(" a.active").parentElement;
+            var parent = el.parentElement;
+            var top = 0;
+            if(el != parent.firstElementChild) {
+                var style = window.getComputedStyle ? getComputedStyle(el, null) : el.currentStyle;
+                top = el.offsetTop - parseInt(style.marginTop);
+            }
+            parent.scrollTop = top;
+        },
+
+        // Hides menu.
+        _hideMenu(force) {
+            var self = this;
+            // Timeout is used to protect against strange event edge cases
+            setTimeout(function(){ 
+                if((!self.inputFocused && !self.itemFocused && !self.mouseDown) || force) {
+                    self.inputValue = self.selectedValue;
+                    self.menuVisible = false;
+                    self.itemFocused = false;
+                }
+            }, force ? 1 : 100);
+        },
+        onKeyDown(e) {
+            if(this.inputFocused || this.itemFocused) {
+
+                var keyCode = e.keyCode;
+
+                if((keyCode === 40 || keyCode === 38) && this.filteredKeyValues.length > 0) {
+
+                    var menu = this.$el.querySelector("ul"),
+                        scrollTop = menu.scrollTop,
+                        menuHeight = menu.scrollHeight,
+                        items = menu.children;
+
+                    // Index of the item that is in the users view.
+                    var scrolledIndex = this.filteredKeyValues.length - Math.round((menuHeight - scrollTop) / (menuHeight / this.filteredKeyValues.length));
+
+                    var focusItem = null;
+
+                    if(this.inputFocused) {
+                        focusItem = items[scrolledIndex].firstChild;
+                    } else if(this.itemFocused) {
+                        
+                        // Get currently focused item.
+                        var currentlyFocusedItem = document.activeElement;
+                        var parent = currentlyFocusedItem.parentElement;
+
+                        // Get next item based on up or down arrow pressed.
+                        var nextItem = keyCode == 40 ? parent.nextSibling : parent.previousSibling;
+
+                        if(nextItem != null) {
+                            focusItem = nextItem.firstChild;
+                        } else {
+                            focusItem = keyCode == 40 ? items[0].firstChild : items[items.length - 1].firstChild;
+                        }
+                    }
+
+                    focusItem.focus();
+                    
+                    e.preventDefault();
+
+                } else if(keyCode === 13 && this.inputFocused) {
+                    this.$el.querySelector(".form-select").blur();
+                    e.preventDefault();
+                }
+            }
+        },
+        onMouseUp() {
+            this.mouseDown = false;
+        },
+        onMouseDown() {
+            this.mouseDown = true;
+        },
+        onFocus() {
+            this.inputValue = ""; 
+            this.inputFocused = true;
+            this.menuVisible = true;
+
+            // Timeout is used to make sure the menu is displayed before scrollTo is called.
+            setTimeout(this._scrollToSelected, 10);
+        },
+        onItemBlur() {
+            this.itemFocused = false;
+            this._hideMenu();
+        },
+        onItemFocus() {
+            this.itemFocused = true;
+            this.menuVisible = true;
+        },
+        onItemClick(key, value) {
+            if(this.selectedKey !== key) {
+                this.selectedValue = value;
+                this.selectedKey = key;
+                this.inputValue = value;
+                this.$emit("itemSelected", this.selectedKey);
+            }
+            this._hideMenu(true);
+        },
+        onBlur() {
+            this.inputFocused = false;
+            this._hideMenu();
+        },
+        init() {
+            if(this.keyValues.length > 0) {
+                // Find the max length item to resize the input accordingly
+                var maxSize = this.size;
+                for(var n = 0; n < this.keyValues.length; n++) {
+                    if(this.keyValues[n].value.length > maxSize) {
+                        maxSize = this.keyValues[n].value.length;
+                    }
+                }
+                this.size = maxSize;
+
+                var emit = this.selectedKey !== this.keyValues[0].key;
+                
+                // Select the first item
+                this.selectedKey = this.keyValues[0].key;
+                this.selectedValue = this.keyValues[0].value;
+                this.inputValue = this.keyValues[0].value;
+
+                if(emit){
+                    // Tell the parent to load the first item
+                    this.$emit("itemSelected", this.selectedKey);
+                }
+
+                this.loaded = true;
+            }
+        }
+    },
+    watch: {
+        filteredKeyValues() {
+            // If filtered values changed, make sure it's scrolled to the top...
+            if(this.filteredKeyValues.length !== this.keyValues.length) {
+                this.$el.querySelector("ul").scrollTop = 0;
+            }
+        },
+        inputValue() {
+            // Filter out the menu every time the user types something
+            this.filteredKeyValues.length = 0;
+            for(var n = 0; n < this.keyValues.length; n++) {
+                if(this.keyValues[n].value.toLowerCase().indexOf(this.inputValue.toLowerCase()) !== -1) {
+                    this.filteredKeyValues.push({ key: this.keyValues[n].key, value: this.keyValues[n].value });
+                }
+            }
+        },
+        keyValues() {
+            this.init();
+        }
+    }
+});
+
+// CONCATENATED MODULE: ./src/components/TypeaheadSelect.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_TypeaheadSelectvue_type_script_lang_js_ = (TypeaheadSelectvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/components/TypeaheadSelect.vue
+
+
+
+
+
+/* normalize component */
+
+var TypeaheadSelect_component = normalizeComponent(
+  components_TypeaheadSelectvue_type_script_lang_js_,
+  TypeaheadSelectvue_type_template_id_494cb251_render,
+  TypeaheadSelectvue_type_template_id_494cb251_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var TypeaheadSelect = (TypeaheadSelect_component.exports);
 // CONCATENATED MODULE: ./src/components/rsui-components.js
 
 
 
 
 
-const components = { BrandedNavbarMenu : BrandedNavbarMenu, BrandedNavColumn : BrandedNavColumn, ToggleNav : ToggleNav, Accordion : Accordion };
+
+const components = { 
+	BrandedNavbarMenu : BrandedNavbarMenu, 
+	BrandedNavColumn : BrandedNavColumn, 
+	ToggleNav : ToggleNav, 
+	Accordion : Accordion, 
+	TypeaheadSelect : TypeaheadSelect 
+};
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib-no-default.js
 /* concated harmony reexport components */__webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 

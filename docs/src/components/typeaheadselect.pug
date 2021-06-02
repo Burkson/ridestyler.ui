@@ -1,0 +1,107 @@
+extends ../_layout/_docs-layout.pug
+
+block variables
+  - var slug = 'typeaheadselect'
+  - var parent = 'components'
+  - var title = 'Typeahead Select - Components - ridestyler.ui CSS Framework'
+  - var description = 'Typeahead Select is a searchable select component. ridestyler.ui CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development.'
+
+block docs-content
+  +docs-heading('typeaheadselect', 'Typeahead Select')
+
+    p Typeahead Select is a searchable select component. Behaves like a select component with searching for filtering.
+
+    +docs-subheading('demo', 'Demo')
+
+    #typeahead-select-demo.select
+
+    p Just like a #[code select] element, the data submitted to the server will be the underlying value, not what the user sees. In this case, it's the abbreviation of the US state.
+
+    +docs-subheading('usage', 'Usage')
+
+    pre.code(data-lang="HTML")
+      code
+        :highlight(lang="html")
+          <TypeaheadSelect 
+            v-bind:name="'pricing-group'"
+            v-bind:keyValues="keyValuesArray" 
+            v-on:itemSelected="itemSelectedEventHandler" 
+          />
+
+    p The TypeaheadSelect component takes 3 properties. #[code keyValuesArray] is the array of items you want to populate the component with. #[code itemSelectedEventHandler] is the method where you would respond to when an item is selected. #[code pricing-group] is the name of the #[code input] so you can handle that on the server.
+
+    p 
+      | For more details on including RS Custom Components, refer to 
+      a(href='../getting-started/javascript.html') JavaScript section
+      | .
+
+
+  include ../_layout/_footer.pug
+  
+block scripts
+    script
+        | var v = new Vue({
+        |   extends: rsui.components.TypeaheadSelect,
+        |   class: "select",
+        |   propsData: { 
+        |    name: "state",
+        |    keyValues: [
+        |      { key: "AL", value: "Alabama" },
+        |      { key: "AK", value: "Alaska" },
+        |      { key: "AZ", value: "Arizona" },
+        |      { key: "AR", value: "Arkansas" },
+        |      { key: "CA", value: "California" },
+        |      { key: "CO", value: "Colorado" },
+        |      { key: "CT", value: "Connecticut" },
+        |      { key: "DE", value: "Delaware" },
+        |      { key: "DC", value: "District Of Columbia" },
+        |      { key: "FL", value: "Florida" },
+        |      { key: "GA", value: "Georgia" },
+        |      { key: "GU", value: "Guam" },
+        |      { key: "HI", value: "Hawaii" },
+        |      { key: "ID", value: "Idaho" },
+        |      { key: "IL", value: "Illinois" },
+        |      { key: "IN", value: "Indiana" },
+        |      { key: "IA", value: "Iowa" },
+        |      { key: "KS", value: "Kansas" },
+        |      { key: "KY", value: "Kentucky" },
+        |      { key: "LA", value: "Louisiana" },
+        |      { key: "ME", value: "Maine" },
+        |      { key: "MD", value: "Maryland" },
+        |      { key: "MA", value: "Massachusetts" },
+        |      { key: "MI", value: "Michigan" },
+        |      { key: "MN", value: "Minnesota" },
+        |      { key: "MS", value: "Mississippi" },
+        |      { key: "MO", value: "Missouri" },
+        |      { key: "MT", value: "Montana" },
+        |      { key: "NE", value: "Nebraska" },
+        |      { key: "NV", value: "Nevada" },
+        |      { key: "NH", value: "New Hampshire" },
+        |      { key: "NJ", value: "New Jersey" },
+        |      { key: "NM", value: "New Mexico" },
+        |      { key: "NY", value: "New York" },
+        |      { key: "NC", value: "North Carolina" },
+        |      { key: "ND", value: "North Dakota" },
+        |      { key: "OH", value: "Ohio" },
+        |      { key: "OK", value: "Oklahoma" },
+        |      { key: "OR", value: "Oregon" },
+        |      { key: "PA", value: "Pennsylvania" },
+        |      { key: "PR", value: "Puerto Rico" },
+        |      { key: "RI", value: "Rhode Island" },
+        |      { key: "SC", value: "South Carolina" },
+        |      { key: "SD", value: "South Dakota" },
+        |      { key: "TN", value: "Tennessee" },
+        |      { key: "TX", value: "Texas" },
+        |      { key: "UT", value: "Utah" },
+        |      { key: "VT", value: "Vermont" },
+        |      { key: "VA", value: "Virginia" },
+        |      { key: "WA", value: "Washington" },
+        |      { key: "WV", value: "West Virginia" },
+        |      { key: "WI", value: "Wisconsin" },
+        |      { key: "WY", value: "Wyoming" }
+        |    ]
+        |   },
+        |   el: '#typeahead-select-demo'
+        | });
+        | v.$on('itemSelected', function(item) { console.log('Selected: ' + item) });
+        | console.log(v.$el);
