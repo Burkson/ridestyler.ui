@@ -34,10 +34,10 @@ export default {
         }
     },
     mounted: function(){
+        this.init();
         document.body.addEventListener('keydown', this.onKeyDown, true);
     },
     methods: {
-
         // Scrolls to the selected item in the menu.
         _scrollToSelected(){
             var el = this.$el.querySelector(" a.active").parentElement;
@@ -47,7 +47,7 @@ export default {
                 var style = window.getComputedStyle ? getComputedStyle(el, null) : el.currentStyle;
                 top = el.offsetTop - parseInt(style.marginTop);
             }
-            parent.scrollTo(0, top);
+            parent.scrollTop = top;
         },
 
         // Hides menu.
@@ -141,13 +141,39 @@ export default {
         onBlur() {
             this.inputFocused = false;
             this._hideMenu();
+        },
+        init() {
+            if(this.keyValues.length > 0) {
+                // Find the max length item to resize the input accordingly
+                var maxSize = this.size;
+                for(var n = 0; n < this.keyValues.length; n++) {
+                    if(this.keyValues[n].value.length > maxSize) {
+                        maxSize = this.keyValues[n].value.length;
+                    }
+                }
+                this.size = maxSize;
+
+                var emit = this.selectedKey !== this.keyValues[0].key;
+                
+                // Select the first item
+                this.selectedKey = this.keyValues[0].key;
+                this.selectedValue = this.keyValues[0].value;
+                this.inputValue = this.keyValues[0].value;
+
+                if(emit){
+                    // Tell the parent to load the first item
+                    this.$emit("itemSelected", this.selectedKey);
+                }
+
+                this.loaded = true;
+            }
         }
     },
     watch: {
         filteredKeyValues() {
             // If filtered values changed, make sure it's scrolled to the top...
             if(this.filteredKeyValues.length !== this.keyValues.length) {
-                this.$el.querySelector("ul").scrollTo(0, 0);
+                this.$el.querySelector("ul").scrollTop = 0;
             }
         },
         inputValue() {
@@ -160,26 +186,7 @@ export default {
             }
         },
         keyValues() {
-            if(this.keyValues.length > 0) {
-                // Find the max length item to resize the input accordingly
-                var maxSize = this.size;
-                for(var n = 0; n < this.keyValues.length; n++) {
-                    if(this.keyValues[n].value.length > maxSize) {
-                        maxSize = this.keyValues[n].value.length;
-                    }
-                }
-                this.size = maxSize;
-
-                // Select the first item
-                this.selectedKey = this.keyValues[0].key;
-                this.selectedValue = this.keyValues[0].value;
-                this.inputValue = this.keyValues[0].value;
-
-                // Tell the parent to load the first item
-                this.$emit("itemSelected", this.selectedKey);
-
-                this.loaded = true;
-            }
+            this.init();
         }
     }
 }

@@ -56,11 +56,13 @@ $sidebar-width: 14rem;
     width: $sidebar-width;
     -webkit-overflow-scrolling: touch;
   }
-
+  .accordion input:checked~.accordion-body, 
+  .accordion[open] .accordion-body {
+	max-height: 60rem !important;
+  }
   .accordion {
     margin-bottom: .75rem;
-    max-height: 53rem;
-
+    max-height: 63rem;
     .accordion-header {
       font-weight: bold;
     }
