@@ -24,10 +24,11 @@
 	}
 
 	&.active .menu,
-	.dropdown-toggle:focus+.menu {
+	.dropdown-toggle:focus + .menu,
+	.menu:hover {
 		display: block;
 	}
-
+	
 	// Fix dropdown-toggle border radius in button groups
 	.btn-group {
 		.dropdown-toggle:nth-last-child(2) {

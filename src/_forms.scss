@@ -125,7 +125,6 @@ textarea.form-input {
 	line-height: $line-height;
 	outline: none;
 	padding: $control-padding-y $control-padding-x;
-	vertical-align: middle;
 	width: 100%;
 
 	// Select sizes
@@ -156,7 +155,7 @@ textarea.form-input {
 		padding-right: 2.8em;
 		overflow : hidden;
 		background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9IiMyMUI4RjciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMjFsLTEyLTE4aDI0eiIvPjwvc3ZnPg==)  no-repeat;
-		background-size: .8em;
+		background-size: .7em;
 		background-position: right 10px center;
 		&::-ms-expand {
 			display: none;
