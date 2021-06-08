@@ -94,7 +94,7 @@ $unit-16: 6.4rem !default;
 $html-font-size: 16px !default;
 $html-line-height: rem-calc(26px) !default;
 $font-size: rem-calc(16px) !default;
-$font-size-button: 0.8rem !default;
+$font-size-button: 0.875rem !default;
 $font-size-xxs: rem-calc(11px) !default;
 $font-size-xs: rem-calc(12px) !default;
 $font-size-sm: rem-calc(14px) !default;
@@ -124,7 +124,7 @@ $button-size: $unit-8 !default;
 $button-padding-x: $unit-2 !default;
 $button-padding-y: ($button-size - $line-height) / 2 !default;
 
-$button-size-sm: $unit-7 !default;
+$button-size-sm: $unit-5 !default;
 $button-padding-x-sm: $button-padding-x * 0.75 !default;
 $button-padding-y-sm: ($button-size-sm - $line-height) / 2 !default;
 
