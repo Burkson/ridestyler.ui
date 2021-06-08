@@ -4,10 +4,7 @@
 
 	appearance: none;
 	border: none;
-	border-top-right-radius: $border-radius;
-	border-top-left-radius: $border-radius;
-	border-bottom-left-radius: $border-radius;
-	border-bottom-right-radius: 0;
+	border-radius: $border-radius;
 	cursor: pointer;
 	display: inline-block;
 	font-weight: bold;
