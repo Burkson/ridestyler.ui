@@ -4,7 +4,7 @@
         <input type="text" class="form-select" v-model="inputValue" :size="size" :placeholder="selectedValue" @focus="onFocus" @blur="onBlur">
         <ul class="menu" @mousedown="onMouseDown" @mouseup="onMouseUp">
             <li class="menu-item" v-for="keyValue in filteredKeyValues" :key="keyValue.key">
-                <a href="#" :class="{ active: keyValue.key === selectedKey }" @focus="onItemFocus" @blur="onItemBlur" @click="onItemClick(keyValue.key, keyValue.value)">
+                <a href="#" :class="{ active: keyValue.key === selectedKey }" @focus="onItemFocus" @blur="onItemBlur" @click="onItemClick(keyValue.key, keyValue.value, $event)">
                     {{ keyValue.value }}
                 </a>
             </li>
@@ -129,7 +129,7 @@ export default {
             this.itemFocused = true;
             this.menuVisible = true;
         },
-        onItemClick(key, value) {
+        onItemClick(key, value, e) {
             if(this.selectedKey !== key) {
                 this.selectedValue = value;
                 this.selectedKey = key;
@@ -137,6 +137,7 @@ export default {
                 this.$emit("itemSelected", this.selectedKey);
             }
             this._hideMenu(true);
+            e.preventDefault();
         },
         onBlur() {
             this.inputFocused = false;
