@@ -4,7 +4,7 @@
         <input type="text" class="form-select" v-model="inputValue" :size="size" :placeholder="selectedValue" @focus="onFocus" @blur="onBlur">
         <ul class="menu" @mousedown="onMouseDown" @mouseup="onMouseUp">
             <li class="menu-item" v-for="keyValue in filteredKeyValues" :key="keyValue.key">
-                <a href="#" :class="{ active: keyValue.key === selectedKey }" @focus="onItemFocus" @blur="onItemBlur" @click="onItemClick(keyValue.key, keyValue.value)">
+                <a href="#" :class="{ active: keyValue.key === selectedKey }" @focus="onItemFocus" @blur="onItemBlur" @click.prevent="onItemClick(keyValue.key, keyValue.value)">
                     {{ keyValue.value }}
                 </a>
             </li>
