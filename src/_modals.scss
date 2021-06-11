@@ -39,28 +39,28 @@
 	}
 
 	&.modal-sm {
-		.modal-container {
+		> .modal-container {
 			max-width: $control-width-sm;
 			padding: 0 $unit-2;
 		}
 	}
 
 	&.modal-lg {
-		.modal-container {
+		> .modal-container {
 			box-shadow: none;
 			max-width: $control-width-lg;
 		}
 	}
 
 	&.modal-xl {
-		.modal-container {
+		> .modal-container {
 			box-shadow: none;
 			max-width: $control-width-xl;
 		}
 	}
 
 	&.modal-full {
-		.modal-container {
+		> .modal-container {
 			max-width: 90vw;
 			max-height: 90vh;
 		}
