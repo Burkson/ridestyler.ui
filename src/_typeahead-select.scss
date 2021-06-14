@@ -1,0 +1,11 @@
+// Typeahead Select
+.typeahead-select {
+	> .menu {
+		display: none !important;
+	}
+	
+	&.active > .menu {
+		display: block !important;
+	}
+}
+

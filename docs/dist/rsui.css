@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*! ridestyler.ui v1.5.10 */
+/*! ridestyler.ui v1.5.14 */
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
@@ -4799,13 +4799,10 @@ html:lang(ko),
   appearance: none;
   background: #e1e0e0; 
   border: none;
-  border-bottom-left-radius: .3rem;
-  border-bottom-right-radius: 0;
-  border-top-left-radius: .3rem;
-  border-top-right-radius: .3rem;
+  border-radius: .3rem;
   cursor: pointer;
   display: inline-block;
-  font-size: .8rem;
+  font-size: .875rem;
   font-weight: bold;
   line-height: 1.625rem;
   min-height: 3.2rem;
@@ -4981,8 +4978,8 @@ html:lang(ko),
 
 .btn.btn-sm {
   font-size: .875rem;
-  min-height: 2.8rem;
-  padding: .5875rem .6rem;
+  min-height: 2rem;
+  padding: .1875rem .6rem;
 }
 
 .btn.btn-lg {
@@ -5075,6 +5072,14 @@ html:lang(ko),
 .btn-group.btn-group-block .btn {
   -ms-flex: 1 0 0;
   flex: 1 0 0;
+}
+
+.btn-group-spaced .btn {
+  margin-right: .4rem;
+}
+
+.btn-group-spaced .btn:last-child:not(:first-child) {
+  margin-right: 0;
 }
 
 .form-group:not(:last-child) {
@@ -5202,7 +5207,6 @@ textarea.form-input.input-sm {
   line-height: 1.625rem;
   outline: none;
   padding: .5375rem .8rem;
-  vertical-align: middle;
   width: 100%;
 }
 
@@ -5227,6 +5231,21 @@ textarea.form-input.input-sm {
 .form-select[size] option,
 .form-select[multiple] option {
   padding: .1rem .4rem;
+}
+
+.form-select:not([multiple]) {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9IiMyMUI4RjciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMjFsLTEyLTE4aDI0eiIvPjwvc3ZnPg==) no-repeat;
+  background-position: right 10px center; 
+  background-size: .7em;
+  overflow: hidden;
+  padding-right: 2.8em;
+}
+
+.form-select:not([multiple])::-ms-expand {
+  display: none;
 }
 
 .has-icon-left,
@@ -6929,7 +6948,8 @@ a.card.card-action {
 }
 
 .dropdown.active .menu,
-.dropdown .dropdown-toggle:focus + .menu {
+.dropdown .dropdown-toggle:focus + .menu,
+.dropdown .menu:hover {
   display: block;
 }
 
@@ -7130,22 +7150,22 @@ a.card.card-action {
   z-index: 1;
 }
 
-.modal.modal-sm .modal-container {
+.modal.modal-sm > .modal-container {
   max-width: 320px;
   padding: 0 .8rem;
 }
 
-.modal.modal-lg .modal-container {
+.modal.modal-lg > .modal-container {
   box-shadow: none;
   max-width: 960px;
 }
 
-.modal.modal-xl .modal-container {
+.modal.modal-xl > .modal-container {
   box-shadow: none;
   max-width: 1280px;
 }
 
-.modal.modal-full .modal-container {
+.modal.modal-full > .modal-container {
   max-height: 90vh; 
   max-width: 90vw;
 }
@@ -8031,6 +8051,14 @@ a.card.card-action {
 
 .ridestyler-logo-tagonly.light {
   background-image: url("https://static.ridestyler.com/images/ridestyler_logo_tagonly_nobg_white.svg");
+}
+
+.typeahead-select > .menu {
+  display: none !important;
+}
+
+.typeahead-select.active > .menu {
+  display: block !important;
 }
 
 @keyframes loading {
