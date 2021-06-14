@@ -1,5 +1,5 @@
 <template>
-    <div class="dropdown" :class="{ 'active': menuVisible && filteredKeyValues.length > 0, 'd-hide': !loaded }">
+    <div class="dropdown typeahead-select" :class="{ 'active': menuVisible && filteredKeyValues.length > 0, 'd-hide': !loaded }">
         <input type="hidden" :name="name" :value="selectedKey">
         <input type="text" class="form-select" v-model="inputValue" :size="size" :placeholder="selectedValue" @focus="onFocus" @blur="onBlur">
         <ul class="menu" @mousedown="onMouseDown" @mouseup="onMouseUp">
