@@ -16,7 +16,8 @@
 		}
 
 		& .accordion-body {
-			max-height: 50rem;
+			max-height: 1000rem;
+			overflow: visible;
 		}
 	}
 
