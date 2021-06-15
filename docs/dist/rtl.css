@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*! ridestyler.ui RTL */
-/*! ridestyler.ui v1.5.14 */
+/*! ridestyler.ui v1.5.15 */
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
@@ -6502,7 +6502,8 @@ video.video-responsive::before {
 
 .accordion input:checked ~ .accordion-body,
 .accordion[open] .accordion-body {
-  max-height: 50rem;
+  max-height: 1000rem;
+  overflow: visible;
 }
 
 .accordion .accordion-header {
