@@ -5,25 +5,31 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.5.15] - 2020-6-15
+## [1.5.16] - 2021-11-18
+
+**Fixed**:
+
+- Changed old divide operator from '/' to math.div() to get rid of build warnings.
+
+## [1.5.15] - 2021-6-15
 
 **Updated**:
 
 - Updated accordion body max height to be much larger.
 
-## [1.5.14] - 2020-6-14
+## [1.5.14] - 2021-6-14
 
 **Fixed**:
 
 - Fixed Typeahead so that menu would always hide after item is selected.
 
-## [1.5.13] - 2020-6-11
+## [1.5.13] - 2021-6-11
 
 **Updated**:
 
 - Added support for a modal inside a modal.
 
-## [1.5.12] - 2020-6-10
+## [1.5.12] - 2021-6-10
 
 **Updated**:
 
@@ -33,21 +39,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Fixed dropdown menus that couldn't be clicked
 
-## [1.5.11] - 2020-6-8
+## [1.5.11] - 2021-6-8
 
 **Updated**:
 
 - Rounded off buttons.
 - Added 'btn-group-spaced' class for a spaced out button group.
 
-## [1.5.10] - 2020-6-2
+## [1.5.10] - 2021-6-2
 
 **Updated**:
 
 - Fixed TypeaheadSelect IE error
 - Added TypeaheadSelect documentation
 
-## [1.5.9] - 2020-5-28
+## [1.5.9] - 2021-5-28
 
 **Updated**:
 

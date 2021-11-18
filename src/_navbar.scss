@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $branded-navbar-height: 6rem;
 
 .navbar {
@@ -122,7 +124,7 @@ $branded-navbar-height: 6rem;
 
 				height: $size;
 				width: $size;
-				top: ($branded-navbar-height - $size) / 2;
+				top: math.div(($branded-navbar-height - $size), 2);
 				right: 0;
 
 				display: flex;
@@ -170,7 +172,7 @@ $branded-navbar-height: 6rem;
 					width: $size;
 					height: $size;
 					
-					top: ($branded-navbar-height - $size) / 2;
+					top: math.div(($branded-navbar-height - $size), 2);
 				}
 			}
 

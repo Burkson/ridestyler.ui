@@ -1,6 +1,6 @@
 {
     "name": "ridestyler.ui",
-    "version": "1.5.15",
+    "version": "1.5.16",
     "author": {
         "name": "Byron Carasco",
         "email": "byron@burkson.com",
@@ -11,6 +11,11 @@
             "name": "Byron Carasco",
             "email": "byron@burkson.com",
             "url": "http://github.com/bcarasco"
+        },
+		{
+            "name": "Adam Dunn",
+            "email": "adunn@ridestyler.com",
+            "url": "http://github.com/adunn-ridestyler"
         }
     ],
     "description": "ridestyler.ui - RideStyler's branded CSS framework",
