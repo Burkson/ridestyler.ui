@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // Core variables
 $version: "{PACKAGE_VERSION}";
 $font-base: "https://static.ridestyler.com/fonts/";
@@ -88,7 +90,7 @@ $unit-16: 6.4rem !default;
 // Font sizes
 @function rem-calc($size) {
     $baseSize: 16px;
-    @return ($size / $baseSize) * 1rem;
+    @return math.div($size, $baseSize) * 1rem;
 }
 
 $html-font-size: 16px !default;
@@ -115,22 +117,22 @@ $control-size-lg: $unit-12 !default;
 $control-padding-x: $unit-2 !default;
 $control-padding-x-sm: $control-padding-x * .75 !default;
 $control-padding-x-lg: $control-padding-x * 1.5 !default;
-$control-padding-y: ($control-size - $line-height) / 2 - $border-width !default;
-$control-padding-y-sm: ($control-size-sm - $line-height) / 2 - $border-width !default;
-$control-padding-y-lg: ($control-size-lg - $line-height) / 2 - $border-width !default;
+$control-padding-y: math.div(($control-size - $line-height), 2) - $border-width !default;
+$control-padding-y-sm: math.div(($control-size-sm - $line-height), 2) - $border-width !default;
+$control-padding-y-lg: math.div(($control-size-lg - $line-height), 2) - $border-width !default;
 $control-icon-size: $unit-4 !default;
 
 $button-size: $unit-8 !default;
 $button-padding-x: $unit-2 !default;
-$button-padding-y: ($button-size - $line-height) / 2 !default;
+$button-padding-y: math.div(($button-size - $line-height), 2) !default;
 
 $button-size-sm: $unit-5 !default;
 $button-padding-x-sm: $button-padding-x * 0.75 !default;
-$button-padding-y-sm: ($button-size-sm - $line-height) / 2 !default;
+$button-padding-y-sm: math.div(($button-size-sm - $line-height), 2) !default;
 
 $button-size-lg: $unit-9 !default;
 $button-padding-x-lg: $button-padding-x * 1.5 !default;
-$button-padding-y-lg: ($button-size-lg - $line-height) / 2 !default;
+$button-padding-y-lg: math.div(($button-size-lg - $line-height), 2) !default;
 
 $control-width-xs: 180px !default;
 $control-width-sm: 320px !default;

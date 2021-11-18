@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // Forms
 .form-group {
 	&:not(:last-child) {
@@ -208,9 +210,9 @@ textarea.form-input {
 .form-switch {
 	display: block;
 	line-height: $line-height;
-	margin: ($control-size - $control-size-sm) / 2 0;
+	margin: math.div(($control-size - $control-size-sm), 2) 0;
 	min-height: $control-size-sm;
-	padding: (($control-size-sm - $line-height) / 2) $control-padding-x (($control-size-sm - $line-height) / 2) ($control-icon-size + $control-padding-x);
+	padding: math.div(($control-size-sm - $line-height), 2) $control-padding-x math.div(($control-size-sm - $line-height), 2) ($control-icon-size + $control-padding-x);
 	position: relative;
 	cursor: pointer;
 
@@ -247,7 +249,7 @@ textarea.form-input {
 
 	&.input-lg {
 		font-size: $font-size-lg;
-		margin: ($control-size-lg - $control-size-sm) / 2 0;
+		margin: math.div(($control-size-lg - $control-size-sm), 2) 0;
 	}
 }
 
@@ -257,7 +259,7 @@ textarea.form-input {
 		background: $bg-color-light;
 		height: $control-icon-size;
 		left: 0;
-		top: ($control-size-sm - $control-icon-size) / 2;
+		top: math.div(($control-size-sm - $control-icon-size), 2);
 		width: $control-icon-size;
 		border: 1px solid $gray-color;
 	}
@@ -344,7 +346,7 @@ textarea.form-input {
 		border-radius: $unit-2;
 		height: $unit-4;
 		left: 0;
-		top: ($control-size-sm - $unit-4) / 2 ;
+		top: math.div(($control-size-sm - $unit-4), 2) ;
 		width: $unit-8;
 
 		&::before {

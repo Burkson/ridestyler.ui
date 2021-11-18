@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // Popovers
 .popover {
     display: inline-block;
@@ -27,14 +29,14 @@
     
                 width: 0;
                 height: 0;
-                border-left: $triangle-size/2 solid transparent;
-                border-right: $triangle-size/2 solid transparent;
+                border-left: math.div($triangle-size, 2) solid transparent;
+                border-right: math.div($triangle-size, 2) solid transparent;
                 border-top: $triangle-size solid $triangle-color;
     
                 position: absolute;
                 bottom: -$triangle-size;
                 left: 50%;
-                margin-left: -$triangle-size/2;
+                margin-left: math.div(-$triangle-size, 2);
             }
         }
     }
@@ -57,15 +59,15 @@
 
                 &:after {
                     border-left: none;
-                    border-top: $triangle-size/2 solid transparent;
-                    border-bottom: $triangle-size/2 solid transparent;
+                    border-top: math.div($triangle-size, 2) solid transparent;
+                    border-bottom: math.div($triangle-size, 2) solid transparent;
                     border-right: $triangle-size solid $triangle-color;
         
                     position: absolute;
                     left: -$triangle-size;
                     top: 50%;
                     bottom: auto;
-                    margin-top: -$triangle-size/2;
+                    margin-top: math.div(-$triangle-size, 2);
                     margin-left: 0;
                 }
             }
@@ -217,15 +219,15 @@
 
                 &:after {
                     border-top: none;
-                    border-left: $triangle-size/2 solid transparent;
-                    border-right: $triangle-size/2 solid transparent;
+                    border-left: math.div($triangle-size, 2) solid transparent;
+                    border-right: math.div($triangle-size, 2) solid transparent;
                     border-bottom: $triangle-size solid $triangle-color;
         
                     position: absolute;
                     left: 50%;
                     top: -$triangle-size;
                     bottom: auto;
-                    margin-left: -$triangle-size/2;
+                    margin-left: math.div(-$triangle-size, 2);
                 }
             }
         }
@@ -247,15 +249,15 @@
 
                 &:after {
                     border-right: none;
-                    border-top: $triangle-size/2 solid transparent;
-                    border-bottom: $triangle-size/2 solid transparent;
+                    border-top: math.div($triangle-size, 2) solid transparent;
+                    border-bottom: math.div($triangle-size, 2) solid transparent;
                     border-left: $triangle-size solid $triangle-color;
         
                     position: absolute;
                     left: 100%;
                     top: 50%;
                     bottom: auto;
-                    margin-top: -$triangle-size/2;
+                    margin-top: math.div(-$triangle-size, 2);
                     margin-left: 0;
                 }
             }
