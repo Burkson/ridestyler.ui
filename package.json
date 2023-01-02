@@ -45,7 +45,7 @@
         "url": "https://github.com/Burkson/ridestyler.ui/issues"
     },
     "devDependencies": {
-        "@vue/cli-service": "^4.1.2",
+        "@vue/cli-service": "^5.0.8",
         "async": "^3.1.0",
         "browser-sync": "^2.26.7",
         "glob": "^7.1.4",
@@ -63,7 +63,7 @@
         "jstransformer-highlight": "latest",
         "jstransformer-markdown-it": "latest",
         "sass-export": "^1.0.6",
-        "sass-loader": "^8.0.2",
+        "sass-loader": "^13.2.0",
         "vue-template-compiler": "^2.6.11",
         "node-sass": "^4.14.1"
     },
