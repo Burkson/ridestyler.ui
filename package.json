@@ -45,7 +45,7 @@
         "url": "https://github.com/Burkson/ridestyler.ui/issues"
     },
     "devDependencies": {
-        "@vue/cli-service": "^4.1.2",
+        "@vue/cli-service": "^5.0.8",
         "async": "^3.1.0",
         "browser-sync": "^2.26.7",
         "glob": "^7.1.4",
