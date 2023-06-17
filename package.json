@@ -12,7 +12,7 @@
             "email": "byron@burkson.com",
             "url": "http://github.com/bcarasco"
         },
-		{
+        {
             "name": "Adam Dunn",
             "email": "adunn@ridestyler.com",
             "url": "http://github.com/adunn-ridestyler"
@@ -44,29 +44,6 @@
     "bugs": {
         "url": "https://github.com/Burkson/ridestyler.ui/issues"
     },
-    "devDependencies": {
-        "@vue/cli-service": "^4.1.2",
-        "async": "^3.1.0",
-        "browser-sync": "^2.26.7",
-        "glob": "^7.1.4",
-        "gulp": "^4.0.2",
-        "gulp-autoprefixer": "latest",
-        "gulp-clean-css": "latest",
-        "gulp-csscomb": "latest",
-        "gulp-iconfont": "^10.0.3",
-        "gulp-pug": "latest",
-        "gulp-rename": "^1.4.0",
-        "gulp-replace": "^1.0.0",
-        "gulp-sass": "latest",
-        "gulp-sourcemaps": "^2.6.5",
-        "handlebars": "^4.4.3",
-        "jstransformer-highlight": "latest",
-        "jstransformer-markdown-it": "latest",
-        "sass-export": "^1.0.6",
-        "sass-loader": "^8.0.2",
-        "vue-template-compiler": "^2.6.11",
-        "node-sass": "^4.14.1"
-    },
     "browserslist": [
         "last 4 Chrome versions",
         "Edge >= 12",
@@ -74,5 +51,24 @@
         "last 4 Safari versions",
         "last 4 Opera versions",
         "Explorer >= 10"
-    ]
+    ],
+    "dependencies": {
+        "@vue/cli-service": "^5.0.8",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^8.0.0",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-csscomb": "^3.1.0",
+        "gulp-iconfont": "^11.0.1",
+        "gulp-pug": "^5.0.0",
+        "gulp-rename": "^2.0.0",
+        "gulp-replace": "^1.1.4",
+        "gulp-sass": "^5.1.0",
+        "gulp-sourcemaps": "^3.0.0",
+        "handlebars": "^4.7.7",
+        "jstransformer-highlight": "^2.0.0",
+        "sass": "^1.63.4",
+        "sass-export": "^2.1.2",
+        "sass-loader": "^13.3.2",
+        "vue-template-compiler": "^2.7.14"
+    }
 }

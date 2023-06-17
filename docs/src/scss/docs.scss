@@ -614,7 +614,7 @@ $off-canvas-breakpoint: $size-lg !default;
     position: absolute;
     left: 50%;
     width: 188px;
-    margin-left: -(188px)/2;
+    margin-left: calc(-188px/2);
     height: 100%;
     top: 0;
     display: flex;
