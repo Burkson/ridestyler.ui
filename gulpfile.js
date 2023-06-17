@@ -11,7 +11,6 @@ var fs = require('fs');
 var Handlebars = require('handlebars');
 var async = require('async');
 var sourcemaps = require('gulp-sourcemaps');
-var sassExporter = require('sass-export').exporter;
 const path = require('path');
 const glob = require('glob');
 const iconMatch = /^u[0-9A-F]{4}\-(.+)$/;
@@ -156,14 +155,6 @@ var docTasks = {
             return icons;
         })();
 
-        sassExporter({
-            inputFiles: [
-                paths.variables
-            ]
-        }).getArray().forEach(variable => {
-            sassVariables[variable.name] = variable.compiledValue;
-        });
-
         return gulp.src('docs/src/**/!(_)*.pug')
             .pipe(pug({
                 pretty: true,
@@ -182,7 +173,7 @@ gulp.task('scss', gulp.series(
 ));
 
 gulp.task('docs', gulp.parallel(
-    //docTasks.html,
+    docTasks.html,
     docTasks.scssDocs
 ));
 

@@ -66,8 +66,8 @@
         "gulp-sourcemaps": "^3.0.0",
         "handlebars": "^4.7.7",
         "jstransformer-highlight": "^2.0.0",
+        "jstransformer-markdown-it": "^3.0.0",
         "sass": "^1.63.4",
-        "sass-export": "^2.1.2",
         "sass-loader": "^13.3.2",
         "vue-template-compiler": "^2.7.14"
     }
