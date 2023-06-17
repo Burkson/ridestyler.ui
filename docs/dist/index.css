@@ -1,4 +1,4 @@
-/*! ridestyler.ui RTL *//*! ridestyler.ui v{PACKAGE_VERSION} */@font-face {
+/*! ridestyler.ui v{PACKAGE_VERSION} */@font-face {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 300;
@@ -2466,7 +2466,7 @@ html:lang(zh-Hans),
 .lang-cjk u + u {
   margin-left: .125em;
 }.table {
-  text-align: right;
+  text-align: left;
   width: 100%;
 }.table td,
 .table th {

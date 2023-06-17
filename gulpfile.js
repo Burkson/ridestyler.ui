@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+var sass = require('gulp-sass')(require('sass'));
 var cleancss = require('gulp-clean-css');
 var csscomb = require('gulp-csscomb');
 var rename = require('gulp-rename');
@@ -11,7 +11,6 @@ var fs = require('fs');
 var Handlebars = require('handlebars');
 var async = require('async');
 var sourcemaps = require('gulp-sourcemaps');
-var browserSync = require('browser-sync').create();
 var sassExporter = require('sass-export').exporter;
 const path = require('path');
 const glob = require('glob');
@@ -39,7 +38,7 @@ var version = require('./package.json').version;
 function buildSCSS() {
     return gulp.src(paths.source)
         .pipe(sourcemaps.init())
-        .pipe(sass({ outputStyle: 'compact', precision: 10 })
+        .pipe(sass({ outputStyle: 'compressed', precision: 10 })
             .on('error', sass.logError)
         )
         .pipe(replaceTokens())
@@ -126,11 +125,10 @@ function buildFonts(done) {
 var docTasks = {
     scssDocs() {
         return gulp.src(paths.doc)
-            .pipe(sourcemaps.init())
-            .pipe(sass({ outputStyle: 'compact', precision: 10 })
+            //.pipe(sourcemaps.init())
+            .pipe(sass({ outputStyle: 'compressed', precision: 10 })
                 .on('error', sass.logError)
             )
-            .pipe(replaceTokens())
             .pipe(autoprefixer())
             .pipe(csscomb())
             .pipe(gulp.dest(distPaths.docs + '/dist'))
@@ -138,7 +136,7 @@ var docTasks = {
             .pipe(rename({
                 suffix: '.min'
             }))
-            .pipe(sourcemaps.write('.'))
+            //.pipe(sourcemaps.write('.'))
             .pipe(gulp.dest(distPaths.docs + '/dist'))
     },
     html() {
@@ -178,42 +176,13 @@ var docTasks = {
     }
 };
 
-// Static server
-gulp.task('serve', function() {
-    browserSync.init({
-        server: {
-            baseDir: "./docs"
-        }
-    });
-    
-    gulp.watch(paths.source, gulp.series(
-        function () {
-            return buildSCSS().pipe(browserSync.stream());
-        }, 
-        copySCSSToDocs
-    ));
-    gulp.watch(paths.variables, function () {
-        return docTasks.scssDocs().pipe(browserSync.stream());
-    });
-    gulp.watch(paths.doc, function () {
-        return docTasks.scssDocs().pipe(browserSync.stream());
-    });
-    gulp.watch('./**/*.pug', function docsHtml (done) {
-        docTasks.html()
-            .on('end', function () {
-                browserSync.reload();
-                done();
-            })
-    });
-});
-
 gulp.task('scss', gulp.series(
     buildSCSS, 
     copySCSSToDocs
 ));
 
 gulp.task('docs', gulp.parallel(
-    docTasks.html,
+    //docTasks.html,
     docTasks.scssDocs
 ));
 
